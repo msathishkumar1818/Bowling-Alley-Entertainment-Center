@@ -37,8 +37,9 @@
       color: #fff9f2 !important;
       min-height: 100vh !important;
       margin: 0 !important;
-      padding: 1rem !important;
+      padding: 2rem 1.5rem !important;
       display: flex !important;
+      flex-direction: column !important;
       align-items: center !important;
       justify-content: center !important;
       box-sizing: border-box !important;
@@ -180,17 +181,23 @@
       }
     }
 
-    /* Streamlined Viewport-Fitting Login Card (No Vertical Overflow/Scroll) */
+    /* Streamlined Viewport-Fitting Login Card (No Vertical Stretching/Void) */
+    main.login-card-terminal,
+    #login-terminal,
     .login-card-terminal {
+      flex: 0 0 auto !important;
+      height: auto !important;
+      min-height: auto !important;
       width: 100% !important;
-      max-width: 440px !important;
+      max-width: 480px !important;
       background: var(--portal-card) !important;
       border: 1.5px solid var(--portal-border) !important;
-      border-radius: 24px !important;
-      padding: 1.75rem 2rem !important;
+      border-radius: 26px !important;
+      padding: 2.25rem 2.25rem !important;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.95), 0 0 30px rgba(123, 13, 39, 0.3) !important;
       box-sizing: border-box !important;
       margin: auto !important;
+      align-self: center !important;
     }
 
     .portal-brand-center {

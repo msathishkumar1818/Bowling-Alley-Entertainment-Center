@@ -7048,6 +7048,9 @@ textarea.dispatch-input {
 }
 
 .login-card-terminal {
+  flex: 0 0 auto !important;
+  height: auto !important;
+  min-height: auto !important;
   width: 100%;
   max-width: 480px;
   background: #140307;
@@ -7057,6 +7060,8 @@ textarea.dispatch-input {
   box-shadow: 0 25px 70px rgba(0, 0, 0, 0.9), 0 0 30px rgba(84, 9, 26, 0.35);
   position: relative;
   z-index: 10;
+  align-self: center !important;
+  margin: auto;
 }
 
 .portal-brand-center {
