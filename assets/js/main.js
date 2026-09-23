@@ -845,17 +845,17 @@
       kids: {
         title: 'Kids Cosmic Glow Blast (Ages 5–12)',
         desc: 'Lightweight bowling balls (6–8 lbs), automated bumper rails that pop up just for kids, lightweight neon shoe valet, and non-stop kid pop radio.',
-        tag: 'Kids Party Mode Active 🎈'
+        tag: 'Kids Party Mode Active'
       },
       teens: {
         title: 'Teen Cosmic Takeover (Ages 13–17)',
         desc: 'UV blacklight glow pins, bass-thumping nightclub sound system, Instagrammable LED neon photo walls, and 60-minute free-play arcade cards.',
-        tag: 'Teen Blacklight Mode Active ⚡'
+        tag: 'Teen Blacklight Mode Active'
       },
       adults: {
         title: 'Adult Milestone Bash & 21+ VIP',
         desc: 'Dedicated mezzanine VIP lanes, craft cocktail towers, artisan slider feasts, private lounge attendant, and full music volume controls.',
-        tag: 'VIP 21+ Lounge Mode Active 🍸'
+        tag: 'VIP 21+ Lounge Mode Active'
       }
     };
 
@@ -980,7 +980,7 @@
     if (scratchBtn && scratchResult) {
       scratchBtn.addEventListener('click', () => {
         scratchBtn.style.display = 'none';
-        scratchResult.innerHTML = '<span style="color: var(--accent-gold); font-weight: 800;">🎉 1,500 BONUS ARCADE TICKETS UNLOCKED!</span><br><small style="color: var(--text-secondary);">Use code GLOW300 at lane checkout.</small>';
+        scratchResult.innerHTML = '<span style="color: var(--accent-gold); font-weight: 800;">1,500 BONUS ARCADE TICKETS UNLOCKED!</span><br><small style="color: var(--text-secondary);">Use code GLOW300 at lane checkout.</small>';
       });
     }
   }

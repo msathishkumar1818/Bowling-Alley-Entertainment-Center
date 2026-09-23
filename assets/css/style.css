@@ -99,6 +99,8 @@ html {
   color: var(--text-primary);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 body {
@@ -108,6 +110,8 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
   transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
@@ -1559,10 +1563,11 @@ a {
 .footer-contact-item {
   display: flex;
   align-items: flex-start;
-  gap: 0.65rem;
+  gap: 0.75rem;
   font-size: 0.88rem;
   color: var(--brand-cream);
-  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  margin-bottom: 0;
 }
 
 .footer-contact-item svg {
@@ -1570,7 +1575,18 @@ a {
   height: 18px;
   color: var(--brand-gold-500);
   flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 3px;
+}
+
+.footer-col-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-contact-items-grid {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.85rem !important;
 }
 
 /* Footer Bottom Bar */
@@ -3239,20 +3255,36 @@ a {
 .members-card-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  gap: 1.25rem;
   padding-bottom: 1.25rem;
   border-bottom: 1px solid var(--border-brand);
 }
 
 .members-badge-gold {
-  padding: 4px 12px;
-  border-radius: 6px;
-  background: var(--brand-gold-500);
-  color: #000000;
-  font-size: 0.76rem;
-  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #F5BC51 0%, #D49022 100%);
+  color: #070103;
+  font-size: 0.78rem;
+  font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(229, 169, 60, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  line-height: 1;
+}
+
+.members-badge-gold svg {
+  width: 13px;
+  height: 13px;
+  fill: currentColor;
+  flex-shrink: 0;
 }
 
 .members-benefits-list {
@@ -6070,24 +6102,26 @@ input[type="time"]::-webkit-calendar-picker-indicator:hover {
 .passports-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1.75rem;
+  align-items: stretch;
 }
 
 .passport-foil-card {
   background: linear-gradient(145deg, #1C0309, #0D0104);
   border: 2px solid var(--border-brand);
   border-radius: 24px;
-  padding: 2.25rem;
+  padding: 1.5rem;
   position: relative;
   transition: all 0.35s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  height: 100%;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
 }
 
 .passport-foil-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   border-color: var(--accent-gold);
   box-shadow: 0 20px 50px rgba(229, 169, 60, 0.25);
 }
@@ -6095,6 +6129,36 @@ input[type="time"]::-webkit-calendar-picker-indicator:hover {
 .passport-foil-card.popular {
   border-color: var(--accent-gold);
   background: linear-gradient(145deg, #26040C, #120206);
+}
+
+.passport-card-image {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  flex-shrink: 0;
+}
+
+.passport-card-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.passport-foil-card:hover .passport-card-image img {
+  transform: scale(1.04);
+}
+
+.passport-card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  height: 100%;
+  padding: 0;
 }
 
 .passport-seal-badge {
@@ -6117,25 +6181,33 @@ input[type="time"]::-webkit-calendar-picker-indicator:hover {
 
 .passport-title {
   font-family: var(--font-heading);
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   font-weight: 800;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
-  padding-right: 3rem;
+  min-height: 3.8rem;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.25;
 }
 
 .passport-desc {
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   color: var(--text-secondary);
   line-height: 1.5;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
+  min-height: 3.8rem;
 }
 
 .passport-price-box {
-  margin-bottom: 1.5rem;
-  padding: 1rem 0;
+  margin-bottom: 1.25rem;
+  padding: 0.85rem 0;
   border-top: 1px solid var(--border-brand);
   border-bottom: 1px solid var(--border-brand);
+  min-height: 76px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .passport-price-val {
@@ -6154,10 +6226,26 @@ input[type="time"]::-webkit-calendar-picker-indicator:hover {
 .passport-features-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 2rem 0;
+  margin: 0 0 1.75rem 0;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  flex-grow: 1;
+  min-height: 195px;
+}
+
+.passport-card-content .btn,
+.passport-foil-card .btn {
+  margin-top: auto !important;
+  width: 100%;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
 }
 
 .passport-feature-item {
@@ -7455,10 +7543,10 @@ textarea.dispatch-input {
   top: 68px;
   left: 0;
   bottom: 0;
-  width: 250px;
+  width: 265px;
   background: rgba(10, 1, 3, 0.98);
   border-right: 1px solid rgba(229, 169, 60, 0.18);
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 0.85rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -7466,7 +7554,7 @@ textarea.dispatch-input {
   overflow-y: auto;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .dash-sidebar {
     display: none !important;
   }
@@ -7481,19 +7569,21 @@ textarea.dispatch-input {
 .dash-nav-btn {
   display: flex;
   align-items: center;
+  justify-content: flex-start !important;
   gap: 0.85rem;
-  padding: 0.82rem 1.1rem;
+  padding: 0.8rem 1rem;
   border-radius: 12px;
   border: 1px solid transparent;
   background: transparent;
   color: rgba(255, 249, 242, 0.7);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s ease;
   width: 100%;
   text-align: left;
+  white-space: nowrap;
 }
 
 .dash-nav-btn:hover {
@@ -7545,14 +7635,12 @@ textarea.dispatch-input {
   border-color: rgba(229, 169, 60, 0.45);
 }
 
-/* Scrollable Main Area: Deep Cosmic Dark Theme matching About & Contact */
 .dash-body {
   background-color: #070103 !important;
   color: #fff9f2 !important;
 }
 
 .dash-main-area {
-  margin-left: 250px;
   margin-top: 68px;
   padding: 2.75rem 2.75rem 5rem;
   min-height: calc(100vh - 68px);
@@ -7561,6 +7649,131 @@ textarea.dispatch-input {
     #070103 !important;
   color: #fff9f2 !important;
   transition: background-color 0.25s ease, color 0.25s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Desktop Sidebar & Main Area Layout (>= 1101px) */
+@media (min-width: 1101px) {
+  .dash-main-area {
+    margin-left: 265px;
+    width: calc(100% - 265px);
+  }
+
+  html[dir="ltr"] .dash-sidebar,
+  html:not([dir="rtl"]) .dash-sidebar {
+    left: 0 !important;
+    right: auto !important;
+    border-right: 1px solid rgba(229, 169, 60, 0.18) !important;
+    border-left: none !important;
+  }
+
+  html[dir="ltr"] .dash-main-area,
+  html:not([dir="rtl"]) .dash-main-area {
+    margin-left: 265px !important;
+    margin-right: 0 !important;
+    width: calc(100% - 265px) !important;
+  }
+
+  html[dir="rtl"] .dash-sidebar {
+    right: 0 !important;
+    left: auto !important;
+    border-left: 1px solid rgba(229, 169, 60, 0.18) !important;
+    border-right: none !important;
+  }
+
+  html[dir="rtl"] .dash-main-area {
+    margin-right: 265px !important;
+    margin-left: 0 !important;
+    width: calc(100% - 265px) !important;
+  }
+}
+
+/* --- Strict LTR / RTL Directional Engine for Dashboard Controls --- */
+html[dir="ltr"] .dash-nav-btn,
+html:not([dir="rtl"]) .dash-nav-btn {
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+
+html[dir="ltr"] .dash-nav-btn .dash-nav-icon,
+html:not([dir="rtl"]) .dash-nav-btn .dash-nav-icon {
+  order: 1 !important;
+  margin: 0 !important;
+}
+
+html[dir="ltr"] .dash-nav-btn span,
+html:not([dir="rtl"]) .dash-nav-btn span {
+  order: 2 !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+html[dir="ltr"] .dash-user-dropdown-panel,
+html:not([dir="rtl"]) .dash-user-dropdown-panel {
+  right: 0 !important;
+  left: auto !important;
+  text-align: left !important;
+}
+
+html[dir="ltr"] .dash-user-dropdown-item,
+html:not([dir="rtl"]) .dash-user-dropdown-item {
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+
+html[dir="ltr"] .dash-user-dropdown-item svg,
+html:not([dir="rtl"]) .dash-user-dropdown-item svg {
+  order: 1 !important;
+  margin: 0 !important;
+}
+
+html[dir="ltr"] .dash-user-dropdown-item span,
+html:not([dir="rtl"]) .dash-user-dropdown-item span {
+  order: 2 !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+/* RTL Direction Rules */
+html[dir="rtl"] .dash-nav-btn {
+  flex-direction: row-reverse !important;
+  justify-content: flex-end !important;
+  text-align: right !important;
+  gap: 0.85rem !important;
+}
+
+html[dir="rtl"] .dash-nav-btn .dash-nav-icon {
+  order: 2 !important;
+}
+
+html[dir="rtl"] .dash-nav-btn span {
+  order: 1 !important;
+  text-align: right !important;
+}
+
+html[dir="rtl"] .dash-user-dropdown-panel {
+  left: 0 !important;
+  right: auto !important;
+  text-align: right !important;
+}
+
+html[dir="rtl"] .dash-user-dropdown-item {
+  flex-direction: row-reverse !important;
+  justify-content: flex-end !important;
+  text-align: right !important;
+  gap: 0.65rem !important;
+}
+
+html[dir="rtl"] .dash-user-dropdown-item svg {
+  order: 2 !important;
+}
+
+html[dir="rtl"] .dash-user-dropdown-item span {
+  order: 1 !important;
+  text-align: right !important;
 }
 
 /* Welcome Card */
@@ -8128,18 +8341,21 @@ textarea.dispatch-input {
 .heritage-eras-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  gap: 1.25rem;
   margin-bottom: 3.5rem;
+  align-items: stretch;
 }
 
 .era-milestone-card {
   background: var(--bg-surface);
   border: 1px solid var(--border-brand);
   border-radius: 20px;
-  padding: 1.75rem 1.5rem;
+  padding: 1.5rem 1.25rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
+  box-sizing: border-box;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   position: relative;
@@ -8161,6 +8377,7 @@ textarea.dispatch-input {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 38px;
   margin-bottom: 1rem;
 }
 
@@ -8169,6 +8386,7 @@ textarea.dispatch-input {
   font-size: 1.45rem;
   font-weight: 900;
   color: var(--accent-gold);
+  line-height: 1;
 }
 
 .era-year-badge.highlight {
@@ -8177,14 +8395,15 @@ textarea.dispatch-input {
 }
 
 .era-phase-tag {
-  font-size: 0.72rem;
+  font-size: 0.65rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding: 0.25rem 0.65rem;
+  letter-spacing: 0.05em;
+  padding: 0.28rem 0.55rem;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
   color: var(--text-muted);
+  white-space: nowrap;
 }
 
 .era-phase-tag.gold {
@@ -8199,14 +8418,19 @@ textarea.dispatch-input {
   font-weight: 800;
   color: #FFFFFF;
   margin: 0 0 0.65rem 0;
+  min-height: 2.85rem;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.25;
 }
 
 .era-card-desc {
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   color: var(--text-secondary);
-  line-height: 1.55;
+  line-height: 1.5;
   margin-bottom: 1.25rem;
-  flex: 1;
+  flex: 1 1 auto;
+  min-height: 5.5rem;
 }
 
 .era-stat-pill {
@@ -8215,9 +8439,13 @@ textarea.dispatch-input {
   color: var(--brand-cream);
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.45rem;
   padding-top: 0.85rem;
   border-top: 1px dashed rgba(255, 249, 242, 0.12);
+  margin-top: auto;
+  white-space: normal;
+  line-height: 1.3;
 }
 
 /* Panoramic Heritage Founder Banner */
@@ -8651,15 +8879,16 @@ textarea.dispatch-input {
 .passport-foil-card {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   height: 100%;
+  box-sizing: border-box;
 }
 
 .passport-card-image {
   position: relative;
   width: 100%;
-  height: 260px;
+  height: 210px;
   overflow: hidden;
+  border-radius: 14px;
 }
 
 .passport-card-image img {
@@ -8677,16 +8906,51 @@ textarea.dispatch-input {
 .passport-card-content {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  padding: 2rem;
+  flex: 1 1 auto;
+  height: 100%;
+  padding: 1.25rem 0 0;
+}
+
+.passport-card-content .passport-title {
+  min-height: 3.8rem;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.25;
+}
+
+.passport-card-content .passport-desc {
+  min-height: 3.8rem;
+  line-height: 1.5;
+}
+
+.passport-card-content .passport-price-box {
+  min-height: 76px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .passport-card-content .passport-features-list {
-  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex-grow: 1;
+  min-height: 195px;
+  margin-bottom: 1.5rem;
 }
 
-.passport-card-content .btn {
-  margin-top: auto;
+.passport-card-content .btn,
+.passport-foil-card .btn {
+  margin-top: auto !important;
+  width: 100%;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
 }
 
 .passport-card-image .passport-seal-badge {
@@ -9911,7 +10175,7 @@ textarea.form-input-control {
   box-sizing: border-box !important;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .booking-hero-banner,
   .leagues-hero-section,
   .pricing-hero-section,

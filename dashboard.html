@@ -236,21 +236,67 @@
       border-color: var(--dash-gold) !important;
     }
 
-    /* Desktop Sidebar (Fixed Left) */
-    .dash-sidebar {
-      position: fixed;
-      top: 66px;
-      left: 0;
-      bottom: 0;
-      width: 255px;
-      background: rgba(10, 1, 3, 0.98) !important;
-      border-right: 1px solid rgba(229, 169, 60, 0.18) !important;
-      padding: 1.5rem 1rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      z-index: 900;
-      overflow-y: auto;
+    /* Desktop Sidebar & Main Area Positioning (Desktop Only >= 1101px) */
+    @media (min-width: 1101px) {
+      .dash-sidebar {
+        position: fixed;
+        top: 66px;
+        left: 0;
+        bottom: 0;
+        width: 265px;
+        background: rgba(10, 1, 3, 0.98) !important;
+        border-right: 1px solid rgba(229, 169, 60, 0.18) !important;
+        padding: 1.5rem 0.85rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 900;
+        overflow-y: auto;
+      }
+
+      .dash-main-area {
+        margin-left: 265px;
+        margin-top: 66px;
+        padding: 2.5rem 2.5rem 5rem;
+        min-height: calc(100vh - 66px);
+        width: calc(100% - 265px);
+        max-width: calc(100% - 265px);
+        background: radial-gradient(circle at 15% 20%, rgba(123, 13, 39, 0.35), transparent 50%),
+          radial-gradient(circle at 85% 60%, rgba(229, 169, 60, 0.1), transparent 45%),
+          var(--dash-bg) !important;
+        color: #fff9f2 !important;
+        box-sizing: border-box !important;
+      }
+
+      html[dir="ltr"] .dash-sidebar,
+      html:not([dir="rtl"]) .dash-sidebar {
+        left: 0 !important;
+        right: auto !important;
+        border-right: 1px solid rgba(229, 169, 60, 0.18) !important;
+        border-left: none !important;
+      }
+
+      html[dir="ltr"] .dash-main-area,
+      html:not([dir="rtl"]) .dash-main-area {
+        margin-left: 265px !important;
+        margin-right: 0 !important;
+        width: calc(100% - 265px) !important;
+        max-width: calc(100% - 265px) !important;
+      }
+
+      html[dir="rtl"] .dash-sidebar {
+        right: 0 !important;
+        left: auto !important;
+        border-left: 1px solid rgba(229, 169, 60, 0.18) !important;
+        border-right: none !important;
+      }
+
+      html[dir="rtl"] .dash-main-area {
+        margin-right: 265px !important;
+        margin-left: 0 !important;
+        width: calc(100% - 265px) !important;
+        max-width: calc(100% - 265px) !important;
+      }
     }
 
     .dash-sidebar-nav {
@@ -262,8 +308,9 @@
     .dash-nav-btn {
       display: flex;
       align-items: center;
+      justify-content: flex-start !important;
       gap: 0.85rem;
-      padding: 0.82rem 1.1rem;
+      padding: 0.8rem 1rem;
       border-radius: 12px;
       border: 1px solid transparent;
       background: transparent;
@@ -275,6 +322,7 @@
       transition: all 0.2s ease;
       width: 100%;
       text-align: left;
+      white-space: nowrap;
     }
 
     .dash-nav-btn:hover:not(.active) {
@@ -317,6 +365,7 @@
       text-decoration: none;
       transition: all 0.2s ease;
       cursor: pointer;
+      white-space: nowrap;
     }
 
     .dash-logout-btn:hover {
@@ -325,19 +374,203 @@
       border-color: rgba(229, 169, 60, 0.5) !important;
     }
 
-    /* Main Scrollable Canvas */
+    /* Base Canvas Style */
     .dash-main-area {
-      margin-left: 255px;
       margin-top: 66px;
-      padding: 2.5rem 2.5rem 5rem;
-      min-height: calc(100vh - 66px);
-      width: calc(100% - 255px);
-      max-width: calc(100% - 255px);
       background: radial-gradient(circle at 15% 20%, rgba(123, 13, 39, 0.35), transparent 50%),
         radial-gradient(circle at 85% 60%, rgba(229, 169, 60, 0.1), transparent 45%),
         var(--dash-bg) !important;
       color: #fff9f2 !important;
       box-sizing: border-box !important;
+    }
+
+    /* --- Strict LTR / RTL Directional Engine for Buttons & Dropdowns --- */
+    html[dir="ltr"] .dash-nav-btn,
+    html:not([dir="rtl"]) .dash-nav-btn {
+      flex-direction: row !important;
+      justify-content: flex-start !important;
+      text-align: left !important;
+    }
+
+    html[dir="ltr"] .dash-nav-btn .dash-nav-icon,
+    html:not([dir="rtl"]) .dash-nav-btn .dash-nav-icon {
+      order: 1 !important;
+      margin: 0 !important;
+    }
+
+    html[dir="ltr"] .dash-nav-btn span,
+    html:not([dir="rtl"]) .dash-nav-btn span {
+      order: 2 !important;
+      margin: 0 !important;
+      text-align: left !important;
+    }
+
+    html[dir="ltr"] .dash-user-pill,
+    html:not([dir="rtl"]) .dash-user-pill {
+      flex-direction: row !important;
+      justify-content: flex-start !important;
+    }
+
+    html[dir="ltr"] .dash-user-avatar,
+    html:not([dir="rtl"]) .dash-user-avatar {
+      order: 1 !important;
+      margin: 0 !important;
+    }
+
+    html[dir="ltr"] .dash-user-name,
+    html:not([dir="rtl"]) .dash-user-name {
+      order: 2 !important;
+      margin: 0 !important;
+      text-align: left !important;
+    }
+
+    html[dir="ltr"] .dash-user-dropdown-panel,
+    html:not([dir="rtl"]) .dash-user-dropdown-panel {
+      right: 0 !important;
+      left: auto !important;
+      text-align: left !important;
+    }
+
+    html[dir="ltr"] .dash-user-dropdown-item,
+    html:not([dir="rtl"]) .dash-user-dropdown-item {
+      flex-direction: row !important;
+      justify-content: flex-start !important;
+      text-align: left !important;
+      white-space: nowrap !important;
+    }
+
+    html[dir="ltr"] .dash-user-dropdown-item svg,
+    html:not([dir="rtl"]) .dash-user-dropdown-item svg {
+      order: 1 !important;
+      margin: 0 !important;
+    }
+
+    html[dir="ltr"] .dash-user-dropdown-item span,
+    html:not([dir="rtl"]) .dash-user-dropdown-item span {
+      order: 2 !important;
+      margin: 0 !important;
+      text-align: left !important;
+    }
+
+    /* RTL Direction Rules */
+    html[dir="rtl"] .dash-nav-btn {
+      flex-direction: row-reverse !important;
+      justify-content: flex-end !important;
+      text-align: right !important;
+      gap: 0.85rem !important;
+    }
+
+    html[dir="rtl"] .dash-nav-btn .dash-nav-icon {
+      order: 2 !important;
+      margin: 0 !important;
+    }
+
+    html[dir="rtl"] .dash-nav-btn span {
+      order: 1 !important;
+      margin: 0 !important;
+      text-align: right !important;
+    }
+
+    html[dir="rtl"] .dash-user-pill {
+      flex-direction: row-reverse !important;
+      justify-content: flex-end !important;
+      gap: 0.5rem !important;
+    }
+
+    html[dir="rtl"] .dash-user-avatar {
+      order: 2 !important;
+      margin: 0 !important;
+    }
+
+    html[dir="rtl"] .dash-user-name {
+      order: 1 !important;
+      margin: 0 !important;
+      text-align: right !important;
+    }
+
+    html[dir="rtl"] .dash-user-dropdown-panel {
+      left: 0 !important;
+      right: auto !important;
+      text-align: right !important;
+    }
+
+    html[dir="rtl"] .dash-user-dropdown-item {
+      flex-direction: row-reverse !important;
+      justify-content: flex-end !important;
+      text-align: right !important;
+      gap: 0.65rem !important;
+      white-space: nowrap !important;
+    }
+
+    html[dir="rtl"] .dash-user-dropdown-item svg {
+      order: 2 !important;
+      margin: 0 !important;
+    }
+
+    html[dir="rtl"] .dash-user-dropdown-item span {
+      order: 1 !important;
+      margin: 0 !important;
+      text-align: right !important;
+    }
+
+    html[dir="rtl"] .dash-nav-btn {
+      flex-direction: row-reverse !important;
+      justify-content: flex-end !important;
+      text-align: right !important;
+      gap: 0.85rem !important;
+    }
+
+    html[dir="rtl"] .dash-nav-btn .dash-nav-icon {
+      order: 2 !important;
+      margin: 0 !important;
+    }
+
+    html[dir="rtl"] .dash-nav-btn span {
+      order: 1 !important;
+      margin: 0 !important;
+      text-align: right !important;
+    }
+
+    html[dir="rtl"] .dash-user-pill {
+      flex-direction: row-reverse !important;
+      justify-content: flex-end !important;
+      gap: 0.5rem !important;
+    }
+
+    html[dir="rtl"] .dash-user-avatar {
+      order: 2 !important;
+      margin: 0 !important;
+    }
+
+    html[dir="rtl"] .dash-user-name {
+      order: 1 !important;
+      margin: 0 !important;
+      text-align: right !important;
+    }
+
+    html[dir="rtl"] .dash-user-dropdown-panel {
+      left: 0 !important;
+      right: auto !important;
+      text-align: right !important;
+    }
+
+    html[dir="rtl"] .dash-user-dropdown-item {
+      flex-direction: row-reverse !important;
+      justify-content: flex-end !important;
+      text-align: right !important;
+      gap: 0.65rem !important;
+      white-space: nowrap !important;
+    }
+
+    html[dir="rtl"] .dash-user-dropdown-item svg {
+      order: 2 !important;
+      margin: 0 !important;
+    }
+
+    html[dir="rtl"] .dash-user-dropdown-item span {
+      order: 1 !important;
+      margin: 0 !important;
+      text-align: right !important;
     }
 
     .dash-section {
@@ -419,7 +652,7 @@
     .dash-metrics-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 1.25rem;
+      gap: 1.15rem;
       margin-bottom: 2.25rem;
       align-items: stretch;
       width: 100% !important;
@@ -432,10 +665,12 @@
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid var(--dash-card-border) !important;
       border-radius: 18px;
-      padding: 1.5rem;
+      padding: 1.25rem 1.15rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      height: 100%;
+      min-height: 155px;
       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7) !important;
       color: #fff9f2 !important;
       transition: all 0.25s ease;
@@ -451,7 +686,7 @@
 
     .dash-metric-card.highlight {
       background: linear-gradient(135deg, rgba(35, 5, 14, 0.95), rgba(18, 2, 7, 0.95)) !important;
-      border: 2px solid rgba(229, 169, 60, 0.65) !important;
+      border: 1px solid rgba(229, 169, 60, 0.75) !important;
       box-shadow: 0 20px 50px rgba(123, 13, 39, 0.5) !important;
     }
 
@@ -461,19 +696,23 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: rgba(255, 249, 242, 0.55);
-      margin-bottom: 1.15rem;
+      margin-bottom: 0.85rem;
       display: block;
+      white-space: normal;
+      line-height: 1.25;
+      min-height: 18px;
     }
 
     .countdown-box-content {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 0.75rem;
+      min-width: 0;
     }
 
     .countdown-ring-circle {
-      width: 52px;
-      height: 52px;
+      width: 46px;
+      height: 46px;
       border-radius: 50%;
       border: 3px solid var(--dash-gold) !important;
       background: rgba(123, 13, 39, 0.3) !important;
@@ -482,38 +721,50 @@
       align-items: center;
       justify-content: center;
       font-family: var(--font-heading);
-      font-size: 1.4rem;
+      font-size: 1.25rem;
       font-weight: 900;
       flex-shrink: 0;
       box-shadow: 0 0 16px rgba(229, 169, 60, 0.3) !important;
     }
 
+    .countdown-meta {
+      min-width: 0;
+      flex: 1 1 auto;
+    }
+
     .countdown-meta h4 {
-      font-size: 1.05rem;
+      font-size: 0.95rem;
       font-weight: 800;
       color: #ffffff;
-      margin: 0 0 0.2rem;
-      white-space: nowrap;
+      margin: 0 0 0.15rem;
+      white-space: normal;
+      word-break: normal;
+      line-height: 1.25;
     }
 
     .countdown-meta span {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       color: rgba(255, 249, 242, 0.55);
-      white-space: nowrap;
+      white-space: normal;
+      word-break: normal;
+      line-height: 1.25;
+      display: block;
     }
 
     .rank-tier-title {
       font-family: var(--font-heading);
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       font-weight: 900;
       color: #ffffff;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.2rem;
+      line-height: 1.2;
     }
 
     .rank-tier-sub {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       color: rgba(255, 249, 242, 0.55);
-      margin-bottom: 0.85rem;
+      margin-bottom: 0.65rem;
+      line-height: 1.2;
     }
 
     .rank-progress-bar {
@@ -533,28 +784,30 @@
 
     .squad-count-big {
       font-family: var(--font-heading);
-      font-size: 2.75rem;
+      font-size: 2.2rem;
       font-weight: 900;
       color: var(--dash-gold) !important;
       line-height: 1;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.25rem;
     }
 
     .squad-count-sub {
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       color: rgba(255, 249, 242, 0.65);
       font-weight: 600;
+      line-height: 1.2;
     }
 
     .btn-briefing-confirm {
       width: 100%;
-      padding: 0.85rem 1.25rem;
+      height: 42px;
+      padding: 0.65rem 1rem;
       border-radius: 12px;
       border: 1px solid rgba(229, 169, 60, 0.5) !important;
       background: linear-gradient(135deg, var(--dash-burgundy) 0%, var(--dash-burgundy-deep) 100%) !important;
       color: #ffffff !important;
       font-family: var(--font-heading);
-      font-size: 0.84rem;
+      font-size: 0.8rem;
       font-weight: 800;
       letter-spacing: 0.05em;
       text-transform: uppercase;
@@ -565,7 +818,6 @@
       gap: 0.4rem;
       box-shadow: 0 8px 24px rgba(123, 13, 39, 0.55) !important;
       transition: all 0.22s ease;
-      margin-top: auto;
     }
 
     .btn-briefing-confirm:hover {
@@ -790,42 +1042,67 @@
       box-sizing: border-box !important;
     }
 
+    .dining-items-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      align-items: stretch;
+      margin-bottom: 1.5rem;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
     .dining-item-pill {
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(229, 169, 60, 0.2);
       border-radius: 14px;
-      padding: 1.15rem;
+      padding: 1.25rem;
       display: flex;
       align-items: flex-start;
       gap: 1rem;
       box-sizing: border-box !important;
       min-width: 0 !important;
+      height: 100%;
     }
 
     .dining-item-icon {
       font-size: 1.75rem;
       line-height: 1;
       flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .dining-item-info {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      height: 100%;
     }
 
     .dining-item-info h5 {
       font-size: 0.95rem;
       font-weight: 800;
       color: #ffffff;
-      margin: 0 0 0.2rem;
+      margin: 0 0 0.35rem;
+      min-height: 2.6rem;
+      display: flex;
+      align-items: flex-start;
+      line-height: 1.3;
     }
 
     .dining-item-info p {
       font-size: 0.78rem;
       color: rgba(255, 249, 242, 0.6);
-      margin: 0;
-      line-height: 1.4;
+      margin: 0 0 0.65rem;
+      line-height: 1.45;
+      min-height: 3.4rem;
+      flex: 1 1 auto;
     }
 
     .dining-item-price {
       display: inline-block;
-      margin-top: 0.4rem;
-      font-size: 0.84rem;
+      margin-top: auto;
+      font-size: 0.92rem;
       font-weight: 800;
       color: var(--dash-gold);
     }
@@ -846,6 +1123,7 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 1.25rem;
       width: 100% !important;
+      align-items: stretch;
       box-sizing: border-box !important;
     }
 
@@ -853,20 +1131,28 @@
       background: var(--dash-card);
       border: 1px solid var(--dash-card-border);
       border-radius: 18px;
-      padding: 1.75rem;
+      padding: 1.75rem 1.5rem;
       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      height: 100%;
       box-sizing: border-box !important;
       min-width: 0 !important;
+    }
+
+    .perk-card-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
     }
 
     .perk-card-top {
       display: flex;
       align-items: center;
       gap: 0.85rem;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
+      min-height: 48px;
     }
 
     .perk-icon-circle {
@@ -888,12 +1174,13 @@
       font-weight: 800;
       color: #ffffff;
       margin: 0;
+      line-height: 1.25;
     }
 
     .perk-sub {
       font-size: 0.78rem;
       color: rgba(255, 249, 242, 0.55);
-      margin: 0;
+      margin: 0.15rem 0 0;
     }
 
     .perk-big-val {
@@ -901,7 +1188,31 @@
       font-size: 2.1rem;
       font-weight: 900;
       color: var(--dash-gold);
-      margin: 0.6rem 0 0.2rem;
+      margin: 0.5rem 0 0.35rem;
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+    }
+
+    .perk-card p {
+      font-size: 0.8rem;
+      color: rgba(255, 249, 242, 0.65);
+      margin: 0 0 1.25rem;
+      line-height: 1.45;
+      min-height: 2.8rem;
+      flex: 1 1 auto;
+    }
+
+    .perk-card .btn-action-sm {
+      margin-top: auto !important;
+      width: 100%;
+      height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.82rem;
+      font-weight: 700;
+      box-sizing: border-box;
     }
 
     /* Telemetry Section Styles */
@@ -1082,17 +1393,21 @@
     }
 
     /* ==========================================================================
-       MOBILE RESPONSIVE BREAKPOINTS (<= 1024px & <= 768px & <= 480px)
+       MOBILE RESPONSIVE BREAKPOINTS (<= 1100px & <= 768px & <= 480px)
        ========================================================================== */
-    @media (max-width: 1024px) {
+    @media (max-width: 1100px) {
 
       /* Hide desktop sidebar on mobile/tablet (it's inside mobile menu drawer) */
       .dash-sidebar {
         display: none !important;
       }
 
+      html[dir="ltr"] .dash-main-area,
+      html[dir="rtl"] .dash-main-area,
+      html:not([dir="rtl"]) .dash-main-area,
       .dash-main-area {
         margin-left: 0 !important;
+        margin-right: 0 !important;
         width: 100% !important;
         max-width: 100% !important;
         padding: 1.75rem 1.25rem 4rem !important;
@@ -1128,9 +1443,21 @@
         display: inline-flex !important;
       }
 
+      .dash-metrics-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 1rem !important;
+      }
+
       .schedule-stages-row {
         grid-template-columns: repeat(3, 1fr) !important;
         gap: 1rem !important;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .dash-metrics-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.85rem !important;
       }
     }
 
@@ -1304,30 +1631,38 @@
             <span style="font-size: 0.75rem; color: #FCD68A;">ID: #SP-8824-VIP • Squad Captain</span>
           </div>
           <a href="#profile" class="dash-user-dropdown-item" role="menuitem">
-            <span>👤 Bowler Profile</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span>Bowler Profile</span>
           </a>
           <a href="#lanes" class="dash-user-dropdown-item" role="menuitem">
-            <span>🎳 Active Lane Manifest</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h7"></path></svg>
+            <span>Active Lane Manifest</span>
           </a>
           <a href="#milestones" class="dash-user-dropdown-item" role="menuitem">
-            <span>🏆 Tournament Milestones</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.45 1-1 1H8c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1c0-.55-.45-1-1-1h-1c-.55 0-1-.45-1-1v-2.34"></path><path d="M18 4H6v7a6 6 0 0 0 12 0V4z"></path></svg>
+            <span>Tournament Milestones</span>
           </a>
           <a href="#dining" class="dash-user-dropdown-item" role="menuitem">
-            <span>🍕 Alley Kitchen Orders</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+            <span>Alley Kitchen Orders</span>
           </a>
           <a href="#arcade" class="dash-user-dropdown-item" role="menuitem">
-            <span>🕹️ Arcade &amp; VIP Perks</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"></rect><path d="M6 12h4m-2-2v4m10-2h.01m-3-2h.01"></path></svg>
+            <span>Arcade &amp; VIP Perks</span>
           </a>
           <a href="#telemetry" class="dash-user-dropdown-item" role="menuitem">
-            <span>📊 Frame Telemetry</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            <span>Frame Telemetry</span>
           </a>
           <a href="book-lane.html" class="dash-user-dropdown-item" role="menuitem">
-            <span>⚡ Quick Lane Booking</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            <span>Quick Lane Booking</span>
           </a>
           <div style="border-top: 1px solid rgba(255, 255, 255, 0.08); margin-top: 0.35rem; padding-top: 0.35rem;">
             <a href="index.html" class="dash-user-dropdown-item" style="color: #fca5a5; font-weight: 700;"
               role="menuitem">
-              <span>🚪 Sign Out</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true" style="color: #fca5a5;"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+              <span>Sign Out</span>
             </a>
           </div>
         </div>
@@ -1415,34 +1750,42 @@
       </div>
 
       <!-- DASHBOARD SIDEBAR BUTTONS TUCKED INSIDE MOBILE DRAWER -->
-      <div class="drawer-nav-group-title">🎳 Bowler Dashboard Sections</div>
+      <div class="drawer-nav-group-title">Bowler Dashboard Sections</div>
       <a href="#profile" class="drawer-dash-link active" data-dash-nav="profile">
-        <span>👤 Bowler Profile</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        <span>Bowler Profile</span>
       </a>
       <a href="#lanes" class="drawer-dash-link" data-dash-nav="lanes">
-        <span>🎳 Active Lane Manifest</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h7"></path></svg>
+        <span>Active Lane Manifest</span>
       </a>
       <a href="#milestones" class="drawer-dash-link" data-dash-nav="milestones">
-        <span>🏆 Tournament Milestones</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.45 1-1 1H8c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1c0-.55-.45-1-1-1h-1c-.55 0-1-.45-1-1v-2.34"></path><path d="M18 4H6v7a6 6 0 0 0 12 0V4z"></path></svg>
+        <span>Tournament Milestones</span>
       </a>
       <a href="#dining" class="drawer-dash-link" data-dash-nav="dining">
-        <span>🍕 Alley Kitchen &amp; Dining</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+        <span>Alley Kitchen &amp; Dining</span>
       </a>
       <a href="#arcade" class="drawer-dash-link" data-dash-nav="arcade">
-        <span>🕹️ Arcade &amp; VIP Perks</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"></rect><path d="M6 12h4m-2-2v4m10-2h.01m-3-2h.01"></path></svg>
+        <span>Arcade &amp; VIP Perks</span>
       </a>
       <a href="#telemetry" class="drawer-dash-link" data-dash-nav="telemetry">
-        <span>📊 Frame Telemetry</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+        <span>Frame Telemetry</span>
       </a>
       <a href="book-lane.html" class="drawer-dash-link"
         style="background: rgba(229, 169, 60, 0.12); border: 1px solid rgba(229, 169, 60, 0.4); color: var(--dash-gold); font-weight: 800; margin-top: 0.5rem;">
-        <span>⚡ Book a New Lane</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+        <span>Book a New Lane</span>
       </a>
 
 
       <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08);">
         <a href="index.html" class="dash-logout-btn" style="justify-content: center;">
-          <span>🚪 Log Out</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true" style="color: #fca5a5;"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          <span>Log Out</span>
         </a>
       </div>
 
@@ -1686,7 +2029,7 @@
 
       <div class="section-headline-bar">
         <div class="section-eyebrow-tag">
-          <span>⚡</span> TOURNAMENT ROADMAP &amp; SCHEDULE
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--dash-gold); margin-right: 4px;" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> TOURNAMENT ROADMAP &amp; SCHEDULE
         </div>
       </div>
 
@@ -1694,7 +2037,7 @@
         <div class="schedule-banner-top">
           <div class="schedule-title-group">
             <h3>
-              <span>⚡</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--dash-gold); margin-right: 6px;" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
               <span>MATCH DAY TIMELINE — BRUNSWICK PRO ARENA</span>
             </h3>
             <p>Confirmed timeline with 30-minute electronic pinsetter calibration • Lane 14 Pro Arena Alpha</p>
@@ -1750,7 +2093,7 @@
 
       <div class="section-headline-bar">
         <div class="section-eyebrow-tag">
-          <span>🍕</span> ALLEY KITCHEN &amp; LANE-SIDE CRAFT DINING
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--dash-gold); margin-right: 4px;" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg> ALLEY KITCHEN &amp; LANE-SIDE CRAFT DINING
         </div>
         <span class="status-badge-active">Live Kitchen Order #AK-409</span>
       </div>
@@ -1766,7 +2109,7 @@
             </p>
           </div>
           <div class="live-confirmed-tag">
-            <span>🔥</span>
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #F87171; margin-right: 4px;" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
             <span>PREPARING AT GRILL</span>
           </div>
         </div>
@@ -1774,7 +2117,9 @@
         <div class="dining-items-grid">
 
           <div class="dining-item-pill">
-            <div class="dining-item-icon">🍕</div>
+            <div class="dining-item-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--dash-gold);" aria-hidden="true"><path d="M12 2l9 19H3L12 2z"></path><circle cx="12" cy="13" r="1.5" fill="currentColor"></circle><circle cx="9" cy="17" r="1.5" fill="currentColor"></circle><circle cx="15" cy="17" r="1.5" fill="currentColor"></circle></svg>
+            </div>
             <div class="dining-item-info">
               <h5>Artisanal Truffle Pinsa (x2)</h5>
               <p>Fermented sourdough crust, black truffle cream, fior di latte mozzarella.</p>
@@ -1783,7 +2128,9 @@
           </div>
 
           <div class="dining-item-pill">
-            <div class="dining-item-icon">🍺</div>
+            <div class="dining-item-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--dash-gold);" aria-hidden="true"><path d="M17 11h1a3 3 0 0 1 0 6h-1"></path><path d="M9 12v6"></path><path d="M13 12v6"></path><path d="M14 7.5c-1 0-1.44.5-3 .5s-2-.5-3-.5-1.72.5-2.5.5a2.5 2.5 0 0 1 0-5c.78 0 1.57.5 2.5.5s1.44-.5 3-.5 2 .5 3 .5 1.72-.5 2.5-.5a2.5 2.5 0 0 1 0 5c-.78 0-1.5-.5-2.5-.5z"></path><path d="M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8"></path></svg>
+            </div>
             <div class="dining-item-info">
               <h5>Cosmic Nitro IPA Pitcher (x1)</h5>
               <p>Fresh craft microbrew tap, citrus hops, crisp refreshing finish.</p>
@@ -1792,7 +2139,9 @@
           </div>
 
           <div class="dining-item-pill">
-            <div class="dining-item-icon">🍗</div>
+            <div class="dining-item-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--dash-gold);" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+            </div>
             <div class="dining-item-info">
               <h5>Sriracha Honey Wings (12 pcs)</h5>
               <p>Crisp double-fried jumbo wings, house chili glaze, creamy gorgonzola dip.</p>
@@ -1822,7 +2171,7 @@
 
       <div class="section-headline-bar">
         <div class="section-eyebrow-tag">
-          <span>🕹️</span> HYPER-ARCADE RIGS &amp; VIP ENTERTAINMENT PASSES
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--dash-gold); margin-right: 4px;" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"></rect><path d="M6 12h4m-2-2v4m10-2h.01m-3-2h.01"></path></svg> HYPER-ARCADE RIGS &amp; VIP ENTERTAINMENT PASSES
         </div>
       </div>
 
@@ -1830,9 +2179,11 @@
 
         <!-- Card 1: PowerCard Balance -->
         <div class="perk-card">
-          <div>
+          <div class="perk-card-content">
             <div class="perk-card-top">
-              <div class="perk-icon-circle">💳</div>
+              <div class="perk-icon-circle">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--dash-gold);" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+              </div>
               <div>
                 <h4 class="perk-title">Arcade PowerCard</h4>
                 <p class="perk-sub">Card ID: #PC-9912-GOLD</p>
@@ -1844,15 +2195,18 @@
             </p>
           </div>
           <button type="button" class="btn-action-sm" style="justify-content: center; width: 100%;">
-            <span>⚡ Reload PowerCard Credits</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            <span>Reload PowerCard Credits</span>
           </button>
         </div>
 
         <!-- Card 2: Laser Tag Arena Pass -->
         <div class="perk-card">
-          <div>
+          <div class="perk-card-content">
             <div class="perk-card-top">
-              <div class="perk-icon-circle">🎯</div>
+              <div class="perk-icon-circle">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--dash-gold);" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+              </div>
               <div>
                 <h4 class="perk-title">Laser Tag Arena</h4>
                 <p class="perk-sub">Sector 7 Neon Citadel</p>
@@ -1870,9 +2224,11 @@
 
         <!-- Card 3: VIP Mezzanine Pass -->
         <div class="perk-card">
-          <div>
+          <div class="perk-card-content">
             <div class="perk-card-top">
-              <div class="perk-icon-circle">🍸</div>
+              <div class="perk-icon-circle">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--dash-gold);" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
               <div>
                 <h4 class="perk-title">Mezzanine VIP Lounge</h4>
                 <p class="perk-sub">Exclusive Suite Access</p>
@@ -1899,7 +2255,7 @@
 
       <div class="section-headline-bar">
         <div class="section-eyebrow-tag">
-          <span>📊</span> BOWLER FRAME TELEMETRY &amp; LIVE RADAR STATS
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--dash-gold); margin-right: 4px;" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg> BOWLER FRAME TELEMETRY &amp; LIVE RADAR STATS
         </div>
         <span class="status-badge-active">Match #4 Game High: 236</span>
       </div>

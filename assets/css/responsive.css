@@ -62,13 +62,45 @@
     justify-content: center;
   }
 
+  .footer-inner {
+    padding-bottom: 6rem !important;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
+    gap: 2.75rem 2rem;
   }
 
   .footer-col-brand {
     grid-column: span 2;
+  }
+
+  .footer-col-contact {
+    grid-column: span 2;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  .footer-contact-items-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.85rem !important;
+    align-items: flex-start !important;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+    padding-top: 2rem;
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem 1.75rem;
   }
 }
 
@@ -97,7 +129,7 @@
   }
 
   .footer-inner {
-    padding: 3.5rem 1.25rem 1.5rem;
+    padding: 3.5rem 1.25rem 6rem !important;
   }
 }
 
@@ -154,24 +186,43 @@
     height: 38px;
   }
 
+  .footer-inner {
+    padding: 3rem 1.25rem 6rem !important;
+  }
+
   .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 2.25rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.25rem 1.25rem;
   }
 
   .footer-col-brand {
-    grid-column: span 1;
+    grid-column: span 2;
+  }
+
+  .footer-col-contact {
+    grid-column: span 2;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1.75rem;
+  }
+
+  .footer-contact-items-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
   }
 
   .footer-bottom {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+    padding-top: 1.75rem;
   }
 
   .footer-bottom-links {
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.75rem 1.25rem;
   }
 }
 
@@ -709,6 +760,12 @@
   .members-pass-card {
     padding: 2rem 1.25rem;
   }
+
+  .members-card-header {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
 }
 
 @media (max-width: 380px) {
@@ -1072,7 +1129,7 @@
 }
 
 /* --- Party Celebrations Responsive Adjustments --- */
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .party-hero-grid,
   .party-studio-grid,
   .arcade-bonus-wrap {
@@ -1119,7 +1176,7 @@
 }
 
 /* --- Pricing System Responsive Adjustments --- */
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .pricing-hero-grid,
   .pricing-hero-showcase-grid,
   .exchange-grid-layout,
@@ -1309,7 +1366,7 @@
 }
 
 /* --- Contact Page Modern Responsive Rules --- */
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .contact-hero-section {
     padding: 2rem 0 2.5rem;
     min-height: auto;
@@ -1470,15 +1527,20 @@
 }
 
 /* --- Dashboard Responsive Adjustments --- */
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   /* On mobile and tablet, sidebar is tucked inside mobile menu drawer */
   .dash-sidebar {
     display: none !important;
   }
 
+  html[dir="ltr"] .dash-main-area,
+  html[dir="rtl"] .dash-main-area,
+  html:not([dir="rtl"]) .dash-main-area,
   .dash-main-area {
     margin-left: 0 !important;
+    margin-right: 0 !important;
     width: 100% !important;
+    max-width: 100% !important;
     margin-top: 68px !important;
     padding: 2rem 1.5rem 4rem !important;
   }
@@ -1518,12 +1580,20 @@
   }
 
   .dash-metrics-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
   }
 
   .schedule-stages-row {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .dash-metrics-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.85rem !important;
   }
 }
 
@@ -1595,8 +1665,17 @@
 /* --------------------------------------------------------------------------
    About Page & Universal Footer Responsiveness
    -------------------------------------------------------------------------- */
-@media (max-width: 1024px) {
-  .about-hero-grid,
+@media (max-width: 1100px) {
+  .about-hero-grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .about-hero-visual-img {
+    height: 380px;
+  }
+
   .about-story-grid,
   .about-zone-pane {
     grid-template-columns: 1fr;
@@ -1611,9 +1690,9 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Heritage Section Responsive (1024px) */
+  /* Heritage Section Responsive (<= 1100px) */
   .heritage-eras-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 1.25rem;
     margin-bottom: 2.5rem;
   }
@@ -1624,6 +1703,13 @@
 
   .heritage-panorama-visual {
     min-height: 260px;
+  }
+}
+
+@media (max-width: 860px) {
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
   }
 }
 
@@ -1713,23 +1799,20 @@
     padding: 0.65rem 0.75rem;
   }
 
+  .footer-inner {
+    padding-bottom: 6rem !important;
+  }
+}
+
+@media (max-width: 420px) {
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
-  .footer-col-brand {
+  .footer-col-brand,
+  .footer-col-contact {
     grid-column: span 1;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-  }
-
-  .footer-bottom-links {
-    justify-content: center;
   }
 }
 
@@ -1801,7 +1884,7 @@
   box-sizing: border-box !important;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .booking-hero-banner,
   .leagues-hero-section,
   .pricing-hero-section,
