@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Discover the story, heritage, and cutting-edge engineering behind Strike & Pin Entertainment Center. 32 Brunswick Pro Lanes, hyper-arcade rigs, and artisanal craft dining.">
+  <title>About Our Epicenter | Strike &amp; Pin Entertainment</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/icons/logo.png">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700;900&family=Outfit:wght@500;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <style>
+    body {
+      background-color: #070103 !important;
+      color: #fff9f2 !important;
+    }
+  </style>
+</head>
+
+<body class="bg-black text-primary font-body antialiased">
+
+  <!-- ==========================================================================
+       BRANDED PRELOADER
+       ========================================================================== -->
+  <div id="preloader" role="status" aria-label="Loading Strike & Pin Center">
+    <div class="loader-content">
+      <div class="loader-brand">
+        <img src="assets/images/icons/logo.png" alt="Strike & Pin Bowling Logo" class="loader-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-title">Strike<span>&</span>Pin</span>
+          <span class="brand-subtitle">Bowling & Entertainment</span>
+        </div>
+      </div>
+      <div class="loader-pin-indicator" aria-hidden="true">
+        <span class="loader-dot"></span>
+        <span class="loader-dot"></span>
+        <span class="loader-dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FIXED COMPACT HEADER
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+
+      <!-- Brand Logo + Name -->
+      <a href="index.html" class="header-brand" aria-label="Strike & Pin Homepage">
+        <img src="assets/images/icons/logo.png" alt="Strike & Pin Bowling Logo" class="header-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-title">Strike<span>&</span>Pin</span>
+          <span class="brand-subtitle">Bowling & Entertainment</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+
+        <!-- 1. Home (Dropdown - CLICK ONLY) -->
+        <div class="nav-dropdown-wrapper" id="homeDropdownWrapper">
+          <button type="button" class="nav-link nav-dropdown-trigger" id="homeDropdownTrigger" aria-haspopup="true"
+            aria-expanded="false">
+            <span>Home</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="dropdown-panel" role="menu" aria-label="Home Variations">
+            <a href="index.html" class="dropdown-item" role="menuitem">
+              <span>Home 1 (Cosmic Arena)</span>
+              <span class="dropdown-badge">V1</span>
+            </a>
+            <a href="home-2.html" class="dropdown-item" role="menuitem">
+              <span>Home 2 (Retro Lounge)</span>
+              <span class="dropdown-badge">V2</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Book a Lane -->
+        <a href="book-lane.html" class="nav-link">
+          <span>Book a Lane</span>
+        </a>
+
+        <!-- 3. Leagues & Tournaments -->
+        <a href="leagues.html" class="nav-link">
+          <span>Leagues & Tournaments</span>
+        </a>
+
+        <!-- 4. Pricing -->
+        <a href="pricing.html" class="nav-link">
+          <span>Pricing</span>
+        </a>
+
+        <!-- 6. About (ACTIVE) -->
+        <a href="about.html" class="nav-link active" aria-current="page">
+          <span>About</span>
+        </a>
+
+        <!-- 7. Contact -->
+        <a href="contact.html" class="nav-link">
+          <span>Contact</span>
+        </a>
+
+        <!-- 8. Dashboard -->
+        <a href="dashboard.html" class="nav-link">
+          <span>Dashboard</span>
+        </a>
+      </nav>
+
+      <!-- Header Controls: RTL, Dark Mode, Dedicated Login Button -->
+      <div class="header-actions">
+
+        <!-- RTL/LTR Toggle -->
+        <button type="button" class="utility-btn rtl-toggle-btn" aria-label="Toggle text direction (RTL/LTR)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 3L4 7l4 4"></path>
+            <path d="M4 7h16"></path>
+            <path d="M16 21l4-4-4-4"></path>
+            <path d="M20 17H4"></path>
+          </svg>
+          <span class="utility-label dir-label-text">RTL</span>
+        </button>
+
+        <!-- Dark Mode Toggle (Pure #000000) -->
+        <button type="button" class="utility-btn dark-mode-toggle" aria-label="Toggle dark mode" aria-pressed="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <span class="utility-label">Theme</span>
+        </button>
+        <!-- Dedicated Member Login Button -->
+        <a href="login.html" class="btn-login desktop-only" aria-label="Sign in to Bowler Portal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            <polyline points="10 17 15 12 10 7"></polyline>
+            <line x1="15" y1="12" x2="3" y2="12"></line>
+          </svg>
+          <span>Login</span>
+        </a>
+
+        <!-- Mobile Drawer Hamburger Toggle Button -->
+        <button type="button" class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Open mobile navigation menu"
+          aria-controls="mobileDrawer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MOBILE NAVIGATION DRAWER
+       ========================================================================== -->
+  <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" role="dialog" aria-modal="true">
+
+    <div class="mobile-drawer-header">
+      <div class="header-brand">
+        <img src="assets/images/icons/logo.png" alt="Strike & Pin Logo" class="header-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-title">Strike<span>&</span>Pin</span>
+          <span class="brand-subtitle">Bowling & Entertainment</span>
+        </div>
+      </div>
+      <button type="button" class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close navigation menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-content">
+      <div class="mobile-accordion-wrapper" id="mobileHomeAccordion">
+        <button type="button" class="mobile-nav-link mobile-accordion-toggle" id="mobileHomeAccordionToggle"
+          aria-expanded="false">
+          <span>Home</span>
+          <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="mobile-accordion-panel" id="mobileHomePanel">
+          <a href="index.html" class="mobile-sub-link">
+            <span>Home 1 (Cosmic Arena)</span>
+            <span class="dropdown-badge">V1</span>
+          </a>
+          <a href="home-2.html" class="mobile-sub-link">
+            <span>Home 2 (Retro Lounge)</span>
+            <span class="dropdown-badge">V2</span>
+          </a>
+        </div>
+      </div>
+
+      <a href="book-lane.html" class="mobile-nav-link"><span>Book a Lane</span></a>
+      <a href="leagues.html" class="mobile-nav-link"><span>Leagues & Tournaments</span></a>
+      <a href="pricing.html" class="mobile-nav-link"><span>Pricing & Bundles</span></a>
+      <a href="about.html" class="mobile-nav-link active"><span>About Us</span></a>
+      <a href="contact.html" class="mobile-nav-link"><span>Contact & Location</span></a>
+      <a href="dashboard.html" class="mobile-nav-link"><span>Bowler Dashboard</span></a>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <a href="login.html" class="btn-login w-full text-center">
+        <span>Bowler Portal Login</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MAIN CONTENT
+       ========================================================================== -->
+  <main id="mainContent">
+
+    <!-- Section 1: Hero Showcase with Live Stats -->
+    <section class="about-hero-section">
+      <div class="container">
+        <div class="about-hero-grid">
+          <div>
+            <div class="about-badge-strip">
+              <span>★</span>
+              <span>Our Story &amp; Epicenter Heritage</span>
+            </div>
+            <h1 class="about-hero-title">
+              Engineering the <span>Cosmic Future</span> of Bowling &amp; Nightlife
+            </h1>
+            <p class="about-hero-desc">
+              Born from a passion for precision competition and unforgettable celebrations, Strike &amp; Pin blends
+              world-class Brunswick tournament lanes with high-octane cosmic lighting, artisanal wood-fired gastronomy,
+              and next-generation arcade entertainment.
+            </p>
+            <div class="hero-actions-row">
+              <a href="book-lane.html" class="btn btn-primary">
+                <span>Reserve a Lane</span>
+                <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+              <a href="#facilityTour" class="btn btn-secondary">
+                <span>Explore Facility</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Side: Luxury Hero Visual Showcase -->
+          <div class="about-hero-visual">
+            <div class="about-hero-visual-frame">
+              <img src="assets/images/about/about-hero-epicenter.jpg"
+                alt="Strike & Pin Cosmic Bowling & Luxury Entertainment Center Sanctuary" class="about-hero-visual-img">
+              <div class="about-hero-floating-pill">
+                <div class="about-hero-pill-badge">
+                  <span class="badge-dot-live"></span>
+                  <span>Flagship Sanctuary</span>
+                </div>
+                <span class="about-hero-pill-text">45,000 Sq.Ft Multi-Sensory Entertainment Hub</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 2: HERITAGE & ORIGIN EVOLUTIONARY ERA SHOWCASE
+         ======================================================================== -->
+    <section class="about-story-section" id="heritageStorySection" aria-label="Our Evolutionary Journey">
+      <div class="container">
+
+        <div class="section-header text-center mb-12">
+          <div class="about-badge-strip justify-center">
+            <span>★</span>
+            <span>Our 38-Year Evolutionary Heritage</span>
+          </div>
+          <h2 class="section-heading">From Solid Maple Roots to <span>The Cosmic Future</span></h2>
+          <p class="section-subheading">
+            What began in 1988 as a 12-lane neighborhood alley has evolved through relentless craftsmanship and
+            architectural innovation into a 45,000 sq.ft. multi-sensory leisure sanctuary.
+          </p>
+        </div>
+
+        <!-- 4 Era Milestone Cards Grid -->
+        <div class="heritage-eras-grid">
+
+          <!-- Era 1: 1988 -->
+          <article class="era-milestone-card">
+            <div class="era-card-header">
+              <span class="era-year-badge">1988</span>
+              <span class="era-phase-tag">The Genesis</span>
+            </div>
+            <h3 class="era-card-title">The Solid Maple Era</h3>
+            <p class="era-card-desc">
+              Founded with 12 authentic maple wood lanes and hand-cranked pinsetters, quickly becoming the regional
+              heartbeat for competitive league bowlers.
+            </p>
+            <div class="era-stat-pill">
+              <span class="perk-check">✓</span> 12 Original Hardwood Lanes
+            </div>
+          </article>
+
+          <!-- Era 2: 2012 -->
+          <article class="era-milestone-card">
+            <div class="era-card-header">
+              <span class="era-year-badge">2012</span>
+              <span class="era-phase-tag">Sensory Leap</span>
+            </div>
+            <h3 class="era-card-title">The Cosmic Revolution</h3>
+            <p class="era-card-desc">
+              Pioneered UV neon cosmic bowling in the region with 50,000-watt nightclub audio rigs, glowing pins, and
+              choreographed laser canopy light shows.
+            </p>
+            <div class="era-stat-pill">
+              <span class="perk-check">✓</span> 50kW Concert Audio &amp; UV Lasers
+            </div>
+          </article>
+
+          <!-- Era 3: 2021 -->
+          <article class="era-milestone-card">
+            <div class="era-card-header">
+              <span class="era-year-badge">2021</span>
+              <span class="era-phase-tag">Culinary &amp; Tech</span>
+            </div>
+            <h3 class="era-card-title">HyperBowling &amp; Craft Taps</h3>
+            <p class="era-card-desc">
+              Integrated smart-bumper HyperBowling video challenges, added VIP mezzanine suites, and debuted our 24-tap
+              craft beer lounge and stone-fired kitchen.
+            </p>
+            <div class="era-stat-pill">
+              <span class="perk-check">✓</span> 45,000 Sq.Ft Multi-Zone Center
+            </div>
+          </article>
+
+          <!-- Era 4: 2026 -->
+          <article class="era-milestone-card active">
+            <div class="era-card-header">
+              <span class="era-year-badge highlight">2026</span>
+              <span class="era-phase-tag gold">Current Flagship</span>
+            </div>
+            <h3 class="era-card-title">The Next-Gen Epicenter</h3>
+            <p class="era-card-desc">
+              32 championship Brunswick lanes with Sync precision laser scoring, real-time Specto bowler portal
+              leaderboards, and USBC tournament accreditation.
+            </p>
+            <div class="era-stat-pill">
+              <span class="perk-check">✓</span> 32 Pro Lanes &amp; Live Telemetry
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Panoramic Heritage Founder Banner -->
+        <div class="heritage-panorama-banner">
+          <div class="heritage-panorama-visual">
+            <img src="assets/images/sections/p29.jpg" alt="Vintage Strike and Pin Wooden Lanes Craftsmanship"
+              class="heritage-panorama-img" loading="lazy">
+            <span class="heritage-visual-tag">100% Authentic Maple Heritage</span>
+          </div>
+
+          <div class="heritage-panorama-content">
+            <div class="about-badge-strip">
+              <span>✦</span> Founder's Architectural Creed <span>✦</span>
+            </div>
+            <blockquote class="heritage-quote">
+              "We didn't just build another bowling alley — we engineered an enduring cathedral of competition,
+              camaraderie, and celebration where three generations have forged unforgettable memories."
+            </blockquote>
+            <div class="heritage-signature-row">
+              <div>
+                <strong class="text-white text-base block font-heading">Marcus Vance Sr. &amp; Elena Vance</strong>
+                <span class="text-xs text-muted">Founders &amp; Master Curators of Strike &amp; Pin</span>
+              </div>
+              <div class="heritage-creed-badges">
+                <span>✓ 38 Years of Continuous Excellence</span>
+                <span>✓ 150K+ Annual Happy Guests</span>
+                <span>✓ USBC Gold Certified Standard</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Section 4: Interactive Facility Zone Showcase -->
+    <section class="about-zones-section" id="facilityTour">
+      <div class="container">
+
+        <div class="text-center max-w-2xl mx-auto" style="margin-bottom: 2.25rem;">
+          <div class="about-badge-strip justify-center">
+            <span>Facility Tour</span>
+            <span>Explore Strike &amp; Pin</span>
+          </div>
+          <h2 class="text-white text-3xl md:text-4xl font-extrabold font-heading mb-3">
+            Four Unique Zones Under One Roof
+          </h2>
+          <p class="text-brand-cream text-base">
+            Click any zone below to preview the atmosphere, equipment, and amenities waiting for you.
+          </p>
+        </div>
+
+        <!-- Zone Tabs Nav -->
+        <div class="about-zone-nav-wrapper">
+          <div class="about-zone-nav" role="tablist" aria-label="Facility Zones">
+            <button type="button" class="about-zone-btn active" data-zone="cosmic" role="tab" aria-selected="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="10" cy="8" r="1.5" fill="currentColor"></circle>
+                <circle cx="14" cy="8" r="1.5" fill="currentColor"></circle>
+                <circle cx="12" cy="12" r="1.5" fill="currentColor"></circle>
+              </svg>
+              <span>Main Cosmic Lanes</span>
+            </button>
+            <button type="button" class="about-zone-btn" data-zone="vip" role="tab" aria-selected="false">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"></path>
+                <path d="M5 20h14"></path>
+              </svg>
+              <span>VIP Mezzanine Suite</span>
+            </button>
+            <button type="button" class="about-zone-btn" data-zone="arcade" role="tab" aria-selected="false">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="6" width="20" height="12" rx="6"></rect>
+                <path d="M6 12h4m-2-2v4"></path>
+                <circle cx="17" cy="10" r="1" fill="currentColor"></circle>
+                <circle cx="15" cy="13" r="1" fill="currentColor"></circle>
+              </svg>
+              <span>Hyper-Arcade Arena</span>
+            </button>
+            <button type="button" class="about-zone-btn" data-zone="craftbar" role="tab" aria-selected="false">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                <line x1="6" y1="1" x2="6" y2="4"></line>
+                <line x1="10" y1="1" x2="10" y2="4"></line>
+                <line x1="14" y1="1" x2="14" y2="4"></line>
+              </svg>
+              <span>Craft Taproom &amp; Lounge</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tab Panes -->
+        <!-- Pane 1: Cosmic Lanes -->
+        <div class="about-zone-pane active" id="zone-cosmic" role="tabpanel">
+          <div class="zone-img-frame">
+            <img src="assets/images/sections/p30.jpg" alt="Main Cosmic Bowling Lanes with UV Glow">
+          </div>
+          <div class="zone-details">
+            <h3>Main Cosmic Competition Lanes</h3>
+            <p>
+              24 full-regulation lanes equipped with Brunswick Sync auto-scoring, hyper-responsive LED bumpers for
+              youngsters, and dazzling cosmic light shows every evening after 7 PM.
+            </p>
+            <ul class="zone-perks-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Automated bumper transitions per player</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>High-definition 85" overhead displays</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Full lane-side food &amp; beverage table service</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Pane 2: VIP Suite -->
+        <div class="about-zone-pane" id="zone-vip" role="tabpanel">
+          <div class="zone-img-frame">
+            <img src="assets/images/sections/p31.jpg"
+              alt="The Royal Pin VIP Bowling Suites with crystal chandelier and private luxury lanes">
+          </div>
+          <div class="zone-details">
+            <div class="eyebrow-badge" style="margin-bottom: 0.75rem; width: fit-content;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                </path>
+              </svg>
+              <span>Private Luxury Experience</span>
+            </div>
+            <h3 style="font-size: 1.5rem; font-weight: 900; color: #FFFFFF; text-transform: uppercase;">The Royal Pin
+              <span style="color: var(--brand-gold-400);">VIP Bowling Suites</span>
+            </h3>
+            <p>
+              Designed for exclusive celebrations, corporate executive retreats, and private parties. Experience private
+              4-lane suites isolated from the main hall with dedicated concierge hospitality.
+            </p>
+            <ul class="zone-perks-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>AR Projection Lanes with dynamic target animations</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Dedicated Server Butler for bottle &amp; table service</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Plush velvet leather banquettes with wireless chargers</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Custom Ball Weight Vault (8 to 16 lbs precision balls)</span>
+              </li>
+            </ul>
+            <div style="margin-top: 1.5rem;">
+              <a href="book-lane.html" class="btn-primary"
+                style="display: inline-flex; width: fit-content; text-decoration: none;">
+                <span>Reserve VIP Suite</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pane 3: Arcade Arena -->
+        <div class="about-zone-pane" id="zone-arcade" role="tabpanel">
+          <div class="zone-img-frame">
+            <img src="assets/images/sections/p32.jpg" alt="High-tech Arcade Playground">
+          </div>
+          <div class="zone-details">
+            <h3>Hyper-Arcade &amp; VR Playground</h3>
+            <p>
+              Over 85 premier arcade installations, full-motion racing pods, 4-player air hockey, and a giant redemption
+              store with top-tier tech rewards.
+            </p>
+            <ul class="zone-perks-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>100% contactless RFID power cards</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Virtual Reality multiplayer experience pods</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Instant e-ticket banking and redemption</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Pane 4: Craft Bar -->
+        <div class="about-zone-pane" id="zone-craftbar" role="tabpanel">
+          <div class="zone-img-frame">
+            <img src="assets/images/sections/p33.jpg" alt="Artisanal Craft Beer and Cocktails">
+          </div>
+          <div class="zone-details">
+            <h3>The Pinsetter Craft Taproom</h3>
+            <p>
+              Featuring 24 rotating regional craft beers on draft, barrel-aged signature cocktails, mocktail flights,
+              and big-screen sports lounge seating.
+            </p>
+            <ul class="zone-perks-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Happy Hour drink specials Mon &ndash; Thu 4&ndash;7 PM</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Artisan shareable platters &amp; sliders</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Curated craft beer flights and tasting cards</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 5: The Leadership & Lane Masters -->
+    <section class="about-team-section">
+      <div class="container">
+
+        <div class="text-center max-w-2xl mx-auto mb-8">
+          <div class="about-badge-strip justify-center">
+            <span>★</span>
+            <span>Lane Marshals &bull; The Team Behind The Strikes</span>
+          </div>
+          <h2 class="text-white text-3xl md:text-4xl font-extrabold font-heading mb-3">
+            Passionate Masters of Hospitality &amp; Sport
+          </h2>
+          <p class="text-brand-cream text-base">
+            From USBC certified coaches to culinary creators, our leadership team ensures flawless operations day and
+            night.
+          </p>
+        </div>
+
+        <div class="about-team-grid">
+
+          <!-- Member 1 -->
+          <div class="about-member-card">
+            <div class="member-avatar-box">
+              <img src="assets/images/sections/contact-team-marcus.jpg" alt="Marcus Vance Head Lane Technician">
+            </div>
+            <h3 class="member-name">Marcus Vance</h3>
+            <span class="member-role">Master Lane &amp; Pin Technician</span>
+            <p class="member-bio">
+              With 18 years of Brunswick mechanical certification, Marcus oversees lane conditioning, oil pattern
+              accuracy, and pinsetter speed.
+            </p>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="about-member-card">
+            <div class="member-avatar-box">
+              <img src="assets/images/sections/contact-team-elena.jpg" alt="Elena Rostova Experience Director">
+            </div>
+            <h3 class="member-name">Elena Rostova</h3>
+            <span class="member-role">VIP &amp; Events Director</span>
+            <p class="member-bio">
+              Elena has orchestrated over 1,200 celebratory birthdays, corporate tournaments, and private buyouts with
+              white-glove hospitality.
+            </p>
+          </div>
+
+          <!-- Member 3 -->
+          <div class="about-member-card">
+            <div class="member-avatar-box">
+              <img src="assets/images/sections/contact-team-david.jpg" alt="David Chen Head Tournament Coach">
+            </div>
+            <h3 class="member-name">David Chen</h3>
+            <span class="member-role">Head Coach &amp; League Marshal</span>
+            <p class="member-bio">
+              Former regional PBA tour contender, David leads our youth development camps, weekly leagues, and ball
+              fitting consultations.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CALL TO ACTION (CTA): READY TO ROLL
+         ========================================================================== -->
+    <section class="site-cta-section" aria-label="Book Your Lane Experience">
+      <div class="section-container">
+        <div class="site-cta-card">
+          <div class="site-cta-glow" aria-hidden="true"></div>
+          <div class="site-cta-content">
+            <div class="eyebrow-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                </path>
+              </svg>
+              <span>Authentic Heritage &amp; Craft Since 1968</span>
+            </div>
+            <h2 class="site-cta-heading">Ready to Experience <span>True Bowling Heritage?</span></h2>
+            <p class="site-cta-subtext">
+              From hand-oiled northern maple lanes and restored vintage pinsetters to artisanal kitchen dining and
+              master coaching clinics—experience the timeless thrill of real bowling.
+            </p>
+            <div class="site-cta-actions">
+              <a href="book-lane.html" class="btn-primary">
+                <span>⚡ Book an Authentic Lane Session</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+
+              <a href="pricing.html" class="btn-secondary" style="border-color: rgba(255,255,255,0.18);">
+                <span>Explore Venue Pricing</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       SHARED EDITORIAL 4-COLUMN FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+
+        <!-- Column 1: Brand & Editorial Bio -->
+        <div class="footer-col-brand">
+          <div class="footer-brand-header">
+            <img src="assets/images/icons/logo.png" alt="Strike & Pin Logo" class="footer-logo-img">
+            <div class="brand-text-group">
+              <span class="brand-title">Strike<span>&</span>Pin</span>
+              <span class="brand-subtitle">Bowling & Entertainment</span>
+            </div>
+          </div>
+          <p class="footer-description">
+            Your premier cosmic bowling sanctuary, arcade playground, and event destination. Engineered for
+            unforgettable celebrations, competitive league play, and gourmet social dining.
+          </p>
+          <div class="footer-badges-row">
+            <span class="footer-badge">32 Pro Lanes</span>
+            <span class="footer-badge">Hyper-Arcade</span>
+            <span class="footer-badge">VIP Lounge</span>
+            <span class="footer-badge">USBC Certified</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Navigation Links -->
+        <div>
+          <h2 class="footer-heading">Navigation</h2>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home (Cosmic Arena)</a></li>
+            <li><a href="home-2.html" class="footer-link">Home 2 (Retro Lounge)</a></li>
+            <li><a href="book-lane.html" class="footer-link">Book a Lane</a></li>
+            <li><a href="leagues.html" class="footer-link">Leagues &amp; Tournaments</a></li>
+            <li><a href="birthday-parties.html" class="footer-link">Birthday Parties</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing &amp; Bundles</a></li>
+            <li><a href="about.html" class="footer-link" style="color: var(--accent-gold); font-weight: 700;">About Our
+                Venue</a></li>
+            <li><a href="contact.html" class="footer-link">Contact &amp; Inquiries</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Entertainment & Leagues -->
+        <div>
+          <h3 class="footer-heading">Experiences</h3>
+          <ul class="footer-links-list">
+            <li><a href="leagues.html" class="footer-link">Tuesday Classic League</a></li>
+            <li><a href="leagues.html" class="footer-link">Thursday Cosmic Clash</a></li>
+            <li><a href="pricing.html" class="footer-link">Youth Birthday Packages</a></li>
+            <li><a href="pricing.html" class="footer-link">Corporate Venue Buyouts</a></li>
+            <li><a href="dashboard.html" class="footer-link">Bowler Score Tracker</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact & Location -->
+        <div>
+          <h2 class="footer-heading">Direct Contact</h2>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>742 Evergreen Cosmic Way, Arena District, Metro City</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span>+1 (800) 555-PINN (7466)</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>concierge@strikepinbowling.com</span>
+          </div>
+
+          <div style="margin-top: 1.25rem;">
+            <a href="contact.html#googleLiveMapSection" class="btn-login"
+              style="display: inline-block; padding: 0.5rem 1rem; font-size: 0.8rem;">
+              <span>📍 View Google Live Map</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Strike &amp; Pin Entertainment Center LLC. All Rights Reserved.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="about.html" class="footer-link">About Venue</a>
+          <a href="pricing.html" class="footer-link">Rate Card</a>
+          <a href="contact.html" class="footer-link">Directions</a>
+          <a href="dashboard.html" class="footer-link">Bowler Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+      aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="assets/js/main.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in or register for your Strike & Pin bowler account to manage lane bookings, tournament brackets, and reward passes.">
+  <title>Sign In &amp; Register | Strike &amp; Pin Entertainment</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/icons/logo.png">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <style>
+    /* ==========================================================================
+       LOGIN PORTAL BESPOKE COSMIC LUXURY THEME & COMPACT VIEWPORT ENGINE
+       ========================================================================== */
+    :root {
+      --portal-bg: #070103;
+      --portal-burgundy: #7B0D27;
+      --portal-burgundy-deep: #4D0717;
+      --portal-gold: #F5BC51;
+      --portal-gold-light: #FCD68A;
+      --portal-card: rgba(18, 3, 7, 0.94);
+      --portal-border: rgba(229, 169, 60, 0.35);
+    }
+
+    html, body.login-portal-body {
+      background: radial-gradient(circle at 50% 35%, rgba(123, 13, 39, 0.45), var(--portal-bg) 70%), var(--portal-bg) !important;
+      color: #fff9f2 !important;
+      min-height: 100vh !important;
+      margin: 0 !important;
+      padding: 1rem !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Fixed Compact Luxury Top Utilities (Dark Mode & RTL Buttons) */
+    .portal-top-utilities {
+      position: fixed !important;
+      top: 1.25rem !important;
+      right: 1.75rem !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.65rem !important;
+      z-index: 1000 !important;
+    }
+
+    html[dir="rtl"] .portal-top-utilities {
+      right: auto !important;
+      left: 1.75rem !important;
+    }
+
+    .portal-utility-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 0.45rem !important;
+      height: 38px !important;
+      width: auto !important;
+      min-width: 0 !important;
+      padding: 0 0.95rem !important;
+      border-radius: 999px !important;
+      background: rgba(18, 3, 7, 0.92) !important;
+      border: 1px solid rgba(229, 169, 60, 0.45) !important;
+      color: var(--portal-gold) !important;
+      font-size: 0.78rem !important;
+      font-weight: 700 !important;
+      cursor: pointer !important;
+      backdrop-filter: blur(14px) !important;
+      -webkit-backdrop-filter: blur(14px) !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6) !important;
+      transition: all 0.2s ease !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.04em !important;
+      user-select: none !important;
+      white-space: nowrap !important;
+      box-sizing: border-box !important;
+    }
+
+    .portal-utility-btn:hover {
+      background: rgba(123, 13, 39, 0.7) !important;
+      border-color: var(--portal-gold) !important;
+      color: #ffffff !important;
+      transform: translateY(-1px) !important;
+      box-shadow: 0 6px 20px rgba(123, 13, 39, 0.55) !important;
+    }
+
+    .portal-utility-btn svg {
+      width: 15px !important;
+      height: 15px !important;
+      flex-shrink: 0 !important;
+      color: var(--portal-gold) !important;
+    }
+
+    .portal-utility-btn:hover svg {
+      color: #ffffff !important;
+    }
+
+    .portal-utility-btn .dir-label-text,
+    .portal-utility-btn .theme-label-text {
+      display: inline-block !important;
+      font-size: 0.78rem !important;
+      font-weight: 700 !important;
+      line-height: 1 !important;
+      color: inherit !important;
+    }
+
+    /* Mobile Responsive Placement: Cleanly seated above the login card without overlapping */
+    @media (max-width: 768px) {
+      body.login-portal-body {
+        padding: 1.25rem 1rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        min-height: 100vh !important;
+      }
+
+      .portal-top-utilities {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        max-width: 440px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        gap: 0.55rem !important;
+        margin: 0 auto 0.65rem auto !important;
+        padding: 0 0.25rem !important;
+        box-sizing: border-box !important;
+        z-index: 20 !important;
+      }
+
+      html[dir="rtl"] .portal-top-utilities {
+        left: auto !important;
+        right: auto !important;
+      }
+
+      .portal-utility-btn {
+        height: 35px !important;
+        padding: 0 0.85rem !important;
+        font-size: 0.75rem !important;
+        gap: 0.4rem !important;
+      }
+
+      .portal-utility-btn svg {
+        width: 14px !important;
+        height: 14px !important;
+      }
+
+      .portal-utility-btn .dir-label-text,
+      .portal-utility-btn .theme-label-text {
+        font-size: 0.75rem !important;
+      }
+
+      .login-card-terminal {
+        margin: 0 auto !important;
+        padding: 1.5rem 1.25rem !important;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .portal-utility-btn {
+        height: 32px !important;
+        padding: 0 0.7rem !important;
+        font-size: 0.72rem !important;
+        gap: 0.35rem !important;
+      }
+    }
+
+    /* Streamlined Viewport-Fitting Login Card (No Vertical Overflow/Scroll) */
+    .login-card-terminal {
+      width: 100% !important;
+      max-width: 440px !important;
+      background: var(--portal-card) !important;
+      border: 1.5px solid var(--portal-border) !important;
+      border-radius: 24px !important;
+      padding: 1.75rem 2rem !important;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.95), 0 0 30px rgba(123, 13, 39, 0.3) !important;
+      box-sizing: border-box !important;
+      margin: auto !important;
+    }
+
+    .portal-brand-center {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 100% !important;
+      gap: 0.65rem !important;
+      margin-bottom: 0.75rem !important;
+      text-decoration: none !important;
+      cursor: pointer !important;
+      transition: transform 0.2s ease !important;
+    }
+
+    .portal-brand-center:hover {
+      transform: scale(1.02) !important;
+    }
+
+    .portal-brand-logo {
+      height: 36px !important;
+      width: auto !important;
+      object-fit: contain !important;
+    }
+
+    .portal-brand-text {
+      display: flex !important;
+      flex-direction: column !important;
+      text-align: left !important;
+    }
+
+    .portal-brand-title {
+      font-size: 1.05rem !important;
+      font-weight: 900 !important;
+      color: #ffffff !important;
+      letter-spacing: 0.04em !important;
+      line-height: 1.1 !important;
+    }
+
+    .portal-brand-sub {
+      font-size: 0.55rem !important;
+      font-weight: 700 !important;
+      color: var(--portal-gold) !important;
+      letter-spacing: 0.1em !important;
+      text-transform: uppercase !important;
+    }
+
+    .portal-heading {
+      font-family: var(--font-heading) !important;
+      font-size: 1.5rem !important;
+      font-weight: 900 !important;
+      color: #ffffff !important;
+      text-align: center !important;
+      margin: 0 0 0.2rem 0 !important;
+      line-height: 1.2 !important;
+    }
+
+    .portal-subtext {
+      font-size: 0.8rem !important;
+      color: rgba(255, 249, 242, 0.6) !important;
+      text-align: center !important;
+      margin: 0 0 0.85rem 0 !important;
+      line-height: 1.4 !important;
+    }
+
+    .auth-segmented-pill {
+      display: flex !important;
+      background: rgba(10, 1, 3, 0.95) !important;
+      border: 1px solid rgba(229, 169, 60, 0.25) !important;
+      border-radius: 999px !important;
+      padding: 3px !important;
+      margin-bottom: 0.85rem !important;
+    }
+
+    .auth-tab-btn {
+      flex: 1 !important;
+      padding: 0.45rem 0.85rem !important;
+      font-size: 0.8rem !important;
+      font-weight: 800 !important;
+      border-radius: 999px !important;
+      border: 1px solid transparent !important;
+      background: transparent !important;
+      color: rgba(255, 249, 242, 0.65) !important;
+      cursor: pointer !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 0.4rem !important;
+      transition: all 0.2s ease !important;
+    }
+
+    .auth-tab-btn.active {
+      background: linear-gradient(135deg, var(--portal-burgundy), var(--portal-burgundy-deep)) !important;
+      border-color: rgba(229, 169, 60, 0.5) !important;
+      color: var(--portal-gold-light) !important;
+      box-shadow: 0 4px 15px rgba(123, 13, 39, 0.55) !important;
+    }
+
+    .auth-tab-btn:hover:not(.active) {
+      color: var(--portal-gold) !important;
+    }
+
+    .auth-field-group {
+      margin-bottom: 0.75rem !important;
+    }
+
+    .auth-field-header {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      margin-bottom: 0.3rem !important;
+    }
+
+    .auth-label {
+      font-size: 0.7rem !important;
+      font-weight: 800 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.08em !important;
+      color: rgba(255, 249, 242, 0.6) !important;
+    }
+
+    .auth-forgot-link {
+      font-size: 0.72rem !important;
+      font-weight: 700 !important;
+      color: var(--portal-gold) !important;
+      background: none !important;
+      border: none !important;
+      cursor: pointer !important;
+      padding: 0 !important;
+      text-decoration: none !important;
+    }
+
+    .auth-forgot-link:hover {
+      color: var(--portal-gold-light) !important;
+      text-decoration: underline !important;
+    }
+
+    .auth-input-box {
+      position: relative !important;
+      display: flex !important;
+      align-items: center !important;
+    }
+
+    .auth-input-icon {
+      position: absolute !important;
+      left: 0.85rem !important;
+      color: rgba(255, 249, 242, 0.4) !important;
+      width: 16px !important;
+      height: 16px !important;
+      pointer-events: none !important;
+    }
+
+    .auth-text-input {
+      width: 100% !important;
+      padding: 0.65rem 0.85rem 0.65rem 2.5rem !important;
+      border-radius: 10px !important;
+      background: #090103 !important;
+      border: 1px solid rgba(229, 169, 60, 0.25) !important;
+      color: #ffffff !important;
+      font-size: 0.88rem !important;
+      box-sizing: border-box !important;
+      transition: all 0.2s ease !important;
+    }
+
+    .auth-text-input:focus {
+      outline: none !important;
+      border-color: rgba(229, 169, 60, 0.7) !important;
+      box-shadow: 0 0 14px rgba(229, 169, 60, 0.28) !important;
+      background: #0E0205 !important;
+    }
+
+    .auth-eye-btn {
+      position: absolute !important;
+      right: 0.85rem !important;
+      background: transparent !important;
+      border: none !important;
+      color: rgba(255, 249, 242, 0.4) !important;
+      cursor: pointer !important;
+      padding: 0 !important;
+      display: flex !important;
+      align-items: center !important;
+    }
+
+    .auth-remember-row {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.55rem !important;
+      margin-bottom: 0.85rem !important;
+      cursor: pointer !important;
+      font-size: 0.78rem !important;
+      color: rgba(255, 249, 242, 0.65) !important;
+    }
+
+    .auth-custom-checkbox {
+      border: 1.5px solid rgba(229, 169, 60, 0.6) !important;
+      background: rgba(123, 13, 39, 0.3) !important;
+      color: var(--portal-gold) !important;
+      width: 16px !important;
+      height: 16px !important;
+      border-radius: 4px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-size: 0.7rem !important;
+      font-weight: 900 !important;
+    }
+
+    .btn-auth-submit {
+      width: 100% !important;
+      padding: 0.75rem 1rem !important;
+      border-radius: 12px !important;
+      font-size: 0.9rem !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.05em !important;
+      cursor: pointer !important;
+      background: linear-gradient(135deg, var(--portal-burgundy), var(--portal-burgundy-deep)) !important;
+      border: 1px solid rgba(229, 169, 60, 0.5) !important;
+      color: #ffffff !important;
+      box-shadow: 0 8px 25px rgba(123, 13, 39, 0.55) !important;
+      transition: all 0.2s ease !important;
+      text-transform: uppercase !important;
+    }
+
+    .btn-auth-submit:hover {
+      background: linear-gradient(135deg, #9B1033, #680A20) !important;
+      box-shadow: 0 12px 35px rgba(123, 13, 39, 0.75) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    .auth-divider-line {
+      display: flex !important;
+      align-items: center !important;
+      text-align: center !important;
+      margin: 0.75rem 0 !important;
+      color: rgba(255, 249, 242, 0.4) !important;
+      font-size: 0.68rem !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.08em !important;
+    }
+
+    .auth-divider-line::before,
+    .auth-divider-line::after {
+      content: "";
+      flex: 1;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .auth-divider-line span {
+      padding: 0 0.75rem;
+    }
+
+    .auth-social-row {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      gap: 0.75rem !important;
+      margin-bottom: 0.75rem !important;
+    }
+
+    .social-pill-btn {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 0.5rem !important;
+      padding: 0.55rem 0.85rem !important;
+      border-radius: 10px !important;
+      background: rgba(255, 255, 255, 0.04) !important;
+      border: 1px solid rgba(229, 169, 60, 0.25) !important;
+      color: #fff9f2 !important;
+      font-size: 0.82rem !important;
+      font-weight: 700 !important;
+      cursor: pointer !important;
+      transition: all 0.2s ease !important;
+    }
+
+    .social-pill-btn:hover {
+      background: rgba(123, 13, 39, 0.35) !important;
+      border-color: rgba(229, 169, 60, 0.5) !important;
+    }
+
+    .auth-bottom-switch {
+      text-align: center !important;
+      font-size: 0.8rem !important;
+      color: rgba(255, 249, 242, 0.6) !important;
+      margin-top: 0.2rem !important;
+    }
+
+    .auth-switch-action {
+      background: none !important;
+      border: none !important;
+      color: var(--portal-gold) !important;
+      font-weight: 800 !important;
+      cursor: pointer !important;
+      padding: 0 !important;
+      font-size: 0.8rem !important;
+    }
+
+    .auth-switch-action:hover {
+      color: var(--portal-gold-light) !important;
+    }
+
+    .auth-back-home {
+      text-align: center !important;
+      margin-top: 0.65rem !important;
+      padding-top: 0.65rem !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+    }
+
+    .auth-back-link {
+      font-size: 0.78rem !important;
+      color: rgba(255, 249, 242, 0.5) !important;
+      text-decoration: none !important;
+      transition: color 0.2s ease !important;
+    }
+
+    .auth-back-link:hover {
+      color: var(--portal-gold) !important;
+    }
+  </style>
+</head>
+<body class="login-portal-body antialiased">
+
+  <!-- ==========================================================================
+       BRANDED PRELOADER
+       ========================================================================== -->
+  <div id="preloader" role="status" aria-label="Loading Strike & Pin Center">
+    <div class="loader-content">
+      <div class="loader-brand">
+        <img src="assets/images/icons/logo.png" alt="Strike & Pin Bowling Logo" class="loader-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-title">Strike<span>&</span>Pin</span>
+          <span class="brand-subtitle">Bowling & Entertainment</span>
+        </div>
+      </div>
+      <div class="loader-pin-indicator" aria-hidden="true">
+        <span class="loader-dot"></span>
+        <span class="loader-dot"></span>
+        <span class="loader-dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Right Floating Utilities Bar (Cosmic Gold Luxury Pill Design) -->
+  <div class="portal-top-utilities">
+    
+    <!-- RTL Toggle Button -->
+    <button type="button" id="rtlToggleBtn" class="portal-utility-btn rtl-toggle-btn" aria-label="Toggle text direction (RTL/LTR)">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M8 3L4 7l4 4"></path>
+        <path d="M4 7h16"></path>
+        <path d="M16 21l4-4-4-4"></path>
+        <path d="M20 17H4"></path>
+      </svg>
+      <span class="dir-label-text">RTL</span>
+    </button>
+
+    <!-- Dark/Light Theme Toggle -->
+    <button type="button" id="themeToggleBtn" class="portal-utility-btn dark-mode-toggle" aria-label="Toggle dark/light mode" aria-pressed="true">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <span class="theme-label-text">Dark</span>
+    </button>
+
+  </div>
+
+  <!-- Central Dedicated Login Terminal Card (#login-terminal) -->
+  <main id="login-terminal" class="login-card-terminal" role="main">
+    
+    <!-- Brand Identity Header: Click to go to Home 1 (index.html) -->
+    <a href="index.html" class="portal-brand-center" aria-label="Strike & Pin Homepage (Home 1)">
+      <img src="assets/images/icons/logo.png" alt="Strike & Pin Logo" class="portal-brand-logo">
+      <div class="portal-brand-text">
+        <span class="portal-brand-title">STRIKE &amp; PIN</span>
+        <span class="portal-brand-sub">BOWLING &amp; ENTERTAINMENT</span>
+      </div>
+    </a>
+
+    <!-- Main Title & Prompt -->
+    <h1 class="portal-heading" id="portalHeading">Welcome back</h1>
+    <p class="portal-subtext" id="portalSubtext">Enter your credentials to access your account dashboard</p>
+
+    <!-- Segmented Tab Switcher (Sign In / Register) -->
+    <div class="auth-segmented-pill" role="tablist">
+      <button type="button" class="auth-tab-btn active" id="tabSignIn" role="tab" aria-selected="true">
+        <span>&rarr; SIGN IN</span>
+      </button>
+      <button type="button" class="auth-tab-btn" id="tabRegister" role="tab" aria-selected="false">
+        <svg viewBox="0 0 20 20" fill="currentColor" width="15" height="15" aria-hidden="true">
+          <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+        </svg>
+        <span>REGISTER</span>
+      </button>
+    </div>
+
+    <!-- Interactive Form -->
+    <form id="loginTerminalForm">
+      
+      <!-- Field: Full Name (Register Only) -->
+      <div class="auth-field-group register-only-field">
+        <div class="auth-field-header">
+          <label for="authFullName" class="auth-label">Full Name</label>
+        </div>
+        <div class="auth-input-box">
+          <svg class="auth-input-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+          </svg>
+          <input type="text" id="authFullName" class="auth-text-input" placeholder="Jordan Miller">
+        </div>
+      </div>
+
+      <!-- Field: Email Address -->
+      <div class="auth-field-group">
+        <div class="auth-field-header">
+          <label for="authEmail" class="auth-label">Email Address</label>
+        </div>
+        <div class="auth-input-box">
+          <svg class="auth-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <input type="email" id="authEmail" class="auth-text-input" placeholder="bowler@strikeandpin.com" value="bowler@strikeandpin.com" required>
+        </div>
+      </div>
+
+      <!-- Field: Password -->
+      <div class="auth-field-group">
+        <div class="auth-field-header">
+          <label for="authPassword" class="auth-label">Password</label>
+          <button type="button" class="auth-forgot-link" id="btnForgotPassword">Forgot password?</button>
+        </div>
+        <div class="auth-input-box">
+          <svg class="auth-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <input type="password" id="authPassword" class="auth-text-input" placeholder="••••••••••••" value="SecretPinPass2026!" required>
+          <button type="button" class="auth-eye-btn" id="togglePasswordEye" aria-label="Toggle password visibility">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Field: Confirm Password (Register Only) -->
+      <div class="auth-field-group register-only-field">
+        <div class="auth-field-header">
+          <label for="authConfirmPassword" class="auth-label">Confirm Password</label>
+        </div>
+        <div class="auth-input-box">
+          <svg class="auth-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <input type="password" id="authConfirmPassword" class="auth-text-input" placeholder="••••••••••••">
+        </div>
+      </div>
+
+      <!-- Remember Me Checkbox -->
+      <label class="auth-remember-row">
+        <span class="auth-custom-checkbox">✓</span>
+        <span>Remember me for 30 days</span>
+      </label>
+
+      <!-- Primary Action Button -->
+      <button type="submit" class="btn-auth-submit" id="authSubmitBtn">
+        <span>SIGN IN &rarr;</span>
+      </button>
+
+      <!-- OR CONTINUE WITH Divider -->
+      <div class="auth-divider-line">
+        <span>OR CONTINUE WITH</span>
+      </div>
+
+      <!-- Social Login Buttons -->
+      <div class="auth-social-row">
+        
+        <!-- Google Button -->
+        <button type="button" class="social-pill-btn" id="btnGoogleLogin">
+          <svg class="social-icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
+          </svg>
+          <span>Google</span>
+        </button>
+
+        <!-- Apple Button -->
+        <button type="button" class="social-pill-btn" id="btnAppleLogin">
+          <svg class="social-icon-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.86c.66-.8 1.1-1.92.98-3.04-.95.04-2.1.64-2.78 1.43-.6.69-1.12 1.83-.98 2.93 1.06.08 2.13-.53 2.78-1.32z" />
+          </svg>
+          <span>Apple</span>
+        </button>
+
+      </div>
+
+      <!-- Bottom Account Switcher Link -->
+      <div class="auth-bottom-switch" id="authBottomSwitch">
+        Don't have an account? <button type="button" class="auth-switch-action" id="btnSwitchRegister">Register now</button>
+      </div>
+
+    </form>
+
+    <!-- Back to Home Link -->
+    <div class="auth-back-home">
+      <a href="index.html" class="auth-back-link">&larr; Back to Strike &amp; Pin Homepage</a>
+    </div>
+
+  </main>
+
+  <!-- Core JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,2138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="description"
+    content="Strike & Pin Member Dashboard. Manage your bowler profile, tournament milestones, reserved lane sessions, dining orders, arcade passes, and squad roster.">
+  <title>Member Dashboard | Strike &amp; Pin Entertainment</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/icons/logo.png">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <style>
+    /* ==========================================================================
+       DASHBOARD BESPOKE COSMIC LUXURY THEME & PERFECT MOBILE RESPONSIVE ENGINE
+       ========================================================================== */
+    :root {
+      --dash-bg: #070103;
+      --dash-burgundy: #7B0D27;
+      --dash-burgundy-deep: #4D0717;
+      --dash-gold: #F5BC51;
+      --dash-gold-light: #FCD68A;
+      --dash-card: rgba(18, 3, 7, 0.88);
+      --dash-card-border: rgba(229, 169, 60, 0.25);
+    }
+
+    /* Zero Horizontal Overflow Enforced */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100% !important;
+      max-width: 100vw !important;
+      overflow-x: hidden !important;
+      background-color: var(--dash-bg) !important;
+      color: #fff9f2 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      font-family: var(--font-body);
+    }
+
+    /* Fixed Top Header Bar */
+    .dash-header-bar {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      max-width: 100vw !important;
+      height: 66px !important;
+      background: rgba(14, 2, 5, 0.96) !important;
+      backdrop-filter: blur(16px) !important;
+      -webkit-backdrop-filter: blur(16px) !important;
+      border-bottom: 1px solid var(--dash-card-border) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 0 1.5rem !important;
+      z-index: 1000 !important;
+      box-sizing: border-box !important;
+    }
+
+    .dash-header-left {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.65rem !important;
+      min-width: 0 !important;
+      flex-shrink: 1 !important;
+    }
+
+    .dash-header-left .header-brand {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.65rem !important;
+      text-decoration: none !important;
+    }
+
+    .dash-header-left .header-logo-img {
+      height: 32px !important;
+      width: auto !important;
+      flex-shrink: 0 !important;
+    }
+
+    .dash-header-left .brand-title {
+      font-size: 1.05rem !important;
+      font-weight: 900 !important;
+      white-space: nowrap !important;
+      color: #ffffff !important;
+      letter-spacing: 0.02em !important;
+    }
+
+    .dash-header-left .brand-title span {
+      color: var(--dash-gold) !important;
+    }
+
+    .dash-header-left .brand-subtitle {
+      font-size: 0.55rem !important;
+      color: var(--dash-gold-light) !important;
+      letter-spacing: 0.08em !important;
+      text-transform: uppercase !important;
+      font-weight: 700 !important;
+      display: block !important;
+      line-height: 1.1 !important;
+    }
+
+    .dash-header-right {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.75rem !important;
+      flex-shrink: 0 !important;
+    }
+
+    /* Profile Pill in Header */
+    .dash-user-pill {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.5rem !important;
+      cursor: pointer !important;
+      padding: 0.25rem 0.65rem !important;
+      border-radius: 999px !important;
+      border: 1px solid rgba(229, 169, 60, 0.25) !important;
+      background: rgba(18, 3, 7, 0.7) !important;
+      transition: all 0.2s ease !important;
+      user-select: none !important;
+    }
+
+    .dash-user-pill:hover {
+      background: rgba(123, 13, 39, 0.35) !important;
+      border-color: rgba(229, 169, 60, 0.55) !important;
+    }
+
+    .dash-user-avatar {
+      width: 32px !important;
+      height: 32px !important;
+      min-width: 32px !important;
+      min-height: 32px !important;
+      border-radius: 50% !important;
+      background: linear-gradient(135deg, var(--dash-burgundy), var(--dash-burgundy-deep)) !important;
+      border: 1.5px solid rgba(229, 169, 60, 0.6) !important;
+      color: var(--dash-gold) !important;
+      font-weight: 900 !important;
+      font-size: 0.78rem !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-shrink: 0 !important;
+      box-shadow: 0 2px 10px rgba(123, 13, 39, 0.5) !important;
+    }
+
+    .dash-user-name {
+      font-size: 0.85rem !important;
+      font-weight: 700 !important;
+      color: #ffffff !important;
+    }
+
+    .dash-user-dropdown-panel {
+      position: absolute !important;
+      top: calc(100% + 8px) !important;
+      right: 0 !important;
+      min-width: 250px !important;
+      background: rgba(20, 3, 8, 0.98) !important;
+      backdrop-filter: blur(16px) !important;
+      -webkit-backdrop-filter: blur(16px) !important;
+      border: 1px solid var(--dash-card-border) !important;
+      border-radius: 14px !important;
+      padding: 0.75rem !important;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.9) !important;
+      display: none;
+      flex-direction: column !important;
+      gap: 0.35rem !important;
+      z-index: 9999 !important;
+    }
+
+    .dash-user-dropdown-panel.show {
+      display: flex !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      animation: dropdownFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+    }
+
+    .dash-user-dropdown-item {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.55rem 0.75rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #fff9f2;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .dash-user-dropdown-item:hover {
+      background: rgba(123, 13, 39, 0.35);
+      color: var(--dash-gold);
+    }
+
+    /* Mobile Hamburger Toggle Button in Header */
+    .dash-header-bar .mobile-toggle-btn {
+      display: none;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 38px !important;
+      height: 38px !important;
+      min-width: 38px !important;
+      min-height: 38px !important;
+      border-radius: 10px !important;
+      background: rgba(123, 13, 39, 0.45) !important;
+      border: 1px solid rgba(229, 169, 60, 0.4) !important;
+      color: var(--dash-gold) !important;
+      cursor: pointer !important;
+      padding: 0 !important;
+      transition: all 0.2s ease !important;
+    }
+
+    .dash-header-bar .mobile-toggle-btn:hover {
+      background: rgba(123, 13, 39, 0.75) !important;
+      border-color: var(--dash-gold) !important;
+    }
+
+    /* Desktop Sidebar (Fixed Left) */
+    .dash-sidebar {
+      position: fixed;
+      top: 66px;
+      left: 0;
+      bottom: 0;
+      width: 255px;
+      background: rgba(10, 1, 3, 0.98) !important;
+      border-right: 1px solid rgba(229, 169, 60, 0.18) !important;
+      padding: 1.5rem 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 900;
+      overflow-y: auto;
+    }
+
+    .dash-sidebar-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .dash-nav-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 0.82rem 1.1rem;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      background: transparent;
+      color: rgba(255, 249, 242, 0.7);
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      width: 100%;
+      text-align: left;
+    }
+
+    .dash-nav-btn:hover:not(.active) {
+      background: rgba(123, 13, 39, 0.25) !important;
+      color: var(--dash-gold) !important;
+      border-color: rgba(229, 169, 60, 0.3) !important;
+    }
+
+    .dash-nav-btn.active {
+      background: linear-gradient(135deg, var(--dash-burgundy), var(--dash-burgundy-deep)) !important;
+      border: 1px solid rgba(229, 169, 60, 0.5) !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 18px rgba(123, 13, 39, 0.6) !important;
+      font-weight: 800 !important;
+    }
+
+    .dash-nav-btn.active .dash-nav-icon {
+      color: var(--dash-gold) !important;
+      stroke: var(--dash-gold) !important;
+    }
+
+    .dash-nav-icon {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      color: rgba(255, 249, 242, 0.65);
+    }
+
+    .dash-logout-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      background: rgba(123, 13, 39, 0.2) !important;
+      border: 1px solid rgba(123, 13, 39, 0.5) !important;
+      color: #fca5a5 !important;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .dash-logout-btn:hover {
+      background: var(--dash-burgundy) !important;
+      color: #ffffff !important;
+      border-color: rgba(229, 169, 60, 0.5) !important;
+    }
+
+    /* Main Scrollable Canvas */
+    .dash-main-area {
+      margin-left: 255px;
+      margin-top: 66px;
+      padding: 2.5rem 2.5rem 5rem;
+      min-height: calc(100vh - 66px);
+      width: calc(100% - 255px);
+      max-width: calc(100% - 255px);
+      background: radial-gradient(circle at 15% 20%, rgba(123, 13, 39, 0.35), transparent 50%),
+        radial-gradient(circle at 85% 60%, rgba(229, 169, 60, 0.1), transparent 45%),
+        var(--dash-bg) !important;
+      color: #fff9f2 !important;
+      box-sizing: border-box !important;
+    }
+
+    .dash-section {
+      scroll-margin-top: 85px;
+      margin-bottom: 3.5rem;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Section Headline Bar */
+    .section-headline-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .section-eyebrow-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--dash-gold) !important;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* Welcome Banner */
+    .dash-welcome-row {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .welcome-avatar-lg {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--dash-burgundy), var(--dash-burgundy-deep));
+      border: 2px solid rgba(229, 169, 60, 0.55);
+      color: var(--dash-gold);
+      font-weight: 900;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 18px rgba(123, 13, 39, 0.5);
+    }
+
+    .welcome-text-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .welcome-sub-greeting {
+      font-size: 0.92rem;
+      color: rgba(255, 249, 242, 0.6);
+      margin-bottom: 0.15rem;
+      font-weight: 600;
+    }
+
+    .welcome-bowler-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.35rem, 2.5vw, 2.1rem);
+      font-weight: 900;
+      color: #ffffff !important;
+      letter-spacing: -0.01em;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    /* Metric Cards Grid */
+    .dash-metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      margin-bottom: 2.25rem;
+      align-items: stretch;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .dash-metric-card {
+      background: var(--dash-card) !important;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--dash-card-border) !important;
+      border-radius: 18px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7) !important;
+      color: #fff9f2 !important;
+      transition: all 0.25s ease;
+      box-sizing: border-box !important;
+      min-width: 0 !important;
+    }
+
+    .dash-metric-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.85);
+      border-color: rgba(229, 169, 60, 0.45) !important;
+    }
+
+    .dash-metric-card.highlight {
+      background: linear-gradient(135deg, rgba(35, 5, 14, 0.95), rgba(18, 2, 7, 0.95)) !important;
+      border: 2px solid rgba(229, 169, 60, 0.65) !important;
+      box-shadow: 0 20px 50px rgba(123, 13, 39, 0.5) !important;
+    }
+
+    .metric-card-header-lbl {
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255, 249, 242, 0.55);
+      margin-bottom: 1.15rem;
+      display: block;
+    }
+
+    .countdown-box-content {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .countdown-ring-circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 3px solid var(--dash-gold) !important;
+      background: rgba(123, 13, 39, 0.3) !important;
+      color: var(--dash-gold) !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 900;
+      flex-shrink: 0;
+      box-shadow: 0 0 16px rgba(229, 169, 60, 0.3) !important;
+    }
+
+    .countdown-meta h4 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 0 0 0.2rem;
+      white-space: nowrap;
+    }
+
+    .countdown-meta span {
+      font-size: 0.8rem;
+      color: rgba(255, 249, 242, 0.55);
+      white-space: nowrap;
+    }
+
+    .rank-tier-title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 0.25rem;
+    }
+
+    .rank-tier-sub {
+      font-size: 0.8rem;
+      color: rgba(255, 249, 242, 0.55);
+      margin-bottom: 0.85rem;
+    }
+
+    .rank-progress-bar {
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .rank-progress-fill {
+      width: 78%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--dash-burgundy), var(--dash-gold)) !important;
+      border-radius: 999px;
+    }
+
+    .squad-count-big {
+      font-family: var(--font-heading);
+      font-size: 2.75rem;
+      font-weight: 900;
+      color: var(--dash-gold) !important;
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .squad-count-sub {
+      font-size: 0.82rem;
+      color: rgba(255, 249, 242, 0.65);
+      font-weight: 600;
+    }
+
+    .btn-briefing-confirm {
+      width: 100%;
+      padding: 0.85rem 1.25rem;
+      border-radius: 12px;
+      border: 1px solid rgba(229, 169, 60, 0.5) !important;
+      background: linear-gradient(135deg, var(--dash-burgundy) 0%, var(--dash-burgundy-deep) 100%) !important;
+      color: #ffffff !important;
+      font-family: var(--font-heading);
+      font-size: 0.84rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      box-shadow: 0 8px 24px rgba(123, 13, 39, 0.55) !important;
+      transition: all 0.22s ease;
+      margin-top: auto;
+    }
+
+    .btn-briefing-confirm:hover {
+      background: linear-gradient(135deg, #9B1033 0%, #680A20 100%) !important;
+      box-shadow: 0 12px 30px rgba(123, 13, 39, 0.75) !important;
+      transform: translateY(-2px);
+    }
+
+    /* Schedule Roadmap Banner */
+    .dash-schedule-banner {
+      background: var(--dash-card) !important;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--dash-card-border) !important;
+      border-radius: 20px;
+      padding: 1.75rem 2rem;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7) !important;
+      box-sizing: border-box !important;
+      width: 100% !important;
+    }
+
+    .schedule-banner-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 1.15rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .schedule-title-group h3 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #ffffff !important;
+      margin-bottom: 0.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .schedule-title-group p {
+      font-size: 0.82rem;
+      color: rgba(255, 249, 242, 0.6) !important;
+      margin: 0;
+    }
+
+    .live-confirmed-tag {
+      background: rgba(229, 169, 60, 0.12) !important;
+      border: 1.5px solid rgba(229, 169, 60, 0.45) !important;
+      color: var(--dash-gold-light) !important;
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .schedule-stages-row {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1rem;
+      text-align: left;
+    }
+
+    .schedule-stage-card {
+      border-left: 2px solid var(--dash-gold) !important;
+      padding-left: 0.75rem;
+    }
+
+    .stage-num-lbl {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--dash-gold) !important;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .stage-name-txt {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    /* Table & Status Pills with Strict Containment */
+    .table-scroll-hint {
+      display: none;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--dash-gold);
+      margin-bottom: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .dash-table-card {
+      background: var(--dash-card) !important;
+      border: 1px solid var(--dash-card-border) !important;
+      border-radius: 18px;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      display: block !important;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7) !important;
+      box-sizing: border-box !important;
+    }
+
+    .dash-roster-table {
+      width: 100%;
+      min-width: 580px;
+      border-collapse: collapse;
+    }
+
+    .dash-roster-table th {
+      background: rgba(10, 1, 3, 0.95) !important;
+      color: var(--dash-gold) !important;
+      border-bottom: 1px solid rgba(229, 169, 60, 0.2) !important;
+      text-align: left;
+      padding: 0.9rem 1.25rem;
+      font-size: 0.76rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+
+    .dash-roster-table td {
+      padding: 1rem 1.25rem;
+      font-size: 0.88rem;
+      color: rgba(255, 249, 242, 0.8) !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+      white-space: nowrap;
+    }
+
+    .dash-roster-table tr:hover td {
+      background: rgba(123, 13, 39, 0.16) !important;
+    }
+
+    .status-badge-active {
+      background: rgba(123, 13, 39, 0.35) !important;
+      border: 1px solid rgba(229, 169, 60, 0.45) !important;
+      color: var(--dash-gold-light) !important;
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      text-transform: uppercase;
+      display: inline-block;
+      box-shadow: 0 0 10px rgba(123, 13, 39, 0.3) !important;
+    }
+
+    .status-badge-pending {
+      background: rgba(229, 169, 60, 0.15) !important;
+      border: 1px solid rgba(229, 169, 60, 0.4) !important;
+      color: var(--dash-gold-light) !important;
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+
+    .btn-action-sm {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--dash-burgundy), var(--dash-burgundy-deep));
+      border: 1px solid rgba(229, 169, 60, 0.45);
+      color: #ffffff;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-action-sm:hover {
+      background: linear-gradient(135deg, #9B1033, #680A20);
+      color: var(--dash-gold);
+      transform: translateY(-1px);
+    }
+
+    /* Dining & Kitchen Section Styles */
+    .dining-order-card {
+      background: var(--dash-card);
+      border: 1px solid var(--dash-card-border);
+      border-radius: 20px;
+      padding: 1.75rem 2rem;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+      box-sizing: border-box !important;
+      width: 100% !important;
+    }
+
+    .dining-order-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 1.5rem;
+    }
+
+    .dining-items-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .dining-item-pill {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(229, 169, 60, 0.2);
+      border-radius: 14px;
+      padding: 1.15rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      box-sizing: border-box !important;
+      min-width: 0 !important;
+    }
+
+    .dining-item-icon {
+      font-size: 1.75rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .dining-item-info h5 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 0 0 0.2rem;
+    }
+
+    .dining-item-info p {
+      font-size: 0.78rem;
+      color: rgba(255, 249, 242, 0.6);
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .dining-item-price {
+      display: inline-block;
+      margin-top: 0.4rem;
+      font-size: 0.84rem;
+      font-weight: 800;
+      color: var(--dash-gold);
+    }
+
+    .order-status-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* Arcade & Perks Section Styles */
+    .perks-three-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .perk-card {
+      background: var(--dash-card);
+      border: 1px solid var(--dash-card-border);
+      border-radius: 18px;
+      padding: 1.75rem;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box !important;
+      min-width: 0 !important;
+    }
+
+    .perk-card-top {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .perk-icon-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(123, 13, 39, 0.45);
+      border: 1px solid rgba(229, 169, 60, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      color: var(--dash-gold);
+      flex-shrink: 0;
+    }
+
+    .perk-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    .perk-sub {
+      font-size: 0.78rem;
+      color: rgba(255, 249, 242, 0.55);
+      margin: 0;
+    }
+
+    .perk-big-val {
+      font-family: var(--font-heading);
+      font-size: 2.1rem;
+      font-weight: 900;
+      color: var(--dash-gold);
+      margin: 0.6rem 0 0.2rem;
+    }
+
+    /* Telemetry Section Styles */
+    .telemetry-card {
+      background: var(--dash-card);
+      border: 1px solid var(--dash-card-border);
+      border-radius: 20px;
+      padding: 1.75rem 2rem;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+      box-sizing: border-box !important;
+      width: 100% !important;
+    }
+
+    .telemetry-frames-grid {
+      display: flex;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch !important;
+      gap: 0.65rem;
+      margin-bottom: 1.75rem;
+      padding-bottom: 0.65rem;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .frame-col-box {
+      background: rgba(10, 1, 3, 0.95);
+      border: 1px solid rgba(229, 169, 60, 0.22);
+      border-radius: 10px;
+      text-align: center;
+      overflow: hidden;
+      min-width: 60px;
+      flex-shrink: 0;
+    }
+
+    .frame-number-hdr {
+      background: rgba(123, 13, 39, 0.35);
+      color: var(--dash-gold);
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 0.25rem 0;
+      border-bottom: 1px solid rgba(229, 169, 60, 0.2);
+    }
+
+    .frame-shots-row {
+      display: flex;
+      height: 28px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .frame-shot {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 900;
+      color: #ffffff;
+    }
+
+    .frame-shot.strike {
+      color: var(--dash-gold);
+      background: rgba(229, 169, 60, 0.12);
+    }
+
+    .frame-score-total {
+      padding: 0.4rem 0;
+      font-size: 0.95rem;
+      font-weight: 900;
+      color: #ffffff;
+    }
+
+    .telemetry-kpis-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .telemetry-kpi-item {
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 12px;
+      padding: 1.1rem;
+      text-align: center;
+      box-sizing: border-box !important;
+    }
+
+    .kpi-lbl {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: rgba(255, 249, 242, 0.55);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.25rem;
+    }
+
+    .kpi-val {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--dash-gold);
+    }
+
+    /* Mobile Drawer with Sidebar Navigation Inside */
+    .mobile-drawer-bowler-card {
+      background: linear-gradient(135deg, rgba(123, 13, 39, 0.4), rgba(20, 3, 8, 0.95));
+      border: 1px solid rgba(229, 169, 60, 0.35);
+      border-radius: 16px;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Mobile Drawer Theme & RTL Action Bar */
+    .drawer-utility-bar {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.65rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .drawer-utility-action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.65rem 0.75rem;
+      border-radius: 12px;
+      background: rgba(123, 13, 39, 0.35);
+      border: 1px solid rgba(229, 169, 60, 0.4);
+      color: var(--dash-gold);
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+
+    .drawer-utility-action-btn:hover {
+      background: rgba(123, 13, 39, 0.65);
+      border-color: var(--dash-gold);
+      color: #ffffff;
+    }
+
+    .drawer-nav-group-title {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--dash-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 0.85rem 0 0.45rem;
+      padding-left: 0.5rem;
+    }
+
+    .drawer-dash-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 0.95rem;
+      border-radius: 10px;
+      color: rgba(255, 249, 242, 0.85);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+      margin-bottom: 0.25rem;
+    }
+
+    .drawer-dash-link:hover,
+    .drawer-dash-link.active {
+      background: rgba(123, 13, 39, 0.45);
+      color: var(--dash-gold);
+      border-color: rgba(229, 169, 60, 0.35);
+    }
+
+    /* ==========================================================================
+       MOBILE RESPONSIVE BREAKPOINTS (<= 1024px & <= 768px & <= 480px)
+       ========================================================================== */
+    @media (max-width: 1024px) {
+
+      /* Hide desktop sidebar on mobile/tablet (it's inside mobile menu drawer) */
+      .dash-sidebar {
+        display: none !important;
+      }
+
+      .dash-main-area {
+        margin-left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 1.75rem 1.25rem 4rem !important;
+      }
+
+      /* Mobile Header: Clean Logo + Brand Name with small subtitle text; No profile icon! */
+      .dash-header-bar {
+        padding: 0 1rem !important;
+      }
+
+      .dash-header-left .brand-subtitle {
+        display: block !important;
+        font-size: 0.54rem !important;
+        color: var(--dash-gold-light, #FCD68A) !important;
+        letter-spacing: 0.08em !important;
+        text-transform: uppercase !important;
+        font-weight: 700 !important;
+        white-space: nowrap !important;
+        line-height: 1.1 !important;
+        margin-top: 1px !important;
+      }
+
+      .dash-header-right .utility-btn {
+        display: none !important;
+      }
+
+      .dash-user-pill,
+      .dash-user-dropdown-panel {
+        display: none !important;
+      }
+
+      .dash-header-bar .mobile-toggle-btn {
+        display: inline-flex !important;
+      }
+
+      .schedule-stages-row {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1rem !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .table-scroll-hint {
+        display: block !important;
+      }
+
+      .dash-main-area {
+        padding: 1.25rem 0.85rem 3.5rem !important;
+      }
+
+      .dash-welcome-row {
+        gap: 0.85rem !important;
+        margin-bottom: 1.25rem !important;
+      }
+
+      .welcome-avatar-lg {
+        width: 44px !important;
+        height: 44px !important;
+        font-size: 1.1rem !important;
+      }
+
+      .welcome-sub-greeting {
+        font-size: 0.8rem !important;
+      }
+
+      .welcome-bowler-title {
+        font-size: 1.2rem !important;
+      }
+
+      /* SINGLE COLUMN METRICS CARDS: NO MORE SQUISHED TEXT! */
+      .dash-metrics-grid {
+        grid-template-columns: 1fr !important;
+        gap: 0.85rem !important;
+      }
+
+      .dash-metric-card {
+        padding: 1.25rem !important;
+      }
+
+      .schedule-stages-row {
+        grid-template-columns: 1fr !important;
+        gap: 0.75rem !important;
+      }
+
+      .dining-items-grid,
+      .perks-three-grid {
+        grid-template-columns: 1fr !important;
+        gap: 0.85rem !important;
+      }
+
+      .dining-order-card,
+      .telemetry-card,
+      .dash-schedule-banner {
+        padding: 1.25rem 1rem !important;
+      }
+
+      .telemetry-kpis-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.75rem !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .dash-header-left .brand-subtitle {
+        display: block !important;
+        font-size: 0.50rem !important;
+        color: var(--dash-gold-light, #FCD68A) !important;
+        letter-spacing: 0.06em !important;
+        text-transform: uppercase !important;
+        font-weight: 700 !important;
+        white-space: nowrap !important;
+        line-height: 1.1 !important;
+      }
+
+      .dash-header-left .brand-title {
+        font-size: 0.95rem !important;
+      }
+
+      .telemetry-kpis-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="dash-body antialiased">
+
+  <!-- ==========================================================================
+       BRANDED PRELOADER
+       ========================================================================== -->
+  <div id="preloader" role="status" aria-label="Loading Strike & Pin Center">
+    <div class="loader-content">
+      <div class="loader-brand">
+        <img src="assets/images/icons/logo.png" alt="Strike & Pin Bowling Logo" class="loader-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-title">Strike<span>&</span>Pin</span>
+          <span class="brand-subtitle">Bowling & Entertainment</span>
+        </div>
+      </div>
+      <div class="loader-pin-indicator" aria-hidden="true">
+        <span class="loader-dot"></span>
+        <span class="loader-dot"></span>
+        <span class="loader-dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       TOP FIXED HEADER BAR
+       Mobile: Brand Name + Logo (Left) | Profile Icon + Menu Toggle (Right)
+       Desktop: Full Brand (Left) | Theme + RTL + Profile Pill (Right)
+       ========================================================================== -->
+  <header class="dash-header-bar" role="banner">
+
+    <!-- Left: Brand Logo + Name -->
+    <div class="dash-header-left">
+      <a href="index.html" class="header-brand" aria-label="Strike & Pin Homepage">
+        <img src="assets/images/icons/logo.png" alt="Strike & Pin Logo" class="header-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-title">Strike<span>&</span>Pin</span>
+          <span class="brand-subtitle">Bowling &amp; Entertainment</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Right: Profile Icon + Menu Button (Mobile) & Theme Utilities (Desktop) -->
+    <div class="dash-header-right">
+
+      <!-- Dark Mode Toggle (Desktop only) -->
+      <button type="button" class="utility-btn dark-mode-toggle" aria-label="Toggle dark mode" aria-pressed="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+          aria-hidden="true">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <span class="utility-label">Theme</span>
+      </button>
+
+      <!-- RTL Toggle (Desktop only) -->
+      <button type="button" class="utility-btn rtl-toggle-btn" aria-label="Toggle text direction (RTL/LTR)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <path d="M8 3L4 7l4 4"></path>
+          <path d="M4 7h16"></path>
+          <path d="M16 21l4-4-4-4"></path>
+          <path d="M20 17H4"></path>
+        </svg>
+        <span class="utility-label dir-label-text">RTL</span>
+      </button>
+
+      <!-- Member Profile Icon Pill (With Dropdown on Click) -->
+      <div class="relative" style="position: relative;">
+        <div class="dash-user-pill" id="dashUserDropdown" role="button" tabindex="0" aria-label="User Profile Menu"
+          aria-haspopup="true" aria-expanded="false">
+          <div class="dash-user-avatar">JM</div>
+          <span class="dash-user-name">Captain Jordan Miller ▾</span>
+        </div>
+        <div class="dash-user-dropdown-panel" id="dashUserMenu" role="menu">
+          <div
+            style="padding: 0.5rem 0.75rem; border-bottom: 1px solid rgba(229, 169, 60, 0.25); margin-bottom: 0.35rem;">
+            <strong style="color: #ffffff; font-size: 0.82rem; display: block;">Jordan Miller</strong>
+            <span style="font-size: 0.75rem; color: #FCD68A;">ID: #SP-8824-VIP • Squad Captain</span>
+          </div>
+          <a href="#profile" class="dash-user-dropdown-item" role="menuitem">
+            <span>👤 Bowler Profile</span>
+          </a>
+          <a href="#lanes" class="dash-user-dropdown-item" role="menuitem">
+            <span>🎳 Active Lane Manifest</span>
+          </a>
+          <a href="#milestones" class="dash-user-dropdown-item" role="menuitem">
+            <span>🏆 Tournament Milestones</span>
+          </a>
+          <a href="#dining" class="dash-user-dropdown-item" role="menuitem">
+            <span>🍕 Alley Kitchen Orders</span>
+          </a>
+          <a href="#arcade" class="dash-user-dropdown-item" role="menuitem">
+            <span>🕹️ Arcade &amp; VIP Perks</span>
+          </a>
+          <a href="#telemetry" class="dash-user-dropdown-item" role="menuitem">
+            <span>📊 Frame Telemetry</span>
+          </a>
+          <a href="book-lane.html" class="dash-user-dropdown-item" role="menuitem">
+            <span>⚡ Quick Lane Booking</span>
+          </a>
+          <div style="border-top: 1px solid rgba(255, 255, 255, 0.08); margin-top: 0.35rem; padding-top: 0.35rem;">
+            <a href="index.html" class="dash-user-dropdown-item" style="color: #fca5a5; font-weight: 700;"
+              role="menuitem">
+              <span>🚪 Sign Out</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Hamburger Button (Strictly Visible on Mobile Header Right!) -->
+      <button type="button" class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Open Navigation Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true" width="22" height="22">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+    </div>
+
+  </header>
+
+  <!-- ==========================================================================
+       MOBILE DRAWER: SIDEBAR BUTTONS TUCKED INSIDE HERE!
+       ========================================================================== -->
+  <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" role="dialog" aria-modal="true">
+
+    <div class="mobile-drawer-header">
+      <div class="header-brand">
+        <img src="assets/images/icons/logo.png" alt="Strike & Pin Logo" class="header-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-title">Strike<span>&</span>Pin</span>
+          <span class="brand-subtitle">Bowling &amp; Entertainment</span>
+        </div>
+      </div>
+      <button type="button" class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close navigation menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-content">
+
+      <!-- Bowler Profile Mini Card -->
+      <div class="mobile-drawer-bowler-card">
+        <div class="dash-user-avatar">JM</div>
+        <div>
+          <strong style="color: #ffffff; font-size: 0.88rem; display: block;">Captain Jordan Miller</strong>
+          <span style="font-size: 0.74rem; color: var(--dash-gold); font-weight: 700;">VIP Bowler #SP-8824 • Lvl
+            28</span>
+        </div>
+      </div>
+
+      <!-- Quick Theme & Direction Controls (Dark Mode & RTL Buttons inside Drawer!) -->
+      <div class="drawer-utility-bar">
+        <button type="button" class="drawer-utility-action-btn dark-mode-toggle" aria-label="Toggle dark mode"
+          aria-pressed="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            width="16" height="16" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <span class="utility-label">Theme Mode</span>
+        </button>
+
+        <button type="button" class="drawer-utility-action-btn rtl-toggle-btn"
+          aria-label="Toggle text direction (RTL/LTR)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" width="16" height="16" aria-hidden="true">
+            <path d="M8 3L4 7l4 4"></path>
+            <path d="M4 7h16"></path>
+            <path d="M16 21l4-4-4-4"></path>
+            <path d="M20 17H4"></path>
+          </svg>
+          <span class="utility-label dir-label-text">RTL</span>
+        </button>
+      </div>
+
+      <!-- DASHBOARD SIDEBAR BUTTONS TUCKED INSIDE MOBILE DRAWER -->
+      <div class="drawer-nav-group-title">🎳 Bowler Dashboard Sections</div>
+      <a href="#profile" class="drawer-dash-link active" data-dash-nav="profile">
+        <span>👤 Bowler Profile</span>
+      </a>
+      <a href="#lanes" class="drawer-dash-link" data-dash-nav="lanes">
+        <span>🎳 Active Lane Manifest</span>
+      </a>
+      <a href="#milestones" class="drawer-dash-link" data-dash-nav="milestones">
+        <span>🏆 Tournament Milestones</span>
+      </a>
+      <a href="#dining" class="drawer-dash-link" data-dash-nav="dining">
+        <span>🍕 Alley Kitchen &amp; Dining</span>
+      </a>
+      <a href="#arcade" class="drawer-dash-link" data-dash-nav="arcade">
+        <span>🕹️ Arcade &amp; VIP Perks</span>
+      </a>
+      <a href="#telemetry" class="drawer-dash-link" data-dash-nav="telemetry">
+        <span>📊 Frame Telemetry</span>
+      </a>
+      <a href="book-lane.html" class="drawer-dash-link"
+        style="background: rgba(229, 169, 60, 0.12); border: 1px solid rgba(229, 169, 60, 0.4); color: var(--dash-gold); font-weight: 800; margin-top: 0.5rem;">
+        <span>⚡ Book a New Lane</span>
+      </a>
+
+
+      <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08);">
+        <a href="index.html" class="dash-logout-btn" style="justify-content: center;">
+          <span>🚪 Log Out</span>
+        </a>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       DESKTOP FIXED NON-SCROLLING LEFT SIDEBAR (Hidden on mobile)
+       ========================================================================== -->
+  <aside class="dash-sidebar" aria-label="Member Navigation">
+
+    <nav class="dash-sidebar-nav">
+
+      <a href="#profile" class="dash-nav-btn active" data-dash-nav="profile">
+        <svg class="dash-nav-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+        </svg>
+        <span>Bowler Profile</span>
+      </a>
+
+      <a href="#lanes" class="dash-nav-btn" data-dash-nav="lanes">
+        <svg class="dash-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h7"></path>
+        </svg>
+        <span>Active Lane Manifest</span>
+      </a>
+
+      <a href="#milestones" class="dash-nav-btn" data-dash-nav="milestones">
+        <svg class="dash-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        <span>Tournament Milestones</span>
+      </a>
+
+      <a href="#dining" class="dash-nav-btn" data-dash-nav="dining">
+        <svg class="dash-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+          <line x1="6" y1="1" x2="6" y2="4"></line>
+          <line x1="10" y1="1" x2="10" y2="4"></line>
+          <line x1="14" y1="1" x2="14" y2="4"></line>
+        </svg>
+        <span>Alley Kitchen Orders</span>
+      </a>
+
+      <a href="#arcade" class="dash-nav-btn" data-dash-nav="arcade">
+        <svg class="dash-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+          <path d="M6 12h4m-2-2v4"></path>
+          <line x1="15" y1="11" x2="15" y2="11.01"></line>
+          <line x1="18" y1="13" x2="18" y2="13.01"></line>
+        </svg>
+        <span>Arcade &amp; VIP Perks</span>
+      </a>
+
+      <a href="#telemetry" class="dash-nav-btn" data-dash-nav="telemetry">
+        <svg class="dash-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+        </svg>
+        <span>Frame Telemetry</span>
+      </a>
+
+      <!-- Quick Action: Book Extra Lane -->
+      <a href="book-lane.html" class="dash-nav-btn"
+        style="background: rgba(229, 169, 60, 0.12); border: 1px solid rgba(229, 169, 60, 0.35); color: var(--dash-gold); font-weight: 800; margin-top: 0.65rem;">
+        <svg class="dash-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true" style="color: var(--dash-gold);">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="16"></line>
+          <line x1="8" y1="12" x2="16" y2="12"></line>
+        </svg>
+        <span>+ Book a Lane</span>
+      </a>
+
+    </nav>
+
+    <!-- Bottom Log Out Action -->
+    <a href="index.html" class="dash-logout-btn" id="dashLogoutBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"
+        aria-hidden="true">
+        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+        <polyline points="16 17 21 12 16 7"></polyline>
+        <line x1="21" y1="12" x2="9" y2="12"></line>
+      </svg>
+      <span>Log Out</span>
+    </a>
+
+  </aside>
+
+  <!-- ==========================================================================
+       SCROLLABLE MAIN DASHBOARD AREA WITH MATCHING ENTERTAINMENT SECTIONS
+       ========================================================================== -->
+  <main class="dash-main-area" role="main">
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 1: BOWLER PROFILE (#profile)
+         ---------------------------------------------------------------------- -->
+    <section id="profile" class="dash-section">
+
+      <!-- Welcome Banner -->
+      <div class="dash-welcome-row">
+        <div class="welcome-avatar-lg">JM</div>
+        <div class="welcome-text-group">
+          <span class="welcome-sub-greeting">Welcome back,</span>
+          <h1 class="welcome-bowler-title">CAPTAIN JORDAN MILLER &amp; THE COSMIC PINS</h1>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Grid (1-Col on mobile, 4-Col on desktop) -->
+      <div class="dash-metrics-grid">
+
+        <!-- Card 1: Tournament Countdown -->
+        <div class="dash-metric-card">
+          <span class="metric-card-header-lbl">TOURNAMENT COUNTDOWN</span>
+          <div class="countdown-box-content">
+            <div class="countdown-ring-circle">28</div>
+            <div class="countdown-meta">
+              <h4>Days to Match</h4>
+              <span>14 October 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Bowler Rank Tier -->
+        <div class="dash-metric-card">
+          <span class="metric-card-header-lbl">BOWLER RANK TIER</span>
+          <div>
+            <div class="rank-tier-title">ELITE STRIKER</div>
+            <div class="rank-tier-sub">Cosmic Pins Squad Captain • Level 28</div>
+            <div class="rank-progress-bar">
+              <div class="rank-progress-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Active Squad Slots (Elevated Highlight Card) -->
+        <div class="dash-metric-card highlight">
+          <span class="metric-card-header-lbl">ACTIVE SQUAD SLOTS</span>
+          <div>
+            <div class="squad-count-big">12</div>
+            <div class="squad-count-sub">Assigned Tournament Bowlers</div>
+          </div>
+        </div>
+
+        <!-- Card 4: Match Readiness -->
+        <div class="dash-metric-card">
+          <span class="metric-card-header-lbl">MATCH READINESS</span>
+          <div>
+            <button type="button" class="btn-briefing-confirm" id="btnConfirmBriefing">
+              <span>✓ CONFIRM BRIEFING</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 2: ACTIVE LANE MANIFEST & SQUAD ALLOCATION (#lanes)
+         ---------------------------------------------------------------------- -->
+    <section id="lanes" class="dash-section">
+
+      <div class="section-headline-bar">
+        <div class="section-eyebrow-tag">
+          <span>■</span> SQUAD ROSTER &amp; ACTIVE LANE ALLOCATION
+        </div>
+        <a href="book-lane.html" class="btn-action-sm">
+          <span>+ Reserve Extra Lane</span>
+        </a>
+      </div>
+
+      <!-- Swipe indicator for mobile users -->
+      <div class="table-scroll-hint">
+        <span>↔ Swipe table horizontally to see all columns</span>
+      </div>
+
+      <div class="dash-table-card">
+        <table class="dash-roster-table" aria-label="Squad Member Roster">
+          <thead>
+            <tr>
+              <th>Bowler Name</th>
+              <th>Squad Role</th>
+              <th>Average Score</th>
+              <th>Handicap</th>
+              <th>Assigned Lane</th>
+              <th>Readiness</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong style="color: #ffffff;">Jordan Miller</strong></td>
+              <td>Squad Captain</td>
+              <td>218.4</td>
+              <td>+0 Scratch</td>
+              <td>Lane 14A (Pro Cosmic)</td>
+              <td><span class="status-badge-active">Confirmed ✓</span></td>
+            </tr>
+            <tr>
+              <td><strong style="color: #ffffff;">Sarah Jenkins</strong></td>
+              <td>Lead Anchor</td>
+              <td>204.2</td>
+              <td>+4 HDCP</td>
+              <td>Lane 14A (Pro Cosmic)</td>
+              <td><span class="status-badge-active">Confirmed ✓</span></td>
+            </tr>
+            <tr>
+              <td><strong style="color: #ffffff;">Marcus Vance</strong></td>
+              <td>Setup Bowler</td>
+              <td>198.8</td>
+              <td>+8 HDCP</td>
+              <td>Lane 14B (Pro Cosmic)</td>
+              <td><span class="status-badge-active">Confirmed ✓</span></td>
+            </tr>
+            <tr>
+              <td><strong style="color: #ffffff;">Elena Russo</strong></td>
+              <td>Middle Strike</td>
+              <td>192.5</td>
+              <td>+12 HDCP</td>
+              <td>Lane 14B (Pro Cosmic)</td>
+              <td><span class="status-badge-pending">Check-In Pending</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 3: TOURNAMENT MILESTONES — MATCH DAY SCHEDULE (#milestones)
+         ---------------------------------------------------------------------- -->
+    <section id="milestones" class="dash-section">
+
+      <div class="section-headline-bar">
+        <div class="section-eyebrow-tag">
+          <span>⚡</span> TOURNAMENT ROADMAP &amp; SCHEDULE
+        </div>
+      </div>
+
+      <div class="dash-schedule-banner">
+        <div class="schedule-banner-top">
+          <div class="schedule-title-group">
+            <h3>
+              <span>⚡</span>
+              <span>MATCH DAY TIMELINE — BRUNSWICK PRO ARENA</span>
+            </h3>
+            <p>Confirmed timeline with 30-minute electronic pinsetter calibration • Lane 14 Pro Arena Alpha</p>
+          </div>
+          <div class="live-confirmed-tag">
+            <span>●</span>
+            <span>LIVE CONFIRMED SCHEDULE</span>
+          </div>
+        </div>
+
+        <!-- Stages Progress Roadmap -->
+        <div class="schedule-stages-row">
+
+          <div class="schedule-stage-card">
+            <span class="stage-num-lbl">Stage 1</span>
+            <span class="stage-name-txt">Arena Check-In</span>
+          </div>
+
+          <div class="schedule-stage-card">
+            <span class="stage-num-lbl">Stage 2</span>
+            <span class="stage-name-txt">Radar Chrono Valet</span>
+          </div>
+
+          <div class="schedule-stage-card">
+            <span class="stage-num-lbl">Stage 3</span>
+            <span class="stage-name-txt">Lane 14 Warmup</span>
+          </div>
+
+          <div class="schedule-stage-card">
+            <span class="stage-num-lbl">Stage 4</span>
+            <span class="stage-name-txt">Knockout Match</span>
+          </div>
+
+          <div class="schedule-stage-card">
+            <span class="stage-num-lbl">Stage 5</span>
+            <span class="stage-name-txt">Final Championship</span>
+          </div>
+
+          <div class="schedule-stage-card">
+            <span class="stage-num-lbl">Stage 6</span>
+            <span class="stage-name-txt">Trophy &amp; Taphouse</span>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 4: ALLEY KITCHEN & LANE-SIDE DINING (#dining)
+         ---------------------------------------------------------------------- -->
+    <section id="dining" class="dash-section">
+
+      <div class="section-headline-bar">
+        <div class="section-eyebrow-tag">
+          <span>🍕</span> ALLEY KITCHEN &amp; LANE-SIDE CRAFT DINING
+        </div>
+        <span class="status-badge-active">Live Kitchen Order #AK-409</span>
+      </div>
+
+      <div class="dining-order-card">
+        <div class="dining-order-header">
+          <div>
+            <h4 style="font-size: 1.15rem; font-weight: 800; color: #ffffff; margin: 0 0 0.25rem;">
+              Lane 14A Active Food &amp; Drink Order
+            </h4>
+            <p style="font-size: 0.82rem; color: rgba(255, 249, 242, 0.6); margin: 0;">
+              Ordered via Bowler Tablet • Estimated delivery to Lane 14A in 12 minutes
+            </p>
+          </div>
+          <div class="live-confirmed-tag">
+            <span>🔥</span>
+            <span>PREPARING AT GRILL</span>
+          </div>
+        </div>
+
+        <div class="dining-items-grid">
+
+          <div class="dining-item-pill">
+            <div class="dining-item-icon">🍕</div>
+            <div class="dining-item-info">
+              <h5>Artisanal Truffle Pinsa (x2)</h5>
+              <p>Fermented sourdough crust, black truffle cream, fior di latte mozzarella.</p>
+              <span class="dining-item-price">$32.00</span>
+            </div>
+          </div>
+
+          <div class="dining-item-pill">
+            <div class="dining-item-icon">🍺</div>
+            <div class="dining-item-info">
+              <h5>Cosmic Nitro IPA Pitcher (x1)</h5>
+              <p>Fresh craft microbrew tap, citrus hops, crisp refreshing finish.</p>
+              <span class="dining-item-price">$16.50</span>
+            </div>
+          </div>
+
+          <div class="dining-item-pill">
+            <div class="dining-item-icon">🍗</div>
+            <div class="dining-item-info">
+              <h5>Sriracha Honey Wings (12 pcs)</h5>
+              <p>Crisp double-fried jumbo wings, house chili glaze, creamy gorgonzola dip.</p>
+              <span class="dining-item-price">$18.00</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="order-status-bar">
+          <div style="font-size: 0.85rem; color: rgba(255, 249, 242, 0.7);">
+            Order Total: <strong style="color: #ffffff; font-size: 1rem;">$66.50</strong> • Charged to Bowler Card
+            #SP-8824
+          </div>
+          <a href="home-2.html#dining" class="btn-action-sm">
+            <span>+ Order More Snacks &amp; Drinks</span>
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 5: HYPER-ARCADE & VIP PERKS (#arcade)
+         ---------------------------------------------------------------------- -->
+    <section id="arcade" class="dash-section">
+
+      <div class="section-headline-bar">
+        <div class="section-eyebrow-tag">
+          <span>🕹️</span> HYPER-ARCADE RIGS &amp; VIP ENTERTAINMENT PASSES
+        </div>
+      </div>
+
+      <div class="perks-three-grid">
+
+        <!-- Card 1: PowerCard Balance -->
+        <div class="perk-card">
+          <div>
+            <div class="perk-card-top">
+              <div class="perk-icon-circle">💳</div>
+              <div>
+                <h4 class="perk-title">Arcade PowerCard</h4>
+                <p class="perk-sub">Card ID: #PC-9912-GOLD</p>
+              </div>
+            </div>
+            <div class="perk-big-val">$85.00</div>
+            <p style="font-size: 0.8rem; color: rgba(255, 249, 242, 0.65); margin: 0 0 1.25rem;">
+              4,250 Ticket Redemption Points available for the Grand Prize Vault.
+            </p>
+          </div>
+          <button type="button" class="btn-action-sm" style="justify-content: center; width: 100%;">
+            <span>⚡ Reload PowerCard Credits</span>
+          </button>
+        </div>
+
+        <!-- Card 2: Laser Tag Arena Pass -->
+        <div class="perk-card">
+          <div>
+            <div class="perk-card-top">
+              <div class="perk-icon-circle">🎯</div>
+              <div>
+                <h4 class="perk-title">Laser Tag Arena</h4>
+                <p class="perk-sub">Sector 7 Neon Citadel</p>
+              </div>
+            </div>
+            <div class="perk-big-val">2 Passes</div>
+            <p style="font-size: 0.8rem; color: rgba(255, 249, 242, 0.65); margin: 0 0 1.25rem;">
+              Tactical phaser access loaded. Priority lane check-in at Sector 7 armory.
+            </p>
+          </div>
+          <a href="pricing.html" class="btn-action-sm" style="justify-content: center; width: 100%;">
+            <span>View Battle Schedules</span>
+          </a>
+        </div>
+
+        <!-- Card 3: VIP Mezzanine Pass -->
+        <div class="perk-card">
+          <div>
+            <div class="perk-card-top">
+              <div class="perk-icon-circle">🍸</div>
+              <div>
+                <h4 class="perk-title">Mezzanine VIP Lounge</h4>
+                <p class="perk-sub">Exclusive Suite Access</p>
+              </div>
+            </div>
+            <div class="perk-big-val" style="color: #34D399;">UNLOCKED</div>
+            <p style="font-size: 0.8rem; color: rgba(255, 249, 242, 0.65); margin: 0 0 1.25rem;">
+              Balcony lane view, dedicated craft bartender, and luxury leather seating.
+            </p>
+          </div>
+          <a href="about.html" class="btn-action-sm" style="justify-content: center; width: 100%;">
+            <span>View Lounge Amenities</span>
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 6: FRAME TELEMETRY & ANALYTICS (#telemetry)
+         ---------------------------------------------------------------------- -->
+    <section id="telemetry" class="dash-section">
+
+      <div class="section-headline-bar">
+        <div class="section-eyebrow-tag">
+          <span>📊</span> BOWLER FRAME TELEMETRY &amp; LIVE RADAR STATS
+        </div>
+        <span class="status-badge-active">Match #4 Game High: 236</span>
+      </div>
+
+      <div class="telemetry-card">
+        <h4 style="font-size: 1.05rem; font-weight: 800; color: #ffffff; margin-bottom: 1rem;">
+          Match 4 Live Frame Breakdown — Lane 14A
+        </h4>
+
+        <!-- 10-Frame Visual Scorecard -->
+        <div class="telemetry-frames-grid">
+
+          <div class="frame-col-box">
+            <div class="frame-number-hdr">F1</div>
+            <div class="frame-shots-row">
+              <span class="frame-shot strike">X</span>
+              <span class="frame-shot"></span>
+            </div>
+            <div class="frame-score-total">20</div>
+          </div>
+
+          <div class="frame-col-box">
+            <div class="frame-number-hdr">F2</div>
+            <div class="frame-shots-row">
+              <span class="frame-shot strike">X</span>
+              <span class="frame-shot"></span>
+            </div>
+            <div class="frame-score-total">40</div>
+          </div>
+
+          <div class="frame-col-box">
+            <div class="frame-number-hdr">F3</div>
+            <div class="frame-shots-row">
+              <span class="frame-shot">9</span>
+              <span class="frame-shot strike">/</span>
+            </div>
+            <div class="frame-score-total">60</div>
+          </div>
+
+          <div class="frame-col-box">
+            <div class="frame-number-hdr">F4</div>
+            <div class="frame-shots-row">
+              <span class="frame-shot strike">X</span>
+              <span class="frame-shot"></span>
+            </div>
+            <div class="frame-score-total">88</div>
+          </div>
+
+          <div class="frame-col-box">
+            <div class="frame-number-hdr">F5</div>
+            <div class="frame-shots-row">
+              <span class="frame-shot strike">X</span>
+              <span class="frame-shot"></span>
+            </div>
+            <div class="frame-score-total">116</div>
+          </div>
+
+          <div class="frame-col-box">
+            <div class="frame-number-hdr">F6</div>
+            <div class="frame-shots-row">
+              <span class="frame-shot strike">X</span>
+              <span class="frame-shot"></span>
+            </div>
+            <div class="frame-score-total">144</div>
+          </div>
+
+          <div class="frame-col-box">
+            <div class="frame-number-hdr">F7</div>
+            <div class="frame-shots-row">
+              <span class="frame-shot">9</span>
+              <span class="frame-shot strike">/</span>
+            </div>
+            <div class="frame-score-total">164</div>
+          </div>
+
+          <div class="frame-col-box">
+            <div class="frame-number-hdr">F8</div>
+            <div class="frame-shots-row">
+              <span class="frame-shot strike">X</span>
+              <span class="frame-shot"></span>
+            </div>
+            <div class="frame-score-total">184</div>
+          </div>
+
+          <div class="frame-col-box">
+            <div class="frame-number-hdr">F9</div>
+            <div class="frame-shots-row">
+              <span class="frame-shot strike">X</span>
+              <span class="frame-shot"></span>
+            </div>
+            <div class="frame-score-total">206</div>
+          </div>
+
+          <div class="frame-col-box" style="min-width: 82px;">
+            <div class="frame-number-hdr">F10</div>
+            <div class="frame-shots-row">
+              <span class="frame-shot strike">X</span>
+              <span class="frame-shot strike">X</span>
+              <span class="frame-shot">9</span>
+            </div>
+            <div class="frame-score-total">236</div>
+          </div>
+
+        </div>
+
+        <!-- Radar Telemetry Key Metrics -->
+        <div class="telemetry-kpis-grid">
+          <div class="telemetry-kpi-item">
+            <div class="kpi-lbl">Ball Exit Velocity</div>
+            <div class="kpi-val">17.8 mph</div>
+          </div>
+          <div class="telemetry-kpi-item">
+            <div class="kpi-lbl">Revs Per Minute</div>
+            <div class="kpi-val">392 rpm</div>
+          </div>
+          <div class="telemetry-kpi-item">
+            <div class="kpi-lbl">Pocket Strike %</div>
+            <div class="kpi-val">71.4%</div>
+          </div>
+          <div class="telemetry-kpi-item">
+            <div class="kpi-lbl">Single Pin Conversion</div>
+            <div class="kpi-val">94.2%</div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Core JavaScript -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Dashboard Client Interactions Script -->
+  <script>
+    function initDashPage() {
+      // 1. Sidebar Nav Click & Smooth Scroll (Both Desktop & Drawer)
+      const allDashNavLinks = document.querySelectorAll('[data-dash-nav]');
+      const mobileDrawer = document.getElementById('mobileDrawer');
+      const mobileBackdrop = document.getElementById('mobileDrawerBackdrop');
+
+      function closeDrawerIfOpen() {
+        if (mobileDrawer && mobileDrawer.classList.contains('active')) {
+          mobileDrawer.classList.remove('active');
+          if (mobileBackdrop) mobileBackdrop.classList.remove('active');
+          document.body.classList.remove('menu-open');
+          document.documentElement.classList.remove('menu-open');
+          document.body.style.overflow = '';
+          document.documentElement.style.overflow = '';
+        }
+      }
+
+      allDashNavLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+          const targetId = link.getAttribute('data-dash-nav');
+          const targetSection = document.getElementById(targetId);
+
+          if (targetSection) {
+            e.preventDefault();
+
+            // Set active state on both sidebar and drawer links
+            allDashNavLinks.forEach((l) => {
+              if (l.getAttribute('data-dash-nav') === targetId) {
+                l.classList.add('active');
+              } else {
+                l.classList.remove('active');
+              }
+            });
+
+            // Smooth scroll to section
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+
+            // Close mobile drawer if open
+            closeDrawerIfOpen();
+          }
+        });
+      });
+
+      // 2. User Profile Dropdown (Desktop Header - Single Bound Handler)
+      const userPill = document.getElementById('dashUserDropdown');
+      const userMenu = document.getElementById('dashUserMenu');
+
+      if (userPill && userMenu && !userPill.dataset.bound) {
+        userPill.dataset.bound = 'true';
+
+        userPill.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const isOpen = userMenu.classList.contains('show');
+          if (isOpen) {
+            userMenu.classList.remove('show');
+            userPill.setAttribute('aria-expanded', 'false');
+          } else {
+            userMenu.classList.add('show');
+            userPill.setAttribute('aria-expanded', 'true');
+          }
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!userPill.contains(e.target) && !userMenu.contains(e.target)) {
+            userMenu.classList.remove('show');
+            userPill.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            userMenu.classList.remove('show');
+            userPill.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+
+      // 3. Confirm Briefing Button Interaction
+      const briefingBtn = document.getElementById('btnConfirmBriefing');
+      if (briefingBtn) {
+        briefingBtn.addEventListener('click', () => {
+          briefingBtn.innerHTML = '<span>✓ BRIEFING CONFIRMED</span>';
+          briefingBtn.style.background = 'linear-gradient(135deg, #7B0D27, #4D0717)';
+          briefingBtn.style.borderColor = 'rgba(229, 169, 60, 0.6)';
+          briefingBtn.style.color = '#F5BC51';
+        });
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initDashPage);
+    } else {
+      initDashPage();
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strike & Pin | Premier Cosmic Bowling & Entertainment Center</title>
+  <meta name="description"
+    content="Experience high-energy cosmic bowling, 32 championship Brunswick lanes, interactive arcade games, pro tournament leagues, and bespoke birthday celebration packages.">
+  <meta name="theme-color" content="#160206">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/icons/logo.png">
+
+  <!-- Global Stylesheets (No inline CSS!) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       BRANDED PRELOADER
+       ========================================================================== -->
+  <div id="preloader" role="status" aria-label="Loading Strike & Pin Center">
+    <div class="loader-content">
+      <div class="loader-brand">
+        <img src="assets/images/icons/logo.png" alt="Strike & Pin Bowling Logo" class="loader-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-title">Strike<span>&</span>Pin</span>
+          <span class="brand-subtitle">Bowling & Entertainment</span>
+        </div>
+      </div>
+      <div class="loader-pin-indicator" aria-hidden="true">
+        <span class="loader-dot"></span>
+        <span class="loader-dot"></span>
+        <span class="loader-dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FIXED COMPACT HEADER (Strictly 1 Line Desktop, Compact, Never Scrolls Away)
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+
+      <!-- Brand Logo + Name + Small Subtitle -->
+      <a href="index.html" class="header-brand" aria-label="Strike & Pin Homepage">
+        <img src="assets/images/icons/logo.png" alt="Strike & Pin Bowling Logo" class="header-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-title">Strike<span>&</span>Pin</span>
+          <span class="brand-subtitle">Bowling & Entertainment</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation - Exactly 6 Items (Home with Click-Only Dropdown) -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+
+        <!-- 1. Home (Dropdown - CLICK ONLY) -->
+        <div class="nav-dropdown-wrapper" id="homeDropdownWrapper">
+          <button type="button" class="nav-link nav-dropdown-trigger" id="homeDropdownTrigger" aria-haspopup="true"
+            aria-expanded="false">
+            <span>Home</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="dropdown-panel" role="menu" aria-label="Home Variations">
+            <a href="index.html" class="dropdown-item" role="menuitem">
+              <span>Home 1 (Cosmic Arena)</span>
+              <span class="dropdown-badge">V1</span>
+            </a>
+            <a href="home-2.html" class="dropdown-item" role="menuitem">
+              <span>Home 2 (Retro Lounge)</span>
+              <span class="dropdown-badge">V2</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Book a Lane -->
+        <a href="book-lane.html" class="nav-link">
+          <span>Book a Lane</span>
+        </a>
+
+        <!-- 3. Leagues & Tournaments -->
+        <a href="leagues.html" class="nav-link">
+          <span>Leagues & Tournaments</span>
+        </a>
+
+        <!-- 4. Pricing -->
+        <a href="pricing.html" class="nav-link">
+          <span>Pricing</span>
+        </a>
+
+        <!-- 6. About -->
+        <a href="about.html" class="nav-link">
+          <span>About</span>
+        </a>
+
+        <!-- 7. Contact (Directly visible) -->
+        <a href="contact.html" class="nav-link">
+          <span>Contact</span>
+        </a>
+
+        <!-- 8. Dashboard -->
+        <a href="dashboard.html" class="nav-link">
+          <span>Dashboard</span>
+        </a>
+      </nav>
+
+      <!-- Header Controls: RTL, Dark Mode, Dedicated Login Button -->
+      <div class="header-actions">
+
+        <!-- RTL/LTR Toggle -->
+        <button type="button" class="utility-btn rtl-toggle-btn" aria-label="Toggle text direction (RTL/LTR)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 3L4 7l4 4"></path>
+            <path d="M4 7h16"></path>
+            <path d="M16 21l4-4-4-4"></path>
+            <path d="M20 17H4"></path>
+          </svg>
+          <span class="utility-label dir-label-text">RTL</span>
+        </button>
+
+        <!-- Dark Mode Toggle (Pure #000000) -->
+        <button type="button" class="utility-btn dark-mode-toggle" aria-label="Toggle dark mode" aria-pressed="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <span class="utility-label">Theme</span>
+        </button>
+
+        <!-- Dedicated Login Button (Replaces generic CTA) -->
+        <a href="login.html" class="btn-login desktop-only" id="headerLoginBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            <polyline points="10 17 15 12 10 7"></polyline>
+            <line x1="15" y1="12" x2="3" y2="12"></line>
+          </svg>
+          <span>Login</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Open mobile navigation menu"
+          aria-controls="mobileDrawer" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MOBILE NAVIGATION DRAWER
+       ========================================================================== -->
+  <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" role="dialog" aria-modal="true">
+
+    <!-- Mobile Drawer Header -->
+    <div class="mobile-drawer-header">
+      <div class="header-brand">
+        <img src="assets/images/icons/logo.png" alt="Strike & Pin Logo" class="header-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-title">Strike<span>&</span>Pin</span>
+          <span class="brand-subtitle">Bowling & Entertainment</span>
+        </div>
+      </div>
+      <button type="button" class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close navigation menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Nav Links -->
+    <div class="mobile-drawer-content">
+
+      <!-- Mobile Home Accordion (CLICK ONLY) -->
+      <div class="mobile-accordion-wrapper" id="mobileHomeAccordion">
+        <button type="button" class="mobile-nav-link mobile-accordion-toggle" id="mobileHomeAccordionToggle"
+          aria-expanded="false">
+          <span>Home</span>
+          <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="mobile-accordion-panel">
+          <a href="index.html" class="mobile-sub-link">
+            <span>Home 1 (Cosmic Arena)</span>
+            <span class="dropdown-badge">V1</span>
+          </a>
+          <a href="home-2.html" class="mobile-sub-link">
+            <span>Home 2 (Retro Lounge)</span>
+            <span class="dropdown-badge">V2</span>
+          </a>
+        </div>
+      </div>
+
+      <a href="book-lane.html" class="mobile-nav-link">
+        <span>Book a Lane</span>
+      </a>
+
+      <a href="leagues.html" class="mobile-nav-link">
+        <span>Leagues & Tournaments</span>
+      </a>
+
+      <a href="pricing.html" class="mobile-nav-link">
+        <span>Pricing</span>
+      </a>
+
+      <a href="about.html" class="mobile-nav-link">
+        <span>About Us</span>
+      </a>
+
+      <a href="contact.html" class="mobile-nav-link">
+        <span>Contact</span>
+      </a>
+
+      <a href="dashboard.html" class="mobile-nav-link">
+        <span>Dashboard</span>
+      </a>
+
+      <!-- Mobile Login Direct Link -->
+      <a href="login.html" class="btn-login" style="margin-top: 1rem; width: 100%; justify-content: center;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+          <polyline points="10 17 15 12 10 7"></polyline>
+          <line x1="15" y1="12" x2="3" y2="12"></line>
+        </svg>
+        <span>Guest & Member Login</span>
+      </a>
+    </div>
+
+    <!-- Mobile Drawer Footer Controls -->
+    <div class="mobile-drawer-footer">
+      <div class="mobile-utility-row">
+        <button type="button" class="utility-btn rtl-toggle-btn" style="width: 100%;"
+          aria-label="Toggle text direction (RTL/LTR)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true">
+            <line x1="21" y1="6" x2="3" y2="6"></line>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+            <line x1="21" y1="18" x2="7" y2="18"></line>
+          </svg>
+          <span class="dir-label-text">RTL</span>
+        </button>
+
+        <button type="button" class="utility-btn dark-mode-toggle" style="width: 100%;" aria-label="Toggle dark mode">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+          </svg>
+          <span>Dark Mode</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: EXACTLY 6 CONTENT SECTIONS FOR HOME 1
+       ========================================================================== -->
+  <main id="mainContent">
+
+    <!-- ------------------------------------------------------------------------
+         SECTION 1: HERO SECTION (COSMIC BOWLING ARENA)
+         ------------------------------------------------------------------------ -->
+    <section class="hero-cosmic" id="heroSection" aria-label="Hero Section">
+      <div class="section-container">
+        <div class="hero-grid">
+
+          <!-- Content Side -->
+          <div class="hero-content">
+            <div class="hero-live-indicator">
+              <span class="pulse-ring"></span>
+              <span>Lanes Live: 24 Open Now</span>
+            </div>
+
+            <h1 class="hero-headline">
+              Unleash The <em>Cosmic Strike</em> Atmosphere
+            </h1>
+
+            <p class="hero-description">
+              Elevate your social night at Metro’s high-energy entertainment complex. Featuring 32 Brunswick synthetic
+              lanes, synchronized kinetic UV lighting, arcade simulators, and artisan alley cocktails.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="book-lane.html" class="btn-primary">
+                <span>Reserve a Lane Slot</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+
+              <a href="#attractionsSection" class="btn-secondary">
+                <span>Explore Attractions</span>
+              </a>
+            </div>
+
+            <div class="hero-stats-row">
+              <div class="hero-stat-card">
+                <span class="hero-stat-num">32<span>+</span></span>
+                <span class="hero-stat-label">Championship Lanes</span>
+              </div>
+              <div class="hero-stat-card">
+                <span class="hero-stat-num">85<span>+</span></span>
+                <span class="hero-stat-label">Arcade Game Rigs</span>
+              </div>
+              <div class="hero-stat-card">
+                <span class="hero-stat-num">4.9<span>★</span></span>
+                <span class="hero-stat-label">Guest Experience Rating</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Media Card -->
+          <div class="hero-visual-card">
+            <div class="hero-img-wrapper">
+              <img src="assets/images/hero/p1.jpg" alt="Vibrant cosmic bowling alley glow with illuminated pins"
+                loading="eager">
+              <div class="hero-floating-pill">
+                <div>
+                  <h4>Cosmic After-Dark Hours</h4>
+                  <p>Thu – Sat Nights with Live Resident DJ</p>
+                </div>
+                <span class="hero-pill-badge">8 PM – Close</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------------
+         SECTION 2: BEYOND THE LANES (ASYMMETRIC ATTRACTIONS)
+         ------------------------------------------------------------------------ -->
+    <section class="section-wrapper bg-surface" id="attractionsSection" aria-label="Attractions Section">
+      <div class="section-container">
+
+        <div class="section-header-center">
+          <div class="eyebrow-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+              </polygon>
+            </svg>
+            <span>Beyond The Bowling Lane</span>
+          </div>
+          <h2 class="section-title">High-Energy <span>Social Play</span> & Sips</h2>
+          <p class="section-subtitle">
+            More than just pin-shattering action. Immerse yourself in competitive retro-modern arcade gaming and craft
+            culinary refreshments crafted for champions.
+          </p>
+        </div>
+
+        <div class="attractions-grid">
+
+          <!-- Feature 1: Hyper-Arcade & VR Matrix -->
+          <article class="attraction-feature-card">
+            <div class="attraction-media-wrap">
+              <img src="assets/images/sections/p2.jpg" alt="Neon lighted arcade entertainment center games"
+                loading="lazy">
+              <span class="attraction-badge-float">Interactive Arcade</span>
+            </div>
+            <div class="attraction-body">
+              <h3>Next-Gen Arcade & VR Stadium</h3>
+              <p>
+                Load up your rechargeable Power Card and conquer over 85 arcade titles, from vintage rhythm machines and
+                pinball tournaments to motion-sensored VR simulators and multiplayer shootouts.
+              </p>
+              <div class="attraction-tags-list">
+                <span class="attraction-tag">Ticket Redemption Counter</span>
+                <span class="attraction-tag">Air Hockey Arenas</span>
+                <span class="attraction-tag">VR Simulators</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Feature 2: Craft Lounge & Alley Bistro -->
+          <article class="attraction-feature-card">
+            <div class="attraction-media-wrap">
+              <img src="assets/images/sections/p3.jpg" alt="Atmospheric cocktail lounge bar with drinks" loading="lazy">
+              <span class="attraction-badge-float">Lane-Side Dining</span>
+            </div>
+            <div class="attraction-body">
+              <h3>The 300 Club Craft Bar & Bistro</h3>
+              <p>
+                Order directly from your lane tablet. Indulge in wood-fired sourdough pizzas, smash burgers, smoked
+                chicken wings, local craft IPA drafts, and custom bowling-themed craft cocktails.
+              </p>
+              <div class="attraction-tags-list">
+                <span class="attraction-tag">Full Cocktail Bar</span>
+                <span class="attraction-tag">Touchscreen Lane Ordering</span>
+                <span class="attraction-tag">Artisan Shareables</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------------
+         SECTION 3: VIP LUXURY SUITES (ARCHITECTURAL PANORAMA)
+         ------------------------------------------------------------------------ -->
+    <section class="section-wrapper bg-body" id="vipSuitesSection" aria-label="VIP Suites Section">
+      <div class="section-container">
+
+        <div class="vip-suite-banner">
+          <div class="vip-grid">
+
+            <!-- Left: Content & Amenities Matrix -->
+            <div class="vip-content-side">
+              <div class="eyebrow-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                  </path>
+                </svg>
+                <span>Private Luxury Experience</span>
+              </div>
+
+              <h2 class="section-title">The Royal Pin <span>VIP Bowling Suites</span></h2>
+
+              <p class="section-subtitle">
+                Designed for exclusive celebrations, corporate executive retreats, and private parties. Experience
+                private 4-lane suites isolated from the main hall with dedicated concierge hospitality.
+              </p>
+
+              <div class="vip-amenities-matrix">
+
+                <div class="vip-amenity-item">
+                  <div class="vip-amenity-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" aria-hidden="true">
+                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                  </div>
+                  <div class="vip-amenity-text">
+                    <h4>AR Projection Lanes</h4>
+                    <p>Dynamic target animations and game modes projected directly onto the wood lanes.</p>
+                  </div>
+                </div>
+
+                <div class="vip-amenity-item">
+                  <div class="vip-amenity-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" aria-hidden="true">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                  </div>
+                  <div class="vip-amenity-text">
+                    <h4>Dedicated Server Butler</h4>
+                    <p>Exclusive server handling food, bottle service, and footwear deliveries instantly.</p>
+                  </div>
+                </div>
+
+                <div class="vip-amenity-item">
+                  <div class="vip-amenity-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" aria-hidden="true">
+                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                  </div>
+                  <div class="vip-amenity-text">
+                    <h4>Leather Banquettes</h4>
+                    <p>Plush velvet leather lounge sofas with built-in wireless phone chargers.</p>
+                  </div>
+                </div>
+
+                <div class="vip-amenity-item">
+                  <div class="vip-amenity-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <circle cx="12" cy="12" r="4"></circle>
+                    </svg>
+                  </div>
+                  <div class="vip-amenity-text">
+                    <h4>Custom Ball Weight Vault</h4>
+                    <p>Exclusive set of precision urethane and reactive bowling balls from 8 to 16 lbs.</p>
+                  </div>
+                </div>
+
+              </div>
+
+              <div>
+                <a href="book-lane.html" class="btn-primary">
+                  <span>Reserve VIP Suite</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right: Architectural Image -->
+            <div class="vip-media-side">
+              <img src="assets/images/sections/p4.jpg" alt="Luxury VIP Bowling Suite interior with lounge seating"
+                loading="lazy">
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------------
+         SECTION 4: PRO LEAGUES & TOURNAMENTS (EDITORIAL MATCHDAY ROSTER)
+         ------------------------------------------------------------------------ -->
+    <section class="section-wrapper bg-surface" id="leaguesSection" aria-label="Leagues and Tournaments">
+      <div class="section-container">
+
+        <div class="section-header-center">
+          <div class="eyebrow-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+              <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+              <path d="M4 22h16"></path>
+              <path d="M10 14.66V17c0 .55-.45 1-1 1H7v2h10v-2h-2c-.55 0-1-.45-1-1v-2.34"></path>
+              <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+            </svg>
+            <span>Competitive Championship</span>
+          </div>
+          <h2 class="section-title">Weekly Leagues & <span>Prize Tournaments</span></h2>
+          <p class="section-subtitle">
+            Join over 40 registered squads competing across sanctioned USBC leagues, fun beer-in-hand handicaps, and
+            cash-prize weekend shootouts.
+          </p>
+        </div>
+
+        <div class="leagues-editorial-layout">
+
+          <!-- Left: Standings Roster -->
+          <div class="roster-card">
+            <div class="roster-header">
+              <div>
+                <h3>Division 1 Pro Leaderboard</h3>
+                <span style="font-size: 0.8rem; color: var(--brand-cream);">Week 14 Standing • Fall Circuit</span>
+              </div>
+              <span class="prize-pot-tag">$15,000 Seasonal Purse</span>
+            </div>
+
+            <div class="roster-table-container">
+              <table class="roster-table" aria-label="Division 1 Leaderboard">
+                <thead>
+                  <tr>
+                    <th>Rank &amp; Squad</th>
+                    <th>Avg Pinfall</th>
+                    <th>W&nbsp;–&nbsp;L</th>
+                    <th>Points</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="team-rank-cell">
+                        <span class="rank-badge-num gold">1</span>
+                        <span>The Pin Crushers</span>
+                      </div>
+                    </td>
+                    <td>218.4</td>
+                    <td>28&nbsp;–&nbsp;6</td>
+                    <td><strong>92.5</strong></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="team-rank-cell">
+                        <span class="rank-badge-num">2</span>
+                        <span>Cosmic Split Kings</span>
+                      </div>
+                    </td>
+                    <td>212.1</td>
+                    <td>26&nbsp;–&nbsp;8</td>
+                    <td><strong>88.0</strong></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="team-rank-cell">
+                        <span class="rank-badge-num">3</span>
+                        <span>Rolling Thunder</span>
+                      </div>
+                    </td>
+                    <td>207.8</td>
+                    <td>23&nbsp;–&nbsp;11</td>
+                    <td><strong>81.5</strong></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="team-rank-cell">
+                        <span class="rank-badge-num">4</span>
+                        <span>Strike Velocity</span>
+                      </div>
+                    </td>
+                    <td>204.5</td>
+                    <td>21&nbsp;–&nbsp;13</td>
+                    <td><strong>76.0</strong></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="team-rank-cell">
+                        <span class="rank-badge-num">5</span>
+                        <span>Gutter Mavericks</span>
+                      </div>
+                    </td>
+                    <td>199.2</td>
+                    <td>19&nbsp;–&nbsp;15</td>
+                    <td><strong>71.0</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Right: Visual Spotlight & Schedule -->
+          <div class="league-feature-side">
+            <div class="league-spotlight-card">
+              <img src="assets/images/sections/p5.jpg" alt="Competitive bowler throwing a strike in a league tournament"
+                loading="lazy">
+              <div class="league-spotlight-overlay">
+                <h4>Sunday Cash Clash Open</h4>
+                <p>Register solo or as a 4-person squad before Thursday 6 PM</p>
+              </div>
+            </div>
+
+            <div class="league-schedule-box">
+              <div class="schedule-item">
+                <div>
+                  <strong style="color: #FFFFFF; display: block;">Tuesday Night Mixed Scratch</strong>
+                  <span style="font-size: 0.76rem; color: var(--brand-cream);">7:00 PM • 3 Games Sanctioned</span>
+                </div>
+                <span class="dropdown-badge">Spots Open</span>
+              </div>
+              <div class="schedule-item">
+                <div>
+                  <strong style="color: #FFFFFF; display: block;">Thursday Night Social Pint League</strong>
+                  <span style="font-size: 0.76rem; color: var(--brand-cream);">8:00 PM • Handicap Friendly</span>
+                </div>
+                <span class="dropdown-badge" style="background: var(--brand-burgundy-500); color: #FFFFFF;">Filling
+                  Fast</span>
+              </div>
+            </div>
+
+            <a href="leagues.html" class="btn-primary" style="width: 100%;">
+              <span>Register Squad for League</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------------
+         SECTION 5: CELEBRATIONS & BIRTHDAY PACKAGES
+         ------------------------------------------------------------------------ -->
+    <section class="section-wrapper bg-body" id="celebrationsSection" aria-label="Birthday Party Packages">
+      <div class="section-container">
+
+        <div class="section-header-center">
+          <div class="eyebrow-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 12v10H4V12"></path>
+              <path d="M2 7h20v5H2z"></path>
+              <path d="M12 22V7"></path>
+              <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
+              <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+            </svg>
+            <span>Celebrations & Group Outings</span>
+          </div>
+          <h2 class="section-title">Epic Birthday & <span>Group Packages</span></h2>
+          <p class="section-subtitle">
+            Hassle-free event coordination with dedicated lanes, fresh hot pizza, arcade power cards, and custom
+            souvenir bowling pins for the guest of honor.
+          </p>
+        </div>
+
+        <!-- Editorial Celebration Visual Banner -->
+        <div class="celebration-hero-banner"
+          style="margin-bottom: 3rem; border-radius: 18px; overflow: hidden; position: relative; border: 1px solid var(--border-brand); min-height: 260px; display: flex; align-items: center;">
+          <img src="assets/images/sections/p6.jpg" alt="Friends celebrating together at the bowling alley"
+            style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.55);"
+            loading="lazy">
+          <div
+            style="position: relative; z-index: 2; padding: 2rem 2.5rem; max-width: 640px; background: linear-gradient(90deg, rgba(22, 2, 6, 0.94) 60%, rgba(22, 2, 6, 0.6) 100%); border-radius: 14px; margin: 1.5rem; border: 1px solid var(--border-subtle);">
+            <span
+              style="font-size: 0.78rem; font-weight: 800; color: var(--brand-gold-400); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.35rem;">Celebration
+              Headquarters</span>
+            <h3 style="font-size: 1.55rem; font-weight: 900; color: #FFFFFF; line-height: 1.2; margin-bottom: 0.5rem;">
+              Turn Milestones Into Unforgettable Strikes</h3>
+            <p style="font-size: 0.9rem; color: var(--brand-cream); line-height: 1.5;">Every party booking includes
+              dedicated event hosts, custom digital lane graphics, souvenir bowling pins, and reserved party lounge
+              tables.</p>
+          </div>
+        </div>
+
+        <div class="packages-grid">
+
+          <!-- Package 1: Youth Cosmic Cadet -->
+          <article class="package-card">
+            <h3 class="package-tier-name">Cosmic Cadet</h3>
+            <p class="package-ideal-for">Tailored for kids aged 5 to 12 • Min 6 Bowlers</p>
+
+            <div class="package-price-wrap">
+              <span class="price-currency">$</span>
+              <span class="price-val">28</span>
+              <span class="price-duration">/ per child</span>
+            </div>
+
+            <ul class="package-inclusions">
+              <li class="inclusion-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>90 minutes of Cosmic Glow bowling</span>
+              </li>
+              <li class="inclusion-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Rental shoe pairs & bumper bumpers</span>
+              </li>
+              <li class="inclusion-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>$10 Game Card per child</span>
+              </li>
+              <li class="inclusion-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>2 Slices of fresh pizza + soda cup</span>
+              </li>
+            </ul>
+
+            <a href="birthday-parties.html" class="btn-secondary" style="width: 100%;">
+              <span>Book Cadet Party</span>
+            </a>
+          </article>
+
+          <!-- Package 2: The Strike Squad (Featured) -->
+          <article class="package-card featured">
+            <span class="featured-ribbon">Most Popular Choice</span>
+            <h3 class="package-tier-name">Strike Squad Epic</h3>
+            <p class="package-ideal-for">Teens & Adults • 2 Full Hours on Premium Lanes</p>
+
+            <div class="package-price-wrap">
+              <span class="price-currency">$</span>
+              <span class="price-val">42</span>
+              <span class="price-duration">/ per guest</span>
+            </div>
+
+            <ul class="package-inclusions">
+              <li class="inclusion-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>2 Full hours of cosmic lane time</span>
+              </li>
+              <li class="inclusion-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Full shoe rentals with pro upgrade option</span>
+              </li>
+              <li class="inclusion-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>$20 Reloadable Arcade Power Card</span>
+              </li>
+              <li class="inclusion-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Unlimited artisan pizza & gourmet appetizers</span>
+              </li>
+              <li class="inclusion-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Commemorative bowling pin signed by squad</span>
+              </li>
+            </ul>
+
+            <a href="birthday-parties.html" class="btn-primary" style="width: 100%;">
+              <span>Book Strike Squad</span>
+            </a>
+          </article>
+
+          <!-- Package 3: Midnight VIP Glow -->
+          <article class="package-card">
+            <h3 class="package-tier-name">Midnight VIP Glow</h3>
+            <p class="package-ideal-for">Late Night Adult Parties, Milestones & Corporate</p>
+
+            <div class="package-price-wrap">
+              <span class="price-currency">$</span>
+              <span class="price-val">65</span>
+              <span class="price-duration">/ per guest</span>
+            </div>
+
+            <ul class="package-inclusions">
+              <li class="inclusion-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Private VIP suite lanes for 3 hours</span>
+              </li>
+              <li class="inclusion-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Dedicated bartender & private butler service</span>
+              </li>
+              <li class="inclusion-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>$35 Arcade VIP Unlimited Pass</span>
+              </li>
+              <li class="inclusion-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Craft sliders, charcuterie & champagne toast</span>
+              </li>
+            </ul>
+
+            <a href="birthday-parties.html" class="btn-secondary" style="width: 100%;">
+              <span>Inquire VIP Night</span>
+            </a>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------------
+         SECTION 6: INTERACTIVE LANE CALCULATOR & GEAR MATRIX
+         ------------------------------------------------------------------------ -->
+    <section class="section-wrapper bg-surface" id="calculatorSection" aria-label="Interactive Lane Calculator">
+      <div class="section-container">
+
+        <div class="section-header-center">
+          <div class="eyebrow-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+              <line x1="8" y1="6" x2="16" y2="6"></line>
+              <line x1="16" y1="14" x2="16" y2="18"></line>
+              <path d="M16 10h.01"></path>
+              <path d="M12 10h.01"></path>
+              <path d="M8 10h.01"></path>
+              <path d="M12 14h.01"></path>
+              <path d="M8 14h.01"></path>
+              <path d="M12 18h.01"></path>
+              <path d="M8 18h.01"></path>
+            </svg>
+            <span>Live Interactive Planner</span>
+          </div>
+          <h2 class="section-title">Instant <span>Lane Slot</span> Estimator</h2>
+          <p class="section-subtitle">
+            Configure your group size, duration, and optional shoe or arcade rentals. Calculate transparent live rates
+            and secure your lane in seconds.
+          </p>
+        </div>
+
+        <div class="calculator-matrix-grid">
+
+          <!-- Interactive Calculation Console -->
+          <div class="calculator-console-card">
+
+            <!-- Step 1: Bowlers -->
+            <div class="calculator-group">
+              <div class="calculator-label-row">
+                <label for="calcBowlers" class="calc-label">Total Bowlers in Squad</label>
+                <span class="calc-val-readout" id="calcBowlersVal">4 Players</span>
+              </div>
+              <input type="range" min="1" max="8" value="4" class="calc-range-slider" id="calcBowlers"
+                aria-label="Number of Bowlers">
+            </div>
+
+            <!-- Step 2: Duration -->
+            <div class="calculator-group">
+              <span class="calc-label">Lane Session Duration</span>
+              <div class="calc-chips-group">
+                <button type="button" class="calc-chip-btn" data-hours="1">1 Hour</button>
+                <button type="button" class="calc-chip-btn selected" data-hours="2">2 Hours (Rec)</button>
+                <button type="button" class="calc-chip-btn" data-hours="3">3 Hours</button>
+              </div>
+            </div>
+
+            <!-- Step 3: Add-on Checkboxes -->
+            <div class="calculator-group">
+              <span class="calc-label">Optional Add-ons</span>
+
+              <div class="calc-checkbox-row active" id="calcShoesToggle" role="checkbox" aria-checked="true"
+                tabindex="0">
+                <div class="calc-checkbox-left">
+                  <div class="calc-custom-check checked" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <span style="font-weight: 700; color: #FFFFFF; font-size: 0.9rem;">Include Shoe Rentals</span>
+                    <span style="display: block; font-size: 0.75rem; color: var(--brand-cream);">$4.50 per person •
+                      Sanitized Pro Shoes</span>
+                  </div>
+                </div>
+                <strong style="color: var(--brand-gold-400); font-size: 0.9rem;">+$4.50/ea</strong>
+              </div>
+
+              <div class="calc-checkbox-row" id="calcArcadeToggle" role="checkbox" aria-checked="false" tabindex="0"
+                style="margin-top: 0.5rem;">
+                <div class="calc-checkbox-left">
+                  <div class="calc-custom-check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <span style="font-weight: 700; color: #FFFFFF; font-size: 0.9rem;">$20 Arcade Power Card</span>
+                    <span style="display: block; font-size: 0.75rem; color: var(--brand-cream);">Discounted to $15 per
+                      person</span>
+                  </div>
+                </div>
+                <strong style="color: var(--brand-gold-400); font-size: 0.9rem;">+$15/ea</strong>
+              </div>
+
+            </div>
+
+            <!-- Price Output & Confirm Button -->
+            <div class="calc-total-banner">
+              <div>
+                <span class="calc-total-label">Estimated Total Rate</span>
+                <span style="display: block; font-size: 0.75rem; color: var(--brand-cream);">Tax included • Guaranteed
+                  reserved lane</span>
+              </div>
+              <div class="calc-total-amount" id="calcTotalAmount">$108.00</div>
+            </div>
+
+            <a href="book-lane.html" class="btn-primary" id="calcReserveBtn" style="width: 100%;">
+              <span>Confirm & Lock In Lane Slot</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
+
+          </div>
+
+          <!-- Gear & Center Visual Side -->
+          <div class="calculator-gear-side">
+            <div class="gear-image-card">
+              <img src="assets/images/sections/p7.jpg" alt="Bowling ball return rack with colorful bowling balls"
+                loading="lazy">
+              <div class="gear-image-overlay">
+                <h4>Pro Grade Gear Provided</h4>
+                <p>USBC-standard balls from 6 to 16 lbs and sizes 4 Youth to 15 Adult</p>
+              </div>
+            </div>
+
+            <div
+              style="background: var(--bg-body); border: 1px solid var(--border-subtle); border-radius: 14px; padding: 1.25rem;">
+              <h4
+                style="font-size: 0.95rem; font-weight: 800; color: #FFFFFF; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--brand-gold-500)"
+                  stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <span>Strike & Pin Guarantee</span>
+              </h4>
+              <p style="font-size: 0.82rem; color: var(--brand-cream); line-height: 1.5;">
+                No waiting in queue on arrival. Your assigned lane is prepped, oiled, and warm before your booking
+                window begins. Free rescheduling up to 4 hours in advance.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CALL TO ACTION (CTA): READY TO ROLL
+         ========================================================================== -->
+    <section class="site-cta-section" aria-label="Book Your Lane Experience">
+      <div class="section-container">
+        <div class="site-cta-card">
+          <div class="site-cta-glow" aria-hidden="true"></div>
+          <div class="site-cta-content">
+            <div class="eyebrow-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
+              <span>Instant Lane Reservations</span>
+            </div>
+            <h2 class="site-cta-heading">Ready to Shatter <span>Some Pins?</span></h2>
+            <p class="site-cta-subtext">
+              Secure your preferred cosmic or timber lanes in advance. Uncapped excitement, artisanal lane-side dining,
+              retro arcade titles, and VIP hospitality await.
+            </p>
+            <div class="site-cta-actions">
+              <a href="book-lane.html" class="btn-primary">
+                <span>⚡ Reserve a Lane Online</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+
+              <a href="contact.html" class="btn-secondary" style="border-color: rgba(255,255,255,0.18);">
+                <span>Contact Event Concierge</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       SCROLL TO TOP BUTTON
+       ========================================================================== -->
+  <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top of page">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ==========================================================================
+       SHARED EDITORIAL FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+
+        <!-- Column 1: Brand & Editorial Bio -->
+        <div class="footer-col-brand">
+          <div class="footer-brand-header">
+            <img src="assets/images/icons/logo.png" alt="Strike & Pin Logo" class="footer-logo-img">
+            <div class="brand-text-group">
+              <span class="brand-title">Strike<span>&</span>Pin</span>
+              <span class="brand-subtitle">Bowling & Entertainment</span>
+            </div>
+          </div>
+          <p class="footer-description">
+            Your premier cosmic bowling sanctuary, arcade playground, and event destination. Engineered for
+            unforgettable celebrations, competitive league play, and gourmet social dining.
+          </p>
+          <div class="footer-badges-row">
+            <span class="footer-badge">32 Pro Lanes</span>
+            <span class="footer-badge">Hyper-Arcade</span>
+            <span class="footer-badge">VIP Lounge</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h2 class="footer-heading">Navigation</h2>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home (Cosmic Arena)</a></li>
+            <li><a href="home-2.html" class="footer-link">Home 2 (Retro Lounge)</a></li>
+            <li><a href="book-lane.html" class="footer-link">Book a Lane</a></li>
+            <li><a href="leagues.html" class="footer-link">Leagues & Tournaments</a></li>
+            <li><a href="birthday-parties.html" class="footer-link">Birthday Parties</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing & Bundles</a></li>
+            <li><a href="about.html" class="footer-link">About Venue</a></li>
+            <li><a href="contact.html" class="footer-link">Contact & Inquiries</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Entertainment & Leagues -->
+        <div>
+          <h3 class="footer-heading">Experiences</h3>
+          <ul class="footer-links-list">
+            <li><a href="leagues.html" class="footer-link">Tuesday Classic League</a></li>
+            <li><a href="leagues.html" class="footer-link">Thursday Cosmic Clash</a></li>
+            <li><a href="pricing.html" class="footer-link">Youth Birthday Packages</a></li>
+            <li><a href="pricing.html" class="footer-link">Corporate Venue Buyouts</a></li>
+            <li><a href="dashboard.html" class="footer-link">Bowler Score Tracker</a></li>
+          </ul>
+        </div>
+
+
+        <!-- Column 4: Contact & Location -->
+        <div>
+          <h2 class="footer-heading">Direct Contact</h2>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>742 Cosmic Boulevard, Grand Entertainment District, Sector 4</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span>+1 (800) 555-BOWL (2695)</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>bookings@strikepincenter.com</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Strike & Pin Bowling Alley & Entertainment Center. All rights reserved.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms of Play</a>
+          <a href="#safety">Safety & Waiver</a>
+          <a href="login.html">Staff Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global Shared Script -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Transparent pricing and VIP all-access passports for Strike & Pin. Peak and off-peak lane rates, arcade credit multipliers, corporate buyouts, and zero hidden fees.">
+  <title>Pricing &amp; All-Access Passports | Strike &amp; Pin Entertainment</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/icons/logo.png">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body class="bg-black text-primary font-body antialiased">
+
+  <!-- ==========================================================================
+       BRANDED PRELOADER
+       ========================================================================== -->
+  <div id="preloader" role="status" aria-label="Loading Strike & Pin Center">
+    <div class="loader-content">
+      <div class="loader-brand">
+        <img src="assets/images/icons/logo.png" alt="Strike & Pin Bowling Logo" class="loader-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-title">Strike<span>&</span>Pin</span>
+          <span class="brand-subtitle">Bowling & Entertainment</span>
+        </div>
+      </div>
+      <div class="loader-pin-indicator" aria-hidden="true">
+        <span class="loader-dot"></span>
+        <span class="loader-dot"></span>
+        <span class="loader-dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FIXED COMPACT HEADER
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+
+      <!-- Brand Logo + Name + Small Subtitle -->
+      <a href="index.html" class="header-brand" aria-label="Strike & Pin Homepage">
+        <img src="assets/images/icons/logo.png" alt="Strike & Pin Bowling Logo" class="header-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-title">Strike<span>&</span>Pin</span>
+          <span class="brand-subtitle">Bowling & Entertainment</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation - Exactly 6 Items (Pricing active) -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+
+        <!-- 1. Home (Dropdown - CLICK ONLY) -->
+        <div class="nav-dropdown-wrapper" id="homeDropdownWrapper">
+          <button type="button" class="nav-link nav-dropdown-trigger" id="homeDropdownTrigger" aria-haspopup="true"
+            aria-expanded="false">
+            <span>Home</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="dropdown-panel" role="menu" aria-label="Home Variations">
+            <a href="index.html" class="dropdown-item" role="menuitem">
+              <span>Home 1 (Cosmic Arena)</span>
+              <span class="dropdown-badge">V1</span>
+            </a>
+            <a href="home-2.html" class="dropdown-item" role="menuitem">
+              <span>Home 2 (Retro Lounge)</span>
+              <span class="dropdown-badge">V2</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Book a Lane -->
+        <a href="book-lane.html" class="nav-link">
+          <span>Book a Lane</span>
+        </a>
+
+        <!-- 3. Leagues & Tournaments -->
+        <a href="leagues.html" class="nav-link">
+          <span>Leagues & Tournaments</span>
+        </a>
+
+        <!-- 4. Pricing (Active) -->
+        <a href="pricing.html" class="nav-link active" aria-current="page">
+          <span>Pricing</span>
+        </a>
+
+        <!-- 6. About -->
+        <a href="about.html" class="nav-link">
+          <span>About</span>
+        </a>
+
+        <!-- 7. Contact -->
+        <a href="contact.html" class="nav-link">
+          <span>Contact</span>
+        </a>
+
+        <!-- 8. Dashboard -->
+        <a href="dashboard.html" class="nav-link">
+          <span>Dashboard</span>
+        </a>
+      </nav>
+
+      <!-- Header Controls: RTL, Dark Mode, Dedicated Login Button -->
+      <div class="header-actions">
+
+        <!-- RTL/LTR Toggle -->
+        <button type="button" class="utility-btn rtl-toggle-btn" id="rtlToggleBtn"
+          aria-label="Toggle text direction (RTL/LTR)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 3L4 7l4 4"></path>
+            <path d="M4 7h16"></path>
+            <path d="M16 21l4-4-4-4"></path>
+            <path d="M20 17H4"></path>
+          </svg>
+          <span class="utility-label dir-label-text">RTL</span>
+        </button>
+
+        <!-- Dark Mode Toggle (Pure #000000) -->
+        <button type="button" class="utility-btn dark-mode-toggle" id="themeToggleBtn" aria-label="Toggle dark mode"
+          aria-pressed="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <span class="utility-label theme-label-text">Theme</span>
+        </button>
+
+        <!-- Dedicated Login Button -->
+        <a href="login.html" class="btn-login desktop-only" id="headerLoginBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            <polyline points="10 17 15 12 10 7"></polyline>
+            <line x1="15" y1="12" x2="3" y2="12"></line>
+          </svg>
+          <span>Login</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Open mobile navigation menu"
+          aria-controls="mobileDrawer" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MOBILE NAVIGATION DRAWER
+       ========================================================================== -->
+  <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" role="dialog" aria-modal="true">
+
+    <!-- Mobile Drawer Header -->
+    <div class="mobile-drawer-header">
+      <div class="header-brand">
+        <img src="assets/images/icons/logo.png" alt="Strike & Pin Logo" class="header-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-title">Strike<span>&</span>Pin</span>
+          <span class="brand-subtitle">Bowling & Entertainment</span>
+        </div>
+      </div>
+      <button type="button" class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close navigation menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Nav Links -->
+    <div class="mobile-drawer-content">
+
+      <!-- Mobile Home Accordion (CLICK ONLY) -->
+      <div class="mobile-accordion-wrapper" id="mobileHomeAccordion">
+        <button type="button" class="mobile-nav-link mobile-accordion-toggle" id="mobileHomeAccordionToggle"
+          aria-expanded="false">
+          <span>Home</span>
+          <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="mobile-accordion-panel" id="mobileHomePanel">
+          <a href="index.html" class="mobile-sub-link">Home 1 (Cosmic Arena)</a>
+          <a href="home-2.html" class="mobile-sub-link">Home 2 (Retro Lounge)</a>
+        </div>
+      </div>
+
+      <a href="book-lane.html" class="mobile-nav-link">Book a Lane</a>
+      <a href="leagues.html" class="mobile-nav-link">Leagues & Tournaments</a>
+      <a href="pricing.html" class="mobile-nav-link active">Pricing</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+      <a href="login.html" class="mobile-nav-link mobile-login-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+          <polyline points="10 17 15 12 10 7"></polyline>
+          <line x1="15" y1="12" x2="3" y2="12"></line>
+        </svg>
+        <span>Sign In / Register</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT AREA (EXACTLY 5 SECTIONS) -->
+  <main id="mainContent">
+
+    <!-- ========================================================================
+         SECTION 1: PRICING HERO WITH LUXURY SHOWCASE VISUAL
+         ======================================================================== -->
+    <section id="pricingHeroMatrix" class="pricing-hero-section">
+      <div class="container">
+        <div class="pricing-hero-showcase-grid">
+
+          <!-- Left Info Column -->
+          <div class="pricing-hero-info">
+            <div class="party-badge-strip">
+              <span>✦</span> Transparent Pricing Creed <span>✦</span>
+            </div>
+
+            <h1 class="party-hero-title">
+              Clear, Honest Rates with <span>Zero Hidden Fees</span>
+            </h1>
+
+            <p class="party-hero-lead">
+              No mandatory service surcharges, no surprise shoe fees at check-in. Explore our upfront lane rates,
+              all-access VIP passes, and enjoy premier hospitality across all 24 championship lanes.
+            </p>
+
+            <!-- Quick Perks Row -->
+            <div class="pricing-perks-row">
+              <div class="pricing-perk-item">
+                <span class="perk-check">✓</span>
+                <span>Complimentary Shoe Valet on Every Booking</span>
+              </div>
+              <div class="pricing-perk-item">
+                <span class="perk-check">✓</span>
+                <span>Precision Laser Scoring &amp; Specto Telemetry</span>
+              </div>
+              <div class="pricing-perk-item">
+                <span class="perk-check">✓</span>
+                <span>100% Refundable Cancellations up to 24 Hours</span>
+              </div>
+            </div>
+
+            <!-- Mini Rate Highlight Cards -->
+            <div class="pricing-mini-stats">
+              <div class="pricing-mini-stat-card">
+                <span class="mini-stat-val">$34</span>
+                <span class="mini-stat-lbl">From / Lane Hr</span>
+              </div>
+              <div class="pricing-mini-stat-card">
+                <span class="mini-stat-val">FREE</span>
+                <span class="mini-stat-lbl">Shoe Valet</span>
+              </div>
+              <div class="pricing-mini-stat-card">
+                <span class="mini-stat-val">24</span>
+                <span class="mini-stat-lbl">Pro Lanes</span>
+              </div>
+            </div>
+
+            <div class="hero-actions-row">
+              <a href="#allAccessPassPacks" class="btn btn-primary">
+                <span>View All-Access Passes</span>
+                <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+              <a href="book-lane.html" class="btn btn-secondary">
+                <span>Book a Lane Now</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Luxury Visual Showcase Card -->
+          <div class="pricing-hero-visual-card">
+            <div class="pricing-visual-frame">
+              <img src="assets/images/sections/pricing-hero-luxury.jpg"
+                alt="Luxury Bowling Alley and VIP Lounge Interior" class="pricing-showcase-img">
+
+              <!-- Floating Top Badges -->
+              <div class="pricing-visual-top-overlay">
+                <span class="pricing-badge-gold">
+                  <span>★</span> VIP Championship Lounge
+                </span>
+                <span class="pricing-badge-live">
+                  <span class="pulse-dot"></span> 24 Lanes Open
+                </span>
+              </div>
+
+              <!-- Floating Bottom Glass Panel -->
+              <div class="pricing-visual-glass-panel">
+                <div class="glass-rate-left">
+                  <span class="glass-rate-sub">Starting Lane Rate</span>
+                  <div class="glass-rate-highlight">
+                    <span class="glass-rate-currency">$</span>34<span class="glass-rate-unit">/ Hour</span>
+                  </div>
+                </div>
+                <div class="glass-rate-right">
+                  <span class="glass-rate-detail">Up to 6 Bowlers Per Lane</span>
+                  <a href="book-lane.html" class="btn-glass-action">
+                    <span>Reserve Lane</span>
+                    <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14" aria-hidden="true">
+                      <path fill-rule="evenodd"
+                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+     SECTION 2: VIP ALL-ACCESS PASSPORTS & BUNDLES
+     Image Top + Content Bottom Card Layout
+     ======================================================================== -->
+    <section id="allAccessPassPacks" class="passports-section">
+      <div class="container">
+
+        <div class="section-header text-center mb-12">
+          <span class="section-tag-pill">Foil-Stamped Passports</span>
+          <h2 class="section-heading">All-Inclusive Entertainment Passports</h2>
+          <p class="section-subheading">
+            Complete packages pairing bowling, shoe valet, arcade plays, and craft
+            refreshments into a single bundled value.
+          </p>
+        </div>
+
+        <div class="passports-grid">
+
+          <!-- Passport 1 -->
+          <article class="passport-foil-card">
+
+            <!-- Image -->
+            <div class="passport-card-image">
+              <img src="assets/images/sections/p26.jpg" alt="Friends enjoying an after-work bowling session">
+
+            </div>
+
+            <!-- Content -->
+            <div class="passport-card-content">
+
+              <h3 class="passport-title">
+                The After-Work Strike Pass
+              </h3>
+
+              <p class="passport-desc">
+                Designed for colleagues unwinding after the workday.
+                Quick, energizing, and refreshingly fun.
+              </p>
+
+              <div class="passport-price-box">
+                <span class="passport-price-val">$29</span>
+                <span class="passport-price-sub">
+                  / person (Min. 2 Bowlers)
+                </span>
+              </div>
+
+              <ul class="passport-features-list">
+                <li class="passport-feature-item">
+                  <span class="passport-check-icon">✓</span>
+                  <span>90 Mins Hardwood Lane Access</span>
+                </li>
+
+                <li class="passport-feature-item">
+                  <span class="passport-check-icon">✓</span>
+                  <span>Complimentary Retro Shoe Valet</span>
+                </li>
+
+                <li class="passport-feature-item">
+                  <span class="passport-check-icon">✓</span>
+                  <span>1 Craft Draft Beer or Signature Mocktail</span>
+                </li>
+
+                <li class="passport-feature-item">
+                  <span class="passport-check-icon">✓</span>
+                  <span>$10 RFID Arcade Game Card</span>
+                </li>
+              </ul>
+
+              <a href="book-lane.html" class="btn btn-secondary w-full text-center">
+                Select After-Work Pass
+              </a>
+
+
+            </div>
+          </article>
+
+
+          <!-- Passport 2 -->
+          <article class="passport-foil-card popular">
+
+            <!-- Image -->
+            <div class="passport-card-image">
+              <img src="assets/images/sections/p27.jpg" alt="Family enjoying bowling and entertainment together">
+
+            </div>
+
+            <!-- Content -->
+            <div class="passport-card-content">
+
+              <h3 class="passport-title">
+                Family Weekend Passport
+              </h3>
+
+              <p class="passport-desc">
+                Our flagship family value passport covering lane time,
+                artisan pizza, and arcade tickets for up to 5 bowlers.
+              </p>
+
+              <div class="passport-price-box">
+                <span class="passport-price-val">$119</span>
+                <span class="passport-price-sub">
+                  Total Bundle (Up to 5 Bowlers)
+                </span>
+              </div>
+
+              <ul class="passport-features-list">
+                <li class="passport-feature-item">
+                  <span class="passport-check-icon">✓</span>
+                  <span>2 Full Hours Cosmic or Classic Bowling</span>
+                </li>
+
+                <li class="passport-feature-item">
+                  <span class="passport-check-icon">✓</span>
+                  <span>Shoe Valet for all 5 Bowlers Included</span>
+                </li>
+
+                <li class="passport-feature-item">
+                  <span class="passport-check-icon">✓</span>
+                  <span>1 Giant 18" Pepperoni or Cheese Pizza</span>
+                </li>
+
+                <li class="passport-feature-item">
+                  <span class="passport-check-icon">✓</span>
+                  <span>1 Pitcher of Soda with Free Refills</span>
+                </li>
+
+                <li class="passport-feature-item">
+                  <span class="passport-check-icon">✓</span>
+                  <span>Five $10 Arcade Power Cards</span>
+                </li>
+              </ul>
+
+              <a href="book-lane.html" class="btn btn-primary w-full text-center">
+                Claim Family Passport
+              </a>
+
+
+
+            </div>
+          </article>
+
+
+          <!-- Passport 3 -->
+          <article class="passport-foil-card">
+
+            <!-- Image -->
+            <div class="passport-card-image">
+              <img src="assets/images/sections/p28.jpg" alt="Friends enjoying late night bowling and entertainment">
+
+            </div>
+
+            <!-- Content -->
+            <div class="passport-card-content">
+
+              <h3 class="passport-title">
+                The Nightowl Unlimited Pass
+              </h3>
+
+              <p class="passport-desc">
+                For late-night crews craving maximum frames,
+                heavy basslines, and craft cocktails past midnight.
+              </p>
+
+              <div class="passport-price-box">
+                <span class="passport-price-val">$39</span>
+                <span class="passport-price-sub">
+                  / person (Available after 9 PM)
+                </span>
+              </div>
+
+              <ul class="passport-features-list">
+                <li class="passport-feature-item">
+                  <span class="passport-check-icon">✓</span>
+                  <span>Unlimited Bowling until Close (Up to 4 Hrs)</span>
+                </li>
+
+                <li class="passport-feature-item">
+                  <span class="passport-check-icon">✓</span>
+                  <span>Premium High-Performance Shoe Valet</span>
+                </li>
+
+                <li class="passport-feature-item">
+                  <span class="passport-check-icon">✓</span>
+                  <span>$20 Arcade Card + 1 VR Experience</span>
+                </li>
+
+                <li class="passport-feature-item">
+                  <span class="passport-check-icon">✓</span>
+                  <span>15% Off All Taphouse Drinks &amp; Bites</span>
+                </li>
+              </ul>
+
+              <a href="book-lane.html" class="btn btn-secondary w-full text-center">
+                Select Nightowl Pass
+              </a>
+
+
+            </div>
+          </article>
+
+        </div>
+
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================================
+         SECTION 4: CORPORATE & VENUE BUYOUT SCALE (#corporateGroupPerks)
+         4 Dedicated Image Cards with Clean Structured Content Below
+         ======================================================================== -->
+    <section id="corporateGroupPerks" class="corporate-buyout-section">
+      <div class="container">
+
+        <div class="section-header text-center mb-12">
+          <span class="section-tag-pill">Private Luxury Experience</span>
+          <h2 class="section-heading">Group &amp; Full Venue Buyout Scale</h2>
+          <p class="section-subheading">
+            Whether you are hosting an intimate executive retreat or a 250-guest holiday gala, our flexible private
+            zones adapt perfectly to your headcount.
+          </p>
+        </div>
+
+        <!-- 4-Card Showcase Grid -->
+        <div class="buyout-showcase-grid">
+
+          <!-- Card 1: The Mezzanine 4-Lane Suite -->
+          <article class="buyout-zone-card">
+            <div class="buyout-zone-image-wrap">
+              <img src="assets/images/sections/buyout-mezzanine-suite.jpg" alt="The Mezzanine 4-Lane Private VIP Suite"
+                class="buyout-zone-img" loading="lazy">
+              <span class="buyout-guest-badge">15–30 Guests</span>
+            </div>
+            <div class="buyout-zone-body">
+              <div class="buyout-zone-header">
+                <h3 class="buyout-zone-title">The Mezzanine 4-Lane Suite</h3>
+                <span class="buyout-zone-price">From $450 <small>/ 2 Hrs</small></span>
+              </div>
+              <p class="buyout-zone-desc">
+                Private mezzanine elevation overlooking the arena with 4 dedicated tournament lanes, dedicated cocktail
+                bar attendant, and plush leather banquet seating.
+              </p>
+              <ul class="buyout-perks-list">
+                <li><span class="perk-check">✓</span> 4 Dedicated Hardwood Lanes</li>
+                <li><span class="perk-check">✓</span> Private Bar &amp; Valet Attendant</li>
+                <li><span class="perk-check">✓</span> Leather Banquette Lounge Seating</li>
+              </ul>
+              <a href="book-lane.html" class="btn btn-primary w-full text-center">
+                <span>Reserve Mezzanine Suite</span>
+                <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2: Cosmic Arena Half-Floor Buyout -->
+          <article class="buyout-zone-card">
+            <div class="buyout-zone-image-wrap">
+              <img src="assets/images/sections/buyout-cosmic-arena.jpg" alt="Cosmic Arena Half-Floor Buyout"
+                class="buyout-zone-img" loading="lazy">
+              <span class="buyout-guest-badge">40–80 Guests</span>
+            </div>
+            <div class="buyout-zone-body">
+              <div class="buyout-zone-header">
+                <h3 class="buyout-zone-title">Cosmic Arena Half-Floor</h3>
+                <span class="buyout-zone-price">From $1,250 <small>/ 2.5 Hrs</small></span>
+              </div>
+              <p class="buyout-zone-desc">
+                12 consecutive bowling lanes, reserved hyper-arcade zone, pizza and artisan slider buffet stations, and
+                unlimited soft drink service.
+              </p>
+              <ul class="buyout-perks-list">
+                <li><span class="perk-check">✓</span> 12 Consecutive Cosmic Lanes</li>
+                <li><span class="perk-check">✓</span> Slider &amp; Pizza Buffet Included</li>
+                <li><span class="perk-check">✓</span> Reserved Arcade Zone Access</li>
+              </ul>
+              <a href="book-lane.html" class="btn btn-primary w-full text-center">
+                <span>Check Half-Floor Availability</span>
+                <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3: Executive Penthouse & Billiards -->
+          <article class="buyout-zone-card">
+            <div class="buyout-zone-image-wrap">
+              <img src="assets/images/sections/buyout-penthouse-lounge.jpg"
+                alt="Executive Penthouse Bowling and Billiards Suite" class="buyout-zone-img" loading="lazy">
+              <span class="buyout-guest-badge">25–50 Guests</span>
+            </div>
+            <div class="buyout-zone-body">
+              <div class="buyout-zone-header">
+                <h3 class="buyout-zone-title">Executive Penthouse Suite</h3>
+                <span class="buyout-zone-price">From $850 <small>/ 2 Hrs</small></span>
+              </div>
+              <p class="buyout-zone-desc">
+                Exclusive penthouse floor with 2 private bowling lanes, slate tournament billiard table, craft cocktail
+                bar, fireplace lounge, and presentation screens.
+              </p>
+              <ul class="buyout-perks-list">
+                <li><span class="perk-check">✓</span> 2 Private Executive Lanes</li>
+                <li><span class="perk-check">✓</span> Slate Tournament Billiard Table</li>
+                <li><span class="perk-check">✓</span> Fireplace Lounge &amp; Private Bar</li>
+              </ul>
+              <a href="book-lane.html" class="btn btn-primary w-full text-center">
+                <span>Reserve Penthouse Suite</span>
+                <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 4: Complete 24-Lane VIP Takeover -->
+          <article class="buyout-zone-card">
+            <div class="buyout-zone-image-wrap">
+              <img src="assets/images/sections/buyout-full-venue-takeover.jpg"
+                alt="Complete 24-Lane Full Venue Lockdown Takeover" class="buyout-zone-img" loading="lazy">
+              <span class="buyout-guest-badge" style="background: var(--brand-crimson); color: #fff;">Up to 250
+                Guests</span>
+            </div>
+            <div class="buyout-zone-body">
+              <div class="buyout-zone-header">
+                <h3 class="buyout-zone-title">Complete 24-Lane Takeover</h3>
+                <span class="buyout-zone-price">Custom Quote</span>
+              </div>
+              <p class="buyout-zone-desc">
+                Total venue lockdown: All 24 lanes, entire 100+ game arcade parlor, private DJ sound booth control,
+                champagne towers, and open bar catering.
+              </p>
+              <ul class="buyout-perks-list">
+                <li><span class="perk-check">✓</span> Full 24-Lane Venue Lockdown</li>
+                <li><span class="perk-check">✓</span> Entire 100+ Game Arcade Parlor</li>
+                <li><span class="perk-check">✓</span> Live DJ Stage &amp; Open Cocktail Bar</li>
+              </ul>
+              <a href="contact.html" class="btn btn-primary w-full text-center">
+                <span>Request Takeover Quote</span>
+                <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Bottom Corporate RFP Banner -->
+        <div class="buyout-rfp-banner">
+          <div class="rfp-banner-text">
+            <h4 class="rfp-banner-title">Need a Custom Corporate RFP or Itemized Invoice?</h4>
+            <p class="rfp-banner-desc">
+              We provide turnkey corporate tax exemption processing, direct billing, custom chef catering menus, and
+              dedicated A/V presentation support.
+            </p>
+          </div>
+          <a href="contact.html" class="btn btn-secondary rfp-banner-btn">
+            <span>Contact Corporate Director</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 5: TRANSPARENT FEE GUARANTEE & REFUND CREED (#transparentFeeGuarantee)
+         ======================================================================== -->
+    <section id="transparentFeeGuarantee" class="transparent-creed-section">
+      <div class="container">
+
+        <div class="section-header text-center mb-12">
+          <span class="section-tag-pill">Honest Ledger</span>
+          <h2 class="section-heading">The Strike &amp; Pin "No Hidden Fees" Creed</h2>
+          <p class="section-subheading">We publish every fee upfront. What you see is exactly what appears on your
+            receipt.</p>
+        </div>
+
+        <!-- Transparent Ledger Table -->
+        <div class="ledger-wrapper">
+          <table class="ledger-table" aria-label="Itemized Fee Transparency Ledger">
+            <thead>
+              <tr>
+                <th>Service Item</th>
+                <th>Standard Rate</th>
+                <th>Typical Competitor Fee</th>
+                <th>The Strike &amp; Pin Standard</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Shoe Rental (Matinee Mon–Thu)</strong></td>
+                <td><span class="ledger-badge-free">FREE</span></td>
+                <td>$6.50 – $8.00 / Pair</td>
+                <td>100% complimentary during all off-peak matinee hours.</td>
+              </tr>
+              <tr>
+                <td><strong>Facility &amp; Environmental Surcharges</strong></td>
+                <td><span class="ledger-badge-free">$0.00 (Zero)</span></td>
+                <td>3.5% – 5.0% Added to Bill</td>
+                <td>Strictly prohibited by house creed. Never charged.</td>
+              </tr>
+              <tr>
+                <td><strong>Kids Under 12 Shoe Valet</strong></td>
+                <td><span class="ledger-badge-free">FREE</span></td>
+                <td>$5.00 / Child</td>
+                <td>Kids bowling shoes are always on the house.</td>
+              </tr>
+              <tr>
+                <td><strong>BYO Birthday Cake Corkage Fee</strong></td>
+                <td><span class="ledger-badge-free">$0.00 (Zero)</span></td>
+                <td>$15 – $25 Cake Cut Fee</td>
+                <td>Bring your own cake with zero cutting or storage fees.</td>
+              </tr>
+              <tr>
+                <td><strong>Online Booking Convenience Fee</strong></td>
+                <td><span class="ledger-badge-free">$0.00 (Zero)</span></td>
+                <td>$2.99 / Transaction</td>
+                <td>Booking directly on our website carries zero surcharge.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 4 Policy Accordion Cards -->
+        <div class="policy-cards-grid">
+
+          <div class="policy-tab-card">
+            <h4>Weather Reschedule Guarantee</h4>
+            <p>If severe storms prevent your group from arriving, we reschedule your booking 100% free with zero
+              penalty.</p>
+          </div>
+
+          <div class="policy-tab-card">
+            <h4>48-Hour Deposit Refund</h4>
+            <p>Cancel or alter party headcounts up to 48 hours prior to your slot for an unconditional 100% deposit
+              refund.</p>
+          </div>
+
+          <div class="policy-tab-card">
+            <h4>Prorated Lane Overtime</h4>
+            <p>If your match runs long, lane overtime is prorated to the exact minute rather than billing a full extra
+              hour.</p>
+          </div>
+
+          <div class="policy-tab-card">
+            <h4>No Card Minimums</h4>
+            <p>Apple Pay, Google Pay, and all major credit cards accepted with zero minimum spend across all bars and
+              lanes.</p>
+          </div>
+
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CALL TO ACTION (CTA): READY TO ROLL
+         ========================================================================== -->
+    <section class="site-cta-section" aria-label="Book Your Lane Experience">
+      <div class="section-container">
+        <div class="site-cta-card">
+          <div class="site-cta-glow" aria-hidden="true"></div>
+          <div class="site-cta-content">
+            <div class="eyebrow-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>Transparent Rates • Zero Surprise Fees</span>
+            </div>
+            <h2 class="site-cta-heading">Ready to Lock in Your <span>Time on the Hardwood?</span></h2>
+            <p class="site-cta-subtext">
+              Zero hidden booking surcharges, upfront shoe rental clarity, and automated lane allocation ready upon
+              arrival. Book online in 60 seconds.
+            </p>
+            <div class="site-cta-actions">
+              <a href="book-lane.html" class="btn-primary">
+                <span>⚡ Book at Guaranteed Best Rate</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+              <a href="contact.html" class="btn-secondary">
+                <span>Inquire for Corporate/Group Discounts</span>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       SHARED EDITORIAL 4-COLUMN FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+
+        <!-- Column 1: Brand & Editorial Bio -->
+        <div class="footer-col-brand">
+          <div class="footer-brand-header">
+            <img src="assets/images/icons/logo.png" alt="Strike & Pin Logo" class="footer-logo-img">
+            <div class="brand-text-group">
+              <span class="brand-title">Strike<span>&</span>Pin</span>
+              <span class="brand-subtitle">Bowling & Entertainment</span>
+            </div>
+          </div>
+          <p class="footer-description">
+            Your premier cosmic bowling sanctuary, arcade playground, and event destination. Engineered for
+            unforgettable celebrations, competitive league play, and gourmet social dining.
+          </p>
+          <div class="footer-badges-row">
+            <span class="footer-badge">32 Pro Lanes</span>
+            <span class="footer-badge">Hyper-Arcade</span>
+            <span class="footer-badge">VIP Lounge</span>
+            <span class="footer-badge">USBC Certified</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Navigation Links -->
+        <div>
+          <h2 class="footer-heading">Navigation</h2>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home (Cosmic Arena)</a></li>
+            <li><a href="home-2.html" class="footer-link">Home 2 (Retro Lounge)</a></li>
+            <li><a href="book-lane.html" class="footer-link">Book a Lane</a></li>
+            <li><a href="leagues.html" class="footer-link">Leagues &amp; Tournaments</a></li>
+            <li><a href="pricing.html" class="footer-link" style="color: var(--accent-gold); font-weight: 700;">Pricing
+                &amp; Bundles</a></li>
+            <li><a href="about.html" class="footer-link">About Our Venue</a></li>
+            <li><a href="contact.html" class="footer-link">Contact &amp; Inquiries</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Entertainment & Leagues -->
+        <div>
+          <h3 class="footer-heading">Experiences</h3>
+          <ul class="footer-links-list">
+            <li><a href="leagues.html" class="footer-link">Tuesday Classic League</a></li>
+            <li><a href="leagues.html" class="footer-link">Thursday Cosmic Clash</a></li>
+            <li><a href="pricing.html" class="footer-link">Youth Birthday Packages</a></li>
+            <li><a href="pricing.html" class="footer-link">Corporate Venue Buyouts</a></li>
+            <li><a href="dashboard.html" class="footer-link">Bowler Score Tracker</a></li>
+          </ul>
+        </div>
+        <!-- Column 4: Contact & Location -->
+        <div>
+          <h2 class="footer-heading">Direct Contact</h2>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>742 Evergreen Cosmic Way, Arena District, Metro City</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span>+1 (800) 555-PINN (7466)</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>concierge@strikepinbowling.com</span>
+          </div>
+
+          <div style="margin-top: 1.25rem;">
+            <a href="contact.html#googleLiveMapSection" class="btn-login"
+              style="display: inline-block; padding: 0.5rem 1rem; font-size: 0.8rem;">
+              <span>📍 View Google Live Map</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Strike &amp; Pin Entertainment Center LLC. All Rights Reserved.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="about.html" class="footer-link">About Venue</a>
+          <a href="pricing.html" class="footer-link">Rate Card</a>
+          <a href="contact.html" class="footer-link">Directions</a>
+          <a href="dashboard.html" class="footer-link">Bowler Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+      aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Core JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

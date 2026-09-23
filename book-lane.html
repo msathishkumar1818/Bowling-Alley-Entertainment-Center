@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Lane Slot | Strike & Pin Entertainment Center</title>
+  <meta name="description"
+    content="Reserve championship bowling lane slots online. Choose between Cosmic Glow, Retro Timber, or VIP Luxury Suites with instant confirmation and group packages.">
+  <meta name="theme-color" content="#160206">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/icons/logo.png">
+
+  <!-- Global Stylesheets (No inline CSS!) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       BRANDED PRELOADER
+       ========================================================================== -->
+  <div id="preloader" role="status" aria-label="Loading Strike & Pin Center">
+    <div class="loader-content">
+      <div class="loader-brand">
+        <img src="assets/images/icons/logo.png" alt="Strike & Pin Bowling Logo" class="loader-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-title">Strike<span>&</span>Pin</span>
+          <span class="brand-subtitle">Bowling & Entertainment</span>
+        </div>
+      </div>
+      <div class="loader-pin-indicator" aria-hidden="true">
+        <span class="loader-dot"></span>
+        <span class="loader-dot"></span>
+        <span class="loader-dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FIXED COMPACT HEADER
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+
+      <!-- Brand Logo + Name + Small Subtitle -->
+      <a href="index.html" class="header-brand" aria-label="Strike & Pin Homepage">
+        <img src="assets/images/icons/logo.png" alt="Strike & Pin Bowling Logo" class="header-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-title">Strike<span>&</span>Pin</span>
+          <span class="brand-subtitle">Bowling & Entertainment</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation - Exactly 6 Items (Book a Lane active) -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+
+        <!-- 1. Home (Dropdown - CLICK ONLY) -->
+        <div class="nav-dropdown-wrapper" id="homeDropdownWrapper">
+          <button type="button" class="nav-link nav-dropdown-trigger" id="homeDropdownTrigger" aria-haspopup="true"
+            aria-expanded="false">
+            <span>Home</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="dropdown-panel" role="menu" aria-label="Home Variations">
+            <a href="index.html" class="dropdown-item" role="menuitem">
+              <span>Home 1 (Cosmic Arena)</span>
+              <span class="dropdown-badge">V1</span>
+            </a>
+            <a href="home-2.html" class="dropdown-item" role="menuitem">
+              <span>Home 2 (Retro Lounge)</span>
+              <span class="dropdown-badge">V2</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Book a Lane (Active) -->
+        <a href="book-lane.html" class="nav-link active" aria-current="page">
+          <span>Book a Lane</span>
+        </a>
+
+        <!-- 3. Leagues & Tournaments -->
+        <a href="leagues.html" class="nav-link">
+          <span>Leagues & Tournaments</span>
+        </a>
+
+        <!-- 4. Pricing -->
+        <a href="pricing.html" class="nav-link">
+          <span>Pricing</span>
+        </a>
+
+        <!-- 6. About -->
+        <a href="about.html" class="nav-link">
+          <span>About</span>
+        </a>
+
+        <!-- 7. Contact (Directly visible) -->
+        <a href="contact.html" class="nav-link">
+          <span>Contact</span>
+        </a>
+
+        <!-- 8. Dashboard -->
+        <a href="dashboard.html" class="nav-link">
+          <span>Dashboard</span>
+        </a>
+      </nav>
+
+      <!-- Header Controls: RTL, Dark Mode, Dedicated Login Button -->
+      <div class="header-actions">
+
+        <!-- RTL/LTR Toggle -->
+        <button type="button" class="utility-btn rtl-toggle-btn" aria-label="Toggle text direction (RTL/LTR)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 3L4 7l4 4"></path>
+            <path d="M4 7h16"></path>
+            <path d="M16 21l4-4-4-4"></path>
+            <path d="M20 17H4"></path>
+          </svg>
+          <span class="utility-label dir-label-text">RTL</span>
+        </button>
+
+        <!-- Dark Mode Toggle (Pure #000000) -->
+        <button type="button" class="utility-btn dark-mode-toggle" aria-label="Toggle dark mode" aria-pressed="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <span class="utility-label">Theme</span>
+        </button>
+
+        <!-- Dedicated Login Button -->
+        <a href="login.html" class="btn-login desktop-only" id="headerLoginBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            <polyline points="10 17 15 12 10 7"></polyline>
+            <line x1="15" y1="12" x2="3" y2="12"></line>
+          </svg>
+          <span>Login</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Open mobile navigation menu"
+          aria-controls="mobileDrawer" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MOBILE NAVIGATION DRAWER
+       ========================================================================== -->
+  <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" role="dialog" aria-modal="true">
+
+    <div class="mobile-drawer-header">
+      <div class="header-brand">
+        <img src="assets/images/icons/logo.png" alt="Strike & Pin Logo" class="header-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-title">Strike<span>&</span>Pin</span>
+          <span class="brand-subtitle">Bowling & Entertainment</span>
+        </div>
+      </div>
+      <button type="button" class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close navigation menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-content">
+
+      <!-- Mobile Home Accordion -->
+      <div class="mobile-accordion-wrapper" id="mobileHomeAccordion">
+        <button type="button" class="mobile-nav-link mobile-accordion-toggle" id="mobileHomeAccordionToggle"
+          aria-expanded="false">
+          <span>Home</span>
+          <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="mobile-accordion-panel">
+          <a href="index.html" class="mobile-sub-link">
+            <span>Home 1 (Cosmic Arena)</span>
+            <span class="dropdown-badge">V1</span>
+          </a>
+          <a href="home-2.html" class="mobile-sub-link">
+            <span>Home 2 (Retro Lounge)</span>
+            <span class="dropdown-badge">V2</span>
+          </a>
+        </div>
+      </div>
+
+      <a href="book-lane.html" class="mobile-nav-link active" aria-current="page">
+        <span>Book a Lane</span>
+      </a>
+
+      <a href="leagues.html" class="mobile-nav-link">
+        <span>Leagues & Tournaments</span>
+      </a>
+
+      <a href="pricing.html" class="mobile-nav-link">
+        <span>Pricing</span>
+      </a>
+
+      <a href="about.html" class="mobile-nav-link">
+        <span>About Us</span>
+      </a>
+
+      <a href="contact.html" class="mobile-nav-link">
+        <span>Contact</span>
+      </a>
+
+      <a href="dashboard.html" class="mobile-nav-link">
+        <span>Dashboard</span>
+      </a>
+
+      <a href="login.html" class="btn-login" style="margin-top: 1rem; width: 100%; justify-content: center;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+          <polyline points="10 17 15 12 10 7"></polyline>
+          <line x1="15" y1="12" x2="3" y2="12"></line>
+        </svg>
+        <span>Guest & Member Login</span>
+      </a>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <div class="mobile-utility-row">
+        <button type="button" class="utility-btn rtl-toggle-btn" style="width: 100%;"
+          aria-label="Toggle text direction (RTL/LTR)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 3L4 7l4 4"></path>
+            <path d="M4 7h16"></path>
+            <path d="M16 21l4-4-4-4"></path>
+            <path d="M20 17H4"></path>
+          </svg>
+          <span class="dir-label-text">RTL</span>
+        </button>
+
+        <button type="button" class="utility-btn dark-mode-toggle" style="width: 100%;" aria-label="Toggle dark mode">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+          </svg>
+          <span>Dark Mode</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: EXACTLY 5 CONTENT SECTIONS FOR BOOK A LANE
+       ========================================================================== -->
+  <main id="mainContent">
+
+    <!-- ------------------------------------------------------------------------
+         SECTION 1: HERO BOOKING HEADER & ZONE SELECTOR
+         ------------------------------------------------------------------------ -->
+    <section class="booking-hero-banner" id="bookingHeroSection" aria-label="Booking Portal Header">
+      <div class="section-container">
+        <div class="booking-hero-content">
+
+          <div class="eyebrow-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <span>Real-Time Reservation Engine</span>
+          </div>
+
+          <h1 class="section-title" style="font-size: clamp(2.4rem, 4.5vw, 3.8rem); margin-bottom: 0.5rem;">
+            Reserve Your <span>Bowling Lane</span> Slot
+          </h1>
+
+          <p class="section-subtitle">
+            Choose your preferred bowling environment, customize party group size, add shoe rentals and food packages,
+            and lock in your lane with zero waiting on arrival.
+          </p>
+
+          <!-- Zone Selector Pills (Interactive) -->
+          <div class="zone-selector-pills" role="tablist" aria-label="Lane Zone Selection">
+            <button type="button" class="zone-pill-btn active" data-rate="48" data-name="Cosmic Main Deck" role="tab"
+              aria-selected="true">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
+              <span>Cosmic Glow Deck ($48/hr)</span>
+            </button>
+
+            <button type="button" class="zone-pill-btn" data-rate="44" data-name="Retro Hardwood Bank" role="tab"
+              aria-selected="false">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <span>Retro Hardwood ($44/hr)</span>
+            </button>
+
+            <button type="button" class="zone-pill-btn" data-rate="85" data-name="Royal Pin VIP Suites" role="tab"
+              aria-selected="false">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                </path>
+              </svg>
+              <span>Royal VIP Suites ($85/hr)</span>
+            </button>
+          </div>
+
+          <!-- Hero Image Showcase -->
+          <div
+            style="margin-top: 2rem; width: 100%; max-width: 960px; height: 320px; border-radius: 20px; overflow: hidden; border: 1px solid var(--border-brand); position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.6);">
+            <img src="assets/images/services/p23.jpg" alt="Illuminated bowling lane perspective ready for players"
+              style="width: 100%; height: 100%; object-fit: cover;" loading="eager">
+            <div
+              style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(14,2,5,0.92) 100%); display: flex; align-items: flex-end; padding: 1.5rem 2rem;">
+              <span
+                style="font-size: 0.95rem; font-weight: 800; color: #FFFFFF; display: flex; align-items: center; gap: 0.5rem;">
+                <span class="status-dot"></span>
+                <span>32 Automated Lanes • Real-Time Computer Sync Scoring • Ready For Check-in</span>
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------------
+         SECTION 2: MULTI-STEP LANE RESERVATION ENGINE
+         ------------------------------------------------------------------------ -->
+    <section class="section-wrapper bg-surface" id="reservationEngineSection" aria-label="Reservation Console">
+      <div class="section-container">
+
+        <div class="reservation-console-grid">
+
+          <!-- Left Column: Multi-Step Interactive Wizard Form -->
+          <form class="reservation-form-column wizard-container-card" id="laneReservationForm">
+
+            <!-- Wizard Progress Stepper Header -->
+            <div class="wizard-stepper-nav" role="tablist" aria-label="Booking Steps">
+              <button type="button" class="wizard-step-tab active" data-step="1" role="tab" aria-selected="true"
+                aria-controls="stepPanel1">
+                <span class="wizard-step-num">1</span>
+                <span class="wizard-step-info">
+                  <span class="wizard-step-sub">Step 1</span>
+                  <strong class="wizard-step-title">Date &amp; Time</strong>
+                </span>
+              </button>
+              <div class="wizard-step-connector"></div>
+
+              <button type="button" class="wizard-step-tab" data-step="2" role="tab" aria-selected="false"
+                aria-controls="stepPanel2">
+                <span class="wizard-step-num">2</span>
+                <span class="wizard-step-info">
+                  <span class="wizard-step-sub">Step 2</span>
+                  <strong class="wizard-step-title">Squad &amp; Lanes</strong>
+                </span>
+              </button>
+              <div class="wizard-step-connector"></div>
+
+              <button type="button" class="wizard-step-tab" data-step="3" role="tab" aria-selected="false"
+                aria-controls="stepPanel3">
+                <span class="wizard-step-num">3</span>
+                <span class="wizard-step-info">
+                  <span class="wizard-step-sub">Step 3</span>
+                  <strong class="wizard-step-title">Shoes &amp; Gear</strong>
+                </span>
+              </button>
+              <div class="wizard-step-connector"></div>
+
+              <button type="button" class="wizard-step-tab" data-step="4" role="tab" aria-selected="false"
+                aria-controls="stepPanel4">
+                <span class="wizard-step-num">4</span>
+                <span class="wizard-step-info">
+                  <span class="wizard-step-sub">Step 4</span>
+                  <strong class="wizard-step-title">Food &amp; Extras</strong>
+                </span>
+              </button>
+            </div>
+
+            <!-- Wizard Panels Body -->
+            <div class="wizard-panels-body">
+
+              <!-- Step 1 Panel: Date & Time Window -->
+              <div class="wizard-step-panel active" id="stepPanel1" role="tabpanel">
+                <div class="wizard-panel-heading">
+                  <span class="wizard-badge">Session Schedule</span>
+                  <h3 class="wizard-panel-title">Select Date &amp; Prime Time Window</h3>
+                  <p class="wizard-panel-desc">Check live lane availability and select your preferred rolling slot.</p>
+                </div>
+
+                <div class="form-grid-fields">
+                  <div class="form-control-wrap">
+                    <label for="bookDate" class="form-label">Reservation Date</label>
+                    <input type="date" id="bookDate" class="form-input-styled" value="2026-10-18" required>
+                  </div>
+
+                  <div class="form-control-wrap">
+                    <label for="bookDurationHours" class="form-label">Session Duration</label>
+                    <select id="bookDurationHours" class="form-select-styled">
+                      <option value="1">1 Hour Session</option>
+                      <option value="2" selected>2 Hours (Standard Match)</option>
+                      <option value="3">3 Hours (Extended Party)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div style="margin-top: 1.25rem;">
+                  <label class="form-label">Select Time Slot Window</label>
+                  <input type="hidden" id="selectedTimeSlot" value="twilight">
+                  <div class="slot-chips-grid">
+                    <div class="slot-chip" data-slot="matinee">
+                      <strong>Matinee Social</strong>
+                      <span>11:00 AM – 03:30 PM</span>
+                    </div>
+                    <div class="slot-chip selected" data-slot="twilight">
+                      <strong>Twilight Prime</strong>
+                      <span>04:00 PM – 08:30 PM</span>
+                    </div>
+                    <div class="slot-chip" data-slot="cosmic">
+                      <strong>Cosmic After-Dark</strong>
+                      <span>09:00 PM – Close</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="wizard-nav-actions">
+                  <div></div>
+                  <button type="button" class="btn-primary wizard-next-btn" data-next="2">
+                    <span>Continue to Squad &amp; Lanes</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 2 Panel: Squad & Lanes -->
+              <div class="wizard-step-panel" id="stepPanel2" role="tabpanel">
+                <div class="wizard-panel-heading">
+                  <span class="wizard-badge">Party Setup</span>
+                  <h3 class="wizard-panel-title">Squad Size &amp; Lane Allocation</h3>
+                  <p class="wizard-panel-desc">Assign your bowlers across authentic USBC regulation timber lanes.</p>
+                </div>
+
+                <div class="form-grid-fields">
+                  <!-- Bowlers Stepper Widget -->
+                  <div class="form-control-wrap">
+                    <label class="form-label" for="bookBowlersCount">Total Bowlers in Party</label>
+                    <div class="stepper-counter-group">
+                      <button type="button" class="counter-step-btn" data-target="bookBowlersCount"
+                        data-action="decrement" aria-label="Decrease Bowlers">−</button>
+                      <div class="counter-step-display">
+                        <strong id="displayBowlersVal">4</strong>
+                        <span>Players</span>
+                      </div>
+                      <button type="button" class="counter-step-btn" data-target="bookBowlersCount"
+                        data-action="increment" aria-label="Increase Bowlers">+</button>
+                    </div>
+                    <!-- Accessible Select synced with JS -->
+                    <select id="bookBowlersCount" class="form-select-styled visually-hidden">
+                      <option value="2">2 Players (Duo)</option>
+                      <option value="4" selected>4 Players (Classic Squad)</option>
+                      <option value="6">6 Players (Full Lane)</option>
+                      <option value="8">8 Players (2 Lanes Recommended)</option>
+                      <option value="12">12 Players (2 Lanes)</option>
+                      <option value="18">18 Players (3 Lanes Group)</option>
+                    </select>
+                  </div>
+
+                  <!-- Lanes Stepper Widget -->
+                  <div class="form-control-wrap">
+                    <label class="form-label" for="bookLanesCount">Lanes Reserved</label>
+                    <div class="stepper-counter-group">
+                      <button type="button" class="counter-step-btn" data-target="bookLanesCount"
+                        data-action="decrement" aria-label="Decrease Lanes">−</button>
+                      <div class="counter-step-display">
+                        <strong id="displayLanesVal">1</strong>
+                        <span>Lane</span>
+                      </div>
+                      <button type="button" class="counter-step-btn" data-target="bookLanesCount"
+                        data-action="increment" aria-label="Increase Lanes">+</button>
+                    </div>
+                    <!-- Accessible Select synced with JS -->
+                    <select id="bookLanesCount" class="form-select-styled visually-hidden">
+                      <option value="1" selected>1 Lane (Up to 6 Bowlers)</option>
+                      <option value="2">2 Side-by-Side Lanes (Up to 12 Bowlers)</option>
+                      <option value="3">3 Consecutive Lanes (Up to 18 Bowlers)</option>
+                      <option value="4">4 Lanes (Quad Squad Suite)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="wizard-tips-pill">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--brand-gold-500)"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                  </svg>
+                  <span>Pro Tip: 1 lane comfortably supports up to 6 bowlers. For 7+ bowlers, 2 side-by-side lanes
+                    ensure faster frame turns!</span>
+                </div>
+
+                <div class="wizard-nav-actions">
+                  <button type="button" class="btn-secondary wizard-back-btn" data-prev="1">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    <span>Back</span>
+                  </button>
+                  <button type="button" class="btn-primary wizard-next-btn" data-next="3">
+                    <span>Continue to Shoes &amp; Gear</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 3 Panel: Shoes & Bumpers -->
+              <div class="wizard-step-panel" id="stepPanel3" role="tabpanel">
+                <div class="wizard-panel-heading">
+                  <span class="wizard-badge">Valet Fitting</span>
+                  <h3 class="wizard-panel-title">Shoe Rental Valet &amp; Bumpers</h3>
+                  <p class="wizard-panel-desc">Sanitized microfiber pro rental shoes pre-allocated to your party.</p>
+                </div>
+
+                <div class="form-grid-fields">
+                  <!-- Shoes Stepper Widget -->
+                  <div class="form-control-wrap">
+                    <label class="form-label" for="bookShoesCount">Shoe Rentals ($4.50 / pair)</label>
+                    <div class="stepper-counter-group">
+                      <button type="button" class="counter-step-btn" data-target="bookShoesCount"
+                        data-action="decrement" aria-label="Decrease Shoes">−</button>
+                      <div class="counter-step-display">
+                        <strong id="displayShoesVal">4</strong>
+                        <span>Pairs</span>
+                      </div>
+                      <button type="button" class="counter-step-btn" data-target="bookShoesCount"
+                        data-action="increment" aria-label="Increase Shoes">+</button>
+                    </div>
+                    <select id="bookShoesCount" class="form-select-styled visually-hidden">
+                      <option value="0">0 Pairs (Bringing Own Pro Shoes)</option>
+                      <option value="2">2 Pairs (+$9.00)</option>
+                      <option value="4" selected>4 Pairs (+$18.00)</option>
+                      <option value="6">6 Pairs (+$27.00)</option>
+                      <option value="8">8 Pairs (+$36.00)</option>
+                    </select>
+                  </div>
+
+                  <!-- Bumpers Option -->
+                  <div class="form-control-wrap">
+                    <label for="bookBumperPreference" class="form-label">Lane Bumpers Assistance</label>
+                    <select id="bookBumperPreference" class="form-select-styled">
+                      <option value="none">No Bumpers (Pro Scoring)</option>
+                      <option value="kids">Auto-Bumpers for Kids Only</option>
+                      <option value="all">Full Bumpers Up All Frames</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="wizard-tips-pill">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--brand-gold-500)"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                  <span>UV-C Sanitized: All rental footwear is treated through dual-action UV-C chambers between each
+                    guest.</span>
+                </div>
+
+                <div class="wizard-nav-actions">
+                  <button type="button" class="btn-secondary wizard-back-btn" data-prev="2">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    <span>Back</span>
+                  </button>
+                  <button type="button" class="btn-primary wizard-next-btn" data-next="4">
+                    <span>Continue to Food &amp; Extras</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 4 Panel: Food, Arcade & Final Confirmation -->
+              <div class="wizard-step-panel" id="stepPanel4" role="tabpanel">
+                <div class="wizard-panel-heading">
+                  <span class="wizard-badge">Gourmet Upgrades</span>
+                  <h3 class="wizard-panel-title">Lane-Side Dining &amp; Arcade Enhancements</h3>
+                  <p class="wizard-panel-desc">Pre-order perks served warm to your tablet, plus reloadable arcade cards.
+                  </p>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 1.25rem;">
+                  <label class="enhancement-item">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                      <input type="checkbox" id="enhancePizza"
+                        style="width: 18px; height: 18px; accent-color: var(--brand-gold-500);">
+                      <div>
+                        <strong style="color: #FFFFFF; font-size: 0.92rem; display: block;">Wood-Fired Pizza &amp;
+                          Pitcher Bundle</strong>
+                        <span style="font-size: 0.78rem; color: var(--brand-cream);">2 Large 16" Hand-Tossed Pizzas + 1
+                          Pitcher of Craft Soda or Draft Pint</span>
+                      </div>
+                    </div>
+                    <span style="font-weight: 800; color: var(--brand-gold-400); font-size: 0.95rem;">+$34.00</span>
+                  </label>
+
+                  <label class="enhancement-item">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                      <input type="checkbox" id="enhanceArcade"
+                        style="width: 18px; height: 18px; accent-color: var(--brand-gold-500);">
+                      <div>
+                        <strong style="color: #FFFFFF; font-size: 0.92rem; display: block;">$20 Reloadable Arcade Power
+                          Card</strong>
+                        <span style="font-size: 0.78rem; color: var(--brand-cream);">100 Game Credits + Ticket
+                          Redemption bonus ($15 per player)</span>
+                      </div>
+                    </div>
+                    <span style="font-weight: 800; color: var(--brand-gold-400); font-size: 0.95rem;">+$15/ea</span>
+                  </label>
+                </div>
+
+                <div class="wizard-nav-actions">
+                  <button type="button" class="btn-secondary wizard-back-btn" data-prev="3">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    <span>Back</span>
+                  </button>
+                  <button type="submit" class="btn-primary" style="height: 48px; font-size: 0.95rem;">
+                    <span>⚡ Confirm &amp; Reserve Lane Now</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+          </form>
+
+          <!-- Right Column: Sticky Live Receipt & Visual Companion -->
+          <div class="reservation-receipt-col">
+
+            <aside class="sticky-receipt-card" aria-label="Reservation Summary Receipt">
+              <div class="receipt-header">
+                <h4>Booking Breakdown</h4>
+                <p>Transparent live pricing with tax & shoe rentals included.</p>
+              </div>
+
+              <div class="receipt-line-items">
+                <div class="receipt-row">
+                  <span id="receiptLaneText">1x Cosmic Main Deck (2 hrs)</span>
+                  <strong id="receiptLaneCost">$96.00</strong>
+                </div>
+
+                <div class="receipt-row">
+                  <span>Shoe Rental Valet</span>
+                  <strong id="receiptShoesCost">$18.00</strong>
+                </div>
+
+                <div class="receipt-row">
+                  <span>Pre-Ordered Add-ons</span>
+                  <strong id="receiptEnhanceCost">$0.00</strong>
+                </div>
+
+                <div class="receipt-row">
+                  <span>State Entertainment Tax (8.25%)</span>
+                  <strong id="receiptTax">$9.41</strong>
+                </div>
+
+                <div class="receipt-divider"></div>
+
+                <div class="receipt-total-row">
+                  <span>Total Due</span>
+                  <div class="receipt-total-val" id="receiptGrandTotal">$123.41</div>
+                </div>
+              </div>
+
+              <div class="receipt-guarantee-note">
+                <strong>Guaranteed Lane Lock:</strong> Once confirmed, your assigned lane is held exclusively for you.
+                Free cancellation or rescheduling up to 4 hours prior to game time.
+              </div>
+            </aside>
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------------
+         SECTION 3: LANE TIER COMPARISON MATRIX
+         ------------------------------------------------------------------------ -->
+    <section class="section-wrapper bg-body" id="laneSpecsSection" aria-label="Lane Specifications Comparison">
+      <div class="section-container">
+
+        <div class="section-header-center">
+          <div class="eyebrow-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+            <span>Environment Architecture</span>
+          </div>
+          <h2 class="section-title">Compare <span>Lane Environments</span></h2>
+          <p class="section-subtitle">
+            Every lane at Strike & Pin is engineered to professional USBC tolerances. Explore the key differences
+            between our 3 dedicated hall zones.
+          </p>
+        </div>
+
+        <div class="specs-matrix-card">
+          <div
+            style="height: 240px; position: relative; overflow: hidden; border-bottom: 1px solid var(--border-brand);">
+            <img src="assets/images/sections/p24.jpg"
+              alt="The Royal Pin VIP Bowling Suites and Private Luxury Experience"
+              style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            <div
+              style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, rgba(14,2,5,0.95) 100%); display: flex; align-items: flex-end; padding: 1.25rem 1.5rem;">
+              <span
+                style="font-size: 0.88rem; font-weight: 800; color: var(--brand-gold-400); text-transform: uppercase; letter-spacing: 0.08em;">
+                Side-by-Side Equipment &amp; Zone Specification Comparison • Private Luxury Experience
+              </span>
+            </div>
+          </div>
+          <div class="specs-table-container">
+            <table class="specs-table" aria-label="Lane Environment Specifications">
+              <thead>
+                <tr>
+                  <th>Environment Feature</th>
+                  <th>Cosmic Glow Deck</th>
+                  <th>Retro Hardwood Bank</th>
+                  <th>Royal Pin VIP Suites</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="specs-feature-name">Lane Bed Material</td>
+                  <td>Synthetic Brunswick Anvilane™</td>
+                  <td>Authentic Canadian Solid Maple</td>
+                  <td>Precision AR Interactive Projection</td>
+                </tr>
+                <tr>
+                  <td class="specs-feature-name">Atmosphere & Lighting</td>
+                  <td>Kinetic UV Blacklight & Lasers</td>
+                  <td>Warm Mid-Century Pendant Amber</td>
+                  <td>Custom Programmable RGB Mood</td>
+                </tr>
+                <tr>
+                  <td class="specs-feature-name">Scoring Display</td>
+                  <td>55" Overhead Sync Video Wall</td>
+                  <td>Dual Tablet Digital + Paper Sheet</td>
+                  <td>Touchscreen Table + Video Projection</td>
+                </tr>
+                <tr>
+                  <td class="specs-feature-name">Seating Arrangement</td>
+                  <td>Curved Ergonomic Banquettes</td>
+                  <td>Classic Leather Upholstered Booths</td>
+                  <td>Ultra-Luxe Velvet Sectional Sofas</td>
+                </tr>
+                <tr>
+                  <td class="specs-feature-name">Hospitality Service</td>
+                  <td>Lane Tablet Digital Ordering</td>
+                  <td>Taphouse Server Attendants</td>
+                  <td>Dedicated Private Butler Concierge</td>
+                </tr>
+                <tr>
+                  <td class="specs-feature-name">Hourly Rate</td>
+                  <td><strong>$48 / hour</strong></td>
+                  <td><strong>$44 / hour</strong></td>
+                  <td><strong>$85 / hour</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------------
+         SECTION 4: SHOE VALET & FITTING GUIDE
+         ------------------------------------------------------------------------ -->
+    <section class="section-wrapper bg-surface" id="fittingGuideSection" aria-label="Shoe Rental and Fitting Guide">
+      <div class="section-container">
+
+        <div class="fitting-guide-grid">
+
+          <!-- Left: Sizing Guide Content -->
+          <div class="fitting-tables-stack">
+            <div class="eyebrow-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 6v6l4 2"></path>
+              </svg>
+              <span>Equipment Standards</span>
+            </div>
+
+            <h2 class="section-title" style="margin-bottom: 0.5rem;">
+              The Professional <span>Fitting & Valet</span> Guide
+            </h2>
+
+            <p class="section-subtitle" style="margin-bottom: 1.5rem;">
+              Bowling performance starts with balance and slide stability. All rental footwear is treated with
+              dual-action antimicrobial UV-C chambers between each guest use.
+            </p>
+
+            <div class="fitting-pill-box">
+              <h4>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--brand-gold-500)"
+                  stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Shoe Sizing Protocol</span>
+              </h4>
+              <p>
+                We stock sizes from US Toddler 7 up to Adult Men 16. Rental shoes feature genuine sliding microfiber
+                soles on both feet for ambidextrous play. Clean athletic socks are required.
+              </p>
+            </div>
+
+            <div class="fitting-pill-box">
+              <h4>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--brand-gold-500)"
+                  stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                  </polygon>
+                </svg>
+                <span>The 10% Body Weight Ball Rule</span>
+              </h4>
+              <p>
+                As a standard rule, select a bowling ball that weighs approximately 10% of your body weight (e.g. 140
+                lbs = 14 lb ball), up to the maximum 16 lbs. For youth bowlers, 6 to 9 lb balls ensure safe, strain-free
+                deliveries.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Right: Visual Side -->
+          <div class="fitting-guide-media">
+            <img src="assets/images/services/p25.jpg" alt="Professional bowling shoes and bowling ball fitting"
+              loading="lazy">
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------------
+         SECTION 5: ARRIVAL PROTOCOL & FAQS
+         ------------------------------------------------------------------------ -->
+    <section class="section-wrapper bg-body" id="arrivalGuideSection" aria-label="Arrival Protocol and FAQs">
+      <div class="section-container">
+
+        <div class="section-header-center">
+          <div class="eyebrow-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <span>Good to Know Before Rolling</span>
+          </div>
+          <h2 class="section-title">Arrival Protocol & <span>Booking FAQs</span></h2>
+          <p class="section-subtitle">
+            Everything you need to guarantee a seamless matchday arrival.
+          </p>
+        </div>
+
+        <div class="faq-policies-layout">
+
+          <!-- Left: Accordion Questions -->
+          <div class="faq-accordion-list">
+
+            <div class="faq-card-item">
+              <button type="button" class="faq-toggle-btn" aria-expanded="false">
+                <span>How early should our group arrive before our booking window?</span>
+                <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-body-content">
+                We strongly advise arriving <strong>15 minutes prior</strong> to your reservation time. This allows your
+                squad to check in, receive properly fitted shoes at the valet, and choose your favorite ball weights
+                without cutting into your lane play clock.
+              </div>
+            </div>
+
+            <div class="faq-card-item">
+              <button type="button" class="faq-toggle-btn" aria-expanded="false">
+                <span>What is the footwear and attire dress code on the lanes?</span>
+                <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-body-content">
+                Official bowling shoes must be worn on the approach at all times to prevent damage to the lane wood and
+                ensure safe sliding. Socks are strictly required. If someone in your party forgets socks, new sanitized
+                cotton pairs are available at the counter for $3.00.
+              </div>
+            </div>
+
+            <div class="faq-card-item">
+              <button type="button" class="faq-toggle-btn" aria-expanded="false">
+                <span>Can we bring our own birthday cake or outside snacks?</span>
+                <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-body-content">
+                Store-bought birthday cakes or cupcakes are warmly permitted with all reserved birthday and party
+                bookings! However, other outside food, fast food, and outside alcoholic beverages are strictly
+                prohibited due to health department guidelines. Our full kitchen bistro and taphouse are open for all
+                orders.
+              </div>
+            </div>
+
+            <div class="faq-card-item">
+              <button type="button" class="faq-toggle-btn" aria-expanded="false">
+                <span>What is your cancellation and rescheduling policy?</span>
+                <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-body-content">
+                Online lane bookings can be rescheduled or canceled for a full store credit or date transfer up to
+                <strong>4 hours before</strong> your reservation time through our self-service Member Portal or by
+                giving us a call.
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CALL TO ACTION (CTA): READY TO ROLL
+         ========================================================================== -->
+    <section class="site-cta-section" aria-label="Book Your Lane Experience">
+      <div class="section-container">
+        <div class="site-cta-card">
+          <div class="site-cta-glow" aria-hidden="true"></div>
+          <div class="site-cta-content">
+            <div class="eyebrow-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+              <span>Parties, Groups &amp; Corporate Buyouts</span>
+            </div>
+            <h2 class="site-cta-heading">Planning for <span>15+ Bowlers or a Private Wing?</span></h2>
+            <p class="site-cta-subtext">
+              Need multiple contiguous lanes, dedicated banquet catering, or a secluded 4-lane VIP suite? Our event
+              concierge coordinates seamless group experiences with zero booking friction.
+            </p>
+            <div class="site-cta-actions">
+              <a href="contact.html" class="btn-primary">
+                <span>📞 Speak with Event Planner</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+
+              <a href="leagues.html" class="btn-secondary" style="border-color: rgba(255,255,255,0.18);">
+                <span>Explore Leagues &amp; Tournaments</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       SCROLL TO TOP BUTTON
+       ========================================================================== -->
+  <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top of page">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ==========================================================================
+       SHARED EDITORIAL FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+
+        <div class="footer-col-brand">
+          <div class="footer-brand-header">
+            <img src="assets/images/icons/logo.png" alt="Strike & Pin Logo" class="footer-logo-img">
+            <div class="brand-text-group">
+              <span class="brand-title">Strike<span>&</span>Pin</span>
+              <span class="brand-subtitle">Bowling & Entertainment</span>
+            </div>
+          </div>
+          <p class="footer-description">
+            Your premier cosmic bowling sanctuary, arcade playground, and event destination. Engineered for
+            unforgettable celebrations, competitive league play, and gourmet social dining.
+          </p>
+          <div class="footer-badges-row">
+            <span class="footer-badge">32 Pro Lanes</span>
+            <span class="footer-badge">Hyper-Arcade</span>
+            <span class="footer-badge">VIP Lounge</span>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Navigation</h2>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home (Cosmic Arena)</a></li>
+            <li><a href="home-2.html" class="footer-link">Home 2 (Retro Lounge)</a></li>
+            <li><a href="book-lane.html" class="footer-link">Book a Lane</a></li>
+            <li><a href="leagues.html" class="footer-link">Leagues & Tournaments</a></li>
+            <li><a href="birthday-parties.html" class="footer-link">Birthday Parties</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing & Bundles</a></li>
+            <li><a href="about.html" class="footer-link">About Venue</a></li>
+            <li><a href="contact.html" class="footer-link">Contact & Inquiries</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Entertainment & Leagues -->
+        <div>
+          <h3 class="footer-heading">Experiences</h3>
+          <ul class="footer-links-list">
+            <li><a href="leagues.html" class="footer-link">Tuesday Classic League</a></li>
+            <li><a href="leagues.html" class="footer-link">Thursday Cosmic Clash</a></li>
+            <li><a href="pricing.html" class="footer-link">Youth Birthday Packages</a></li>
+            <li><a href="pricing.html" class="footer-link">Corporate Venue Buyouts</a></li>
+            <li><a href="dashboard.html" class="footer-link">Bowler Score Tracker</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Direct Contact</h2>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>742 Cosmic Boulevard, Grand Entertainment District, Sector 4</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span>+1 (800) 555-BOWL (2695)</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>bookings@strikepincenter.com</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Strike & Pin Bowling Alley & Entertainment Center. All rights reserved.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms of Play</a>
+          <a href="#safety">Safety & Waiver</a>
+          <a href="login.html">Staff Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global Shared Script -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

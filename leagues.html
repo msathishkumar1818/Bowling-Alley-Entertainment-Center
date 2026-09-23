@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leagues & Championship Tournaments | Strike & Pin</title>
+  <meta name="description"
+    content="Compete in sanctioned USBC scratch circuits, fun social handicap leagues, and high-stakes prize tournaments. View knockout brackets, rosters, and draft free agents.">
+  <meta name="theme-color" content="#160206">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/icons/logo.png">
+
+  <!-- Global Stylesheets (No inline CSS!) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       BRANDED PRELOADER
+       ========================================================================== -->
+  <div id="preloader" role="status" aria-label="Loading Strike & Pin Center">
+    <div class="loader-content">
+      <div class="loader-brand">
+        <img src="assets/images/icons/logo.png" alt="Strike & Pin Bowling Logo" class="loader-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-title">Strike<span>&</span>Pin</span>
+          <span class="brand-subtitle">Bowling & Entertainment</span>
+        </div>
+      </div>
+      <div class="loader-pin-indicator" aria-hidden="true">
+        <span class="loader-dot"></span>
+        <span class="loader-dot"></span>
+        <span class="loader-dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FIXED COMPACT HEADER
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+
+      <!-- Brand Logo + Name + Small Subtitle -->
+      <a href="index.html" class="header-brand" aria-label="Strike & Pin Homepage">
+        <img src="assets/images/icons/logo.png" alt="Strike & Pin Bowling Logo" class="header-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-title">Strike<span>&</span>Pin</span>
+          <span class="brand-subtitle">Bowling & Entertainment</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation - Exactly 6 Items (Leagues & Tournaments active) -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+
+        <!-- 1. Home (Dropdown - CLICK ONLY) -->
+        <div class="nav-dropdown-wrapper" id="homeDropdownWrapper">
+          <button type="button" class="nav-link nav-dropdown-trigger" id="homeDropdownTrigger" aria-haspopup="true"
+            aria-expanded="false">
+            <span>Home</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="dropdown-panel" role="menu" aria-label="Home Variations">
+            <a href="index.html" class="dropdown-item" role="menuitem">
+              <span>Home 1 (Cosmic Arena)</span>
+              <span class="dropdown-badge">V1</span>
+            </a>
+            <a href="home-2.html" class="dropdown-item" role="menuitem">
+              <span>Home 2 (Retro Lounge)</span>
+              <span class="dropdown-badge">V2</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Book a Lane -->
+        <a href="book-lane.html" class="nav-link">
+          <span>Book a Lane</span>
+        </a>
+
+        <!-- 3. Leagues & Tournaments (Active) -->
+        <a href="leagues.html" class="nav-link active" aria-current="page">
+          <span>Leagues & Tournaments</span>
+        </a>
+
+        <!-- 4. Pricing -->
+        <a href="pricing.html" class="nav-link">
+          <span>Pricing</span>
+        </a>
+
+        <!-- 6. About -->
+        <a href="about.html" class="nav-link">
+          <span>About</span>
+        </a>
+
+        <!-- 7. Contact (Directly visible) -->
+        <a href="contact.html" class="nav-link">
+          <span>Contact</span>
+        </a>
+
+        <!-- 8. Dashboard -->
+        <a href="dashboard.html" class="nav-link">
+          <span>Dashboard</span>
+        </a>
+      </nav>
+
+      <!-- Header Controls: RTL, Dark Mode, Dedicated Login Button -->
+      <div class="header-actions">
+
+        <!-- RTL/LTR Toggle -->
+        <button type="button" class="utility-btn rtl-toggle-btn" aria-label="Toggle text direction (RTL/LTR)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 3L4 7l4 4"></path>
+            <path d="M4 7h16"></path>
+            <path d="M16 21l4-4-4-4"></path>
+            <path d="M20 17H4"></path>
+          </svg>
+          <span class="utility-label dir-label-text">RTL</span>
+        </button>
+
+        <!-- Dark Mode Toggle (Pure #000000) -->
+        <button type="button" class="utility-btn dark-mode-toggle" aria-label="Toggle dark mode" aria-pressed="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <span class="utility-label">Theme</span>
+        </button>
+
+        <!-- Dedicated Login Button -->
+        <a href="login.html" class="btn-login desktop-only" id="headerLoginBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            <polyline points="10 17 15 12 10 7"></polyline>
+            <line x1="15" y1="12" x2="3" y2="12"></line>
+          </svg>
+          <span>Login</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Open mobile navigation menu"
+          aria-controls="mobileDrawer" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MOBILE NAVIGATION DRAWER
+       ========================================================================== -->
+  <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" role="dialog" aria-modal="true">
+
+    <div class="mobile-drawer-header">
+      <div class="header-brand">
+        <img src="assets/images/icons/logo.png" alt="Strike & Pin Logo" class="header-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-title">Strike<span>&</span>Pin</span>
+          <span class="brand-subtitle">Bowling & Entertainment</span>
+        </div>
+      </div>
+      <button type="button" class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close navigation menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-content">
+
+      <div class="mobile-accordion-wrapper" id="mobileHomeAccordion">
+        <button type="button" class="mobile-nav-link mobile-accordion-toggle" id="mobileHomeAccordionToggle"
+          aria-expanded="false">
+          <span>Home</span>
+          <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="mobile-accordion-panel">
+          <a href="index.html" class="mobile-sub-link">
+            <span>Home 1 (Cosmic Arena)</span>
+            <span class="dropdown-badge">V1</span>
+          </a>
+          <a href="home-2.html" class="mobile-sub-link">
+            <span>Home 2 (Retro Lounge)</span>
+            <span class="dropdown-badge">V2</span>
+          </a>
+        </div>
+      </div>
+
+      <a href="book-lane.html" class="mobile-nav-link">
+        <span>Book a Lane</span>
+      </a>
+
+      <a href="leagues.html" class="mobile-nav-link active" aria-current="page">
+        <span>Leagues & Tournaments</span>
+      </a>
+
+      <a href="pricing.html" class="mobile-nav-link">
+        <span>Pricing</span>
+      </a>
+
+      <a href="about.html" class="mobile-nav-link">
+        <span>About Us</span>
+      </a>
+
+      <a href="contact.html" class="mobile-nav-link">
+        <span>Contact</span>
+      </a>
+
+      <a href="dashboard.html" class="mobile-nav-link">
+        <span>Dashboard</span>
+      </a>
+
+      <a href="login.html" class="btn-login" style="margin-top: 1rem; width: 100%; justify-content: center;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+          <polyline points="10 17 15 12 10 7"></polyline>
+          <line x1="15" y1="12" x2="3" y2="12"></line>
+        </svg>
+        <span>Guest & Member Login</span>
+      </a>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <div class="mobile-utility-row">
+        <button type="button" class="utility-btn rtl-toggle-btn" style="width: 100%;"
+          aria-label="Toggle text direction (RTL/LTR)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 3L4 7l4 4"></path>
+            <path d="M4 7h16"></path>
+            <path d="M16 21l4-4-4-4"></path>
+            <path d="M20 17H4"></path>
+          </svg>
+          <span class="dir-label-text">RTL</span>
+        </button>
+
+        <button type="button" class="utility-btn dark-mode-toggle" style="width: 100%;" aria-label="Toggle dark mode">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+          </svg>
+          <span>Dark Mode</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: EXACTLY 5 CONTENT SECTIONS FOR LEAGUES & TOURNAMENTS
+       ========================================================================== -->
+  <main id="mainContent">
+
+    <!-- ========================================================================
+         SECTION 1: LEAGUES & TOURNAMENTS HERO RADAR TERMINAL
+         ======================================================================== -->
+    <section class="pricing-hero-section leagues-hero-section" id="leaguesJumbotronSection"
+      aria-label="Leagues and Tournaments Championship">
+      <div class="container">
+        <div class="pricing-hero-grid">
+
+          <!-- Left Info Column -->
+          <div class="pricing-hero-info">
+            <div class="party-badge-strip">
+              <span>✦</span> USBC Sanctioned Circuit 2026 <span>✦</span>
+            </div>
+
+            <h1 class="party-hero-title">
+              Sanctioned USBC Leagues <span>&amp; Cash Tournaments</span>
+            </h1>
+
+            <p class="party-hero-lead">
+              From scratch master divisions battling on PBA oil patterns to casual craft beer social squads, find your
+              roster and compete for glory, championship rings, and $25,000 in cash prizes.
+            </p>
+
+            <div class="hero-actions-row">
+              <a href="#freeAgentDraftSection" class="btn btn-primary">
+                <span>Register Full Squad</span>
+                <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+              <a href="#hallOfHonorSection" class="btn btn-secondary">
+                <span>The 300 Hall of Fame</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Interactive League Division Radar Terminal -->
+          <div class="pricing-radar-terminal league-radar-terminal">
+            <span class="text-xs uppercase font-extrabold text-accent-gold tracking-widest block mb-3">
+              Competitive Division Radar
+            </span>
+
+            <div class="radar-selector-strip" id="leagueRadarSelectorStrip">
+              <button type="button" class="radar-pill-btn active" data-div="scratch">Scratch Masters</button>
+              <button type="button" class="radar-pill-btn" data-div="classic">Classic Trio</button>
+              <button type="button" class="radar-pill-btn" data-div="pub">Pub &amp; Pint</button>
+              <button type="button" class="radar-pill-btn" data-div="weekend">Weekend Blitz</button>
+            </div>
+
+            <div class="radar-hud-card">
+              <div class="radar-hud-header">
+                <h3 class="radar-band-name" id="leagueRadarBandTitle">Scratch Masters (Thu 7:00 PM)</h3>
+                <span class="radar-savings-tag" id="leagueRadarTag">USBC Sanctioned ✦ $12K Purse</span>
+              </div>
+
+              <div class="radar-stats-grid">
+                <div class="radar-stat-box">
+                  <div class="radar-stat-val" id="leagueRadarStat1">195+</div>
+                  <div class="radar-stat-label" id="leagueRadarLabel1">Min Avg Req</div>
+                </div>
+                <div class="radar-stat-box">
+                  <div class="radar-stat-val" id="leagueRadarStat2">$32</div>
+                  <div class="radar-stat-label" id="leagueRadarLabel2">Weekly Dues</div>
+                </div>
+                <div class="radar-stat-box">
+                  <div class="radar-stat-val" id="leagueRadarStat3">4 Spots</div>
+                  <div class="radar-stat-label" id="leagueRadarLabel3">Open Roster</div>
+                </div>
+              </div>
+
+              <p class="radar-hud-details" id="leagueRadarDesc">
+                USBC Sport-certified league competing on rotating PBA Animal oil patterns with automated Specto
+                telemetry, weekly stepladder finals, and ring awards.
+              </p>
+
+              <a href="#freeAgentDraftSection" class="btn btn-primary w-full text-center" id="leagueRadarJoinBtn">
+                <span>Join This Division</span>
+                <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+
+
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------------
+         SECTION 2: TOURNAMENT KNOCKOUT BRACKET VISUAL SHOWCASE
+         ------------------------------------------------------------------------ -->
+    <section class="section-wrapper bg-surface" id="tournamentBracketSection" aria-label="Tournament Knockout Bracket">
+      <div class="section-container">
+        <div class="tournament-bracket-visual-frame">
+          <img src="assets/images/gallery/tournament-bracket-board.jpg"
+            alt="Championship Knockout Tournament Bracket Display" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ------------------------------------------------------------------------
+         SECTION 3: THE 300 HALL OF FAME & SEASONAL RECORDS WALL
+         ------------------------------------------------------------------------ -->
+    <section class="section-wrapper bg-surface" id="hallOfHonorSection" aria-label="300 Game Hall of Fame">
+      <div class="section-container">
+
+        <div class="hall-of-fame-layout">
+
+          <!-- Left: Golden Pins Visual -->
+          <div class="hall-pins-visual-col">
+            <img src="assets/images/gallery/hall-of-fame-pins.jpg"
+              alt="Golden commemorative bowling pins honoring 300 perfect games" loading="lazy">
+          </div>
+
+          <!-- Right: Wall of Honor Plaques Grid -->
+          <div>
+            <div class="eyebrow-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 8v8"></path>
+                <path d="M8 12h8"></path>
+              </svg>
+              <span>The Wall of Honor</span>
+            </div>
+
+            <h2 class="section-title" style="margin-bottom: 0.5rem;">
+              The 300 Club <span>Hall of Fame</span>
+            </h2>
+
+            <p class="section-subtitle" style="margin-bottom: 2rem;">
+              Immortalizing the elite athletes who rolled a verified 12 consecutive strikes for a Perfect 300 Game or an
+              800+ 3-game series in official league competition.
+            </p>
+
+            <div class="hall-plaques-grid">
+
+              <div class="hall-honor-plaque">
+                <img src="assets/images/gallery/bowler-marcus.jpg" alt="Marcus Vance 300 Game Bowler"
+                  class="plaque-bg-img" loading="lazy">
+                <div class="plaque-overlay"></div>
+                <span class="plaque-gold-medallion">300</span>
+                <div class="plaque-content">
+                  <h4>Marcus Vance</h4>
+                  <p>October 12, 2026 • Lane 7<br>Ball: Storm Phaze II (15 lbs)<br>Squad: The Pin Crushers</p>
+                </div>
+              </div>
+
+              <div class="hall-honor-plaque">
+                <img src="assets/images/gallery/bowler-elena.jpg" alt="Elena Rostova 300 Game Bowler"
+                  class="plaque-bg-img" loading="lazy">
+                <div class="plaque-overlay"></div>
+                <span class="plaque-gold-medallion">300</span>
+                <div class="plaque-content">
+                  <h4>Elena Rostova</h4>
+                  <p>September 24, 2026 • Lane 14<br>Ball: Hammer Black Widow (14 lbs)<br>Squad: Cosmic Split Kings</p>
+                </div>
+              </div>
+
+              <div class="hall-honor-plaque">
+                <img src="assets/images/gallery/bowler-julian.jpg" alt="Julian Thorne 812 Series Bowler"
+                  class="plaque-bg-img" loading="lazy">
+                <div class="plaque-overlay"></div>
+                <span class="plaque-gold-medallion"
+                  style="background: var(--brand-burgundy-500); color: #fff;">812</span>
+                <div class="plaque-content">
+                  <h4>Julian Thorne</h4>
+                  <p>812 Series (279 - 289 - 244)<br>August 19, 2026 • Lane 9<br>Squad: Rolling Thunder</p>
+                </div>
+              </div>
+
+              <div class="hall-honor-plaque">
+                <img src="assets/images/gallery/bowler-devon.jpg" alt="Devon Miller 300 Game Bowler"
+                  class="plaque-bg-img" loading="lazy">
+                <div class="plaque-overlay"></div>
+                <span class="plaque-gold-medallion">300</span>
+                <div class="plaque-content">
+                  <h4>Devon Miller</h4>
+                  <p>July 30, 2026 • Lane 3<br>Ball: Roto Grip Gem (15 lbs)<br>Squad: Strike Velocity</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------------
+         SECTION 4: FREE AGENT DRAFT BOARD & SQUAD REGISTRATION CONSOLE
+         ------------------------------------------------------------------------ -->
+    <section class="section-wrapper bg-body" id="freeAgentDraftSection" aria-label="Free Agent Draft Board">
+      <div class="section-container">
+
+        <div class="section-header-center">
+          <div class="eyebrow-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            <span>Matchmaking Hub</span>
+          </div>
+          <h2 class="section-title">Squad Entry <span>&amp; Free Agent Draft</span></h2>
+          <p class="section-subtitle">
+            Need a clutch anchor bowler to complete your squad, or ready to register your full 4-person championship
+            roster?
+          </p>
+        </div>
+
+        <div class="draft-board-layout">
+
+          <!-- Card 1: Available Free Agents Roster -->
+          <div class="draft-roster-card">
+            <div class="draft-roster-header">
+              <div>
+                <h3 style="font-size: 1.25rem; font-weight: 800; color: #FFFFFF;">Available Free Agents</h3>
+                <span style="font-size: 0.8rem; color: var(--brand-cream);">Verified USBC bowlers looking for
+                  teams</span>
+              </div>
+              <span class="dropdown-badge" style="background: #22C55E; color: #000;">4 Available</span>
+            </div>
+
+            <div class="draft-agents-list">
+              <div class="draft-agent-row">
+                <div class="agent-meta-left">
+                  <div class="agent-avatar-badge">TC</div>
+                  <div>
+                    <span class="agent-name-text">Tyler Chen</span>
+                    <span style="font-size: 0.78rem; color: var(--brand-cream); display: block;">Right-Handed Crank •
+                      Tue &amp; Thu</span>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.85rem;">
+                  <span class="agent-average-pill">214 Avg</span>
+                  <button type="button" class="btn-primary btn-draft-agent" data-agent="Tyler Chen"
+                    style="height: 36px; padding: 0 1rem; font-size: 0.8rem;">Draft</button>
+                </div>
+              </div>
+
+              <div class="draft-agent-row">
+                <div class="agent-meta-left">
+                  <div class="agent-avatar-badge">SM</div>
+                  <div>
+                    <span class="agent-name-text">Sarah Morales</span>
+                    <span style="font-size: 0.78rem; color: var(--brand-cream); display: block;">Two-Handed Stroker •
+                      Pub League</span>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.85rem;">
+                  <span class="agent-average-pill">188 Avg</span>
+                  <button type="button" class="btn-primary btn-draft-agent" data-agent="Sarah Morales"
+                    style="height: 36px; padding: 0 1rem; font-size: 0.8rem;">Draft</button>
+                </div>
+              </div>
+
+              <div class="draft-agent-row">
+                <div class="agent-meta-left">
+                  <div class="agent-avatar-badge">KJ</div>
+                  <div>
+                    <span class="agent-name-text">Kevin Jenkins</span>
+                    <span style="font-size: 0.78rem; color: var(--brand-cream); display: block;">Left-Handed Spinner •
+                      Sunday Trios</span>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.85rem;">
+                  <span class="agent-average-pill">196 Avg</span>
+                  <button type="button" class="btn-primary btn-draft-agent" data-agent="Kevin Jenkins"
+                    style="height: 36px; padding: 0 1rem; font-size: 0.8rem;">Draft</button>
+                </div>
+              </div>
+
+              <div class="draft-agent-row">
+                <div class="agent-meta-left">
+                  <div class="agent-avatar-badge">AL</div>
+                  <div>
+                    <span class="agent-name-text">Amber Lewis</span>
+                    <span style="font-size: 0.78rem; color: var(--brand-cream); display: block;">Casual Social Player •
+                      All Nights</span>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.85rem;">
+                  <span class="agent-average-pill">162 Avg</span>
+                  <button type="button" class="btn-primary btn-draft-agent" data-agent="Amber Lewis"
+                    style="height: 36px; padding: 0 1rem; font-size: 0.8rem;">Draft</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="draft-card-footer">
+              <span style="font-size: 0.82rem; color: var(--brand-cream);">Rolling solo this season?</span>
+              <button type="button" class="btn-secondary" style="height: 36px; font-size: 0.8rem; padding: 0 1rem;"
+                onclick="alert('Free agent sign-up form: Please enter your details or contact league coordinator at leagues@strikepin.com');">+
+                Join Draft Pool</button>
+            </div>
+          </div>
+
+          <!-- Card 2: Register Full Squad -->
+          <div class="squad-form-card">
+            <div class="draft-roster-header">
+              <div>
+                <h3 style="font-size: 1.25rem; font-weight: 800; color: #FFFFFF;">Register Full Squad</h3>
+                <span style="font-size: 0.8rem; color: var(--brand-cream);">Lock in your team's division slot</span>
+              </div>
+              <span class="dropdown-badge" style="background: var(--brand-gold-500); color: #000;">Fall 2026</span>
+            </div>
+
+            <form
+              onsubmit="event.preventDefault(); alert('Squad registration received! League coordinator will email your team schedule and sanction packet.');"
+              style="display: flex; flex-direction: column; gap: 1.15rem; flex: 1; justify-content: space-between;">
+              <div style="display: flex; flex-direction: column; gap: 1.15rem;">
+                <div class="form-control-wrap">
+                  <label for="squadName" class="form-label">Squad / Team Name</label>
+                  <input type="text" id="squadName" class="form-input-styled" placeholder="e.g. Rolling Thunder"
+                    required>
+                </div>
+
+                <div class="form-control-wrap">
+                  <label for="captainEmail" class="form-label">Captain Email Address</label>
+                  <input type="email" id="captainEmail" class="form-input-styled" placeholder="captain@bowlingclub.com"
+                    required>
+                </div>
+
+                <div class="form-control-wrap">
+                  <label for="divisionSelect" class="form-label">Desired Circuit Division</label>
+                  <select id="divisionSelect" class="form-select-styled">
+                    <option value="divA">Division A: Premier Scratch (190+ Avg)</option>
+                    <option value="divB" selected>Division B: Thursday Pint &amp; Pub (Handicap)</option>
+                    <option value="divC">Division C: Sunday Baker Trios</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <button type="submit" class="btn-primary"
+                  style="width: 100%; height: 48px; justify-content: center; margin-top: 0.5rem;">
+                  <span>Submit Squad Application</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+
+                <div class="squad-form-perks">
+                  <span>✓ USBC Sanctioned</span>
+                  <span>✓ Weekly Cash Payouts</span>
+                  <span>✓ Free Practice 30m</span>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CALL TO ACTION (CTA): READY TO ROLL
+         ========================================================================== -->
+    <section class="site-cta-section" aria-label="Book Your Lane Experience">
+      <div class="section-container">
+        <div class="site-cta-card">
+          <div class="site-cta-glow" aria-hidden="true"></div>
+          <div class="site-cta-content">
+            <div class="eyebrow-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                <path d="M4 22h16"></path>
+                <path d="M10 14.66V17c0 .55-.45 1-1 1H7v2h10v-2h-2c-.55 0-1-.45-1-1v-2.34"></path>
+                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+              </svg>
+              <span>Fall &amp; Winter League Registration</span>
+            </div>
+            <h2 class="site-cta-heading">Ready to Claim Your <span>Spot on the Leaderboard?</span></h2>
+            <p class="site-cta-subtext">
+              Whether you average 110 or 220, our USBC-certified handicap divisions guarantee balanced competition, real
+              weekly cash payouts, and great teammates. Join as an individual free agent or register a full 4-person
+              squad.
+            </p>
+            <div class="site-cta-actions">
+              <a href="contact.html" class="btn-primary">
+                <span>🏆 Register Team / Free Agent</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+              <a href="book-lane.html" class="btn-secondary">
+                <span>Book Practice Lanes</span>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       SCROLL TO TOP BUTTON
+       ========================================================================== -->
+  <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top of page">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ==========================================================================
+       SHARED EDITORIAL FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+
+        <div class="footer-col-brand">
+          <div class="footer-brand-header">
+            <img src="assets/images/icons/logo.png" alt="Strike & Pin Logo" class="footer-logo-img">
+            <div class="brand-text-group">
+              <span class="brand-title">Strike<span>&</span>Pin</span>
+              <span class="brand-subtitle">Bowling & Entertainment</span>
+            </div>
+          </div>
+          <p class="footer-description">
+            Your premier cosmic bowling sanctuary, arcade playground, and event destination. Engineered for
+            unforgettable celebrations, competitive league play, and gourmet social dining.
+          </p>
+          <div class="footer-badges-row">
+            <span class="footer-badge">32 Pro Lanes</span>
+            <span class="footer-badge">Hyper-Arcade</span>
+            <span class="footer-badge">VIP Lounge</span>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Navigation</h2>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home (Cosmic Arena)</a></li>
+            <li><a href="home-2.html" class="footer-link">Home 2 (Retro Lounge)</a></li>
+            <li><a href="book-lane.html" class="footer-link">Book a Lane</a></li>
+            <li><a href="leagues.html" class="footer-link">Leagues & Tournaments</a></li>
+            <li><a href="birthday-parties.html" class="footer-link">Birthday Parties</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing & Bundles</a></li>
+            <li><a href="about.html" class="footer-link">About Venue</a></li>
+            <li><a href="contact.html" class="footer-link">Contact & Inquiries</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Entertainment & Leagues -->
+        <div>
+          <h3 class="footer-heading">Experiences</h3>
+          <ul class="footer-links-list">
+            <li><a href="leagues.html" class="footer-link">Tuesday Classic League</a></li>
+            <li><a href="leagues.html" class="footer-link">Thursday Cosmic Clash</a></li>
+            <li><a href="pricing.html" class="footer-link">Youth Birthday Packages</a></li>
+            <li><a href="pricing.html" class="footer-link">Corporate Venue Buyouts</a></li>
+            <li><a href="dashboard.html" class="footer-link">Bowler Score Tracker</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Direct Contact</h2>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>742 Cosmic Boulevard, Grand Entertainment District, Sector 4</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span>+1 (800) 555-BOWL (2695)</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>bookings@strikepincenter.com</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Strike & Pin Bowling Alley & Entertainment Center. All rights reserved.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms of Play</a>
+          <a href="#safety">Safety & Waiver</a>
+          <a href="login.html">Staff Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global Shared Script -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
