@@ -810,8 +810,8 @@ a {
 .footer-logo-img,
 .footer-brand img,
 .site-footer img {
-  height: 38px;
-  max-height: 38px;
+  height: 44px;
+  max-height: 44px;
   width: auto;
   max-width: 150px;
   object-fit: contain;
@@ -1438,13 +1438,14 @@ a {
 .footer-inner {
   max-width: 1360px;
   margin: 0 auto;
-  padding: 4.5rem 1.5rem 2rem;
+  padding: 4.5rem 1.5rem 2.5rem;
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.4fr;
-  gap: 3rem;
+  grid-template-columns: 1.8fr 1fr 1fr 1.35fr;
+  gap: 2.5rem;
+  align-items: start;
   margin-bottom: 3.5rem;
 }
 
@@ -1455,15 +1456,37 @@ a {
 }
 
 .footer-brand-header {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.85rem;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  width: fit-content;
+  transition: transform var(--transition-fast, 0.2s ease), opacity var(--transition-fast, 0.2s ease);
+}
+
+.footer-brand-header:hover {
+  text-decoration: none;
+  opacity: 0.95;
+  transform: translateY(-2px);
+}
+
+.footer-brand-header:hover .footer-logo-img {
+  transform: scale(1.06) rotate(-2deg);
+}
+
+.footer-brand-header:hover .brand-title {
+  color: var(--brand-gold-400);
 }
 
 .footer-logo-img {
-  height: 48px;
+  height: 44px;
+  max-height: 44px;
   width: auto;
   object-fit: contain;
+  transition: transform 0.25s ease;
+  vertical-align: middle;
 }
 
 .footer-description {
@@ -1503,6 +1526,7 @@ a {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  white-space: nowrap;
 }
 
 .footer-heading::after {
@@ -1511,6 +1535,7 @@ a {
   width: 24px;
   height: 2px;
   background: var(--brand-gold-500);
+  flex-shrink: 0;
 }
 
 .footer-links-list {
@@ -1587,6 +1612,31 @@ a {
   display: flex !important;
   flex-direction: column !important;
   gap: 0.85rem !important;
+}
+
+.footer-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.35rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(229, 169, 60, 0.45);
+  background: rgba(229, 169, 60, 0.08);
+  color: var(--brand-gold-400);
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  width: fit-content;
+  transition: all var(--transition-fast, 0.2s ease);
+}
+
+.footer-pill-btn:hover {
+  background: rgba(229, 169, 60, 0.2);
+  border-color: var(--brand-gold-500);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(229, 169, 60, 0.22);
 }
 
 /* Footer Bottom Bar */
