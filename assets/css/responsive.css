@@ -67,8 +67,8 @@
   }
 
   .footer-grid {
-    grid-template-columns: 1.8fr 1fr 1fr 1.35fr;
-    gap: 1.75rem 1.25rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.75rem 2rem;
   }
 
   .footer-col-brand,
@@ -80,7 +80,7 @@
   }
 
   .footer-description {
-    max-width: 320px;
+    max-width: 480px;
   }
 
   .footer-contact-items-grid {
