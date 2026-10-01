@@ -20,21 +20,39 @@
 
   <style>
     /* ==========================================================================
-       LOGIN PORTAL BESPOKE COSMIC LUXURY THEME & COMPACT VIEWPORT ENGINE
+       LOGIN PORTAL RED & CHARCOAL THEME
        ========================================================================== */
     :root {
-      --portal-bg: #070103;
-      --portal-burgundy: #7B0D27;
-      --portal-burgundy-deep: #4D0717;
-      --portal-gold: #F5BC51;
-      --portal-gold-light: #FCD68A;
-      --portal-card: rgba(18, 3, 7, 0.94);
-      --portal-border: rgba(229, 169, 60, 0.35);
+      --portal-bg: #FFFFFF;
+      --portal-burgundy: #E5252A;
+      --portal-burgundy-deep: #C51D22;
+      --portal-gold: #E5252A;
+      --portal-gold-light: #EF4444;
+      --portal-card: #FFFFFF;
+      --portal-border: #E4E4E7;
+      --portal-text: #000000;
+      --portal-subtext: #18181B;
+      --portal-input-bg: #F4F4F5;
+      --portal-input-border: #D4D4D8;
+    }
+
+    html.dark {
+      --portal-bg: #09090B;
+      --portal-burgundy: #E5252A;
+      --portal-burgundy-deep: #C51D22;
+      --portal-gold: #FF3B30;
+      --portal-gold-light: #FF3B30;
+      --portal-card: #121215;
+      --portal-border: rgba(255, 255, 255, 0.12);
+      --portal-text: #FFFFFF;
+      --portal-subtext: #F4F4F5;
+      --portal-input-bg: #18181B;
+      --portal-input-border: rgba(255, 255, 255, 0.18);
     }
 
     html, body.login-portal-body {
-      background: radial-gradient(circle at 50% 35%, rgba(123, 13, 39, 0.45), var(--portal-bg) 70%), var(--portal-bg) !important;
-      color: #fff9f2 !important;
+      background: var(--portal-bg) !important;
+      color: var(--portal-text) !important;
       min-height: 100vh !important;
       margin: 0 !important;
       padding: 2rem 1.5rem !important;
@@ -43,9 +61,10 @@
       align-items: center !important;
       justify-content: center !important;
       box-sizing: border-box !important;
+      transition: background-color 0.25s ease, color 0.25s ease !important;
     }
 
-    /* Fixed Compact Luxury Top Utilities (Dark Mode & RTL Buttons) */
+    /* Fixed Compact Top Utilities */
     .portal-top-utilities {
       position: fixed !important;
       top: 1.25rem !important;
@@ -71,15 +90,15 @@
       min-width: 0 !important;
       padding: 0 0.95rem !important;
       border-radius: 999px !important;
-      background: rgba(18, 3, 7, 0.92) !important;
-      border: 1px solid rgba(229, 169, 60, 0.45) !important;
-      color: var(--portal-gold) !important;
+      background: var(--portal-card) !important;
+      border: 1px solid var(--portal-border) !important;
+      color: var(--portal-text) !important;
       font-size: 0.78rem !important;
       font-weight: 700 !important;
       cursor: pointer !important;
       backdrop-filter: blur(14px) !important;
       -webkit-backdrop-filter: blur(14px) !important;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6) !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
       transition: all 0.2s ease !important;
       text-transform: uppercase !important;
       letter-spacing: 0.04em !important;
@@ -89,22 +108,17 @@
     }
 
     .portal-utility-btn:hover {
-      background: rgba(123, 13, 39, 0.7) !important;
-      border-color: var(--portal-gold) !important;
-      color: #ffffff !important;
+      background: rgba(229, 37, 42, 0.08) !important;
+      border-color: var(--portal-burgundy) !important;
+      color: var(--portal-burgundy) !important;
       transform: translateY(-1px) !important;
-      box-shadow: 0 6px 20px rgba(123, 13, 39, 0.55) !important;
     }
 
     .portal-utility-btn svg {
       width: 15px !important;
       height: 15px !important;
       flex-shrink: 0 !important;
-      color: var(--portal-gold) !important;
-    }
-
-    .portal-utility-btn:hover svg {
-      color: #ffffff !important;
+      color: var(--portal-burgundy) !important;
     }
 
     .portal-utility-btn .dir-label-text,
@@ -116,7 +130,7 @@
       color: inherit !important;
     }
 
-    /* Mobile Responsive Placement: Cleanly seated above the login card without overlapping */
+    /* Mobile Responsive Placement */
     @media (max-width: 768px) {
       body.login-portal-body {
         padding: 1.25rem 1rem !important;
@@ -181,7 +195,7 @@
       }
     }
 
-    /* Streamlined Viewport-Fitting Login Card (No Vertical Stretching/Void) */
+    /* Login Card Terminal */
     main.login-card-terminal,
     #login-terminal,
     .login-card-terminal {
@@ -194,10 +208,14 @@
       border: 1.5px solid var(--portal-border) !important;
       border-radius: 26px !important;
       padding: 2.25rem 2.25rem !important;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.95), 0 0 30px rgba(123, 13, 39, 0.3) !important;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1), 0 0 25px rgba(229, 37, 42, 0.1) !important;
       box-sizing: border-box !important;
       margin: auto !important;
       align-self: center !important;
+    }
+
+    html.dark .login-card-terminal {
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85), 0 0 25px rgba(229, 37, 42, 0.25) !important;
     }
 
     .portal-brand-center {
@@ -231,7 +249,7 @@
     .portal-brand-title {
       font-size: 1.05rem !important;
       font-weight: 900 !important;
-      color: #ffffff !important;
+      color: var(--portal-text) !important;
       letter-spacing: 0.04em !important;
       line-height: 1.1 !important;
     }
@@ -239,7 +257,7 @@
     .portal-brand-sub {
       font-size: 0.55rem !important;
       font-weight: 700 !important;
-      color: var(--portal-gold) !important;
+      color: var(--portal-burgundy) !important;
       letter-spacing: 0.1em !important;
       text-transform: uppercase !important;
     }
@@ -248,7 +266,7 @@
       font-family: var(--font-heading) !important;
       font-size: 1.5rem !important;
       font-weight: 900 !important;
-      color: #ffffff !important;
+      color: var(--portal-text) !important;
       text-align: center !important;
       margin: 0 0 0.2rem 0 !important;
       line-height: 1.2 !important;
@@ -256,7 +274,7 @@
 
     .portal-subtext {
       font-size: 0.8rem !important;
-      color: rgba(255, 249, 242, 0.6) !important;
+      color: var(--portal-subtext) !important;
       text-align: center !important;
       margin: 0 0 0.85rem 0 !important;
       line-height: 1.4 !important;
@@ -264,8 +282,8 @@
 
     .auth-segmented-pill {
       display: flex !important;
-      background: rgba(10, 1, 3, 0.95) !important;
-      border: 1px solid rgba(229, 169, 60, 0.25) !important;
+      background: var(--portal-input-bg) !important;
+      border: 1px solid var(--portal-border) !important;
       border-radius: 999px !important;
       padding: 3px !important;
       margin-bottom: 0.85rem !important;
@@ -279,7 +297,7 @@
       border-radius: 999px !important;
       border: 1px solid transparent !important;
       background: transparent !important;
-      color: rgba(255, 249, 242, 0.65) !important;
+      color: var(--portal-subtext) !important;
       cursor: pointer !important;
       display: flex !important;
       align-items: center !important;
@@ -289,14 +307,14 @@
     }
 
     .auth-tab-btn.active {
-      background: linear-gradient(135deg, var(--portal-burgundy), var(--portal-burgundy-deep)) !important;
-      border-color: rgba(229, 169, 60, 0.5) !important;
-      color: var(--portal-gold-light) !important;
-      box-shadow: 0 4px 15px rgba(123, 13, 39, 0.55) !important;
+      background: var(--portal-burgundy) !important;
+      border-color: var(--portal-burgundy-deep) !important;
+      color: #FFFFFF !important;
+      box-shadow: 0 4px 15px rgba(229, 37, 42, 0.4) !important;
     }
 
     .auth-tab-btn:hover:not(.active) {
-      color: var(--portal-gold) !important;
+      color: var(--portal-burgundy) !important;
     }
 
     .auth-field-group {
@@ -315,13 +333,13 @@
       font-weight: 800 !important;
       text-transform: uppercase !important;
       letter-spacing: 0.08em !important;
-      color: rgba(255, 249, 242, 0.6) !important;
+      color: var(--portal-subtext) !important;
     }
 
     .auth-forgot-link {
       font-size: 0.72rem !important;
       font-weight: 700 !important;
-      color: var(--portal-gold) !important;
+      color: var(--portal-burgundy) !important;
       background: none !important;
       border: none !important;
       cursor: pointer !important;
@@ -330,7 +348,7 @@
     }
 
     .auth-forgot-link:hover {
-      color: var(--portal-gold-light) !important;
+      color: var(--portal-burgundy-deep) !important;
       text-decoration: underline !important;
     }
 
@@ -343,7 +361,7 @@
     .auth-input-icon {
       position: absolute !important;
       left: 0.85rem !important;
-      color: rgba(255, 249, 242, 0.4) !important;
+      color: var(--portal-subtext) !important;
       width: 16px !important;
       height: 16px !important;
       pointer-events: none !important;
@@ -353,9 +371,9 @@
       width: 100% !important;
       padding: 0.65rem 0.85rem 0.65rem 2.5rem !important;
       border-radius: 10px !important;
-      background: #090103 !important;
-      border: 1px solid rgba(229, 169, 60, 0.25) !important;
-      color: #ffffff !important;
+      background: var(--portal-input-bg) !important;
+      border: 1px solid var(--portal-input-border) !important;
+      color: var(--portal-text) !important;
       font-size: 0.88rem !important;
       box-sizing: border-box !important;
       transition: all 0.2s ease !important;
@@ -363,9 +381,9 @@
 
     .auth-text-input:focus {
       outline: none !important;
-      border-color: rgba(229, 169, 60, 0.7) !important;
-      box-shadow: 0 0 14px rgba(229, 169, 60, 0.28) !important;
-      background: #0E0205 !important;
+      border-color: var(--portal-burgundy) !important;
+      box-shadow: 0 0 14px rgba(229, 37, 42, 0.25) !important;
+      background: var(--portal-input-bg) !important;
     }
 
     .auth-eye-btn {
@@ -373,7 +391,7 @@
       right: 0.85rem !important;
       background: transparent !important;
       border: none !important;
-      color: rgba(255, 249, 242, 0.4) !important;
+      color: var(--portal-subtext) !important;
       cursor: pointer !important;
       padding: 0 !important;
       display: flex !important;
@@ -387,13 +405,13 @@
       margin-bottom: 0.85rem !important;
       cursor: pointer !important;
       font-size: 0.78rem !important;
-      color: rgba(255, 249, 242, 0.65) !important;
+      color: var(--portal-subtext) !important;
     }
 
     .auth-custom-checkbox {
-      border: 1.5px solid rgba(229, 169, 60, 0.6) !important;
-      background: rgba(123, 13, 39, 0.3) !important;
-      color: var(--portal-gold) !important;
+      border: 1.5px solid var(--portal-burgundy) !important;
+      background: rgba(229, 37, 42, 0.1) !important;
+      color: var(--portal-burgundy) !important;
       width: 16px !important;
       height: 16px !important;
       border-radius: 4px !important;
@@ -412,18 +430,19 @@
       font-weight: 800 !important;
       letter-spacing: 0.05em !important;
       cursor: pointer !important;
-      background: linear-gradient(135deg, var(--portal-burgundy), var(--portal-burgundy-deep)) !important;
-      border: 1px solid rgba(229, 169, 60, 0.5) !important;
+      background: var(--portal-burgundy) !important;
+      border: 1px solid var(--portal-burgundy-deep) !important;
       color: #ffffff !important;
-      box-shadow: 0 8px 25px rgba(123, 13, 39, 0.55) !important;
+      box-shadow: 0 8px 25px rgba(229, 37, 42, 0.4) !important;
       transition: all 0.2s ease !important;
       text-transform: uppercase !important;
     }
 
     .btn-auth-submit:hover {
-      background: linear-gradient(135deg, #9B1033, #680A20) !important;
-      box-shadow: 0 12px 35px rgba(123, 13, 39, 0.75) !important;
+      background: var(--portal-burgundy-deep) !important;
+      box-shadow: 0 12px 35px rgba(229, 37, 42, 0.6) !important;
       transform: translateY(-2px) !important;
+      color: #ffffff !important;
     }
 
     .auth-divider-line {
@@ -431,7 +450,7 @@
       align-items: center !important;
       text-align: center !important;
       margin: 0.75rem 0 !important;
-      color: rgba(255, 249, 242, 0.4) !important;
+      color: var(--portal-subtext) !important;
       font-size: 0.68rem !important;
       font-weight: 800 !important;
       letter-spacing: 0.08em !important;
@@ -441,7 +460,7 @@
     .auth-divider-line::after {
       content: "";
       flex: 1;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid var(--portal-border) !important;
     }
 
     .auth-divider-line span {
@@ -462,9 +481,9 @@
       gap: 0.5rem !important;
       padding: 0.55rem 0.85rem !important;
       border-radius: 10px !important;
-      background: rgba(255, 255, 255, 0.04) !important;
-      border: 1px solid rgba(229, 169, 60, 0.25) !important;
-      color: #fff9f2 !important;
+      background: var(--portal-input-bg) !important;
+      border: 1px solid var(--portal-border) !important;
+      color: var(--portal-text) !important;
       font-size: 0.82rem !important;
       font-weight: 700 !important;
       cursor: pointer !important;
@@ -472,21 +491,22 @@
     }
 
     .social-pill-btn:hover {
-      background: rgba(123, 13, 39, 0.35) !important;
-      border-color: rgba(229, 169, 60, 0.5) !important;
+      background: rgba(229, 37, 42, 0.08) !important;
+      border-color: var(--portal-burgundy) !important;
+      color: var(--portal-burgundy) !important;
     }
 
     .auth-bottom-switch {
       text-align: center !important;
       font-size: 0.8rem !important;
-      color: rgba(255, 249, 242, 0.6) !important;
+      color: var(--portal-subtext) !important;
       margin-top: 0.2rem !important;
     }
 
     .auth-switch-action {
       background: none !important;
       border: none !important;
-      color: var(--portal-gold) !important;
+      color: var(--portal-burgundy) !important;
       font-weight: 800 !important;
       cursor: pointer !important;
       padding: 0 !important;
@@ -494,25 +514,25 @@
     }
 
     .auth-switch-action:hover {
-      color: var(--portal-gold-light) !important;
+      color: var(--portal-burgundy-deep) !important;
     }
 
     .auth-back-home {
       text-align: center !important;
       margin-top: 0.65rem !important;
       padding-top: 0.65rem !important;
-      border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+      border-top: 1px solid var(--portal-border) !important;
     }
 
     .auth-back-link {
       font-size: 0.78rem !important;
-      color: rgba(255, 249, 242, 0.5) !important;
+      color: var(--portal-subtext) !important;
       text-decoration: none !important;
       transition: color 0.2s ease !important;
     }
 
     .auth-back-link:hover {
-      color: var(--portal-gold) !important;
+      color: var(--portal-burgundy) !important;
     }
   </style>
 </head>

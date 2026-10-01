@@ -7,51 +7,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
-  /* Brand Core Palette */
-  --brand-burgundy-950: #1A0207;
-  --brand-burgundy-900: #2C040D;
-  --brand-burgundy-850: #3E0613;
-  --brand-burgundy-800: #54091A;
-  --brand-burgundy-700: #6D0C23;
-  --brand-burgundy-600: #88122D;
-  --brand-burgundy-500: #A51A39;
-  --brand-burgundy-400: #C4264A;
+  /* Brand Core Palette - Red & Charcoal Theme */
+  --brand-red-primary: #E5252A;
+  --brand-red-hover: #C51D22;
+  --brand-red-deep: #991B1B;
+  --brand-charcoal-dark: #09090B;
+  --brand-charcoal-surface: #121215;
+  --brand-charcoal-elevated: #1C1C20;
+  --brand-gray-medium: #71717A;
+  --brand-gray-light: #E4E4E7;
+  --brand-gray-muted: #A1A1AA;
 
-  /* Accent Gold / Amber */
-  --brand-gold-600: #C98B23;
-  --brand-gold-500: #E5A93C;
-  --brand-gold-400: #F5BC51;
-  --brand-gold-300: #FCD68A;
-
-  /* Neutrals & Contrast Surfaces */
-  --brand-cream: #FFF9F2;
-  --brand-cream-soft: #FBF0E4;
-  --brand-cream-muted: #EFE0D0;
-
-  /* Theme Surfaces (Default Rich Burgundy Atmosphere) */
-  --bg-body: #160206;
-  --bg-surface: #26040C;
-  --bg-surface-elevated: #3A0713;
-  --bg-surface-glass: rgba(38, 4, 12, 0.88);
-  --header-bg: rgba(22, 2, 6, 0.94);
+  /* Theme Surfaces (Light Mode Default) */
+  --bg-body: #FFFFFF;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #F4F4F5;
+  --bg-surface-glass: rgba(255, 255, 255, 0.94);
+  --header-bg: rgba(255, 255, 255, 0.96);
 
   /* Borders */
-  --border-subtle: rgba(255, 249, 242, 0.15);
-  --border-brand: rgba(229, 169, 60, 0.28);
-  --border-highlight: rgba(229, 169, 60, 0.55);
+  --border-subtle: #E4E4E7;
+  --border-brand: rgba(229, 37, 42, 0.35);
+  --border-highlight: #E5252A;
 
-  /* Typography - Crisp Bright Text */
-  --text-primary: #FFFFFF;
-  --text-secondary: #FFF9F2;
-  --text-muted: #FDE8ED;
-  --text-gold: #FCD68A;
+  /* Typography - Clean high-contrast bright text */
+  --text-primary: #000000;
+  --text-secondary: #18181B;
+  --text-muted: #27272A;
+  --text-gold: #E5252A;
 
   /* Aliased Accent Variables used across pages */
-  --accent-gold: #E5A93C;
-  --accent-gold-light: #FCD68A;
-  --bg-black: #000000;
-  --brand-burgundy-light: #C4264A;
-  --brand-crimson: #E63946;
+  --accent-gold: #E5252A;
+  --accent-gold-light: #EF4444;
+  --bg-black: #09090B;
+  --brand-burgundy-light: #E5252A;
+  --brand-crimson: #E5252A;
+
+  /* Legacy aliases mapped to Red & Charcoal system */
+  --brand-burgundy-950: #09090B;
+  --brand-burgundy-900: #121215;
+  --brand-burgundy-850: #1C1C20;
+  --brand-burgundy-800: #7F1D1D;
+  --brand-burgundy-700: #991B1B;
+  --brand-burgundy-600: #C51D22;
+  --brand-burgundy-500: #E5252A;
+  --brand-burgundy-400: #EF4444;
+
+  --brand-gold-600: #B91C1C;
+  --brand-gold-500: #E5252A;
+  --brand-gold-400: #E5252A;
+  --brand-gold-300: #EF4444;
+
+  --brand-cream: #18181B;
+  --brand-cream-soft: #27272A;
+  --brand-cream-muted: #3F3F46;
 
   /* Dimensions */
   --header-height: 70px;
@@ -63,23 +72,46 @@
   --transition-normal: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Strict Dark Mode: #000000 */
+/* Strict Dark Mode: Crisp Bright White text and vibrant Red accents */
 html.dark {
   --bg-body: #000000;
-  --bg-surface: #0D0204;
-  --bg-surface-elevated: #170308;
-  --bg-surface-glass: rgba(0, 0, 0, 0.92);
-  --header-bg: rgba(0, 0, 0, 0.95);
-  --border-subtle: rgba(255, 249, 242, 0.18);
-  --border-brand: rgba(229, 169, 60, 0.35);
+  --bg-surface: #121215;
+  --bg-surface-elevated: #18181B;
+  --bg-surface-glass: rgba(9, 9, 11, 0.94);
+  --header-bg: rgba(9, 9, 11, 0.96);
+
+  --border-subtle: rgba(255, 255, 255, 0.12);
+  --border-brand: rgba(229, 37, 42, 0.4);
+  --border-highlight: #E5252A;
+
   --text-primary: #FFFFFF;
-  --text-secondary: #FFF9F2;
-  --text-muted: #FFEAEF;
-  --accent-gold: #F5BC51;
-  --accent-gold-light: #FCD68A;
-  --bg-black: #000000;
-  --brand-burgundy-light: #C4264A;
-  --brand-crimson: #FF4D5E;
+  --text-secondary: #FFFFFF;
+  --text-muted: #ffffff;
+  --text-gold: #FF3B30;
+
+  --accent-gold: #E5252A;
+  --accent-gold-light: #EF4444;
+  --bg-black: #09090B;
+  --brand-burgundy-light: #E5252A;
+  --brand-crimson: #E5252A;
+
+  --brand-burgundy-950: #09090B;
+  --brand-burgundy-900: #121215;
+  --brand-burgundy-850: #18181B;
+  --brand-burgundy-800: #7F1D1D;
+  --brand-burgundy-700: #991B1B;
+  --brand-burgundy-600: #C51D22;
+  --brand-burgundy-500: #E5252A;
+  --brand-burgundy-400: #EF4444;
+
+  --brand-gold-600: #B91C1C;
+  --brand-gold-500: #E5252A;
+  --brand-gold-400: #E5252A;
+  --brand-gold-300: #EF4444;
+
+  --brand-cream: #FFFFFF;
+  --brand-cream-soft: #F4F4F5;
+  --brand-cream-muted: #E4E4E7;
 }
 
 /* Base Styles */
@@ -142,7 +174,12 @@ h6 {
   letter-spacing: -0.02em;
 }
 
-p,
+p {
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
 span,
 li,
 a,
@@ -152,7 +189,7 @@ input,
 select,
 textarea {
   font-family: var(--font-body);
-  color: var(--text-primary);
+  color: inherit;
 }
 
 a {
@@ -161,11 +198,382 @@ a {
   transition: color var(--transition-fast);
 }
 
+a:hover {
+  color: var(--brand-red-primary);
+}
+
 /* Focus Visible */
 :focus-visible {
-  outline: 2px solid var(--brand-gold-500);
+  outline: 2px solid var(--brand-red-primary);
   outline-offset: 3px;
   border-radius: 4px;
+}
+
+/* ==========================================================================
+   THEME COLOR ENFORCEMENT: RED & CHARCOAL PALETTE
+   ========================================================================== */
+
+/* 1. Primary & CTA Buttons: Vibrant Red with Crisp White Text */
+.btn-primary,
+.btn-login,
+.btn-brand,
+.site-cta-btn,
+.btn-auth-submit,
+.btn-draft-agent,
+.btn-reserve-action,
+#calcReserveBtn,
+button.btn-primary,
+a.btn-primary {
+  background: var(--brand-red-primary) !important;
+  background-color: var(--brand-red-primary) !important;
+  color: #FFFFFF !important;
+  border: 1px solid var(--brand-red-hover) !important;
+  box-shadow: 0 4px 14px rgba(229, 37, 42, 0.35) !important;
+  text-shadow: none !important;
+  cursor: pointer !important;
+}
+
+.btn-primary *,
+.btn-login *,
+.btn-brand *,
+.site-cta-btn *,
+.btn-auth-submit *,
+.btn-draft-agent *,
+.btn-reserve-action * {
+  color: #FFFFFF !important;
+}
+
+.btn-primary:hover,
+.btn-login:hover,
+.btn-brand:hover,
+.site-cta-btn:hover,
+.btn-auth-submit:hover,
+.btn-draft-agent:hover,
+.btn-reserve-action:hover,
+#calcReserveBtn:hover,
+button.btn-primary:hover,
+a.btn-primary:hover {
+  background: var(--brand-red-hover) !important;
+  background-color: var(--brand-red-hover) !important;
+  color: #FFFFFF !important;
+  border-color: var(--brand-red-deep) !important;
+  box-shadow: 0 6px 20px rgba(229, 37, 42, 0.5) !important;
+  transform: translateY(-2px);
+}
+
+/* Secondary Buttons */
+.btn-secondary {
+  background: var(--bg-surface-elevated) !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--text-primary) !important;
+}
+
+.btn-secondary:hover {
+  background: rgba(229, 37, 42, 0.08) !important;
+  border-color: var(--brand-red-primary) !important;
+  color: var(--brand-red-primary) !important;
+}
+
+html.dark .btn-secondary {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #FFFFFF !important;
+}
+
+html.dark .btn-secondary:hover {
+  background: rgba(229, 37, 42, 0.15) !important;
+  border-color: var(--brand-red-primary) !important;
+  color: #FFFFFF !important;
+}
+
+/* 2. Navigation / Header */
+.site-header {
+  background: var(--header-bg) !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+}
+
+.nav-link {
+  color: var(--text-primary) !important;
+}
+
+.nav-link:hover {
+  color: var(--brand-red-primary) !important;
+  background-color: rgba(229, 37, 42, 0.08) !important;
+}
+
+.nav-link.active {
+  color: #FFFFFF !important;
+  background-color: var(--brand-red-primary) !important;
+  box-shadow: 0 2px 10px rgba(229, 37, 42, 0.4) !important;
+}
+
+.dropdown-panel,
+.dropdown-menu {
+  background-color: var(--bg-surface) !important;
+  border: 1px solid var(--border-subtle) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25) !important;
+}
+
+.dropdown-item,
+.dropdown-link {
+  color: var(--text-primary) !important;
+}
+
+.dropdown-item:hover,
+.dropdown-link:hover {
+  background-color: rgba(229, 37, 42, 0.1) !important;
+  color: var(--brand-red-primary) !important;
+}
+
+.dropdown-item.active,
+.dropdown-link.active {
+  background-color: var(--brand-red-primary) !important;
+  color: #FFFFFF !important;
+}
+
+.dropdown-badge {
+  background: var(--brand-red-primary) !important;
+  color: #FFFFFF !important;
+}
+
+.utility-btn,
+.mobile-toggle-btn {
+  background: var(--bg-surface-elevated) !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--text-primary) !important;
+}
+
+.utility-btn:hover,
+.mobile-toggle-btn:hover {
+  background: rgba(229, 37, 42, 0.08) !important;
+  border-color: var(--brand-red-primary) !important;
+  color: var(--brand-red-primary) !important;
+}
+
+/* 3. Headings, Accents & Text */
+.section-heading,
+.section-title,
+.package-tier-name,
+.card-title,
+.feature-title,
+.portal-card-title,
+.attraction-title,
+.event-card-title,
+.faq-question-text,
+.review-author-name,
+.league-name,
+.stat-number,
+.league-card-title {
+  color: var(--text-primary) !important;
+}
+
+.section-subheading,
+.section-subtitle,
+.package-ideal-for,
+.card-desc,
+.feature-desc,
+.attraction-desc,
+.event-card-desc,
+.faq-answer-text,
+.review-text,
+.league-schedule,
+.footer-description {
+  color: var(--text-secondary);
+}
+
+.price-val {
+  color: var(--text-primary) !important;
+}
+
+.price-currency,
+.rating-star,
+.accent-text,
+.text-accent-gold,
+.text-accent-gold-light,
+.section-title span,
+.section-heading span,
+.brand-title span {
+  color: var(--brand-red-primary) !important;
+}
+
+.brand-subtitle {
+  color: var(--text-secondary) !important;
+}
+
+.price-duration {
+  color: var(--text-muted) !important;
+}
+
+.inclusion-item,
+.spec-item,
+.benefit-item,
+.detail-row {
+  color: var(--text-primary) !important;
+}
+
+.inclusion-item svg,
+.spec-item svg,
+.benefit-item svg {
+  color: var(--brand-red-primary) !important;
+  stroke: var(--brand-red-primary) !important;
+}
+
+/* Eyebrow & Badges */
+.section-tag-pill,
+.tag-pill,
+.eyebrow-pill,
+.footer-badge,
+.hero-status-pill {
+  background: rgba(229, 37, 42, 0.1) !important;
+  border: 1px solid rgba(229, 37, 42, 0.3) !important;
+  color: var(--brand-red-primary) !important;
+}
+
+.featured-ribbon {
+  background: var(--brand-red-primary) !important;
+  color: #FFFFFF !important;
+}
+
+/* 4. Cards & Surfaces */
+.package-card,
+.portal-card,
+.attraction-card,
+.pricing-card,
+.review-card,
+.faq-card,
+.event-card,
+.league-card,
+.spec-card,
+.lane-card,
+.stat-card,
+.contact-card,
+.team-card,
+.heritage-era-card,
+.era-milestone-card {
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--text-primary) !important;
+}
+
+.package-card:hover,
+.attraction-card:hover,
+.pricing-card:hover,
+.league-card:hover {
+  border-color: var(--brand-red-primary) !important;
+}
+
+.package-card.featured {
+  border: 2px solid var(--brand-red-primary) !important;
+  box-shadow: 0 12px 32px rgba(229, 37, 42, 0.2) !important;
+}
+
+html.dark .package-card,
+html.dark .attraction-card,
+html.dark .pricing-card,
+html.dark .league-card,
+html.dark .stat-card,
+html.dark .contact-card {
+  background: #121215 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+html.dark .package-card.featured {
+  background: #18181B !important;
+  border: 2px solid var(--brand-red-primary) !important;
+}
+
+/* 5. Forms & Inputs */
+input,
+select,
+textarea,
+.bar-input,
+.form-input-styled,
+.form-select-styled,
+.auth-text-input {
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--text-primary) !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+.bar-input:focus,
+.form-input-styled:focus,
+.form-select-styled:focus,
+.auth-text-input:focus {
+  border-color: var(--brand-red-primary) !important;
+  box-shadow: 0 0 0 3px rgba(229, 37, 42, 0.2) !important;
+  outline: none !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted) !important;
+}
+
+select option,
+.bar-select option,
+.form-select-styled option {
+  background-color: var(--bg-surface) !important;
+  color: var(--text-primary) !important;
+}
+
+/* 6. Footer & Dark Banners */
+.site-footer {
+  background: #09090B !important;
+  border-top: 1px solid #27272A !important;
+  color: #E4E4E7 !important;
+}
+
+.site-footer .footer-heading {
+  color: #FFFFFF !important;
+}
+
+.site-footer .footer-heading::after {
+  background: var(--brand-red-primary) !important;
+}
+
+.site-footer .footer-description,
+.site-footer .hours-row {
+  color: #F4F4F5 !important;
+}
+
+.site-footer .footer-link,
+.site-footer .footer-contact-item {
+  color: #FFFFFF !important;
+}
+
+.site-footer .footer-link:hover {
+  color: var(--brand-red-primary) !important;
+}
+
+.site-footer .hours-row strong {
+  color: #FFFFFF !important;
+}
+
+.site-footer .footer-badge {
+  background: rgba(229, 37, 42, 0.15) !important;
+  border-color: rgba(229, 37, 42, 0.4) !important;
+  color: #EF4444 !important;
+}
+
+.site-cta-card,
+.site-cta-section {
+  background: linear-gradient(135deg, #18181B 0%, #111113 50%, #09090B 100%) !important;
+  border: 1px solid rgba(229, 37, 42, 0.3) !important;
+}
+
+.site-cta-card h2,
+.site-cta-card .section-heading,
+.site-cta-section h2 {
+  color: #FFFFFF !important;
+}
+
+.site-cta-card p,
+.site-cta-card .section-subheading,
+.site-cta-section p {
+  color: #FFFFFF !important;
 }
 
 /* ==========================================================================
@@ -287,7 +695,7 @@ a {
 }
 
 .text-muted {
-  color: #94a3b8;
+  color: #f1f3f6;
 }
 
 .text-secondary {
@@ -295,7 +703,7 @@ a {
 }
 
 .text-white {
-  color: #ffffff;
+  color: #f7f7f7;
 }
 
 .text-primary {
@@ -319,7 +727,7 @@ a {
 }
 
 .bg-black {
-  background-color: #070103 !important;
+  background-color: #09090B !important;
 }
 
 .bg-brand-crimson {
@@ -580,9 +988,9 @@ a {
   gap: 0.4rem;
   padding: 0.35rem 1rem;
   border-radius: 999px;
-  background: rgba(229, 169, 60, 0.12);
-  border: 1px solid var(--accent-gold);
-  color: var(--accent-gold-light);
+  background: rgba(229, 37, 42, 0.1);
+  border: 1px solid var(--border-brand);
+  color: var(--brand-red-primary);
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -594,7 +1002,7 @@ a {
   font-family: var(--font-heading);
   font-size: clamp(2rem, 3.5vw, 2.75rem);
   font-weight: 800;
-  color: #ffffff;
+  color: var(--text-primary);
   line-height: 1.18;
   margin-bottom: 0.75rem;
 }
@@ -602,7 +1010,7 @@ a {
 .section-subheading {
   font-size: 1.05rem;
   line-height: 1.65;
-  color: var(--brand-cream);
+  color: var(--text-secondary);
   max-width: 680px;
   margin: 0 auto;
 }
@@ -1773,20 +2181,20 @@ a {
 .section-title {
   font-size: clamp(2rem, 3.8vw, 3rem);
   font-weight: 800;
-  color: #FFFFFF;
+  color: var(--text-primary);
   line-height: 1.15;
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
 }
 
 .section-title span {
-  color: var(--brand-gold-400);
+  color: var(--brand-red-primary);
 }
 
 .section-subtitle {
   font-size: 1.05rem;
   line-height: 1.65;
-  color: var(--brand-cream);
+  color: var(--text-secondary);
 }
 
 .btn {
@@ -2134,20 +2542,20 @@ a {
   gap: 0.35rem;
   padding: 5px 12px;
   border-radius: 999px;
-  background: rgba(229, 169, 60, 0.08);
-  border: 1px solid rgba(229, 169, 60, 0.28);
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
   font-size: 0.75rem;
   font-weight: 600;
-  color: #FFFFFF;
+  color: var(--text-primary);
   letter-spacing: 0.01em;
   white-space: nowrap;
   transition: all var(--transition-fast);
 }
 
 .attraction-tag:hover {
-  background: rgba(229, 169, 60, 0.16);
-  border-color: var(--brand-gold-500);
-  color: var(--brand-gold-300);
+  background: rgba(229, 37, 42, 0.1);
+  border-color: var(--brand-red-primary);
+  color: var(--brand-red-primary);
 }
 
 /* ==========================================================================
@@ -2523,9 +2931,9 @@ a {
 }
 
 .package-card.featured {
-  background: linear-gradient(180deg, rgba(84, 9, 26, 0.85), var(--bg-surface));
-  border: 2px solid var(--brand-gold-500);
-  box-shadow: 0 16px 40px rgba(109, 12, 35, 0.5);
+  background: var(--bg-surface);
+  border: 2px solid var(--brand-red-primary);
+  box-shadow: 0 16px 40px rgba(229, 37, 42, 0.2);
 }
 
 .featured-ribbon {
@@ -2533,8 +2941,8 @@ a {
   top: -12px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--brand-gold-500);
-  color: #000000;
+  background: var(--brand-red-primary);
+  color: #FFFFFF;
   font-size: 0.72rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -2547,13 +2955,13 @@ a {
 .package-tier-name {
   font-size: 1.45rem;
   font-weight: 800;
-  color: #FFFFFF;
+  color: var(--text-primary);
   margin-bottom: 0.35rem;
 }
 
 .package-ideal-for {
   font-size: 0.82rem;
-  color: var(--brand-cream);
+  color: var(--text-secondary);
   margin-bottom: 1.5rem;
 }
 
@@ -2569,20 +2977,20 @@ a {
 .price-currency {
   font-size: 1.35rem;
   font-weight: 700;
-  color: var(--brand-gold-400);
+  color: var(--brand-red-primary);
 }
 
 .price-val {
   font-family: var(--font-heading);
   font-size: 2.75rem;
   font-weight: 900;
-  color: #FFFFFF;
+  color: var(--text-primary);
   line-height: 1;
 }
 
 .price-duration {
   font-size: 0.82rem;
-  color: var(--brand-cream);
+  color: var(--text-muted);
 }
 
 .package-inclusions {
@@ -2599,13 +3007,13 @@ a {
   align-items: flex-start;
   gap: 0.65rem;
   font-size: 0.86rem;
-  color: #FFFFFF;
+  color: var(--text-primary);
 }
 
 .inclusion-item svg {
   width: 16px;
   height: 16px;
-  color: var(--brand-gold-500);
+  color: var(--brand-red-primary);
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -2676,9 +3084,9 @@ a {
 .calc-chip-btn {
   padding: 0.65rem 0.5rem;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--bg-surface-elevated);
   border: 1px solid var(--border-subtle);
-  color: #FFFFFF;
+  color: var(--text-primary);
   font-size: 0.85rem;
   font-weight: 600;
   text-align: center;
@@ -2687,10 +3095,10 @@ a {
 }
 
 .calc-chip-btn.selected {
-  background: var(--brand-burgundy-700);
-  border-color: var(--brand-gold-500);
+  background: var(--brand-red-primary);
+  border-color: var(--brand-red-hover);
   color: #FFFFFF;
-  box-shadow: 0 0 10px rgba(229, 169, 60, 0.3);
+  box-shadow: 0 0 10px rgba(229, 37, 42, 0.35);
 }
 
 .calc-checkbox-row {
@@ -3321,15 +3729,15 @@ a {
   gap: 0.45rem;
   padding: 6px 14px;
   border-radius: 999px;
-  background: linear-gradient(135deg, #F5BC51 0%, #D49022 100%);
-  color: #070103;
+  background: var(--brand-red-primary);
+  color: #FFFFFF;
   font-size: 0.78rem;
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   white-space: nowrap;
   flex-shrink: 0;
-  box-shadow: 0 4px 14px rgba(229, 169, 60, 0.4);
+  box-shadow: 0 4px 14px rgba(229, 37, 42, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.4);
   line-height: 1;
 }
@@ -7451,8 +7859,8 @@ textarea.dispatch-input {
    ========================================================================== */
 
 .dash-body {
-  background-color: #070103 !important;
-  color: #fff9f2 !important;
+  background-color: var(--bg-body) !important;
+  color: var(--text-primary) !important;
   min-height: 100vh;
   margin: 0;
   font-family: var(--font-body);
@@ -7696,21 +8104,23 @@ textarea.dispatch-input {
 }
 
 .dash-body {
-  background-color: #070103 !important;
-  color: #fff9f2 !important;
+  background-color: var(--bg-body) !important;
+  color: var(--text-primary) !important;
 }
 
 .dash-main-area {
   margin-top: 68px;
   padding: 2.75rem 2.75rem 5rem;
   min-height: calc(100vh - 68px);
-  background: radial-gradient(circle at 15% 20%, rgba(123, 13, 39, 0.35), transparent 50%),
-    radial-gradient(circle at 85% 60%, rgba(229, 169, 60, 0.1), transparent 45%),
-    #070103 !important;
-  color: #fff9f2 !important;
+  background: var(--bg-body) !important;
+  color: var(--text-primary) !important;
   transition: background-color 0.25s ease, color 0.25s ease;
   width: 100%;
   box-sizing: border-box;
+}
+
+html.dark .dash-main-area {
+  background: #09090B !important;
 }
 
 /* Desktop Sidebar & Main Area Layout (>= 1101px) */
@@ -8657,7 +9067,7 @@ html[dir="rtl"] .dash-user-dropdown-item span {
 .pillar-desc {
   font-size: 0.88rem;
   line-height: 1.6;
-  color: #cbd5e1;
+  color: var(--text-secondary);
 }
 
 /* Interactive Virtual Zone Showcase */
@@ -8695,7 +9105,7 @@ html[dir="rtl"] .dash-user-dropdown-item span {
   border-radius: 999px;
   background: transparent;
   border: 1px solid transparent;
-  color: #cbd5e1;
+  color: var(--text-primary);
   font-family: var(--font-body);
   font-size: 0.92rem;
   font-weight: 700;
@@ -8787,7 +9197,7 @@ html[dir="rtl"] .dash-user-dropdown-item span {
 .zone-details p {
   font-size: 0.95rem;
   line-height: 1.7;
-  color: #cbd5e1;
+  color: var(--text-secondary);
   margin-bottom: 1.5rem;
 }
 
@@ -8886,7 +9296,7 @@ html[dir="rtl"] .dash-user-dropdown-item span {
 .member-bio {
   font-size: 0.86rem;
   line-height: 1.6;
-  color: #cbd5e1;
+  color: var(--text-secondary);
 }
 
 /* Dual CTA Banner */
@@ -9070,18 +9480,18 @@ html[dir="rtl"] .dash-user-dropdown-item span {
        CONTACT PAGE BESPOKE PREMIUM STYLES
        ========================================================================== */
 :root {
-  --contact-gold: #F5BC51;
-  --contact-gold-dark: #C69225;
-  --contact-burgundy: #7B0D27;
-  --contact-burgundy-deep: #430412;
-  --contact-bg: #070103;
-  --contact-card: rgba(18, 3, 7, 0.78);
-  --contact-card-border: rgba(229, 169, 60, 0.22);
+  --contact-gold: #E5252A;
+  --contact-gold-dark: #C51D22;
+  --contact-burgundy: #E5252A;
+  --contact-burgundy-deep: #18181B;
+  --contact-bg: var(--bg-body);
+  --contact-card: var(--bg-surface-elevated);
+  --contact-card-border: var(--border-subtle);
 }
 
-body {
-  background-color: var(--contact-bg) !important;
-  color: #fff9f2;
+.contact-page-body {
+  background-color: var(--bg-body);
+  color: var(--text-primary);
   overflow-x: hidden;
   padding-top: 0 !important;
   margin: 0 !important;
@@ -9129,9 +9539,9 @@ body {
 .contact-hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 20% 40%, rgba(123, 13, 39, 0.55), transparent 60%),
-    radial-gradient(circle at 85% 65%, rgba(229, 169, 60, 0.16), transparent 50%),
-    linear-gradient(180deg, rgba(7, 1, 3, 0.6) 0%, rgba(7, 1, 3, 0.85) 60%, #070103 100%);
+  background: radial-gradient(circle at 20% 40%, rgba(229, 37, 42, 0.4), transparent 60%),
+    radial-gradient(circle at 85% 65%, rgba(229, 37, 42, 0.12), transparent 50%),
+    linear-gradient(180deg, rgba(9, 9, 11, 0.6) 0%, rgba(9, 9, 11, 0.85) 60%, #09090B 100%);
 }
 
 .contact-hero-container {
@@ -9397,7 +9807,7 @@ body {
        SECTION 2: CONTACT FORM & DIRECT INFO SECTION
        -------------------------------------------------------------------------- */
 .contact-form-section {
-  background: #070103;
+  background: var(--bg-body);
   padding: 6.5rem 0;
   position: relative;
 }
@@ -9606,10 +10016,10 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 2px solid #070103;
+  border: 2px solid var(--bg-surface);
   object-fit: cover;
   margin-right: -10px;
-  background: #1a0408;
+  background: #18181B;
 }
 
 .coordinator-copy {
@@ -10238,6 +10648,7 @@ textarea.form-input-control {
 }
 
 @media (max-width: 1100px) {
+
   .booking-hero-banner,
   .leagues-hero-section,
   .pricing-hero-section,
@@ -10252,6 +10663,7 @@ textarea.form-input-control {
 }
 
 @media (max-width: 768px) {
+
   .booking-hero-banner,
   .leagues-hero-section,
   .pricing-hero-section,
@@ -10265,6 +10677,7 @@ textarea.form-input-control {
 }
 
 @media (max-width: 480px) {
+
   .booking-hero-banner,
   .leagues-hero-section,
   .pricing-hero-section,
@@ -10275,4 +10688,2628 @@ textarea.form-input-control {
   .hero-retro {
     padding: calc(var(--header-height, 58px) + 1.25rem) 0 2.5rem !important;
   }
+}
+
+/* ==========================================================================
+   MASTER LIGHT MODE & DARK MODE CONTRAST & VISIBILITY ENFORCEMENT
+   Guarantees 100% visible, high-contrast text and components across all pages
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   LIGHT MODE: Dark Charcoal text on Clean White / Off-White surfaces
+   -------------------------------------------------------------------------- */
+html:not(.dark),
+html:not(.dark) body {
+  background-color: #FFFFFF !important;
+  color: #111827 !important;
+}
+
+/* Headings & High-Emphasis Titles in Light Mode (Pure Jet Black) */
+html:not(.dark) h1,
+html:not(.dark) h2,
+html:not(.dark) h3,
+html:not(.dark) h4,
+html:not(.dark) h5,
+html:not(.dark) h6,
+html:not(.dark) .hero-headline,
+html:not(.dark) .hero-title,
+html:not(.dark) .hero-stat-num,
+html:not(.dark) .section-heading,
+html:not(.dark) .section-title,
+html:not(.dark) .card-title,
+html:not(.dark) .feature-title,
+html:not(.dark) .attraction-title,
+html:not(.dark) .attraction-card-title,
+html:not(.dark) .event-card-title,
+html:not(.dark) .package-tier-name,
+html:not(.dark) .price-val,
+html:not(.dark) .league-name,
+html:not(.dark) .league-title,
+html:not(.dark) .league-card-title,
+html:not(.dark) .stat-number,
+html:not(.dark) .stat-num,
+html:not(.dark) .faq-question-text,
+html:not(.dark) .faq-trigger,
+html:not(.dark) .review-author-name,
+html:not(.dark) .brand-title,
+html:not(.dark) .portal-card-title,
+html:not(.dark) .portal-heading,
+html:not(.dark) .lane-card-title,
+html:not(.dark) .retro-card-title,
+html:not(.dark) .timeline-year,
+html:not(.dark) .timeline-title,
+html:not(.dark) .team-card-name,
+html:not(.dark) .coordinator-name,
+html:not(.dark) .contact-info-title,
+html:not(.dark) .step-title,
+html:not(.dark) .booking-step-title,
+html:not(.dark) .summary-title,
+html:not(.dark) .addon-name,
+html:not(.dark) .inclusion-item,
+html:not(.dark) .spec-item,
+html:not(.dark) .benefit-item,
+html:not(.dark) .detail-row,
+html:not(.dark) .pricing-tier-name,
+html:not(.dark) .pricing-plan-title,
+html:not(.dark) .glance-num,
+html:not(.dark) .leaderboard-table th,
+html:not(.dark) .leaderboard-table td,
+html:not(.dark) .schedule-table th,
+html:not(.dark) .schedule-table td,
+html:not(.dark) table:not(.specs-table) th,
+html:not(.dark) table td,
+html:not(.dark) strong,
+html:not(.dark) b {
+  color: #000000 !important;
+}
+
+/* Override any hardcoded white inline styles in Light Mode (except inside dedicated dark containers) */
+html:not(.dark) *:not(.btn-primary):not(.btn-primary *):not(.btn-login):not(.btn-login *):not(.site-cta-btn):not(.site-cta-btn *):not(.btn-auth-submit):not(.btn-auth-submit *):not(.featured-ribbon):not(.site-footer):not(.site-footer *):not(.site-cta-card):not(.site-cta-card *):not(.site-cta-section):not(.site-cta-section *):not(.about-cta-card):not(.about-cta-card *):not(.hero-floating-pill):not(.hero-floating-pill *):not(.vip-suite-banner):not(.vip-suite-banner *):not(.celebration-hero-banner):not(.celebration-hero-banner *):not(.roster-header):not(.roster-header *):not(.league-spotlight-overlay):not(.league-spotlight-overlay *):not(.gear-image-overlay):not(.gear-image-overlay *):not(.calc-total-banner):not(.calc-total-banner *):not(.mosaic-overlay-card):not(.mosaic-overlay-card *):not(.vip-gallery-overlay):not(.vip-gallery-overlay *):not(.pricing-visual-top-overlay):not(.pricing-visual-top-overlay *):not(.pricing-visual-glass-panel):not(.pricing-visual-glass-panel *):not(.pricing-hero-visual-card):not(.pricing-hero-visual-card *):not(.buyout-rfp-banner):not(.buyout-rfp-banner *):not(.contact-hero-section):not(.contact-hero-section *):not(.contact-hero-container):not(.contact-hero-container *):not(.contact-hero-glance-card):not(.contact-hero-glance-card *):not(.cta-banner-card):not(.cta-banner-card *):not(.hall-honor-plaque):not(.hall-honor-plaque *):not(.specs-table thead):not(.specs-table thead *):not(.members-visual-caption):not(.members-visual-caption *):not(#preloader):not(#preloader *)[style*="color: #FFFFFF"],
+html:not(.dark) *:not(.btn-primary):not(.btn-primary *):not(.btn-login):not(.btn-login *):not(.site-cta-btn):not(.site-cta-btn *):not(.btn-auth-submit):not(.btn-auth-submit *):not(.featured-ribbon):not(.site-footer):not(.site-footer *):not(.site-cta-card):not(.site-cta-card *):not(.site-cta-section):not(.site-cta-section *):not(.about-cta-card):not(.about-cta-card *):not(.hero-floating-pill):not(.hero-floating-pill *):not(.vip-suite-banner):not(.vip-suite-banner *):not(.celebration-hero-banner):not(.celebration-hero-banner *):not(.roster-header):not(.roster-header *):not(.league-spotlight-overlay):not(.league-spotlight-overlay *):not(.gear-image-overlay):not(.gear-image-overlay *):not(.calc-total-banner):not(.calc-total-banner *):not(.mosaic-overlay-card):not(.mosaic-overlay-card *):not(.vip-gallery-overlay):not(.vip-gallery-overlay *):not(.pricing-visual-top-overlay):not(.pricing-visual-top-overlay *):not(.pricing-visual-glass-panel):not(.pricing-visual-glass-panel *):not(.pricing-hero-visual-card):not(.pricing-hero-visual-card *):not(.buyout-rfp-banner):not(.buyout-rfp-banner *):not(.contact-hero-section):not(.contact-hero-section *):not(.contact-hero-container):not(.contact-hero-container *):not(.contact-hero-glance-card):not(.contact-hero-glance-card *):not(.cta-banner-card):not(.cta-banner-card *):not(.hall-honor-plaque):not(.hall-honor-plaque *):not(.specs-table thead):not(.specs-table thead *):not(.members-visual-caption):not(.members-visual-caption *):not(#preloader):not(#preloader *)[style*="color: #ffffff"],
+html:not(.dark) *:not(.btn-primary):not(.btn-primary *):not(.btn-login):not(.btn-login *):not(.site-cta-btn):not(.site-cta-btn *):not(.btn-auth-submit):not(.btn-auth-submit *):not(.featured-ribbon):not(.site-footer):not(.site-footer *):not(.site-cta-card):not(.site-cta-card *):not(.site-cta-section):not(.site-cta-section *):not(.about-cta-card):not(.about-cta-card *):not(.hero-floating-pill):not(.hero-floating-pill *):not(.vip-suite-banner):not(.vip-suite-banner *):not(.celebration-hero-banner):not(.celebration-hero-banner *):not(.roster-header):not(.roster-header *):not(.league-spotlight-overlay):not(.league-spotlight-overlay *):not(.gear-image-overlay):not(.gear-image-overlay *):not(.calc-total-banner):not(.calc-total-banner *):not(.mosaic-overlay-card):not(.mosaic-overlay-card *):not(.vip-gallery-overlay):not(.vip-gallery-overlay *):not(.pricing-visual-top-overlay):not(.pricing-visual-top-overlay *):not(.pricing-visual-glass-panel):not(.pricing-visual-glass-panel *):not(.pricing-hero-visual-card):not(.pricing-hero-visual-card *):not(.buyout-rfp-banner):not(.buyout-rfp-banner *):not(.contact-hero-section):not(.contact-hero-section *):not(.contact-hero-container):not(.contact-hero-container *):not(.contact-hero-glance-card):not(.contact-hero-glance-card *):not(.cta-banner-card):not(.cta-banner-card *):not(.hall-honor-plaque):not(.hall-honor-plaque *):not(.specs-table thead):not(.specs-table thead *):not(.members-visual-caption):not(.members-visual-caption *):not(#preloader):not(#preloader *)[style*="color:#FFFFFF"],
+html:not(.dark) *:not(.btn-primary):not(.btn-primary *):not(.btn-login):not(.btn-login *):not(.site-cta-btn):not(.site-cta-btn *):not(.btn-auth-submit):not(.btn-auth-submit *):not(.featured-ribbon):not(.site-footer):not(.site-footer *):not(.site-cta-card):not(.site-cta-card *):not(.site-cta-section):not(.site-cta-section *):not(.about-cta-card):not(.about-cta-card *):not(.hero-floating-pill):not(.hero-floating-pill *):not(.vip-suite-banner):not(.vip-suite-banner *):not(.celebration-hero-banner):not(.celebration-hero-banner *):not(.roster-header):not(.roster-header *):not(.league-spotlight-overlay):not(.league-spotlight-overlay *):not(.gear-image-overlay):not(.gear-image-overlay *):not(.calc-total-banner):not(.calc-total-banner *):not(.mosaic-overlay-card):not(.mosaic-overlay-card *):not(.vip-gallery-overlay):not(.vip-gallery-overlay *):not(.pricing-visual-top-overlay):not(.pricing-visual-top-overlay *):not(.pricing-visual-glass-panel):not(.pricing-visual-glass-panel *):not(.pricing-hero-visual-card):not(.pricing-hero-visual-card *):not(.buyout-rfp-banner):not(.buyout-rfp-banner *):not(.contact-hero-section):not(.contact-hero-section *):not(.contact-hero-container):not(.contact-hero-container *):not(.contact-hero-glance-card):not(.contact-hero-glance-card *):not(.cta-banner-card):not(.cta-banner-card *):not(.hall-honor-plaque):not(.hall-honor-plaque *):not(.specs-table thead):not(.specs-table thead *):not(.members-visual-caption):not(.members-visual-caption *):not(#preloader):not(#preloader *)[style*="color:#ffffff"],
+html:not(.dark) *:not(.btn-primary):not(.btn-primary *):not(.btn-login):not(.btn-login *):not(.site-cta-btn):not(.site-cta-btn *):not(.btn-auth-submit):not(.btn-auth-submit *):not(.featured-ribbon):not(.site-footer):not(.site-footer *):not(.site-cta-card):not(.site-cta-card *):not(.site-cta-section):not(.site-cta-section *):not(.about-cta-card):not(.about-cta-card *):not(.hero-floating-pill):not(.hero-floating-pill *):not(.vip-suite-banner):not(.vip-suite-banner *):not(.celebration-hero-banner):not(.celebration-hero-banner *):not(.roster-header):not(.roster-header *):not(.league-spotlight-overlay):not(.league-spotlight-overlay *):not(.gear-image-overlay):not(.gear-image-overlay *):not(.calc-total-banner):not(.calc-total-banner *):not(.mosaic-overlay-card):not(.mosaic-overlay-card *):not(.vip-gallery-overlay):not(.vip-gallery-overlay *):not(.pricing-visual-top-overlay):not(.pricing-visual-top-overlay *):not(.pricing-visual-glass-panel):not(.pricing-visual-glass-panel *):not(.pricing-hero-visual-card):not(.pricing-hero-visual-card *):not(.buyout-rfp-banner):not(.buyout-rfp-banner *):not(.contact-hero-section):not(.contact-hero-section *):not(.contact-hero-container):not(.contact-hero-container *):not(.contact-hero-glance-card):not(.contact-hero-glance-card *):not(.cta-banner-card):not(.cta-banner-card *):not(.hall-honor-plaque):not(.hall-honor-plaque *):not(.specs-table thead):not(.specs-table thead *):not(.members-visual-caption):not(.members-visual-caption *):not(#preloader):not(#preloader *)[style*="color: #fff"],
+html:not(.dark) *:not(.btn-primary):not(.btn-primary *):not(.btn-login):not(.btn-login *):not(.site-cta-btn):not(.site-cta-btn *):not(.btn-auth-submit):not(.btn-auth-submit *):not(.featured-ribbon):not(.site-footer):not(.site-footer *):not(.site-cta-card):not(.site-cta-card *):not(.site-cta-section):not(.site-cta-section *):not(.about-cta-card):not(.about-cta-card *):not(.hero-floating-pill):not(.hero-floating-pill *):not(.vip-suite-banner):not(.vip-suite-banner *):not(.celebration-hero-banner):not(.celebration-hero-banner *):not(.roster-header):not(.roster-header *):not(.league-spotlight-overlay):not(.league-spotlight-overlay *):not(.gear-image-overlay):not(.gear-image-overlay *):not(.calc-total-banner):not(.calc-total-banner *):not(.mosaic-overlay-card):not(.mosaic-overlay-card *):not(.vip-gallery-overlay):not(.vip-gallery-overlay *):not(.pricing-visual-top-overlay):not(.pricing-visual-top-overlay *):not(.pricing-visual-glass-panel):not(.pricing-visual-glass-panel *):not(.pricing-hero-visual-card):not(.pricing-hero-visual-card *):not(.buyout-rfp-banner):not(.buyout-rfp-banner *):not(.contact-hero-section):not(.contact-hero-section *):not(.contact-hero-container):not(.contact-hero-container *):not(.contact-hero-glance-card):not(.contact-hero-glance-card *):not(.cta-banner-card):not(.cta-banner-card *):not(.hall-honor-plaque):not(.hall-honor-plaque *):not(.specs-table thead):not(.specs-table thead *):not(.members-visual-caption):not(.members-visual-caption *):not(#preloader):not(#preloader *)[style*="color:#fff"],
+html:not(.dark) *:not(.btn-primary):not(.btn-primary *):not(.btn-login):not(.btn-login *):not(.site-cta-btn):not(.site-cta-btn *):not(.btn-auth-submit):not(.btn-auth-submit *):not(.featured-ribbon):not(.site-footer):not(.site-footer *):not(.site-cta-card):not(.site-cta-card *):not(.site-cta-section):not(.site-cta-section *):not(.about-cta-card):not(.about-cta-card *):not(.hero-floating-pill):not(.hero-floating-pill *):not(.vip-suite-banner):not(.vip-suite-banner *):not(.celebration-hero-banner):not(.celebration-hero-banner *):not(.roster-header):not(.roster-header *):not(.league-spotlight-overlay):not(.league-spotlight-overlay *):not(.gear-image-overlay):not(.gear-image-overlay *):not(.calc-total-banner):not(.calc-total-banner *):not(.mosaic-overlay-card):not(.mosaic-overlay-card *):not(.vip-gallery-overlay):not(.vip-gallery-overlay *):not(.pricing-visual-top-overlay):not(.pricing-visual-top-overlay *):not(.pricing-visual-glass-panel):not(.pricing-visual-glass-panel *):not(.pricing-hero-visual-card):not(.pricing-hero-visual-card *):not(.buyout-rfp-banner):not(.buyout-rfp-banner *):not(.contact-hero-section):not(.contact-hero-section *):not(.contact-hero-container):not(.contact-hero-container *):not(.contact-hero-glance-card):not(.contact-hero-glance-card *):not(.cta-banner-card):not(.cta-banner-card *):not(.hall-honor-plaque):not(.hall-honor-plaque *):not(.specs-table thead):not(.specs-table thead *):not(.members-visual-caption):not(.members-visual-caption *):not(#preloader):not(#preloader *)[style*="color: #fff9f2"],
+html:not(.dark) *:not(.btn-primary):not(.btn-primary *):not(.btn-login):not(.btn-login *):not(.site-cta-btn):not(.site-cta-btn *):not(.btn-auth-submit):not(.btn-auth-submit *):not(.featured-ribbon):not(.site-footer):not(.site-footer *):not(.site-cta-card):not(.site-cta-card *):not(.site-cta-section):not(.site-cta-section *):not(.about-cta-card):not(.about-cta-card *):not(.hero-floating-pill):not(.hero-floating-pill *):not(.vip-suite-banner):not(.vip-suite-banner *):not(.celebration-hero-banner):not(.celebration-hero-banner *):not(.roster-header):not(.roster-header *):not(.league-spotlight-overlay):not(.league-spotlight-overlay *):not(.gear-image-overlay):not(.gear-image-overlay *):not(.calc-total-banner):not(.calc-total-banner *):not(.mosaic-overlay-card):not(.mosaic-overlay-card *):not(.vip-gallery-overlay):not(.vip-gallery-overlay *):not(.pricing-visual-top-overlay):not(.pricing-visual-top-overlay *):not(.pricing-visual-glass-panel):not(.pricing-visual-glass-panel *):not(.pricing-hero-visual-card):not(.pricing-hero-visual-card *):not(.buyout-rfp-banner):not(.buyout-rfp-banner *):not(.contact-hero-section):not(.contact-hero-section *):not(.contact-hero-container):not(.contact-hero-container *):not(.contact-hero-glance-card):not(.contact-hero-glance-card *):not(.cta-banner-card):not(.cta-banner-card *):not(.hall-honor-plaque):not(.hall-honor-plaque *):not(.specs-table thead):not(.specs-table thead *):not(.members-visual-caption):not(.members-visual-caption *):not(#preloader):not(#preloader *)[style*="color:#fff9f2"] {
+  color: #111827 !important;
+}
+
+html:not(.dark) *:not(.site-footer *):not(.site-cta-card *):not(.site-cta-section *):not(.about-cta-card *):not(.hero-floating-pill *):not(.vip-suite-banner *):not(.celebration-hero-banner *):not(.roster-header *):not(.league-spotlight-overlay *):not(.gear-image-overlay *):not(.calc-total-banner *):not(.mosaic-overlay-card *):not(.vip-gallery-overlay *):not(.pricing-visual-top-overlay *):not(.pricing-visual-glass-panel *):not(.pricing-hero-visual-card *):not(.buyout-rfp-banner *):not(.contact-hero-section *):not(.contact-hero-container *):not(.contact-hero-glance-card *):not(.cta-banner-card *):not(.hall-honor-plaque *):not(.specs-table thead *):not(.members-visual-caption *)[style*="color: var(--brand-cream)"],
+html:not(.dark) *:not(.site-footer *):not(.site-cta-card *):not(.site-cta-section *):not(.about-cta-card *):not(.hero-floating-pill *):not(.vip-suite-banner *):not(.celebration-hero-banner *):not(.roster-header *):not(.league-spotlight-overlay *):not(.gear-image-overlay *):not(.calc-total-banner *):not(.mosaic-overlay-card *):not(.vip-gallery-overlay *):not(.pricing-visual-top-overlay *):not(.pricing-visual-glass-panel *):not(.pricing-hero-visual-card *):not(.buyout-rfp-banner *):not(.contact-hero-section *):not(.contact-hero-container *):not(.contact-hero-glance-card *):not(.cta-banner-card *):not(.hall-honor-plaque *):not(.specs-table thead *):not(.members-visual-caption *)[style*="color:var(--brand-cream)"] {
+  color: #111827 !important;
+}
+
+/* Body Text, Subheadings & Descriptions in Light Mode (Crisp, High-Contrast Black) */
+html:not(.dark) p,
+html:not(.dark) .hero-description,
+html:not(.dark) .hero-stat-label,
+html:not(.dark) .section-subheading,
+html:not(.dark) .section-subtitle,
+html:not(.dark) .card-desc,
+html:not(.dark) .feature-desc,
+html:not(.dark) .attraction-desc,
+html:not(.dark) .event-card-desc,
+html:not(.dark) .package-ideal-for,
+html:not(.dark) .faq-answer-text,
+html:not(.dark) .review-text,
+html:not(.dark) .league-schedule,
+html:not(.dark) .league-desc,
+html:not(.dark) .timeline-desc,
+html:not(.dark) .team-card-role,
+html:not(.dark) .member-bio,
+html:not(.dark) .coordinator-role,
+html:not(.dark) .contact-info-desc,
+html:not(.dark) .step-desc,
+html:not(.dark) .booking-step-desc,
+html:not(.dark) .summary-row,
+html:not(.dark) .addon-desc,
+html:not(.dark) .glance-label,
+html:not(.dark) .filter-chip,
+html:not(.dark) .text-muted,
+html:not(.dark) .text-secondary {
+  color: #111827 !important;
+}
+
+html:not(.dark) .brand-subtitle,
+html:not(.dark) .price-duration {
+  color: #1F2937 !important;
+}
+
+/* Red Accents & Highlight Words in Light Mode */
+html:not(.dark) .hero-headline em,
+html:not(.dark) .section-title span,
+html:not(.dark) .section-heading span,
+html:not(.dark) .brand-title span,
+html:not(.dark) .price-currency,
+html:not(.dark) .rating-star,
+html:not(.dark) .accent-text,
+html:not(.dark) span.text-accent-gold,
+html:not(.dark) span.text-accent-gold-light,
+html:not(.dark) .hero-stat-num span,
+html:not(.dark) .stat-number span {
+  color: #E5252A !important;
+}
+
+/* Light Mode Section Backgrounds */
+html:not(.dark) .hero-cosmic,
+html:not(.dark) .booking-hero-banner,
+html:not(.dark) .leagues-hero-section,
+html:not(.dark) .pricing-hero-section,
+html:not(.dark) .party-hero-section,
+html:not(.dark) .about-hero-section,
+html:not(.dark) .about-story-section,
+html:not(.dark) .contact-hero-section,
+html:not(.dark) .contact-form-section,
+html:not(.dark) section:not(.site-footer):not(.site-cta-section):not(.about-cta-section):not(.hero-retro) {
+  background: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+}
+
+/* Light Mode Cards & Surfaces */
+html:not(.dark) .package-card,
+html:not(.dark) .portal-card,
+html:not(.dark) .attraction-card,
+html:not(.dark) .pricing-card,
+html:not(.dark) .review-card,
+html:not(.dark) .faq-card,
+html:not(.dark) .event-card,
+html:not(.dark) .league-card,
+html:not(.dark) .spec-card,
+html:not(.dark) .lane-card,
+html:not(.dark) .stat-card,
+html:not(.dark) .contact-card,
+html:not(.dark) .team-card,
+html:not(.dark) .heritage-era-card,
+html:not(.dark) .era-milestone-card,
+html:not(.dark) .retro-card,
+html:not(.dark) .booking-wizard-card,
+html:not(.dark) .summary-sidebar,
+html:not(.dark) .faq-item,
+html:not(.dark) .accordion-item,
+html:not(.dark) .slot-chip,
+html:not(.dark) .contact-method-card {
+  background: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+  border-color: #E4E4E7 !important;
+  color: #18181B !important;
+}
+
+html:not(.dark) .hero-stat-card {
+  background: #F4F4F5 !important;
+  border: 1px solid #E4E4E7 !important;
+}
+
+html:not(.dark) .hero-live-indicator {
+  background: rgba(229, 37, 42, 0.08) !important;
+  border: 1px solid rgba(229, 37, 42, 0.25) !important;
+}
+
+html:not(.dark) .hero-live-indicator span {
+  color: #000000 !important;
+  font-weight: 600 !important;
+}
+
+html:not(.dark) .package-card.featured {
+  background: #FFFFFF !important;
+  border: 2px solid #E5252A !important;
+  box-shadow: 0 12px 32px rgba(229, 37, 42, 0.15) !important;
+}
+
+/* Navigation in Light Mode */
+html:not(.dark) .site-header {
+  background: rgba(255, 255, 255, 0.98) !important;
+  border-bottom: 1px solid #E4E4E7 !important;
+}
+
+html:not(.dark) .nav-link {
+  color: #000000 !important;
+  font-weight: 600 !important;
+}
+
+html:not(.dark) .nav-link:hover {
+  color: #E5252A !important;
+  background-color: rgba(229, 37, 42, 0.08) !important;
+}
+
+html:not(.dark) .nav-link.active {
+  color: #FFFFFF !important;
+  background-color: #E5252A !important;
+}
+
+html:not(.dark) .dropdown-panel,
+html:not(.dark) .dropdown-menu {
+  background-color: #FFFFFF !important;
+  border: 1px solid #E4E4E7 !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12) !important;
+}
+
+html:not(.dark) .dropdown-item,
+html:not(.dark) .dropdown-link {
+  color: #000000 !important;
+  font-weight: 500 !important;
+}
+
+html:not(.dark) .dropdown-item:hover,
+html:not(.dark) .dropdown-link:hover {
+  background-color: rgba(229, 37, 42, 0.08) !important;
+  color: #E5252A !important;
+}
+
+html:not(.dark) .dropdown-item.active,
+html:not(.dark) .dropdown-link.active {
+  background-color: #E5252A !important;
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .utility-btn,
+html:not(.dark) .mobile-toggle-btn {
+  background: #F4F4F5 !important;
+  border-color: #E4E4E7 !important;
+  color: #000000 !important;
+}
+
+html:not(.dark) .utility-btn svg,
+html:not(.dark) .mobile-toggle-btn svg {
+  color: #000000 !important;
+  stroke: #000000 !important;
+}
+
+html:not(.dark) .utility-btn:hover,
+html:not(.dark) .mobile-toggle-btn:hover {
+  background: rgba(229, 37, 42, 0.08) !important;
+  border-color: #E5252A !important;
+  color: #E5252A !important;
+}
+
+html:not(.dark) .utility-btn:hover svg,
+html:not(.dark) .mobile-toggle-btn:hover svg {
+  color: #E5252A !important;
+  stroke: #E5252A !important;
+}
+
+/* Forms & Inputs in Light Mode */
+html:not(.dark) input,
+html:not(.dark) select,
+html:not(.dark) textarea,
+html:not(.dark) .bar-input,
+html:not(.dark) .form-input-styled,
+html:not(.dark) .form-select-styled,
+html:not(.dark) .auth-text-input {
+  background: #FFFFFF !important;
+  border: 1px solid #D4D4D8 !important;
+  color: #000000 !important;
+}
+
+html:not(.dark) input:focus,
+html:not(.dark) select:focus,
+html:not(.dark) textarea:focus,
+html:not(.dark) .bar-input:focus,
+html:not(.dark) .form-input-styled:focus,
+html:not(.dark) .form-select-styled:focus,
+html:not(.dark) .auth-text-input:focus {
+  border-color: #E5252A !important;
+  box-shadow: 0 0 0 3px rgba(229, 37, 42, 0.18) !important;
+  color: #000000 !important;
+}
+
+html:not(.dark) input::placeholder,
+html:not(.dark) textarea::placeholder {
+  color: #71717A !important;
+}
+
+html:not(.dark) select option,
+html:not(.dark) .bar-select option,
+html:not(.dark) .form-select-styled option {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+}
+
+html:not(.dark) label {
+  color: #000000 !important;
+  font-weight: 600 !important;
+}
+
+/* Buttons in Light Mode (Primary Red with White Text) */
+html:not(.dark) .btn-primary,
+html:not(.dark) .btn-login,
+html:not(.dark) .btn-brand,
+html:not(.dark) .site-cta-btn,
+html:not(.dark) .btn-auth-submit,
+html:not(.dark) .btn-draft-agent,
+html:not(.dark) .btn-reserve-action,
+html:not(.dark) #calcReserveBtn,
+html:not(.dark) button.btn-primary,
+html:not(.dark) a.btn-primary {
+  background: #E5252A !important;
+  background-color: #E5252A !important;
+  color: #FFFFFF !important;
+  border: 1px solid #C51D22 !important;
+  box-shadow: 0 4px 14px rgba(229, 37, 42, 0.35) !important;
+}
+
+html:not(.dark) .btn-primary *,
+html:not(.dark) .btn-login *,
+html:not(.dark) .btn-brand *,
+html:not(.dark) .site-cta-btn *,
+html:not(.dark) .btn-auth-submit *,
+html:not(.dark) .btn-draft-agent *,
+html:not(.dark) .btn-reserve-action * {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .btn-primary:hover,
+html:not(.dark) .btn-login:hover,
+html:not(.dark) .btn-brand:hover,
+html:not(.dark) .site-cta-btn:hover,
+html:not(.dark) .btn-auth-submit:hover,
+html:not(.dark) .btn-draft-agent:hover,
+html:not(.dark) .btn-reserve-action:hover,
+html:not(.dark) #calcReserveBtn:hover,
+html:not(.dark) button.btn-primary:hover,
+html:not(.dark) a.btn-primary:hover {
+  background: #C51D22 !important;
+  background-color: #C51D22 !important;
+  color: #FFFFFF !important;
+  border-color: #991B1B !important;
+}
+
+html:not(.dark) .btn-secondary {
+  background: #F4F4F5 !important;
+  border: 1px solid #E4E4E7 !important;
+  color: #000000 !important;
+  font-weight: 600 !important;
+}
+
+html:not(.dark) .btn-secondary * {
+  color: #000000 !important;
+}
+
+html:not(.dark) .btn-secondary:hover {
+  background: rgba(229, 37, 42, 0.08) !important;
+  border-color: #E5252A !important;
+  color: #E5252A !important;
+}
+
+html:not(.dark) .btn-secondary:hover * {
+  color: #E5252A !important;
+}
+
+/* ==========================================================================
+   DEDICATED DARK CONTAINERS & OVERLAYS IN LIGHT MODE (PRESERVE BRIGHT WHITE & RED TEXT)
+   Guarantees 100% crystal-clear visibility on dark backgrounds even in Light Mode
+   ========================================================================== */
+
+/* 1. VIP Suites Luxury Panorama Banner */
+html:not(.dark) .vip-suite-banner h2,
+html:not(.dark) .vip-suite-banner .section-title,
+html:not(.dark) .vip-suite-banner h3,
+html:not(.dark) .vip-suite-banner h4,
+html:not(.dark) .vip-suite-banner .vip-amenity-text h4 {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .vip-suite-banner .section-title span {
+  color: #FF3B30 !important;
+}
+
+html:not(.dark) .vip-suite-banner p,
+html:not(.dark) .vip-suite-banner .vip-amenity-text p,
+html:not(.dark) .vip-suite-banner span:not(.section-title span):not(.eyebrow-badge span) {
+  color: #F4F4F5 !important;
+}
+
+html:not(.dark) .vip-suite-banner .eyebrow-badge {
+  background: rgba(229, 37, 42, 0.2) !important;
+  border: 1px solid rgba(229, 37, 42, 0.45) !important;
+}
+
+html:not(.dark) .vip-suite-banner .eyebrow-badge span,
+html:not(.dark) .vip-suite-banner .eyebrow-badge svg {
+  color: #FF3B30 !important;
+  stroke: #FF3B30 !important;
+}
+
+html:not(.dark) .vip-suite-banner .vip-amenity-icon {
+  background: rgba(229, 37, 42, 0.2) !important;
+  border: 1px solid rgba(229, 37, 42, 0.45) !important;
+  color: #FF3B30 !important;
+}
+
+html:not(.dark) .vip-suite-banner .vip-amenity-icon svg {
+  color: #FF3B30 !important;
+  stroke: #FF3B30 !important;
+}
+
+/* 2. Celebration Hero Banner (Turn Milestones Into Unforgettable Strikes) */
+html:not(.dark) .celebration-hero-banner h3,
+html:not(.dark) .celebration-hero-banner h4 {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .celebration-hero-banner p {
+  color: #F4F4F5 !important;
+}
+
+html:not(.dark) .celebration-hero-banner span {
+  color: #FF3B30 !important;
+}
+
+/* 3. League Leaderboard Header & Tournament Spotlight Overlay */
+html:not(.dark) .roster-header h3 {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .roster-header span {
+  color: #F4F4F5 !important;
+}
+
+html:not(.dark) .roster-header .prize-pot-tag {
+  background: rgba(229, 37, 42, 0.25) !important;
+  border-color: #E5252A !important;
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .league-spotlight-overlay h4 {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .league-spotlight-overlay p {
+  color: #F4F4F5 !important;
+}
+
+/* 4. Calculator Total Banner (Dark Container) & Interactive Chips */
+html:not(.dark) .calc-total-banner .calc-total-label {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .calc-total-banner span {
+  color: #F4F4F5 !important;
+}
+
+html:not(.dark) .calc-total-amount {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .calc-total-amount span {
+  color: #FF3B30 !important;
+}
+
+html:not(.dark) .calc-chip-btn {
+  background: #F4F4F5 !important;
+  border: 1px solid #D4D4D8 !important;
+  color: #000000 !important;
+  font-weight: 600 !important;
+}
+
+html:not(.dark) .calc-chip-btn:hover {
+  border-color: #E5252A !important;
+  color: #E5252A !important;
+}
+
+html:not(.dark) .calc-chip-btn.selected {
+  background: #E5252A !important;
+  border-color: #C51D22 !important;
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .calc-chip-btn.selected * {
+  color: #FFFFFF !important;
+}
+
+/* 5. Gear Visual Overlay, Vinyl Sessions & VIP 3-Gallery Overlays */
+html:not(.dark) .gear-image-overlay h4,
+html:not(.dark) .mosaic-overlay-card h3,
+html:not(.dark) .mosaic-overlay-card h4,
+html:not(.dark) .vip-gallery-overlay .vip-gallery-title,
+html:not(.dark) .vip-gallery-overlay h3,
+html:not(.dark) .vip-gallery-overlay h4,
+html:not(.dark) .pricing-visual-top-overlay h4 {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .gear-image-overlay p,
+html:not(.dark) .mosaic-overlay-card p,
+html:not(.dark) .vip-gallery-overlay .vip-gallery-desc,
+html:not(.dark) .vip-gallery-overlay p,
+html:not(.dark) .pricing-visual-top-overlay p {
+  color: #F4F4F5 !important;
+}
+
+html:not(.dark) .mosaic-overlay-card .eyebrow-badge,
+html:not(.dark) .vip-gallery-overlay .vip-gallery-badge {
+  background: rgba(229, 37, 42, 0.25) !important;
+  border-color: rgba(229, 37, 42, 0.5) !important;
+  color: #FF3B30 !important;
+}
+
+html:not(.dark) .mosaic-overlay-card .eyebrow-badge span,
+html:not(.dark) .vip-gallery-overlay .vip-gallery-badge span {
+  color: #FF3B30 !important;
+}
+
+/* 6. Retro Lounge Hero Section (Home 2) */
+html:not(.dark) .hero-retro h1,
+html:not(.dark) .hero-retro .retro-headline,
+html:not(.dark) .hero-retro h2,
+html:not(.dark) .hero-retro h3 {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .hero-retro .retro-headline span,
+html:not(.dark) .hero-retro h1 span {
+  color: #FF3B30 !important;
+}
+
+html:not(.dark) .hero-retro p,
+html:not(.dark) .hero-retro .retro-description {
+  color: #F4F4F5 !important;
+}
+
+html:not(.dark) .hero-retro .retro-vintage-badge {
+  background: rgba(229, 37, 42, 0.25) !important;
+  border-color: rgba(229, 37, 42, 0.5) !important;
+}
+
+html:not(.dark) .hero-retro .retro-vintage-badge span,
+html:not(.dark) .hero-retro .retro-vintage-badge svg {
+  color: #FF3B30 !important;
+  stroke: #FF3B30 !important;
+}
+
+/* 7. Corporate Mezzanine Buyout Hero Card (Home 2) */
+html:not(.dark) .buyout-hero-card h2,
+html:not(.dark) .buyout-hero-card .section-title,
+html:not(.dark) .buyout-hero-card h3,
+html:not(.dark) .buyout-hero-card h4,
+html:not(.dark) .buyout-hero-card h5,
+html:not(.dark) .buyout-hero-card .buyout-stat h5 {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .buyout-hero-card .section-title span {
+  color: #FF3B30 !important;
+}
+
+html:not(.dark) .buyout-hero-card p,
+html:not(.dark) .buyout-hero-card .section-subtitle,
+html:not(.dark) .buyout-hero-card .buyout-stat span {
+  color: #F4F4F5 !important;
+}
+
+html:not(.dark) .buyout-hero-card .eyebrow-badge {
+  background: rgba(229, 37, 42, 0.2) !important;
+  border-color: rgba(229, 37, 42, 0.45) !important;
+}
+
+html:not(.dark) .buyout-hero-card .eyebrow-badge span,
+html:not(.dark) .buyout-hero-card .eyebrow-badge svg {
+  color: #FF3B30 !important;
+  stroke: #FF3B30 !important;
+}
+
+/* 8. Attraction Tags (Crisp Black text on light mode card surfaces) */
+html:not(.dark) .attraction-tag {
+  background: #F4F4F5 !important;
+  border: 1px solid #D4D4D8 !important;
+  color: #000000 !important;
+  font-weight: 600 !important;
+}
+
+html:not(.dark) .attraction-tag:hover {
+  background: rgba(229, 37, 42, 0.08) !important;
+  border-color: #E5252A !important;
+  color: #E5252A !important;
+}
+
+/* 9. Footer in Light Mode */
+html:not(.dark) .site-footer {
+  background: #09090B !important;
+  border-top: 1px solid #27272A !important;
+}
+
+html:not(.dark) .site-footer .brand-title {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .site-footer .brand-title span {
+  color: #FF3B30 !important;
+}
+
+html:not(.dark) .site-footer .brand-subtitle {
+  color: #F4F4F5 !important;
+}
+
+html:not(.dark) .site-footer h1,
+html:not(.dark) .site-footer h2,
+html:not(.dark) .site-footer h3,
+html:not(.dark) .site-footer h4,
+html:not(.dark) .site-footer h5,
+html:not(.dark) .site-footer h6,
+html:not(.dark) .site-footer .footer-heading,
+html:not(.dark) .site-footer strong {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .site-footer p,
+html:not(.dark) .site-footer .footer-description,
+html:not(.dark) .site-footer .hours-row {
+  color: #F4F4F5 !important;
+}
+
+html:not(.dark) .site-footer a,
+html:not(.dark) .site-footer .footer-link,
+html:not(.dark) .site-footer .footer-contact-item {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .site-footer a:hover,
+html:not(.dark) .site-footer .footer-link:hover {
+  color: #E5252A !important;
+}
+
+html:not(.dark) .site-footer .footer-badge {
+  background: rgba(229, 37, 42, 0.15) !important;
+  border-color: rgba(229, 37, 42, 0.4) !important;
+  color: #EF4444 !important;
+}
+
+/* 8. CTA Sections & Floating Badges */
+html:not(.dark) .site-cta-card,
+html:not(.dark) .site-cta-section,
+html:not(.dark) .about-cta-section,
+html:not(.dark) .about-cta-card {
+  background: linear-gradient(135deg, #18181B 0%, #111113 50%, #09090B 100%) !important;
+  border-color: rgba(229, 37, 42, 0.3) !important;
+}
+
+html:not(.dark) .site-cta-card h2,
+html:not(.dark) .site-cta-card .section-heading,
+html:not(.dark) .site-cta-section h2,
+html:not(.dark) .about-cta-card h2 {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .site-cta-card p,
+html:not(.dark) .site-cta-card .section-subheading,
+html:not(.dark) .site-cta-section p,
+html:not(.dark) .about-cta-card p {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .hero-floating-pill {
+  background: rgba(18, 18, 21, 0.92) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+html:not(.dark) .hero-floating-pill h4 {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .hero-floating-pill p {
+  color: #F4F4F5 !important;
+}
+
+html:not(.dark) .hero-pill-badge {
+  background: #E5252A !important;
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .featured-ribbon {
+  background: #E5252A !important;
+  color: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   10. PRICING PAGE LIGHT MODE FIXES (Screenshot 1 & Screenshot 2)
+   ========================================================================== */
+
+/* Pricing Hero Title Accent - Crystal clear Vermilion Red, no faint gradient */
+html:not(.dark) .party-hero-title span {
+  color: #E5252A !important;
+  background: none !important;
+  -webkit-text-fill-color: #E5252A !important;
+  font-weight: 900 !important;
+}
+
+/* Transparent Pricing Creed Pill */
+html:not(.dark) .party-badge-strip,
+html:not(.dark) .contact-hero-badge {
+  background: rgba(229, 37, 42, 0.08) !important;
+  border: 1px solid rgba(229, 37, 42, 0.35) !important;
+  color: #E5252A !important;
+}
+
+html:not(.dark) .party-badge-strip span,
+html:not(.dark) .contact-hero-badge span {
+  color: #E5252A !important;
+}
+
+/* 3 Quick Rate Highlight Cards in Pricing Hero (Screenshot 1 Left) */
+html:not(.dark) .pricing-mini-stat-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E4E4E7 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04) !important;
+}
+
+html:not(.dark) .pricing-mini-stat-card .mini-stat-val {
+  color: #E5252A !important;
+  font-weight: 900 !important;
+}
+
+html:not(.dark) .pricing-mini-stat-card .mini-stat-lbl {
+  color: #18181B !important;
+  font-weight: 700 !important;
+}
+
+/* Luxury Showcase Overlay & Floating Glass Panel (Screenshot 1 Right) */
+html:not(.dark) .pricing-visual-top-overlay .pricing-badge-gold {
+  background: rgba(229, 37, 42, 0.3) !important;
+  border: 1px solid rgba(229, 37, 42, 0.6) !important;
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .pricing-visual-top-overlay .pricing-badge-gold * {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .pricing-visual-top-overlay .pricing-badge-live {
+  background: rgba(0, 0, 0, 0.65) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .pricing-visual-top-overlay .pricing-badge-live * {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .pricing-visual-glass-panel {
+  background: rgba(14, 2, 6, 0.92) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6) !important;
+}
+
+html:not(.dark) .pricing-visual-glass-panel .glass-rate-sub {
+  color: #D4D4D8 !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) .pricing-visual-glass-panel .glass-rate-val {
+  color: #FFFFFF !important;
+  font-weight: 900 !important;
+}
+
+html:not(.dark) .pricing-visual-glass-panel .glass-rate-val span {
+  color: #FF3B30 !important;
+  font-weight: 900 !important;
+}
+
+html:not(.dark) .pricing-visual-glass-panel .glass-rate-cap {
+  color: #D4D4D8 !important;
+  font-weight: 600 !important;
+}
+
+html:not(.dark) .pricing-visual-glass-panel .glass-book-btn {
+  background: #E5252A !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) .pricing-visual-glass-panel .glass-book-btn * {
+  color: #FFFFFF !important;
+}
+
+/* Bottom Corporate RFP Banner (Screenshot 2) */
+html:not(.dark) .buyout-rfp-banner {
+  background: linear-gradient(135deg, rgba(38, 4, 12, 0.96), rgba(18, 2, 6, 0.98)) !important;
+  border: 1px solid rgba(229, 37, 42, 0.35) !important;
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.6) !important;
+}
+
+html:not(.dark) .buyout-rfp-banner .rfp-banner-title {
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .buyout-rfp-banner .rfp-banner-desc {
+  color: #F4F4F5 !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+}
+
+html:not(.dark) .buyout-rfp-banner .rfp-banner-btn {
+  background: #FFFFFF !important;
+  border-color: #FFFFFF !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) .buyout-rfp-banner .rfp-banner-btn * {
+  color: #000000 !important;
+}
+
+html:not(.dark) .buyout-rfp-banner .rfp-banner-btn:hover {
+  background: #E5252A !important;
+  border-color: #E5252A !important;
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .buyout-rfp-banner .rfp-banner-btn:hover * {
+  color: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   11. ABOUT US PAGE LIGHT MODE FIXES (Screenshot 3 & Screenshot 4)
+   ========================================================================== */
+
+/* Zone Navigation Bar & Inactive/Active Tabs (Screenshot 3 Tabs) */
+html:not(.dark) .about-zone-nav {
+  background: #F4F4F5 !important;
+  border: 1px solid #D4D4D8 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
+}
+
+html:not(.dark) .about-zone-btn:not(.active) {
+  color: #18181B !important;
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
+html:not(.dark) .about-zone-btn:not(.active) svg {
+  color: #18181B !important;
+  stroke: #18181B !important;
+}
+
+html:not(.dark) .about-zone-btn:not(.active):hover {
+  background: #E4E4E7 !important;
+  color: #000000 !important;
+}
+
+html:not(.dark) .about-zone-btn.active {
+  background: #E5252A !important;
+  border: 1px solid #E5252A !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 16px rgba(229, 37, 42, 0.35) !important;
+}
+
+html:not(.dark) .about-zone-btn.active * {
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+}
+
+/* Zone Detail Card Pane (Screenshot 3 Main Pane) */
+html:not(.dark) .about-zone-pane {
+  background: #FFFFFF !important;
+  border: 1px solid #E4E4E7 !important;
+  border-radius: 20px !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06) !important;
+}
+
+html:not(.dark) .about-zone-pane .zone-details h3,
+html:not(.dark) .about-zone-pane .zone-details h4 {
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .about-zone-pane .zone-details h3 span {
+  color: #E5252A !important;
+}
+
+html:not(.dark) .about-zone-pane .zone-details p {
+  color: #27272A !important;
+  font-weight: 500 !important;
+  line-height: 1.7 !important;
+}
+
+html:not(.dark) .about-zone-pane .zone-perks-list li {
+  color: #18181B !important;
+  font-weight: 600 !important;
+}
+
+html:not(.dark) .about-zone-pane .zone-perks-list li span {
+  color: #18181B !important;
+}
+
+html:not(.dark) .about-zone-pane .zone-perks-list li svg {
+  color: #E5252A !important;
+  stroke: #E5252A !important;
+}
+
+html:not(.dark) .about-zone-pane .zone-img-frame {
+  border: 1px solid #E4E4E7 !important;
+}
+
+/* Team Section & Member Cards (Screenshot 4) */
+html:not(.dark) .about-team-section {
+  background: #FAFAFA !important;
+}
+
+html:not(.dark) .about-member-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E4E4E7 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+html:not(.dark) .about-member-card:hover {
+  border-color: #E5252A !important;
+  box-shadow: 0 10px 28px rgba(229, 37, 42, 0.12) !important;
+}
+
+html:not(.dark) .about-member-card .member-avatar-box {
+  border: 2px solid #E5252A !important;
+  background: #F4F4F5 !important;
+  color: #E5252A !important;
+}
+
+html:not(.dark) .about-member-card .member-name {
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .about-member-card .member-role {
+  color: #E5252A !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+}
+
+html:not(.dark) .about-member-card .member-bio {
+  color: #27272A !important;
+  font-weight: 500 !important;
+  line-height: 1.6 !important;
+}
+
+/* ==========================================================================
+   12. CONTACT PAGE HERO & LIVE VENUE GLANCE FIXES (Screenshot 5)
+   ========================================================================== */
+
+/* Hero Title, Subtitle & Action Buttons */
+html:not(.dark) .contact-hero-title {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .contact-hero-title .gold-shimmer {
+  color: #FF3B30 !important;
+  -webkit-text-fill-color: #FF3B30 !important;
+  background: none !important;
+}
+
+html:not(.dark) .contact-hero-desc {
+  color: #F4F4F5 !important;
+  font-weight: 450 !important;
+  line-height: 1.75 !important;
+}
+
+html:not(.dark) .contact-pill-live {
+  background: rgba(229, 37, 42, 0.25) !important;
+  border: 1px solid rgba(229, 37, 42, 0.55) !important;
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .contact-pill-live span {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .btn-contact-gold {
+  background: #E5252A !important;
+  border-color: #E5252A !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 8px 24px rgba(229, 37, 42, 0.4) !important;
+}
+
+html:not(.dark) .btn-contact-gold * {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .btn-contact-gold:hover {
+  background: #C51D22 !important;
+  border-color: #C51D22 !important;
+}
+
+html:not(.dark) .btn-contact-outline {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .btn-contact-outline * {
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+}
+
+html:not(.dark) .btn-contact-outline:hover {
+  background: rgba(229, 37, 42, 0.25) !important;
+  border-color: #FF3B30 !important;
+  color: #FF3B30 !important;
+}
+
+html:not(.dark) .btn-contact-outline:hover * {
+  color: #FF3B30 !important;
+  stroke: #FF3B30 !important;
+}
+
+/* Fast Venue Overview Card (Screenshot 5 Right) */
+html:not(.dark) .contact-hero-glance-card {
+  background: rgba(14, 2, 6, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65) !important;
+}
+
+html:not(.dark) .glance-title {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .glance-card-header p {
+  color: #D4D4D8 !important;
+}
+
+html:not(.dark) .glance-badge {
+  background: rgba(16, 185, 129, 0.2) !important;
+  border: 1px solid rgba(16, 185, 129, 0.45) !important;
+  color: #34D399 !important;
+}
+
+html:not(.dark) .glance-row {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+html:not(.dark) .glance-row:hover {
+  background: rgba(255, 255, 255, 0.09) !important;
+  border-color: rgba(229, 37, 42, 0.4) !important;
+}
+
+html:not(.dark) .glance-icon {
+  background: rgba(229, 37, 42, 0.25) !important;
+  border: 1px solid rgba(229, 37, 42, 0.45) !important;
+  color: #FF3B30 !important;
+}
+
+html:not(.dark) .glance-icon svg {
+  color: #FF3B30 !important;
+  stroke: #FF3B30 !important;
+}
+
+html:not(.dark) .glance-label {
+  color: #D4D4D8 !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) .glance-val {
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
+}
+
+html:not(.dark) .glance-stat-box {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+html:not(.dark) .glance-stat-num {
+  color: #FF3B30 !important;
+  font-weight: 900 !important;
+}
+
+html:not(.dark) .glance-stat-lbl {
+  color: #D4D4D8 !important;
+  font-weight: 700 !important;
+}
+
+/* Contact Form Section: Direct Info Cards & Form Card (Light Mode) */
+html:not(.dark) .contact-info-card,
+html:not(.dark) .contact-form-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E4E4E7 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+}
+
+html:not(.dark) .info-card-heading,
+html:not(.dark) .form-card-title {
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .info-card-badge {
+  color: #E5252A !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .info-card-icon {
+  background: rgba(229, 37, 42, 0.08) !important;
+  border: 1px solid rgba(229, 37, 42, 0.25) !important;
+  color: #E5252A !important;
+}
+
+html:not(.dark) .info-card-icon svg {
+  color: #E5252A !important;
+  stroke: #E5252A !important;
+}
+
+html:not(.dark) .info-card-body p {
+  color: #27272A !important;
+}
+
+html:not(.dark) .info-card-body a {
+  color: #E5252A !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) .hours-day {
+  color: #4B5563 !important;
+  font-weight: 500 !important;
+}
+
+html:not(.dark) .hours-time {
+  color: #111827 !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) .hours-time.highlight {
+  color: #E5252A !important;
+}
+
+html:not(.dark) .form-card-sub,
+html:not(.dark) .form-topic-label,
+html:not(.dark) .coordinator-copy {
+  color: #4B5563 !important;
+}
+
+html:not(.dark) .coordinator-copy strong {
+  color: #111827 !important;
+}
+
+html:not(.dark) .topic-chip-btn {
+  background: #F4F4F5 !important;
+  border: 1px solid #D4D4D8 !important;
+  color: #18181B !important;
+  font-weight: 600 !important;
+}
+
+html:not(.dark) .topic-chip-btn:hover {
+  background: rgba(229, 37, 42, 0.08) !important;
+  border-color: #E5252A !important;
+  color: #E5252A !important;
+}
+
+html:not(.dark) .topic-chip-btn.active {
+  background: #E5252A !important;
+  border-color: #E5252A !important;
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .form-input-box {
+  background: #FFFFFF !important;
+  border: 1px solid #D4D4D8 !important;
+  color: #111827 !important;
+}
+
+html:not(.dark) .form-input-box:focus {
+  border-color: #E5252A !important;
+  box-shadow: 0 0 0 3px rgba(229, 37, 42, 0.12) !important;
+}
+
+/* CTA Banner Card at bottom of contact.html (Screenshot 2) */
+html:not(.dark) .cta-banner-card {
+  background: linear-gradient(135deg, #0e0205 0%, #1c0309 50%, #0e0205 100%) !important;
+  border: 1px solid rgba(229, 37, 42, 0.35) !important;
+}
+
+html:not(.dark) .cta-banner-card .cta-heading {
+  color: #FFFFFF !important;
+  font-weight: 900 !important;
+}
+
+html:not(.dark) .cta-banner-card .cta-heading span {
+  color: #FF3B30 !important;
+  background: none !important;
+  -webkit-text-fill-color: #FF3B30 !important;
+}
+
+html:not(.dark) .cta-banner-card .cta-subtitle {
+  color: #F4F4F5 !important;
+  font-weight: 450 !important;
+}
+
+html:not(.dark) .cta-banner-card .cta-badge {
+  background: rgba(229, 37, 42, 0.25) !important;
+  border: 1px solid rgba(229, 37, 42, 0.55) !important;
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .cta-banner-card .cta-badge span {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .cta-banner-card .cta-stat-item .num {
+  color: #FF3B30 !important;
+  font-weight: 900 !important;
+}
+
+html:not(.dark) .cta-banner-card .cta-stat-item .lbl {
+  color: #D4D4D8 !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) .cta-banner-card .btn-contact-gold {
+  background: #E5252A !important;
+  border-color: #E5252A !important;
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .cta-banner-card .btn-contact-gold * {
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .cta-banner-card .btn-contact-outline {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .cta-banner-card .btn-contact-outline * {
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   13. MEMBER DASHBOARD LIGHT MODE HIGH CONTRAST (Screenshots 3, 4, 5)
+   ========================================================================== */
+html:not(.dark) .dash-body {
+  background-color: #F8F9FA !important;
+  color: #111827 !important;
+}
+
+html:not(.dark) .dash-main-area {
+  background: #F8F9FA !important;
+  color: #111827 !important;
+}
+
+html:not(.dark) .dash-sidebar {
+  background: #FFFFFF !important;
+  border-right: 1px solid #E4E4E7 !important;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.03) !important;
+}
+
+html:not(.dark) .dash-nav-btn {
+  color: #18181B !important;
+}
+
+html:not(.dark) .dash-nav-btn .dash-nav-icon {
+  color: #71717A !important;
+}
+
+html:not(.dark) .dash-nav-btn:hover:not(.active) {
+  background: #F4F4F5 !important;
+  color: #E5252A !important;
+}
+
+html:not(.dark) .dash-nav-btn.active {
+  background: #E5252A !important;
+  border-color: #E5252A !important;
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .dash-nav-btn.active * {
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+}
+
+html:not(.dark) .dash-header-bar {
+  background: #FFFFFF !important;
+  border-bottom: 1px solid #E4E4E7 !important;
+}
+
+html:not(.dark) .dash-header-bar .brand-title {
+  color: #000000 !important;
+}
+
+html:not(.dark) .dash-header-bar .brand-subtitle {
+  color: #4B5563 !important;
+}
+
+html:not(.dark) .dash-user-pill {
+  background: #F4F4F5 !important;
+  border: 1px solid #E4E4E7 !important;
+  color: #18181B !important;
+}
+
+html:not(.dark) .dash-user-name {
+  color: #18181B !important;
+}
+
+/* Welcome Row */
+html:not(.dark) .welcome-sub-greeting {
+  color: #4B5563 !important;
+}
+
+html:not(.dark) .welcome-bowler-title {
+  color: #000000 !important;
+}
+
+html:not(.dark) .welcome-avatar-lg {
+  background: #E5252A !important;
+  border-color: #E5252A !important;
+  color: #FFFFFF !important;
+}
+
+/* Dashboard 4 Metric Cards (Screenshot 3) */
+html:not(.dark) .dash-metric-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E4E4E7 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+  color: #18181B !important;
+}
+
+html:not(.dark) .metric-card-header-lbl {
+  color: #18181B !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .countdown-meta h4 {
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .countdown-meta span {
+  color: #4B5563 !important;
+  font-weight: 600 !important;
+}
+
+html:not(.dark) .countdown-ring-circle {
+  background: #FEF2F2 !important;
+  border: 3px solid #E5252A !important;
+  color: #E5252A !important;
+  box-shadow: 0 0 12px rgba(229, 37, 42, 0.15) !important;
+}
+
+html:not(.dark) .rank-tier-title {
+  color: #000000 !important;
+  font-weight: 900 !important;
+  font-size: 1.15rem !important;
+}
+
+html:not(.dark) .rank-tier-sub {
+  color: #4B5563 !important;
+  font-weight: 600 !important;
+  font-size: 0.8rem !important;
+}
+
+html:not(.dark) .rank-progress-bar {
+  background: #E4E4E7 !important;
+}
+
+html:not(.dark) .rank-progress-fill {
+  background: #E5252A !important;
+}
+
+/* Highlight Card (Card 3: Active Squad Slots) */
+html:not(.dark) .dash-metric-card.highlight {
+  background: linear-gradient(135deg, #180308, #2a050f) !important;
+  border: 1px solid rgba(229, 37, 42, 0.5) !important;
+}
+
+html:not(.dark) .dash-metric-card.highlight .metric-card-header-lbl {
+  color: #D4D4D8 !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .dash-metric-card.highlight .squad-count-big {
+  color: #FF3B30 !important;
+  font-weight: 900 !important;
+}
+
+html:not(.dark) .dash-metric-card.highlight .squad-count-sub {
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
+}
+
+html:not(.dark) .btn-briefing-confirm {
+  background: #E5252A !important;
+  border-color: #E5252A !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(229, 37, 42, 0.3) !important;
+}
+
+html:not(.dark) .btn-briefing-confirm * {
+  color: #FFFFFF !important;
+}
+
+/* Squad Roster Table (Screenshot 3 Bottom) */
+html:not(.dark) .section-headline-bar .section-eyebrow-tag {
+  color: #E5252A !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .section-headline-bar .section-eyebrow-tag span,
+html:not(.dark) .section-headline-bar .section-eyebrow-tag svg {
+  color: #E5252A !important;
+}
+
+html:not(.dark) .dash-table-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E4E4E7 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+}
+
+html:not(.dark) .dash-roster-table thead th {
+  background: #F4F4F5 !important;
+  color: #111827 !important;
+  font-weight: 800 !important;
+  border-bottom: 2px solid #E4E4E7 !important;
+}
+
+html:not(.dark) .dash-roster-table tbody td {
+  background: #FFFFFF !important;
+  color: #18181B !important;
+  border-bottom: 1px solid #E4E4E7 !important;
+}
+
+html:not(.dark) .dash-roster-table tbody td strong {
+  color: #000000 !important;
+}
+
+html:not(.dark) .dash-roster-table tr:hover td {
+  background: rgba(229, 37, 42, 0.04) !important;
+}
+
+/* Dining Order Card (Screenshot 4) */
+html:not(.dark) .dining-order-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E4E4E7 !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04) !important;
+}
+
+html:not(.dark) .dining-order-header h4 {
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .dining-order-header p {
+  color: #4B5563 !important;
+  font-weight: 500 !important;
+}
+
+html:not(.dark) .dining-item-pill {
+  background: #F8F9FA !important;
+  border: 1px solid #E4E4E7 !important;
+}
+
+html:not(.dark) .dining-item-info h5 {
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .dining-item-info p {
+  color: #4B5563 !important;
+  font-weight: 500 !important;
+}
+
+html:not(.dark) .dining-item-price {
+  color: #E5252A !important;
+  font-weight: 900 !important;
+}
+
+html:not(.dark) .dining-item-icon {
+  background: rgba(229, 37, 42, 0.08) !important;
+  border: 1px solid rgba(229, 37, 42, 0.25) !important;
+  color: #E5252A !important;
+}
+
+html:not(.dark) .dining-item-icon svg {
+  color: #E5252A !important;
+  stroke: #E5252A !important;
+}
+
+html:not(.dark) .order-status-bar {
+  border-top: 1px solid #E4E4E7 !important;
+}
+
+html:not(.dark) .order-status-bar div {
+  color: #18181B !important;
+  font-weight: 600 !important;
+}
+
+html:not(.dark) .order-status-bar strong {
+  color: #000000 !important;
+  font-weight: 900 !important;
+}
+
+/* Telemetry Card & Key Metrics (Screenshot 5) */
+html:not(.dark) .dash-section .telemetry-card,
+html:not(.dark) #telemetry .dining-order-card,
+html:not(.dark) .telemetry-frame-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E4E4E7 !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04) !important;
+}
+
+html:not(.dark) .telemetry-kpi-item {
+  background: #F8F9FA !important;
+  border: 1px solid #E4E4E7 !important;
+}
+
+html:not(.dark) .kpi-lbl {
+  color: #18181B !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .kpi-val {
+  color: #E5252A !important;
+  font-weight: 900 !important;
+}
+
+/* ==========================================================================
+   SECTION 14: BOOK-LANE & LEAGUES LIGHT MODE COMPREHENSIVE CONTRAST ENGINE
+   ========================================================================== */
+
+/* --- 1. BOOK-LANE: Interactive Step Wizard & Stepper Header (Screenshot 1) --- */
+html:not(.dark) .wizard-container-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E4E4E7 !important;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05) !important;
+}
+
+html:not(.dark) .wizard-step-tab {
+  background: transparent !important;
+}
+
+html:not(.dark) .wizard-step-tab:hover {
+  background: #F4F4F5 !important;
+}
+
+html:not(.dark) .wizard-step-num {
+  background: #F4F4F5 !important;
+  border: 1.5px solid #D4D4D8 !important;
+  color: #18181B !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .wizard-step-tab.active .wizard-step-num {
+  background: #E5252A !important;
+  border-color: #E5252A !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(229, 37, 42, 0.4) !important;
+}
+
+html:not(.dark) .wizard-step-tab.completed .wizard-step-num {
+  background: #18181B !important;
+  border-color: #18181B !important;
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .wizard-step-sub {
+  color: #4B5563 !important;
+  opacity: 1 !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) .wizard-step-title {
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .wizard-step-tab.active .wizard-step-title {
+  color: #E5252A !important;
+}
+
+html:not(.dark) .wizard-step-connector {
+  background: #E4E4E7 !important;
+}
+
+html:not(.dark) .wizard-step-connector.active {
+  background: #E5252A !important;
+}
+
+/* Wizard Headings & Descriptions */
+html:not(.dark) .wizard-badge {
+  color: #E5252A !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .wizard-panel-title {
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .wizard-panel-desc {
+  color: #374151 !important;
+  font-weight: 500 !important;
+}
+
+/* Form Controls & Date Picker */
+html:not(.dark) .form-label {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) .form-input-styled,
+html:not(.dark) .form-select-styled {
+  background: #FFFFFF !important;
+  border: 1.5px solid #D4D4D8 !important;
+  color: #000000 !important;
+  font-weight: 600 !important;
+}
+
+html:not(.dark) .form-input-styled:focus,
+html:not(.dark) .form-select-styled:focus {
+  border-color: #E5252A !important;
+  box-shadow: 0 0 0 3px rgba(229, 37, 42, 0.15) !important;
+}
+
+html:not(.dark) .form-select-styled option {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+}
+
+html:not(.dark) input[type="date"],
+html:not(.dark) input[type="time"],
+html:not(.dark) input[type="datetime-local"] {
+  color-scheme: light !important;
+}
+
+html:not(.dark) input[type="date"]::-webkit-calendar-picker-indicator,
+html:not(.dark) input[type="time"]::-webkit-calendar-picker-indicator,
+html:not(.dark) input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+html:not(.dark) input[type="date"].form-input-styled::-webkit-calendar-picker-indicator,
+html:not(.dark) input[type="time"].form-input-styled::-webkit-calendar-picker-indicator,
+html:not(.dark) input[type="datetime-local"].form-input-styled::-webkit-calendar-picker-indicator {
+  filter: none !important;
+  opacity: 0.85 !important;
+  cursor: pointer;
+}
+
+/* Time Slot Chips */
+html:not(.dark) .slot-chip {
+  background: #FFFFFF !important;
+  border: 1.5px solid #D4D4D8 !important;
+  color: #000000 !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03) !important;
+}
+
+html:not(.dark) .slot-chip strong {
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .slot-chip span {
+  color: #4B5563 !important;
+  font-weight: 600 !important;
+}
+
+html:not(.dark) .slot-chip:hover {
+  border-color: #E5252A !important;
+  background: #FFF5F5 !important;
+}
+
+html:not(.dark) .slot-chip.selected {
+  background: #FFF5F5 !important;
+  border: 2px solid #E5252A !important;
+  box-shadow: 0 4px 14px rgba(229, 37, 42, 0.18) !important;
+}
+
+html:not(.dark) .slot-chip.selected strong {
+  color: #E5252A !important;
+  font-weight: 900 !important;
+}
+
+html:not(.dark) .slot-chip.selected span {
+  color: #C51D22 !important;
+  font-weight: 700 !important;
+}
+
+/* Counter Stepper Widgets */
+html:not(.dark) .stepper-counter-group {
+  background: #F4F4F5 !important;
+  border: 1.5px solid #D4D4D8 !important;
+}
+
+html:not(.dark) .counter-step-btn {
+  background: #FFFFFF !important;
+  border: 1px solid #D4D4D8 !important;
+  color: #000000 !important;
+}
+
+html:not(.dark) .counter-step-btn:hover {
+  background: #E5252A !important;
+  color: #FFFFFF !important;
+  border-color: #E5252A !important;
+}
+
+html:not(.dark) .counter-step-display strong {
+  color: #000000 !important;
+  font-weight: 900 !important;
+}
+
+html:not(.dark) .counter-step-display span {
+  color: #4B5563 !important;
+  font-weight: 600 !important;
+}
+
+html:not(.dark) .wizard-tips-pill {
+  background: #FFF5F5 !important;
+  border: 1px solid #FECACA !important;
+  color: #991B1B !important;
+  font-weight: 500 !important;
+}
+
+html:not(.dark) .wizard-tips-pill svg {
+  color: #E5252A !important;
+  stroke: #E5252A !important;
+}
+
+/* Enhancements Items */
+html:not(.dark) .enhancement-item {
+  background: #FFFFFF !important;
+  border: 1.5px solid #E4E4E7 !important;
+}
+
+html:not(.dark) .enhancement-item:hover {
+  background: #FFF5F5 !important;
+  border-color: #E5252A !important;
+}
+
+html:not(.dark) .enhancement-item.selected {
+  background: #FFF5F5 !important;
+  border-color: #E5252A !important;
+}
+
+html:not(.dark) .enhancement-item strong {
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .enhancement-item span {
+  color: #4B5563 !important;
+  font-weight: 500 !important;
+}
+
+html:not(.dark) .enhancement-item span[style*="font-weight: 800"] {
+  color: #E5252A !important;
+  font-weight: 800 !important;
+}
+
+/* Zone Selector Pills */
+html:not(.dark) .zone-pill-btn {
+  background: #F4F4F5 !important;
+  border: 1.5px solid #D4D4D8 !important;
+  color: #18181B !important;
+}
+
+html:not(.dark) .zone-pill-btn:hover {
+  background: #FFF5F5 !important;
+  border-color: #E5252A !important;
+  color: #E5252A !important;
+}
+
+html:not(.dark) .zone-pill-btn.active {
+  background: #E5252A !important;
+  border-color: #E5252A !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(229, 37, 42, 0.35) !important;
+}
+
+html:not(.dark) .zone-pill-btn.active svg,
+html:not(.dark) .zone-pill-btn.active span {
+  color: #FFFFFF !important;
+}
+
+/* Live Receipt Sticky Card */
+html:not(.dark) .sticky-receipt-card {
+  background: #FFFFFF !important;
+  border: 2px solid #E5252A !important;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08) !important;
+}
+
+html:not(.dark) .receipt-header h4 {
+  color: #000000 !important;
+  font-weight: 900 !important;
+}
+
+html:not(.dark) .receipt-header p {
+  color: #4B5563 !important;
+}
+
+html:not(.dark) .receipt-row {
+  color: #374151 !important;
+}
+
+html:not(.dark) .receipt-row strong {
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .receipt-divider {
+  background: #E4E4E7 !important;
+}
+
+html:not(.dark) .receipt-total-row {
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .receipt-total-val {
+  color: #E5252A !important;
+  font-weight: 900 !important;
+}
+
+html:not(.dark) .receipt-guarantee-note {
+  background: #F4F4F5 !important;
+  color: #374151 !important;
+  border-left: 3px solid #E5252A !important;
+}
+
+[dir="rtl"] html:not(.dark) .receipt-guarantee-note {
+  border-left: none !important;
+  border-right: 3px solid #E5252A !important;
+}
+
+/* --- 2. BOOK-LANE: Specs Comparison Table (Screenshot 2) --- */
+html:not(.dark) .specs-matrix-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E4E4E7 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+}
+
+html:not(.dark) .specs-table thead th,
+html:not(.dark) .specs-table th {
+  background: #C51D22 !important;
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+  border-bottom: 2px solid #991B1B !important;
+}
+
+html:not(.dark) .specs-table tbody td {
+  background: #FFFFFF !important;
+  color: #18181B !important;
+  border-bottom: 1px solid #E4E4E7 !important;
+}
+
+html:not(.dark) .specs-table .specs-feature-name {
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .specs-table tbody tr:hover td {
+  background: #FFF5F5 !important;
+}
+
+/* Shoe Valet Fitting Guide */
+html:not(.dark) .fitting-pill-box {
+  background: #FFFFFF !important;
+  border: 1px solid #E4E4E7 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+}
+
+html:not(.dark) .fitting-pill-box h4 {
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .fitting-pill-box p {
+  color: #374151 !important;
+}
+
+/* --- 3. BOOK-LANE: Arrival Protocol & FAQs Accordion (Screenshot 3) --- */
+html:not(.dark) .faq-card-item {
+  background: #FFFFFF !important;
+  border: 1px solid #E4E4E7 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+html:not(.dark) .faq-card-item:hover,
+html:not(.dark) .faq-card-item.open {
+  border-color: #E5252A !important;
+}
+
+html:not(.dark) .faq-toggle-btn,
+html:not(.dark) .faq-toggle-btn span {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) .faq-toggle-btn .chevron-icon {
+  color: #E5252A !important;
+}
+
+html:not(.dark) .faq-body-content {
+  color: #27272A !important;
+  font-weight: 500 !important;
+}
+
+html:not(.dark) .faq-body-content strong {
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
+
+/* --- 4. LEAGUES: The 300 Club Hall of Fame (Screenshot 4) --- */
+html:not(.dark) .hall-honor-plaque {
+  border: 1px solid rgba(229, 37, 42, 0.35) !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5) !important;
+}
+
+html:not(.dark) .hall-honor-plaque:hover {
+  border-color: #E5252A !important;
+  box-shadow: 0 16px 40px rgba(229, 37, 42, 0.35) !important;
+}
+
+html:not(.dark) .hall-honor-plaque h4,
+html:not(.dark) .plaque-content h4 {
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95) !important;
+}
+
+html:not(.dark) .hall-honor-plaque p,
+html:not(.dark) .plaque-content p {
+  color: #F4F4F5 !important;
+  font-weight: 500 !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
+}
+
+html:not(.dark) .hall-honor-plaque .plaque-gold-medallion {
+  background: #E5252A !important;
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 4px 14px rgba(229, 37, 42, 0.5) !important;
+}
+
+/* --- 5. LEAGUES: Division Radar Terminal & Free Agent Draft Cards --- */
+html:not(.dark) .pricing-radar-terminal,
+html:not(.dark) .league-radar-terminal {
+  background: #FFFFFF !important;
+  border: 1px solid #E4E4E7 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+}
+
+html:not(.dark) .radar-selector-strip {
+  background: #F4F4F5 !important;
+  border: 1px solid #E4E4E7 !important;
+}
+
+html:not(.dark) .radar-pill-btn {
+  color: #18181B !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) .radar-pill-btn:hover {
+  color: #E5252A !important;
+}
+
+html:not(.dark) .radar-pill-btn.active {
+  background: #E5252A !important;
+  color: #FFFFFF !important;
+}
+
+html:not(.dark) .radar-hud-card {
+  background: #FAFAFA !important;
+  border: 1px solid #E4E4E7 !important;
+}
+
+html:not(.dark) .radar-band-name {
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .radar-savings-tag {
+  color: #E5252A !important;
+  background: #FFF5F5 !important;
+  border: 1px solid #FECACA !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) .radar-stat-box {
+  background: #FFFFFF !important;
+  border: 1px solid #E4E4E7 !important;
+}
+
+html:not(.dark) .radar-stat-val {
+  color: #E5252A !important;
+  font-weight: 900 !important;
+}
+
+html:not(.dark) .radar-stat-label {
+  color: #4B5563 !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) .radar-hud-details {
+  color: #374151 !important;
+  font-weight: 500 !important;
+}
+
+/* Free Agent Draft Board & Full Squad Cards */
+html:not(.dark) .draft-roster-card,
+html:not(.dark) .squad-form-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E4E4E7 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+html:not(.dark) .draft-roster-header h3 {
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .draft-roster-header span {
+  color: #4B5563 !important;
+  font-weight: 500 !important;
+}
+
+html:not(.dark) .draft-agent-row {
+  border-bottom: 1px solid #F4F4F5 !important;
+}
+
+html:not(.dark) .agent-name-text {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) .agent-meta-left span {
+  color: #4B5563 !important;
+}
+
+html:not(.dark) .agent-avatar-badge {
+  background: #F4F4F5 !important;
+  border: 1px solid #E4E4E7 !important;
+  color: #E5252A !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .agent-average-pill {
+  background: #FFF5F5 !important;
+  color: #E5252A !important;
+  border: 1px solid #FECACA !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) .draft-card-footer {
+  border-top: 1px solid #E4E4E7 !important;
+}
+
+html:not(.dark) .draft-card-footer span {
+  color: #4B5563 !important;
+}
+
+html:not(.dark) .squad-form-card .form-label {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) .squad-form-card .form-input-styled,
+html:not(.dark) .squad-form-card .form-select-styled {
+  background: #FFFFFF !important;
+  border: 1.5px solid #D4D4D8 !important;
+  color: #000000 !important;
+}
+
+html:not(.dark) .squad-form-perks span {
+  color: #16A34A !important;
+  font-weight: 600 !important;
+}
+
+/* --- 6. HOME-2: Members Pass & Benefits (The Golden Pin Pass - Screenshot 2) --- */
+html:not(.dark) .members-pass-card {
+  background: #FFFFFF !important;
+  border: 2px solid #E5252A !important;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06) !important;
+}
+
+html:not(.dark) .members-pass-card h3 {
+  color: #000000 !important;
+  font-weight: 900 !important;
+}
+
+html:not(.dark) .members-pass-card p {
+  color: #4B5563 !important;
+}
+
+html:not(.dark) .members-pass-card span[style*="font-family: var(--font-heading)"] {
+  color: #000000 !important;
+}
+
+html:not(.dark) .members-pass-card span[style*="font-family: var(--font-heading)"] small {
+  color: #E5252A !important;
+}
+
+html:not(.dark) .members-benefits-list,
+html:not(.dark) .members-benefits-list li,
+html:not(.dark) .member-benefit-item,
+html:not(.dark) .member-benefit-item span {
+  color: #18181B !important;
+  font-weight: 600 !important;
+}
+
+html:not(.dark) .member-benefit-item svg {
+  color: #E5252A !important;
+  stroke: #E5252A !important;
+}
+
+/* Members Visual Lounge Caption (The Pin Master Lounge) */
+html:not(.dark) .members-visual-caption h4 {
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95) !important;
+}
+
+html:not(.dark) .members-visual-caption p {
+  color: #F4F4F5 !important;
+  font-weight: 500 !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
+}
+
+/* --- 7. INDEX: Interactive Lane Pricing Calculator (Screenshot 3) --- */
+html:not(.dark) .calculator-console-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E4E4E7 !important;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05) !important;
+}
+
+html:not(.dark) .calc-label {
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
+
+html:not(.dark) .calc-val-readout {
+  color: #E5252A !important;
+  font-weight: 900 !important;
+}
+
+html:not(.dark) .calc-chip-btn {
+  background: #FFFFFF !important;
+  border: 1.5px solid #D4D4D8 !important;
+  color: #18181B !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) .calc-chip-btn:hover {
+  border-color: #E5252A !important;
+  color: #E5252A !important;
+}
+
+html:not(.dark) .calc-chip-btn.selected {
+  background: #E5252A !important;
+  border-color: #E5252A !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(229, 37, 42, 0.35) !important;
+}
+
+html:not(.dark) .calc-checkbox-row {
+  background: #FFFFFF !important;
+  border: 1.5px solid #E4E4E7 !important;
+}
+
+html:not(.dark) .calc-checkbox-row:hover {
+  background: #FFF5F5 !important;
+  border-color: #E5252A !important;
+}
+
+html:not(.dark) .calc-checkbox-row.active {
+  background: #FFF5F5 !important;
+  border-color: #E5252A !important;
+}
+
+html:not(.dark) .calc-checkbox-row span[style*="font-weight: 700"] {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+html:not(.dark) .calc-checkbox-row span[style*="color: var(--brand-cream)"] {
+  color: #4B5563 !important;
+}
+
+html:not(.dark) .calc-checkbox-row strong {
+  color: #E5252A !important;
+  font-weight: 800 !important;
+}
+
+/* --- 8. DASHBOARD: User Profile Avatar Badge (Screenshot 1: "JM") --- */
+.dash-user-avatar,
+html:not(.dark) .dash-user-avatar,
+html.dark .dash-user-avatar {
+  background: #E5252A !important;
+  border: 1.5px solid #C51D22 !important;
+  color: #FFFFFF !important;
+  font-weight: 900 !important;
+  box-shadow: 0 2px 8px rgba(229, 37, 42, 0.4) !important;
+}
+
+.welcome-avatar-lg,
+html:not(.dark) .welcome-avatar-lg,
+html.dark .welcome-avatar-lg {
+  background: #E5252A !important;
+  border-color: #E5252A !important;
+  color: #FFFFFF !important;
+  font-weight: 900 !important;
+}
+
+/* --------------------------------------------------------------------------
+   DARK MODE: Crisp White text on Near-Black / Charcoal surfaces
+   -------------------------------------------------------------------------- */
+html.dark,
+html.dark body {
+  background-color: #09090B !important;
+  color: #FFFFFF !important;
+}
+
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark h6,
+html.dark .hero-headline,
+html.dark .hero-title,
+html.dark .hero-stat-num,
+html.dark .section-heading,
+html.dark .section-title,
+html.dark .card-title,
+html.dark .feature-title,
+html.dark .attraction-title,
+html.dark .attraction-card-title,
+html.dark .event-card-title,
+html.dark .package-tier-name,
+html.dark .price-val,
+html.dark .league-name,
+html.dark .league-title,
+html.dark .league-card-title,
+html.dark .stat-number,
+html.dark .stat-num,
+html.dark .faq-question-text,
+html.dark .faq-trigger,
+html.dark .review-author-name,
+html.dark .brand-title,
+html.dark .portal-card-title,
+html.dark .portal-heading,
+html.dark .lane-card-title,
+html.dark .retro-card-title,
+html.dark .timeline-year,
+html.dark .timeline-title,
+html.dark .team-card-name,
+html.dark .coordinator-name,
+html.dark .contact-info-title,
+html.dark .step-title,
+html.dark .booking-step-title,
+html.dark .summary-title,
+html.dark .addon-name,
+html.dark .inclusion-item,
+html.dark .spec-item,
+html.dark .benefit-item,
+html.dark .detail-row,
+html.dark .pricing-tier-name,
+html.dark .pricing-plan-title,
+html.dark .glance-num,
+html.dark .leaderboard-table th,
+html.dark .leaderboard-table td,
+html.dark .schedule-table th,
+html.dark .schedule-table td,
+html.dark table th,
+html.dark table td,
+html.dark strong,
+html.dark b {
+  color: #FFFFFF !important;
+}
+
+html.dark p,
+html.dark .hero-description,
+html.dark .hero-stat-label,
+html.dark .section-subheading,
+html.dark .section-subtitle,
+html.dark .card-desc,
+html.dark .feature-desc,
+html.dark .attraction-desc,
+html.dark .event-card-desc,
+html.dark .package-ideal-for,
+html.dark .faq-answer-text,
+html.dark .review-text,
+html.dark .league-schedule,
+html.dark .league-desc,
+html.dark .timeline-desc,
+html.dark .team-card-role,
+html.dark .member-bio,
+html.dark .coordinator-role,
+html.dark .contact-info-desc,
+html.dark .step-desc,
+html.dark .booking-step-desc,
+html.dark .summary-row,
+html.dark .addon-desc,
+html.dark .glance-label,
+html.dark .filter-chip,
+html.dark .text-muted,
+html.dark .text-secondary {
+  color: #FFFFFF !important;
+}
+
+html.dark .brand-subtitle,
+html.dark .price-duration {
+  color: #F4F4F5 !important;
+}
+
+/* Glowing Bright Vermilion Red Accents in Dark Mode */
+html.dark span.text-accent-gold,
+html.dark span.text-accent-gold-light,
+html.dark .hero-headline em,
+html.dark .section-title span,
+html.dark .section-heading span,
+html.dark .brand-title span,
+html.dark .price-currency,
+html.dark .rating-star,
+html.dark .accent-text,
+html.dark .hero-stat-num span,
+html.dark .stat-number span {
+  color: #FF3B30 !important;
+}
+
+/* Navigation & Header in Dark Mode */
+html.dark .site-header {
+  background: rgba(9, 9, 11, 0.96) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+html.dark .nav-link {
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
+}
+
+html.dark .nav-link:hover {
+  color: #FF3B30 !important;
+  background-color: rgba(229, 37, 42, 0.15) !important;
+}
+
+html.dark .nav-link.active {
+  color: #FFFFFF !important;
+  background-color: #E5252A !important;
+}
+
+html.dark .dropdown-panel,
+html.dark .dropdown-menu {
+  background-color: #121215 !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5) !important;
+}
+
+html.dark .dropdown-item,
+html.dark .dropdown-link {
+  color: #FFFFFF !important;
+  font-weight: 500 !important;
+}
+
+html.dark .dropdown-item:hover,
+html.dark .dropdown-link:hover {
+  background-color: rgba(229, 37, 42, 0.18) !important;
+  color: #FF3B30 !important;
+}
+
+html.dark .dropdown-item.active,
+html.dark .dropdown-link.active {
+  background-color: #E5252A !important;
+  color: #FFFFFF !important;
+}
+
+html.dark .utility-btn,
+html.dark .mobile-toggle-btn {
+  background: #18181B !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: #FFFFFF !important;
+}
+
+html.dark .utility-btn svg,
+html.dark .mobile-toggle-btn svg {
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+}
+
+html.dark .utility-btn:hover,
+html.dark .mobile-toggle-btn:hover {
+  background: rgba(229, 37, 42, 0.2) !important;
+  border-color: #FF3B30 !important;
+  color: #FF3B30 !important;
+}
+
+html.dark .utility-btn:hover svg,
+html.dark .mobile-toggle-btn:hover svg {
+  color: #FF3B30 !important;
+  stroke: #FF3B30 !important;
+}
+
+/* Forms & Inputs in Dark Mode */
+html.dark label {
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
+}
+
+html.dark input,
+html.dark select,
+html.dark textarea,
+html.dark .bar-input,
+html.dark .form-input-styled,
+html.dark .form-select-styled,
+html.dark .auth-text-input {
+  background: #121215 !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+}
+
+html.dark input:focus,
+html.dark select:focus,
+html.dark textarea:focus,
+html.dark .bar-input:focus,
+html.dark .form-input-styled:focus,
+html.dark .form-select-styled:focus,
+html.dark .auth-text-input:focus {
+  border-color: #FF3B30 !important;
+  box-shadow: 0 0 0 3px rgba(229, 37, 42, 0.3) !important;
+  color: #FFFFFF !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #A1A1AA !important;
+}
+
+html.dark select option,
+html.dark .bar-select option,
+html.dark .form-select-styled option {
+  background-color: #121215 !important;
+  color: #FFFFFF !important;
+}
+
+/* Buttons in Dark Mode */
+html.dark .btn-primary,
+html.dark .btn-login,
+html.dark .btn-brand,
+html.dark .site-cta-btn,
+html.dark .btn-auth-submit,
+html.dark .btn-draft-agent,
+html.dark .btn-reserve-action,
+html.dark #calcReserveBtn,
+html.dark button.btn-primary,
+html.dark a.btn-primary {
+  background: #E5252A !important;
+  background-color: #E5252A !important;
+  color: #FFFFFF !important;
+  border: 1px solid #FF3B30 !important;
+  box-shadow: 0 4px 14px rgba(229, 37, 42, 0.45) !important;
+}
+
+html.dark .btn-primary *,
+html.dark .btn-login *,
+html.dark .btn-brand *,
+html.dark .site-cta-btn *,
+html.dark .btn-auth-submit *,
+html.dark .btn-draft-agent *,
+html.dark .btn-reserve-action * {
+  color: #FFFFFF !important;
+}
+
+html.dark .btn-secondary {
+  background: #18181B !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
+}
+
+html.dark .btn-secondary * {
+  color: #FFFFFF !important;
+}
+
+html.dark .btn-secondary:hover {
+  background: rgba(229, 37, 42, 0.2) !important;
+  border-color: #FF3B30 !important;
+  color: #FF3B30 !important;
+}
+
+html.dark .btn-secondary:hover * {
+  color: #FF3B30 !important;
+}
+
+/* Dark Mode Footer */
+html.dark .site-footer {
+  background: #000000 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+html.dark .site-footer * {
+  color: #FFFFFF !important;
+}
+
+html.dark .site-footer a:hover,
+html.dark .site-footer .footer-link:hover {
+  color: #FF3B30 !important;
+}
+
+/* Dark Mode Section Backgrounds & Surfaces */
+html.dark .hero-cosmic,
+html.dark .hero-retro,
+html.dark .booking-hero-banner,
+html.dark .leagues-hero-section,
+html.dark .pricing-hero-section,
+html.dark .party-hero-section,
+html.dark .about-hero-section,
+html.dark .about-story-section,
+html.dark .contact-hero-section,
+html.dark .contact-form-section,
+html.dark section:not(.site-footer):not(.site-cta-section):not(.about-cta-section) {
+  background: #09090B !important;
+  background-color: #09090B !important;
+}
+
+html.dark .package-card,
+html.dark .portal-card,
+html.dark .attraction-card,
+html.dark .pricing-card,
+html.dark .review-card,
+html.dark .faq-card,
+html.dark .event-card,
+html.dark .league-card,
+html.dark .spec-card,
+html.dark .lane-card,
+html.dark .stat-card,
+html.dark .contact-card,
+html.dark .team-card,
+html.dark .about-member-card,
+html.dark .about-zone-pane,
+html.dark .pricing-mini-stat-card,
+html.dark .heritage-era-card,
+html.dark .era-milestone-card,
+html.dark .retro-card,
+html.dark .booking-wizard-card,
+html.dark .summary-sidebar,
+html.dark .faq-item,
+html.dark .accordion-item,
+html.dark .slot-chip,
+html.dark .contact-hero-glance-card,
+html.dark .contact-info-card,
+html.dark .contact-form-card,
+html.dark .contact-method-card {
+  background: #121215 !important;
+  background-color: #121215 !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #FFFFFF !important;
+}
+
+html.dark .hero-stat-card {
+  background: #18181B !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+html.dark .package-card.featured {
+  background: #18181B !important;
+  border: 2px solid #E5252A !important;
+}
+
+html.dark .inclusion-item svg,
+html.dark .spec-item svg,
+html.dark .benefit-item svg {
+  color: #FF3B30 !important;
+  stroke: #FF3B30 !important;
+}
+
+html.dark .attraction-tag {
+  background: #18181B !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #FFFFFF !important;
+}
+
+html.dark .attraction-tag:hover {
+  background: rgba(229, 37, 42, 0.2) !important;
+  border-color: #FF3B30 !important;
+  color: #FF3B30 !important;
+}
+
+html.dark .calc-chip-btn {
+  background: #18181B !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #FFFFFF !important;
+}
+
+html.dark .calc-chip-btn:hover {
+  border-color: #FF3B30 !important;
+  color: #FF3B30 !important;
+}
+
+html.dark .calc-chip-btn.selected {
+  background: #E5252A !important;
+  border-color: #FF3B30 !important;
+  color: #FFFFFF !important;
 }

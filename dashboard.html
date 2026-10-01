@@ -28,13 +28,29 @@
        DASHBOARD BESPOKE COSMIC LUXURY THEME & PERFECT MOBILE RESPONSIVE ENGINE
        ========================================================================== */
     :root {
-      --dash-bg: #070103;
-      --dash-burgundy: #7B0D27;
-      --dash-burgundy-deep: #4D0717;
-      --dash-gold: #F5BC51;
-      --dash-gold-light: #FCD68A;
-      --dash-card: rgba(18, 3, 7, 0.88);
-      --dash-card-border: rgba(229, 169, 60, 0.25);
+      --dash-bg: #FFFFFF;
+      --dash-burgundy: #E5252A;
+      --dash-burgundy-deep: #C51D22;
+      --dash-gold: #E5252A;
+      --dash-gold-light: #EF4444;
+      --dash-card: #FFFFFF;
+      --dash-card-border: #E4E4E7;
+      --dash-text: #000000;
+      --dash-text-sub: #18181B;
+      --dash-header-bg: rgba(255, 255, 255, 0.98);
+    }
+
+    html.dark {
+      --dash-bg: #09090B;
+      --dash-burgundy: #E5252A;
+      --dash-burgundy-deep: #C51D22;
+      --dash-gold: #FF3B30;
+      --dash-gold-light: #FF3B30;
+      --dash-card: #121215;
+      --dash-card-border: rgba(255, 255, 255, 0.12);
+      --dash-text: #FFFFFF;
+      --dash-text-sub: #F4F4F5;
+      --dash-header-bg: rgba(9, 9, 11, 0.96);
     }
 
     /* Zero Horizontal Overflow Enforced */
@@ -50,7 +66,7 @@
       max-width: 100vw !important;
       overflow-x: hidden !important;
       background-color: var(--dash-bg) !important;
-      color: #fff9f2 !important;
+      color: var(--dash-text) !important;
       margin: 0 !important;
       padding: 0 !important;
       font-family: var(--font-body);
@@ -65,7 +81,7 @@
       width: 100% !important;
       max-width: 100vw !important;
       height: 66px !important;
-      background: rgba(14, 2, 5, 0.96) !important;
+      background: var(--dash-header-bg) !important;
       backdrop-filter: blur(16px) !important;
       -webkit-backdrop-filter: blur(16px) !important;
       border-bottom: 1px solid var(--dash-card-border) !important;
@@ -153,8 +169,8 @@
       min-height: 32px !important;
       border-radius: 50% !important;
       background: linear-gradient(135deg, var(--dash-burgundy), var(--dash-burgundy-deep)) !important;
-      border: 1.5px solid rgba(229, 169, 60, 0.6) !important;
-      color: var(--dash-gold) !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
+      color: #FFFFFF !important;
       font-weight: 900 !important;
       font-size: 0.78rem !important;
       display: flex !important;
@@ -1542,6 +1558,270 @@
         grid-template-columns: 1fr !important;
       }
     }
+
+    /* Dedicated Dashboard Light Mode High-Contrast Engine */
+    html:not(.dark) .dash-body,
+    html:not(.dark) .dash-main-area {
+      background: #F8F9FA !important;
+      color: #111827 !important;
+    }
+
+    html:not(.dark) .dash-sidebar {
+      background: #FFFFFF !important;
+      border-right: 1px solid #E4E4E7 !important;
+      box-shadow: 2px 0 12px rgba(0, 0, 0, 0.03) !important;
+    }
+
+    html:not(.dark) .dash-nav-btn {
+      color: #18181B !important;
+    }
+
+    html:not(.dark) .dash-nav-btn .dash-nav-icon {
+      color: #71717A !important;
+    }
+
+    html:not(.dark) .dash-nav-btn:hover:not(.active) {
+      background: #F4F4F5 !important;
+      color: #E5252A !important;
+    }
+
+    html:not(.dark) .dash-nav-btn.active {
+      background: #E5252A !important;
+      border-color: #E5252A !important;
+      color: #FFFFFF !important;
+    }
+
+    html:not(.dark) .dash-nav-btn.active * {
+      color: #FFFFFF !important;
+      stroke: #FFFFFF !important;
+    }
+
+    html:not(.dark) .dash-header-bar {
+      background: #FFFFFF !important;
+      border-bottom: 1px solid #E4E4E7 !important;
+    }
+
+    html:not(.dark) .dash-header-bar .brand-title {
+      color: #000000 !important;
+    }
+
+    html:not(.dark) .dash-header-bar .brand-subtitle {
+      color: #4B5563 !important;
+    }
+
+    html:not(.dark) .dash-user-pill {
+      background: #F4F4F5 !important;
+      border: 1px solid #E4E4E7 !important;
+      color: #18181B !important;
+    }
+
+    html:not(.dark) .dash-user-avatar {
+      background: #E5252A !important;
+      border: 1.5px solid #C51D22 !important;
+      color: #FFFFFF !important;
+      font-weight: 900 !important;
+    }
+
+    html:not(.dark) .dash-user-name {
+      color: #18181B !important;
+    }
+
+    html:not(.dark) .welcome-sub-greeting {
+      color: #4B5563 !important;
+    }
+
+    html:not(.dark) .welcome-bowler-title {
+      color: #000000 !important;
+    }
+
+    html:not(.dark) .welcome-avatar-lg {
+      background: #E5252A !important;
+      border-color: #E5252A !important;
+      color: #FFFFFF !important;
+      font-weight: 900 !important;
+    }
+
+    /* 4 Metric Cards */
+    html:not(.dark) .dash-metric-card {
+      background: #FFFFFF !important;
+      border: 1px solid #E4E4E7 !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+      color: #18181B !important;
+    }
+
+    html:not(.dark) .metric-card-header-lbl {
+      color: #18181B !important;
+      font-weight: 800 !important;
+    }
+
+    html:not(.dark) .countdown-meta h4 {
+      color: #000000 !important;
+      font-weight: 800 !important;
+    }
+
+    html:not(.dark) .countdown-meta span {
+      color: #4B5563 !important;
+      font-weight: 600 !important;
+    }
+
+    html:not(.dark) .countdown-ring-circle {
+      background: #FEF2F2 !important;
+      border: 3px solid #E5252A !important;
+      color: #E5252A !important;
+      box-shadow: 0 0 12px rgba(229, 37, 42, 0.15) !important;
+    }
+
+    html:not(.dark) .rank-tier-title {
+      color: #000000 !important;
+      font-weight: 900 !important;
+      font-size: 1.15rem !important;
+    }
+
+    html:not(.dark) .rank-tier-sub {
+      color: #4B5563 !important;
+      font-weight: 600 !important;
+      font-size: 0.8rem !important;
+    }
+
+    html:not(.dark) .rank-progress-bar {
+      background: #E4E4E7 !important;
+    }
+
+    html:not(.dark) .rank-progress-fill {
+      background: #E5252A !important;
+    }
+
+    html:not(.dark) .dash-metric-card.highlight {
+      background: linear-gradient(135deg, #180308, #2a050f) !important;
+      border: 1px solid rgba(229, 37, 42, 0.5) !important;
+    }
+
+    html:not(.dark) .dash-metric-card.highlight .metric-card-header-lbl {
+      color: #D4D4D8 !important;
+      font-weight: 800 !important;
+    }
+
+    html:not(.dark) .dash-metric-card.highlight .squad-count-big {
+      color: #FF3B30 !important;
+      font-weight: 900 !important;
+    }
+
+    html:not(.dark) .dash-metric-card.highlight .squad-count-sub {
+      color: #FFFFFF !important;
+      font-weight: 600 !important;
+    }
+
+    html:not(.dark) .btn-briefing-confirm {
+      background: #E5252A !important;
+      border-color: #E5252A !important;
+      color: #FFFFFF !important;
+    }
+
+    html:not(.dark) .btn-briefing-confirm * {
+      color: #FFFFFF !important;
+    }
+
+    /* Roster Table */
+    html:not(.dark) .section-headline-bar .section-eyebrow-tag {
+      color: #E5252A !important;
+      font-weight: 800 !important;
+    }
+
+    html:not(.dark) .dash-table-card {
+      background: #FFFFFF !important;
+      border: 1px solid #E4E4E7 !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+    }
+
+    html:not(.dark) .dash-roster-table thead th {
+      background: #F4F4F5 !important;
+      color: #111827 !important;
+      font-weight: 800 !important;
+      border-bottom: 2px solid #E4E4E7 !important;
+    }
+
+    html:not(.dark) .dash-roster-table tbody td {
+      background: #FFFFFF !important;
+      color: #18181B !important;
+      border-bottom: 1px solid #E4E4E7 !important;
+    }
+
+    html:not(.dark) .dash-roster-table tbody td strong,
+    html:not(.dark) .bowler-strong-name {
+      color: #000000 !important;
+      font-weight: 700 !important;
+    }
+
+    /* Dining Card */
+    html:not(.dark) .dining-order-card {
+      background: #FFFFFF !important;
+      border: 1px solid #E4E4E7 !important;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04) !important;
+    }
+
+    html:not(.dark) .dining-order-header h4,
+    html:not(.dark) .dining-order-title {
+      color: #000000 !important;
+      font-weight: 800 !important;
+    }
+
+    html:not(.dark) .dining-order-header p,
+    html:not(.dark) .dining-order-desc {
+      color: #4B5563 !important;
+      font-weight: 500 !important;
+    }
+
+    html:not(.dark) .dining-item-pill {
+      background: #F8F9FA !important;
+      border: 1px solid #E4E4E7 !important;
+    }
+
+    html:not(.dark) .dining-item-info h5 {
+      color: #000000 !important;
+      font-weight: 800 !important;
+    }
+
+    html:not(.dark) .dining-item-info p {
+      color: #4B5563 !important;
+      font-weight: 500 !important;
+    }
+
+    html:not(.dark) .dining-item-price {
+      color: #E5252A !important;
+      font-weight: 900 !important;
+    }
+
+    html:not(.dark) .order-status-bar {
+      border-top: 1px solid #E4E4E7 !important;
+    }
+
+    html:not(.dark) .order-status-bar div,
+    html:not(.dark) .order-total-text {
+      color: #18181B !important;
+      font-weight: 600 !important;
+    }
+
+    html:not(.dark) .order-status-bar strong,
+    html:not(.dark) .order-total-amount {
+      color: #000000 !important;
+      font-weight: 900 !important;
+    }
+
+    /* Telemetry KPI Cards */
+    html:not(.dark) .telemetry-kpi-item {
+      background: #F8F9FA !important;
+      border: 1px solid #E4E4E7 !important;
+    }
+
+    html:not(.dark) .kpi-lbl {
+      color: #18181B !important;
+      font-weight: 800 !important;
+    }
+
+    html:not(.dark) .kpi-val {
+      color: #E5252A !important;
+      font-weight: 900 !important;
+    }
   </style>
 </head>
 
@@ -1985,7 +2265,7 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong style="color: #ffffff;">Jordan Miller</strong></td>
+              <td><strong class="bowler-strong-name">Jordan Miller</strong></td>
               <td>Squad Captain</td>
               <td>218.4</td>
               <td>+0 Scratch</td>
@@ -1993,7 +2273,7 @@
               <td><span class="status-badge-active">Confirmed ✓</span></td>
             </tr>
             <tr>
-              <td><strong style="color: #ffffff;">Sarah Jenkins</strong></td>
+              <td><strong class="bowler-strong-name">Sarah Jenkins</strong></td>
               <td>Lead Anchor</td>
               <td>204.2</td>
               <td>+4 HDCP</td>
@@ -2001,7 +2281,7 @@
               <td><span class="status-badge-active">Confirmed ✓</span></td>
             </tr>
             <tr>
-              <td><strong style="color: #ffffff;">Marcus Vance</strong></td>
+              <td><strong class="bowler-strong-name">Marcus Vance</strong></td>
               <td>Setup Bowler</td>
               <td>198.8</td>
               <td>+8 HDCP</td>
@@ -2009,7 +2289,7 @@
               <td><span class="status-badge-active">Confirmed ✓</span></td>
             </tr>
             <tr>
-              <td><strong style="color: #ffffff;">Elena Russo</strong></td>
+              <td><strong class="bowler-strong-name">Elena Russo</strong></td>
               <td>Middle Strike</td>
               <td>192.5</td>
               <td>+12 HDCP</td>
@@ -2101,10 +2381,10 @@
       <div class="dining-order-card">
         <div class="dining-order-header">
           <div>
-            <h4 style="font-size: 1.15rem; font-weight: 800; color: #ffffff; margin: 0 0 0.25rem;">
+            <h4 class="dining-order-title" style="font-size: 1.15rem; font-weight: 800; margin: 0 0 0.25rem;">
               Lane 14A Active Food &amp; Drink Order
             </h4>
-            <p style="font-size: 0.82rem; color: rgba(255, 249, 242, 0.6); margin: 0;">
+            <p class="dining-order-desc" style="font-size: 0.82rem; margin: 0;">
               Ordered via Bowler Tablet • Estimated delivery to Lane 14A in 12 minutes
             </p>
           </div>
@@ -2152,8 +2432,8 @@
         </div>
 
         <div class="order-status-bar">
-          <div style="font-size: 0.85rem; color: rgba(255, 249, 242, 0.7);">
-            Order Total: <strong style="color: #ffffff; font-size: 1rem;">$66.50</strong> • Charged to Bowler Card
+          <div class="order-total-text" style="font-size: 0.85rem;">
+            Order Total: <strong class="order-total-amount" style="font-size: 1rem;">$66.50</strong> • Charged to Bowler Card
             #SP-8824
           </div>
           <a href="home-2.html#dining" class="btn-action-sm">
