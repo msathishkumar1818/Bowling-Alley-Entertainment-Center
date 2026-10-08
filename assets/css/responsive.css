@@ -138,11 +138,39 @@
   .footer-inner {
     padding: 3.5rem 1.5rem 2.5rem !important;
   }
+
+  .footer-bottom {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 1.1rem !important;
+    padding-top: 2rem !important;
+    width: 100% !important;
+  }
+
+  .footer-bottom div,
+  .footer-bottom p {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .footer-bottom-links {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 1.25rem 2rem !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+  }
 }
 
 /* --------------------------------------------------------------------------
    iPad Mini Dedicated Optimization (740px - 840px, e.g. 768px)
-   Matches 2x2 Grid + Sleek Horizontal Bottom Bar + Clean CTA Card
+   Matches 2x2 Grid + Centered Balanced Bottom Bar + Clean CTA Card
    -------------------------------------------------------------------------- */
 @media (min-width: 740px) and (max-width: 840px) {
   .footer-inner {
@@ -171,22 +199,30 @@
 
   .footer-bottom {
     display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
+    flex-direction: column !important;
+    justify-content: center !important;
     align-items: center !important;
-    text-align: left !important;
-    gap: 1.5rem !important;
+    text-align: center !important;
+    gap: 1.1rem !important;
     padding-top: 2rem !important;
+    width: 100% !important;
+  }
+
+  .footer-bottom div,
+  .footer-bottom p {
+    text-align: center !important;
     width: 100% !important;
   }
 
   .footer-bottom-links {
     display: flex !important;
     flex-direction: row !important;
-    justify-content: flex-end !important;
+    justify-content: center !important;
     align-items: center !important;
-    gap: 1.5rem !important;
-    flex-wrap: nowrap !important;
+    text-align: center !important;
+    gap: 1.25rem 2rem !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
   }
 
   .site-cta-card {

@@ -1613,6 +1613,26 @@
       border-color: #E4E4E7 !important;
     }
 
+    html:not(.dark) .mobile-drawer-close {
+      background: #F4F4F5 !important;
+      border: 1px solid #D4D4D8 !important;
+      color: #18181B !important;
+    }
+
+    html:not(.dark) .mobile-drawer-close svg {
+      stroke: #18181B !important;
+    }
+
+    html:not(.dark) .mobile-drawer-close:hover {
+      background: #E5252A !important;
+      border-color: #E5252A !important;
+      color: #FFFFFF !important;
+    }
+
+    html:not(.dark) .mobile-drawer-close:hover svg {
+      stroke: #FFFFFF !important;
+    }
+
     html:not(.dark) .mobile-drawer-bowler-card {
       background: #F4F4F5 !important;
       border: 1px solid #E4E4E7 !important;
@@ -2146,37 +2166,7 @@
         </div>
       </div>
 
-      <!-- Quick Theme & Direction Controls (Dark Mode & RTL Buttons inside Drawer!) -->
-      <div class="drawer-utility-bar">
-        <button type="button" class="drawer-utility-action-btn dark-mode-toggle" aria-label="Toggle dark mode"
-          aria-pressed="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-            width="16" height="16" aria-hidden="true">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-          <span class="utility-label">Theme Mode</span>
-        </button>
 
-        <button type="button" class="drawer-utility-action-btn rtl-toggle-btn"
-          aria-label="Toggle text direction (RTL/LTR)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
-            stroke-linejoin="round" width="16" height="16" aria-hidden="true">
-            <path d="M8 3L4 7l4 4"></path>
-            <path d="M4 7h16"></path>
-            <path d="M16 21l4-4-4-4"></path>
-            <path d="M20 17H4"></path>
-          </svg>
-          <span class="utility-label dir-label-text">RTL</span>
-        </button>
-      </div>
 
       <!-- DASHBOARD SIDEBAR BUTTONS TUCKED INSIDE MOBILE DRAWER -->
       <div class="drawer-nav-group-title">Bowler Dashboard Sections</div>
