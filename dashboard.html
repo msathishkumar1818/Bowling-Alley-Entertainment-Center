@@ -1401,11 +1401,22 @@
       margin-bottom: 0.25rem;
     }
 
-    .drawer-dash-link:hover,
+    .drawer-dash-link:hover {
+      background: rgba(229, 37, 42, 0.15);
+      color: #ffffff;
+      border-color: rgba(229, 37, 42, 0.35);
+    }
+
     .drawer-dash-link.active {
-      background: rgba(123, 13, 39, 0.45);
-      color: var(--dash-gold);
-      border-color: rgba(229, 169, 60, 0.35);
+      background: #E5252A;
+      color: #ffffff;
+      border-color: #E5252A;
+      box-shadow: 0 4px 14px rgba(229, 37, 42, 0.3);
+    }
+
+    .drawer-dash-link.active * {
+      color: #ffffff !important;
+      stroke: #ffffff !important;
     }
 
     /* ==========================================================================
@@ -1592,6 +1603,144 @@
     }
 
     html:not(.dark) .dash-nav-btn.active * {
+      color: #FFFFFF !important;
+      stroke: #FFFFFF !important;
+    }
+
+    /* Mobile Navigation Drawer in Light Mode (360px, 768px, 1024px) */
+    html:not(.dark) .mobile-drawer {
+      background: #FFFFFF !important;
+      border-color: #E4E4E7 !important;
+    }
+
+    html:not(.dark) .mobile-drawer-bowler-card {
+      background: #F4F4F5 !important;
+      border: 1px solid #E4E4E7 !important;
+    }
+
+    html:not(.dark) .mobile-drawer-bowler-card strong {
+      color: #111827 !important;
+    }
+
+    html:not(.dark) .mobile-drawer-bowler-card span {
+      color: #E5252A !important;
+    }
+
+    html:not(.dark) .drawer-utility-action-btn {
+      background: #F4F4F5 !important;
+      border: 1px solid #E4E4E7 !important;
+      color: #18181B !important;
+    }
+
+    html:not(.dark) .drawer-utility-action-btn * {
+      color: #18181B !important;
+      stroke: #18181B !important;
+    }
+
+    html:not(.dark) .drawer-utility-action-btn:hover {
+      background: rgba(229, 37, 42, 0.08) !important;
+      border-color: #E5252A !important;
+      color: #E5252A !important;
+    }
+
+    html:not(.dark) .drawer-utility-action-btn:hover * {
+      color: #E5252A !important;
+      stroke: #E5252A !important;
+    }
+
+    html:not(.dark) .drawer-nav-group-title {
+      color: #E5252A !important;
+      font-weight: 800 !important;
+    }
+
+    html:not(.dark) .drawer-dash-link {
+      color: #18181B !important;
+      background: transparent !important;
+      border-color: transparent !important;
+    }
+
+    html:not(.dark) .drawer-dash-link span {
+      color: #18181B !important;
+      font-weight: 600 !important;
+    }
+
+    html:not(.dark) .drawer-dash-link svg {
+      color: #71717A !important;
+      stroke: #71717A !important;
+    }
+
+    html:not(.dark) .drawer-dash-link:hover:not(.active) {
+      background: #F4F4F5 !important;
+      border-color: #E4E4E7 !important;
+      color: #E5252A !important;
+    }
+
+    html:not(.dark) .drawer-dash-link:hover:not(.active) span,
+    html:not(.dark) .drawer-dash-link:hover:not(.active) svg {
+      color: #E5252A !important;
+      stroke: #E5252A !important;
+    }
+
+    html:not(.dark) .drawer-dash-link.active {
+      background: #E5252A !important;
+      border-color: #E5252A !important;
+      color: #FFFFFF !important;
+      box-shadow: 0 4px 14px rgba(229, 37, 42, 0.25) !important;
+    }
+
+    html:not(.dark) .drawer-dash-link.active span,
+    html:not(.dark) .drawer-dash-link.active svg,
+    html:not(.dark) .drawer-dash-link.active * {
+      color: #FFFFFF !important;
+      stroke: #FFFFFF !important;
+    }
+
+    html:not(.dark) .drawer-dash-link[href="book-lane.html"],
+    html:not(.dark) .dash-nav-btn[href="book-lane.html"] {
+      background: rgba(229, 37, 42, 0.08) !important;
+      border: 1px solid rgba(229, 37, 42, 0.35) !important;
+      color: #E5252A !important;
+    }
+
+    html:not(.dark) .drawer-dash-link[href="book-lane.html"] *,
+    html:not(.dark) .dash-nav-btn[href="book-lane.html"] * {
+      color: #E5252A !important;
+      stroke: #E5252A !important;
+    }
+
+    html:not(.dark) .drawer-dash-link[href="book-lane.html"]:hover,
+    html:not(.dark) .dash-nav-btn[href="book-lane.html"]:hover {
+      background: #E5252A !important;
+      border-color: #C51D22 !important;
+      color: #FFFFFF !important;
+    }
+
+    html:not(.dark) .drawer-dash-link[href="book-lane.html"]:hover *,
+    html:not(.dark) .dash-nav-btn[href="book-lane.html"]:hover * {
+      color: #FFFFFF !important;
+      stroke: #FFFFFF !important;
+    }
+
+    html:not(.dark) .dash-logout-btn {
+      background: #FEE2E2 !important;
+      border: 1px solid #FCA5A5 !important;
+      color: #DC2626 !important;
+    }
+
+    html:not(.dark) .dash-logout-btn *,
+    html:not(.dark) .dash-logout-btn svg {
+      color: #DC2626 !important;
+      stroke: #DC2626 !important;
+    }
+
+    html:not(.dark) .dash-logout-btn:hover {
+      background: #DC2626 !important;
+      border-color: #B91C1C !important;
+      color: #FFFFFF !important;
+    }
+
+    html:not(.dark) .dash-logout-btn:hover *,
+    html:not(.dark) .dash-logout-btn:hover svg {
       color: #FFFFFF !important;
       stroke: #FFFFFF !important;
     }
@@ -2062,9 +2211,9 @@
       </a>
 
 
-      <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08);">
+      <div class="drawer-logout-wrap" style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08);">
         <a href="index.html" class="dash-logout-btn" style="justify-content: center;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true" style="color: #fca5a5;"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
           <span>Log Out</span>
         </a>
       </div>
